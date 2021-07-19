@@ -1,12 +1,6 @@
-@import url(h:\Anastasia\html\Rizzoma\node_modules\normalize.css\normalize.css);
 @font-face {
   font-family: 'MontserratRegular';
   src: url("../fonts/Montserrat-Regular/Montserrat-Regular.eot");
   src: url("../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype");
 }
-
-body {
-  background-color: aqua;
-  font-family: 'MontserratRegular';
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=fonts.css.map */
