@@ -1,12 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const merge = require('webpack-merge');
-const Pug = require('pug');
+const pug = require('pug');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+//const { webpackConfig, merge } = require('@rails/webpacker');
+//const WebpackAssetsManifest = require('webpack-assets-manifest');
+
 //const ImageminPlugin = require('imagemin-webpack');
 //const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const fs = require('fs');
@@ -25,6 +27,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+
 
 const optimization = () => {
   const configObj = {
@@ -60,52 +63,31 @@ const plugins = () => {
     new CopyWebpackPlugin({
       patterns: [
         {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'app'), noErrorOnMissing: true,},
-       
+        //{from: path.resolve(__dirname, 'src/assets/img') , to: path.resolve(__dirname, 'app/assets/img'), noErrorOnMissing: true,},
+
+              
       ]
     }),
   ];
-
- /* if (isProd) {
-    basePlugins.push(
-      new ImageminPlugin({
-        bail: false, // Ignore errors on corrupted images
-        cache: true,
-        imageminOptions: {
-          plugins: [
-            ["gifsicle", { interlaced: true }],
-            ["jpegtran", { progressive: true }],
-            ["optipng", { optimizationLevel: 5 }],
-            [
-              "svgo",
-              {
-                plugins: [
-                  {
-                    removeViewBox: false
-                  }
-                ]
-              }
-            ]
-          ]
-        }
-      })  
-    )
-  } */
-
-
   return basePlugins;
 };
 
 module.exports = {
+  
    externals: {
     paths: PATHS
   },
+  
+ 
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: './js/main.js',
   output: {
     filename: `./js/${filename('js')}`,
     path: path.resolve(__dirname, 'app'),
-    publicPath: ''
+    assetModuleFilename: `./img/${filename('[ext]')}`,
+    
+    publicPath: '',
   },
   devServer: {
     historyApiFallback: true,
@@ -118,11 +100,14 @@ module.exports = {
   optimization: optimization(),
   plugins: plugins(),
   devtool: isProd ? false : 'source-map',
-  module: {
+
+  module: {    
     rules: [
+      
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: 'html-loader',
+        
       },
       {
         test: /\.css$/i,
@@ -156,24 +141,14 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      
       {
-        test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: `./img/${filename('[ext]')}`
-          }
-        }],
+        test: /\.png/,
+
+       type: 'asset/resource'
+        
       },
-      {
-        test: /\.(?:|woff|eot|ttf|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: `./fonts/${filename('[ext]')}`
-          }
-        }],
-      },
+      
       {
         test: /\.pug$/,
         use: [{
@@ -183,6 +158,7 @@ module.exports = {
           pretty: true
         }
        }],
+       
       }
     ]
   }
