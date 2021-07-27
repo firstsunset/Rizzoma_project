@@ -7,7 +7,8 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
-const filename_img = (ext) => (isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`); 
+//const filename_img = (ext) => (isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`); 
+//const filename_font = (ext) => (isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`); 
 
 module.exports = {
     context: path.resolve(__dirname, 'src'), 
@@ -17,7 +18,8 @@ module.exports = {
     output: {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
-        assetModuleFilename: `./images/${filename_img('[ext]')}`,
+        //assetModuleFilename: `./images/${filename_img('png')}`,
+        //assetModuleFilename: `./fonts/${filename_font('[ext]')}`,
         publicPath: ''
     },
 
@@ -66,9 +68,14 @@ module.exports = {
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',                
+            },
+            {
+
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        
                 type: 'asset/resource',
-              
-               
+        
             },
         
           ]
