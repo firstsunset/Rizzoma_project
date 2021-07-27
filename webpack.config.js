@@ -51,7 +51,7 @@ module.exports = {
                 options: {
 
                     // Disables attributes processing
-                    sources: false,
+                    sources: true,
                 },
                 
             }, 
