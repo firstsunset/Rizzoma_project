@@ -1,6 +1,11 @@
 import _ from 'lodash';
+//import $ from 'jquery';
 
-//import '../style.css';
 import '../scss/main.scss';
-//import '../images/logo_group.png';
-import '../scss/fonts.scss';
+
+
+//import '../index.html';
+
+
+//$('body').css('color','red');
+

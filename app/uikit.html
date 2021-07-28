@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Toxin</title>
+    <style>
+       @import './fonts.scss';
+@import './vendor';
+@import './settings';
+
+
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #E5E5E5;
+    margin: 0;
+    padding: 0;
+    font-family: 'MontserratRegular';
+   
+}
+
+.logogroup {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-top: 3rem;
+    margin-bottom: 6.2rem;
+    margin-left: 3rem;
+}
+.header {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 7rem;
+    color: #8f90a0;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    
+
+}
+
+.header_body {
+    display: flex;
+    
+    margin-top: auto;
+    margin-left: 14rem;
+    margin-right: 14rem;   
+}
+
+.header_logo {
+    width: 10.569rem;
+    height: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+       
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 28.431rem;
+    margin-top: 2.6rem;
+    margin-bottom: 2.6rem;
+    
+    
+}
+
+.nav-item {
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 14px;
+    padding-right: 2rem;
+    list-style-type: none;
+   
+    
+    
+}
+.nav-link {
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.5);
+}
+.nav-link-about {
+    color: rgba(31, 32, 65, 0.75);
+    font-family: 'MontserratRegular', sans-serif;
+    font-weight: bold;
+    
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+    font-family: 'MontserratRegular', sans-serif;
+    font-size: 14px;
+    
+}
+.dropbtn {
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+    color: #8f90a0;
+    
+
+}
+
+
+.headerbtn {
+  border: 0.2rem solid transparent;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  position: relative;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-radius: 2.2rem;
+  overflow: hidden;
+  
+}
+
+.headerbtn-log-in {
+    width: 8.7rem;
+    height: 3.4rem;
+    background: #FFFFFF;
+    color: #BC9CFF;
+    position: relative;
+    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 1;
+
+   
+    font-family: 'MontserratRegular', sans-serif;
+    font-weight: bold;
+    font-size: 1,2rem;
+    
+   
+    
+    
+}
+
+.headerbtn-sign-up {
+    width: 19.6rem;
+    height: 3.4rem;
+    
+    border-radius: 2.2rem;
+    color: #fff;
+    position: relative;
+    border:none;
+    font-family: 'MontserratRegular', sans-serif;
+    font-weight: bold;
+    font-size: 1,2rem;
+    
+}
+
+.footer {
+    font-family:'MontserratRegular';
+}
+    </style>
+  <script defer="defer" src="./js/main.js"></script><link href="./css/main.css" rel="stylesheet"></head>
+  <body>
+    <div class="logogroup"> <a href="#"><img src="c2a93d6ae04f381031de.svg" alt="logo_group"></a></div>
+<header> 
+  <div class="header"> 
+    <div class="header_body">
+      <div class="header_logo"> <a href="#"><img src="c2a93d6ae04f381031de.svg" alt="Logo"></a></div>
+      <nav> 
+        <ul class="nav">
+          <li class="nav-item"> <a class="nav-link nav-link-about" href="">О нас</a></li>
+          <li class="nav-item"> 
+            <div class="dropdown"> 
+              <button class="dropbtn">Услуги <img class="arrow" src="e85954bc6e43e8dff6e0.svg" alt="arrow"></button>
+            </div>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="">Вакансии</a></li>
+          <li class="nav-item"> <a class="nav-link" href="">Новости</a></li>
+          <li class="nav-item"> 
+            <div class="dropdown"> 
+              <button class="dropbtn">Соглашения<img class="arrow" src="e85954bc6e43e8dff6e0.svg" alt="arrow"></button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <button class="headerbtn headerbtn-log-in">ВОЙТИ</button>
+      <button class="headerbtn headerbtn-sign-up">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+    </div>
+  </div>
+</header>
+  </body>
+</html>
