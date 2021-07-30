@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <title>Toxin</title>
     <style>
-       @import './fonts.scss';
-@import './vendor';
-@import './settings';
+       @import 'fonts';
+@import 'settings';
+@import 'header';
+
 
 
 
@@ -27,125 +28,7 @@ body {
     margin-bottom: 62px;
     margin-left: 30px;
 }
-.header {
-    background-color: #FFFFFF;
-    width: 100%;
-    height: 70px;
-    color: #8f90a0;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    
 
-}
-
-.header_body {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-    //margin-left: 14rem;
-    //margin-right: 14rem;   
-}
-
-.header_logo {
-  //  width: 10.569rem;
-  //  height: 4rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    
-       
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    width: 447px;
-    height: 21px;
-    margin-left: 264.31px;
-    margin-top: 26px;
-    margin-bottom: 26px;
-    padding-left: 0px;
-    padding-right: 0px;
-    font-size: 14px;
-    
-    
-}
-
-.nav-item {
-  //  padding-right: 2rem;
-    list-style-type: none;
-    padding-right: 0px;
-   
-        
-    
-}
-.nav-item-text {
-   padding-right: 0px;
-   
-}
-.nav-link {
-    text-decoration: none;
-    color: rgba(31, 32, 65, 0.5);
-    font-family: 'MontserratRegular';
-    font-style: normal;
-}
-
-
-.nav-link-about {
-    color: rgba(31, 32, 65, 0.75);
-    font-family: 'MontserratBold';
-   // line-height: 17px;
-
-    
-}
-
-.nav-arrow {
-    margin-left: 6px;
-    margin-right: 6px;
-}
-
-
-.headerbtn {
-    border-radius: 100rem;
-    margin-top: 18px;
-    margin-bottom: 18px;
-   // box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-    border: solid 2px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: 2px 1000px 1px #FFFFFF inset;
-    font-family: 'MontserratBold';
-    font-size: 12px;
-    text-transform: uppercase;
-    
-  
-}
-
-.headerbtn-log-in {
-    width: 87px;
-    height: 34px;
-    color: #BC9CFF;
-    text-align: center;
-   // position: relative;
-  //  border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) 1;
-     
-}
-
-.headerbtn-sign-up {
-    width: 196px;
-    height: 34px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    box-shadow: none;
-    color: #FFFFFF;
-    position: relative;
-    border:none;
-   
-   
-    
-}
-
-.footer {
-    font-family:'MontserratRegular';
-}
     </style>
   <script defer="defer" src="./js/main.js"></script><link href="./css/main.css" rel="stylesheet"></head>
   <body>
@@ -174,5 +57,90 @@ body {
     </div>
   </div>
 </header>
+<header> 
+  <div class="header"> 
+    <div class="container">
+      <div class="header_body">
+        <div class="header_logo"> <a href="#"><img src="37dcbdff522b4259045e.svg" alt="Logo"></a></div>
+        <nav> 
+          <ul class="nav-login">
+            <li class="nav-item"> <a class="nav-link nav-link-about" href="">О нас</a></li>
+            <li class="nav-item"> <a class="nav-link" href="">Услуги</a><img class="nav-arrow" src="e85954bc6e43e8dff6e0.svg" alt="arrow"></li>
+            <li class="nav-item">
+              <div class="nav-item-text"><a class="nav-link" href="">Вакансии</a></div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-item-text"><a class="nav-link" href="">Новости</a></div>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="">Соглашения<img class="nav-arrow" src="e85954bc6e43e8dff6e0.svg" alt="arrow"></a></li>
+            <li class="nav-item"> 
+              <div class="nav-lin vl"></div>
+            </li>
+            <li class="nav-item"> 
+              <div class="nav-link">Юлий Цезарь</div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<footer> 
+  <div class="footer"> 
+    <div class="container"> 
+      <div class="footer_body">
+        <div class="footer_section-1">
+          <div class="col-xs-12 col-md-4 col-lg-4">
+            <div class="footer-item">
+              <div class="footer_logo"> <a href="#"><img src="37dcbdff522b4259045e.svg" alt="Logo"></a></div>
+              <div class="footer_logo_text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+            </div>
+            <div class="footer-item">
+              <ul class="footer-list"> 
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Навигация</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">О нас </a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Новости</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Служба поддержки</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Услуги</a></li>
+              </ul>
+            </div>
+            <div class="footer-item">
+              <ul class="footer-list"> 
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">О нас</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">О сервисе </a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Наша команда</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Вакансии</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Инвесторы</a></li>
+              </ul>
+            </div>
+            <div class="footer-item">
+              <ul class="footer-list"> 
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Служба поддержки</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Соглашения </a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Сообщества</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Связь с нами                                </a></li>
+              </ul>
+            </div>
+            <div class="footer-item">
+              <ul class="footer-list"> 
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Подписка</a></li>
+                <li class="footer-list__item"> <a class="footer-list__link" href="#">Получайте специальные предложения и новости сервиса </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer_section-2">
+          <div class="copyright_bar">Copyright © 2018 Toxin отель. Все права защищены.
+            <ul>
+              <li> <a href=""> </a><img src="680551ca8b147d9593a9.svg" alt="twitter"></li>
+              <li> <a href=""> </a><img src="d18da88dc7aa6e08514e.svg" alt="facebook"></li>
+              <li> <a href=""> </a><img src="c54ef15fbdc6cd69b00a.svg" alt="instagram"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
   </body>
 </html>
