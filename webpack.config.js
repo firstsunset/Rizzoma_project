@@ -57,7 +57,7 @@ module.exports = {
 
     devServer: {
         historyApiFallback: true,
-        contentBase: path.resolve(__dirname, 'app'),
+       // contentBase: path.resolve(__dirname, 'app'),
         open: true,
         compress: true,
         hot: true,
@@ -69,7 +69,7 @@ module.exports = {
 
           template: `${PAGES_DIR}/${page}`,
     
-          filename: `./${page.replace(/\.pug/, '.html')}`,
+          filename: `./${page.replace(/\.pug/,'.html')}`,
           minify: {
             collapseWhitespace: isProd
         }

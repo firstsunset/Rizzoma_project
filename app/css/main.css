@@ -358,64 +358,69 @@ template {
   font-family: "MontserratRegular";
   src: url(../f5d6b5bf17165e78dc3b.woff) format("woff"), url(../3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../4157e8a85b69c65af9b7.svg) format("svg");
 }
-html {
-  box-sizing: border-box;
+@font-face {
+  font-family: "MontserratBold";
+  src: url(../0f78db24da2c5f98591a.woff) format("woff"), url(../079ca05d3ded9bc107ab.ttf) format("truetype"), url(../946d834c14da9a5a8710.svg) format("svg");
 }
+/*html {
+    box-sizing: border-box;
+  }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 
-body {
-  overflow-anchor: none;
-  font-family: "asd", sans-serif;
-  background-color: var(--color-white);
-  scroll-behavior: smooth;
-}
+  body {
+    overflow-anchor: none;
+    font-family: "asd", sans-serif;
+    background-color: var(--color-white);
+    scroll-behavior: smooth;
+  }
 
-img {
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .site-container {
+    overflow: hidden;
+  }
+
+  .is-hidden {
+    display: none !important; // stylelint-disable-line declaration-no-important
+  }
+
+  /*.visually-hidden {
+    @include visually-hidden;
+  }
+
+  .btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .list-reset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }*/
+.container {
+  margin: 0 140px;
+  padding: 0 0;
+  width: 1160px;
   max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.site-container {
-  overflow: hidden;
-}
-
-.is-hidden {
-  display: none !important;
-}
-
-/*.visually-hidden {
-  @include visually-hidden;
-}*/
-.btn-reset {
-  border: none;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.list-reset {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
-}
-
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
-}
+/* .js-focus-visible :focus:not(.focus-visible) {
+   outline: none;
+ }*/
 
 /*# sourceMappingURL=main.css.map*/

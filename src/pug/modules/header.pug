@@ -1,26 +1,27 @@
 header 
     div.header 
-        .header_body
-            .header_logo 
-                a(href="#"): img(src=require("../../images/logo_group.svg"), alt="Logo")
-            nav 
-                ul.nav
-                    li.nav-item 
-                        a(href="").nav-link.nav-link-about О нас
-                    li.nav-item 
-                        .dropdown 
-                            button.dropbtn Услуги 
-                                img.arrow(src=require("../../images/expand_more.svg"), alt="arrow")
-                    li.nav-item 
-                        a(href="").nav-link Вакансии
-                    li.nav-item 
-                        a(href="").nav-link Новости
-                    li.nav-item 
-                        .dropdown 
-                            button.dropbtn Соглашения
-                                img.arrow(src=require("../../images/expand_more.svg"), alt="arrow")
-            button.headerbtn.headerbtn-log-in ВОЙТИ
-            button.headerbtn.headerbtn-sign-up ЗАРЕГИСТРИРОВАТЬСЯ
+        .container
+            .header_body
+                .header_logo 
+                    a(href="#"): img(src=require("../../images/logo.svg"), alt="Logo")
+                nav 
+                    ul.nav
+                        li.nav-item 
+                            a(href="").nav-link.nav-link-about О нас
+                        li.nav-item 
+                            a(href="").nav-link Услуги
+                            img.arrow(src=require("../../images/arrow.svg"), alt="arrow")
+                        li.nav-item
+                            .nav-item-text
+                                a(href="").nav-link Вакансии
+                        li.nav-item
+                            .nav-item-text
+                                a(href="").nav-link Новости
+                        li.nav-item 
+                            a(href="").nav-link Соглашения
+                                    img.arrow(src=require("../../images/arrow.svg"), alt="arrow")
+                button.headerbtn.headerbtn-log-in ВОЙТИ
+                button.headerbtn.headerbtn-sign-up ЗАРЕГИСТРИРОВАТЬСЯ
 
                         
 

@@ -1,4 +1,4 @@
-html {
+/*html {
     box-sizing: border-box;
   }
   
@@ -34,7 +34,7 @@ html {
   
   /*.visually-hidden {
     @include visually-hidden;
-  }*/
+  }
   
   .btn-reset {
     border: none;
@@ -47,14 +47,15 @@ html {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+  }*/
   
   .container {
-    margin: 0 auto;
-    padding: 0 15px;
-    max-width: 1200px;
+    margin: 0 140px;
+    padding: 0 0;
+    width: 1160px;
+    max-width: 100%;
   }
   
-  .js-focus-visible :focus:not(.focus-visible) {
+ /* .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
-  }
+  }*/
