@@ -17213,10 +17213,10 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./scss/main.scss":
-/*!************************!*\
-  !*** ./scss/main.scss ***!
-  \************************/
+/***/ "./pages/uikit/uikit.scss":
+/*!********************************!*\
+  !*** ./pages/uikit/uikit.scss ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17322,19 +17322,18 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!*********************!*\
-  !*** ./js/index.js ***!
-  \*********************/
+/*!******************************!*\
+  !*** ./pages/uikit/uikit.js ***!
+  \******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ "./scss/main.scss");
+/* harmony import */ var _uikit_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./uikit.scss */ "./pages/uikit/uikit.scss");
  //import $ from 'jquery';
 
- //import '../index.html';
-//$('body').css('color','red');
+ //$('body').css('color','red');
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=uikit.js.map

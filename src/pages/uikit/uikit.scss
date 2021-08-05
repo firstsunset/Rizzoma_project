@@ -1,0 +1,40 @@
+//@import '../../../scss/vendor';
+//@import '../../../scss/fonts';
+@import '~normalize.css';
+@import '~flexboxgrid2';
+@import '../../modules/header/header';
+@import '../../modules/header-login/header-login';
+@import '../../modules/footer/footer';
+
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url("../../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"), 
+    url("../../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype"),
+    url("../../fonts/Montserrat-Regular/Montserrat-Regular.svg") format("svg");
+  }
+  @font-face {
+    font-family: 'MontserratBold';
+    src: url("../../fonts/Montserrat-Bold/Montserrat-Bold.woff") format("woff"), 
+    url("../../fonts/Montserrat-Bold/Montserrat-Bold.ttf") format("truetype"),
+    url("../../fonts/Montserrat-Bold/Montserrat-Bold.svg") format("svg");
+  }
+
+
+
+
+
+body {
+    background-color: #F4F4F6;
+    margin: 0;
+    padding: 0;
+   
+   
+}
+
+.logogroup {
+    width: 48px;
+    height: 48px;
+    margin-top: 30px;
+    margin-bottom: 62px;
+    margin-left: 30px;
+}

@@ -351,9 +351,9 @@ template {
   display: none;
 }
 
-/*!***********************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/main.scss ***!
-  \***********************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/uikit/uikit.scss ***!
+  \*******************************************************************************************************************/
 .container {
   box-sizing: border-box;
   margin-left: auto;
@@ -1680,73 +1680,6 @@ template {
     display: none;
   }
 }
-@font-face {
-  font-family: "MontserratRegular";
-  src: url(../f5d6b5bf17165e78dc3b.woff) format("woff"), url(../3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../4157e8a85b69c65af9b7.svg) format("svg");
-}
-@font-face {
-  font-family: "MontserratBold";
-  src: url(../0f78db24da2c5f98591a.woff) format("woff"), url(../079ca05d3ded9bc107ab.ttf) format("truetype"), url(../946d834c14da9a5a8710.svg) format("svg");
-}
-/*html {
-    box-sizing: border-box;
-  }
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-
-  body {
-    overflow-anchor: none;
-    font-family: "asd", sans-serif;
-    background-color: var(--color-white);
-    scroll-behavior: smooth;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .site-container {
-    overflow: hidden;
-  }
-
-  .is-hidden {
-    display: none !important; // stylelint-disable-line declaration-no-important
-  }
-
-  /*.visually-hidden {
-    @include visually-hidden;
-  }
-
-  .btn-reset {
-    border: none;
-    padding: 0;
-    background: transparent;
-    cursor: pointer;
-  }
-
-  .list-reset {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }*/
-/*.container {
-  margin: 0 140px;
-  padding: 0 0;
-  width: 1160px;
-  max-width: 100%;
-}*/
-/* .js-focus-visible :focus:not(.focus-visible) {
-   outline: none;
- }*/
 .header {
   background-color: #FFFFFF;
   width: 100%;
@@ -1931,6 +1864,14 @@ template {
   height: 30px;
 }
 
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(..\../f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../4157e8a85b69c65af9b7.svg) format("svg");
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url(..\../0f78db24da2c5f98591a.woff) format("woff"), url(..\../079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../946d834c14da9a5a8710.svg) format("svg");
+}
 .footer {
   background-color: #FFFFFF;
   width: 100%;
@@ -1976,6 +1917,14 @@ template {
   line-height: 24px;
 }
 
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(..\../f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../4157e8a85b69c65af9b7.svg) format("svg");
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url(..\../0f78db24da2c5f98591a.woff) format("woff"), url(..\../079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../946d834c14da9a5a8710.svg) format("svg");
+}
 body {
   background-color: #F4F4F6;
   margin: 0;
@@ -1990,4 +1939,4 @@ body {
   margin-left: 30px;
 }
 
-/*# sourceMappingURL=main.css.map*/
+/*# sourceMappingURL=uikit.css.map*/

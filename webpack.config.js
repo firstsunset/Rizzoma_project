@@ -4,7 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const fs =require('fs');
+//const fs =require('fs');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 
 
@@ -20,41 +20,45 @@ const PATHS = {
   app: path.join(__dirname, 'app'),
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+//const PAGES_DIR = `${PATHS.src}/pages/`;
 
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
-/*const optimization = () => {
-  const configObj = {
-    splitChunks: {
-      chunks: 'all'
-    }
-  };
+//const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
-  if (isProd) {
-    configObj.minimizer = [
-      new CssMinimizerPlugin()
-    ];
-  }
 
-  return configObj;
-};*/
 module.exports = {
     externals: {
     paths: PATHS
   },
     context: path.resolve(__dirname, 'src'), 
     mode: 'development',
-    entry: './js/index.js',
-    
+    entry: {
+      registration: '/pages/registration/registration.js',
+      uikit: '/pages/uikit/uikit.js',
+      
+    },
+  
+       
     output: {
-        filename: `./js/${filename('js')}`,
+        filename: `js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
+        //?????
+        clean: true,
        // assetModuleFilename: `./images/${filename_img('[ext]')}`,
        // assetModuleFilename: `./fonts/${filename_font('[ext]')}`,
         publicPath: ''
     },
-
+    optimization: {
+      minimize: true,
+      minimizer: [
+        
+       /* new TerserPlugin({
+          parallel: true
+        }),*/
+        
+        //new CssMinimizerPlugin()
+      ]
+    },
     devServer: {
         historyApiFallback: true,
        // contentBase: path.resolve(__dirname, 'app'),
@@ -65,16 +69,20 @@ module.exports = {
       }, 
      // optimization: optimization(),
       plugins: [
-        ...PAGES.map(page => new HtmlWebpackPlugin({
-
-          template: `${PAGES_DIR}/${page}`,
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/pages/registration/registration.pug'),
+          inject: true,
+          chunks: ['registration'],
+          filename: 'registration.html'
+        }),
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/pages/uikit/uikit.pug'),
+            inject: true,
+            chunks: ['uikit'],
+            filename: 'uikit.html'
+        }),
     
-          filename: `./${page.replace(/\.pug/,'.html')}`,
-          minify: {
-            collapseWhitespace: isProd
-        }
-    
-        })),
+        
         new HtmlWebpackPugPlugin({
           adjustIndent: true
         }),
@@ -117,9 +125,7 @@ module.exports = {
               test: /\.pug$/,
               use: [{
                 loader: 'pug-loader',
-              options: {
-                //name: `./${filename('[ext]')}`,
-                name: `./pug/${filename('[ext]')}`,
+                options: {
                 pretty: true,
                 sources: true,
               }
