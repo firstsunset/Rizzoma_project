@@ -27,6 +27,7 @@ const PATHS = {
 
 
 module.exports = {
+    
     externals: {
     paths: PATHS
   },
@@ -44,8 +45,8 @@ module.exports = {
         path: path.resolve(__dirname, 'app'),
         //?????
         clean: true,
-       // assetModuleFilename: `./images/${filename_img('[ext]')}`,
-       // assetModuleFilename: `./fonts/${filename_font('[ext]')}`,
+        assetModuleFilename: `./images/${filename_img('[ext]')}`,
+        assetModuleFilename: `./fonts/${filename_font('[ext]')}`,
         publicPath: ''
     },
     optimization: {
@@ -162,9 +163,14 @@ module.exports = {
                   ],
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+                test: /\.(ico|gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
-                                   
+                generator: {
+                  filename: 'images/[hash][ext]'
+                },
+                exclude: path.resolve(__dirname, 'src/fonts')
+               
+                                            
             },
             
             {
@@ -172,6 +178,11 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|svg)$/i,
         
                 type: 'asset/resource',
+                include: path.resolve(__dirname, 'src/fonts'),
+                generator: {
+                  filename: 'fonts/[hash][ext]'
+                },
+
               
             },
         

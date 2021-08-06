@@ -1680,6 +1680,14 @@ template {
     display: none;
   }
 }
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(..\../fonts/f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../fonts/3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../fonts/4157e8a85b69c65af9b7.svg) format("svg");
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url(..\../fonts/0f78db24da2c5f98591a.woff) format("woff"), url(..\../fonts/079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../fonts/946d834c14da9a5a8710.svg) format("svg");
+}
 .header {
   background-color: #FFFFFF;
   width: 100%;
@@ -1769,6 +1777,14 @@ template {
   border: none;
 }
 
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(..\../fonts/f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../fonts/3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../fonts/4157e8a85b69c65af9b7.svg) format("svg");
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url(..\../fonts/0f78db24da2c5f98591a.woff) format("woff"), url(..\../fonts/079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../fonts/946d834c14da9a5a8710.svg) format("svg");
+}
 .header {
   background-color: #FFFFFF;
   width: 100%;
@@ -1866,11 +1882,11 @@ template {
 
 @font-face {
   font-family: "MontserratRegular";
-  src: url(..\../f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../4157e8a85b69c65af9b7.svg) format("svg");
+  src: url(..\../fonts/f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../fonts/3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../fonts/4157e8a85b69c65af9b7.svg) format("svg");
 }
 @font-face {
   font-family: "MontserratBold";
-  src: url(..\../0f78db24da2c5f98591a.woff) format("woff"), url(..\../079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../946d834c14da9a5a8710.svg) format("svg");
+  src: url(..\../fonts/0f78db24da2c5f98591a.woff) format("woff"), url(..\../fonts/079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../fonts/946d834c14da9a5a8710.svg) format("svg");
 }
 .footer {
   background-color: #FFFFFF;
@@ -1917,14 +1933,6 @@ template {
   line-height: 24px;
 }
 
-@font-face {
-  font-family: "MontserratRegular";
-  src: url(..\../f5d6b5bf17165e78dc3b.woff) format("woff"), url(..\../3cd786652b8a2e9d41f2.ttf) format("truetype"), url(..\../4157e8a85b69c65af9b7.svg) format("svg");
-}
-@font-face {
-  font-family: "MontserratBold";
-  src: url(..\../0f78db24da2c5f98591a.woff) format("woff"), url(..\../079ca05d3ded9bc107ab.ttf) format("truetype"), url(..\../946d834c14da9a5a8710.svg) format("svg");
-}
 body {
   background-color: #F4F4F6;
   margin: 0;
