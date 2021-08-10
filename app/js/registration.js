@@ -17213,6 +17213,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./pages/registration/fonts.scss":
+/*!***************************************!*\
+  !*** ./pages/registration/fonts.scss ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./pages/registration/registration.scss":
 /*!**********************************************!*\
   !*** ./pages/registration/registration.scss ***!
@@ -17329,7 +17342,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _registration_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./registration.scss */ "./pages/registration/registration.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./pages/registration/fonts.scss");
  //import $ from 'jquery';
+
 
 
 })();

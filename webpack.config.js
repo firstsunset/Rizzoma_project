@@ -12,18 +12,13 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
-const filename_img = (ext) => (isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`); 
+//const filename_img = (ext) => (isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`); 
 const filename_font = (ext) => (isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`); 
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
   app: path.join(__dirname, 'app'),
 }
-
-//const PAGES_DIR = `${PATHS.src}/pages/`;
-
-
-//const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 
 module.exports = {
@@ -34,8 +29,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src'), 
     mode: 'development',
     entry: {
-      registration: '/pages/registration/registration.js',
-      uikit: '/pages/uikit/uikit.js',
+      registration: PATHS.src + '/pages/registration/registration.js',
+      uikit: PATHS.src + '/pages/uikit/uikit.js',
       
     },
   
@@ -45,31 +40,33 @@ module.exports = {
         path: path.resolve(__dirname, 'app'),
         //?????
         clean: true,
-        assetModuleFilename: `./images/${filename_img('[ext]')}`,
-        assetModuleFilename: `./fonts/${filename_font('[ext]')}`,
+       // assetModuleFilename: `./images/${filename_img('[ext]')}`,
+       // assetModuleFilename: `./fonts/${filename_font('[ext]')}`,
         publicPath: ''
     },
-    optimization: {
+    /*optimization: {
       minimize: true,
       minimizer: [
         
-       /* new TerserPlugin({
-          parallel: true
-        }),*/
-        
-        //new CssMinimizerPlugin()
+       new CssMinimizerPlugin()
       ]
-    },
+      splitChunks: {
+        chunks: 'all'
+      }
+     
+    },*/
+    mode: 'development',
     devServer: {
-        historyApiFallback: true,
-       // contentBase: path.resolve(__dirname, 'app'),
-        open: true,
-        compress: true,
-        hot: true,
-        port: 3000,
+      historyApiFallback: true,
+      contentBase: path.resolve(__dirname, 'app'),
+      open: true,
+      compress: true,
+      hot: true,
+      port: 3000,
       }, 
-     // optimization: optimization(),
+    // optimization: optimization(),
       plugins: [
+        
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, 'src/pages/registration/registration.pug'),
           inject: true,
@@ -87,13 +84,7 @@ module.exports = {
         new HtmlWebpackPugPlugin({
           adjustIndent: true
         }),
-      /*  new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/index.html'),
-            filename: 'index.html',
-            minify: {
-                collapseWhitespace: isProd
-            }
-        }),*/
+    
         new CleanWebpackPlugin (),
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`,
@@ -139,10 +130,14 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                          hmr: isDev //меняет css без перезвгрузки страницы hot в devServer
+                          hmr: isDev, 
+                          
+
                         },
                       },
-                      'css-loader'    
+                      
+                      'css-loader',
+                       
                 ],
             },
 
@@ -152,10 +147,9 @@ module.exports = {
                     {
                       loader: MiniCssExtractPlugin.loader,
                       options: {
-                        publicPath: (resourcePath, context) => {
-                          return path.relative(path.dirname(resourcePath), context) + '/';
-                        },
-                      }
+                        publicPath: '../'
+                        
+                      },
                     },
                     
                     'css-loader',
@@ -168,7 +162,8 @@ module.exports = {
                 generator: {
                   filename: 'images/[hash][ext]'
                 },
-                exclude: path.resolve(__dirname, 'src/fonts')
+                exclude: path.resolve(__dirname, 'src/fonts'),
+                
                
                                             
             },
@@ -176,12 +171,11 @@ module.exports = {
             {
 
                 test: /\.(woff|woff2|eot|ttf|svg)$/i,
-        
                 type: 'asset/resource',
-                include: path.resolve(__dirname, 'src/fonts'),
                 generator: {
                   filename: 'fonts/[hash][ext]'
                 },
+                include: path.resolve(__dirname, 'src/fonts'),
 
               
             },
