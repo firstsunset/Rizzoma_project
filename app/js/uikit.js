@@ -17358,6 +17358,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./pages/uikit/settings.scss":
+/*!***********************************!*\
+  !*** ./pages/uikit/settings.scss ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./pages/uikit/uikit.scss":
 /*!********************************!*\
   !*** ./pages/uikit/uikit.scss ***!
@@ -17478,6 +17491,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");
 /* harmony import */ var _uikit_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./uikit.scss */ "./pages/uikit/uikit.scss");
 /* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./fonts.scss */ "./pages/uikit/fonts.scss");
+/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./settings.scss */ "./pages/uikit/settings.scss");
+
 
 
 

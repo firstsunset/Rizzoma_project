@@ -8,6 +8,7 @@ import '../../modules/header-login/header-login';
 
 import './uikit.scss';
 import './fonts.scss';
+import './settings.scss';
 
 
 

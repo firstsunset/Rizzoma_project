@@ -160,7 +160,7 @@ module.exports = {
                 test: /\.(ico|gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'images/[hash][ext]'
+                  filename: 'images/[name][hash][ext]'
                 },
                 exclude: path.resolve(__dirname, 'src/fonts'),
                 
@@ -173,7 +173,7 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|svg)$/i,
                 type: 'asset/resource',
                 generator: {
-                  filename: 'fonts/[hash][ext]'
+                  filename: 'fonts/[name][hash][ext]'
                 },
                 include: path.resolve(__dirname, 'src/fonts'),
 
