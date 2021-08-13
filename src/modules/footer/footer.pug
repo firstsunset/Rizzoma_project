@@ -2,54 +2,48 @@ footer
     .footer 
         .container 
            .footer_section-1
-                .col-xs-12.col-md-4.col-lg-2
-                    .footer-item.footer-item-logo
-                        .footer_logo 
-                           a(href="/mock-address/change-me"): img(src=require("./logo.svg"), alt="Logo")
-                        .footer_logo_text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                .col-xs-12.col-md-4.col-lg-2
-                    .footer-item.footer-item-nav
-                        ul.footer-list 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link.footer-list-link-bold Навигация
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link О нас 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Новости
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Служба поддержки
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Услуги
-                .col-xs-12.col-md-4.col-lg-2
-                    .footer-item.footer-item-about
-                        ul.footer-list 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link.footer-list-link-bold О нас
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link О сервисе 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Наша команда
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Вакансии
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Инвесторы
-                .col-xs-12.col-md-4.col-lg-2
-                    .footer-item.footer-item-support
-                        ul.footer-list 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link.footer-list-link-bold Служба поддержки
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Соглашения 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Сообщества
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Связь с нами   
-                .col-xs-12.col-md-4.col-lg-2                             
-                    .footer-item.footer-item-support-subscribe
-                        ul.footer-list 
-                            li.footer-list-item
-                                a(href="/mock-address/change-me").footer-list-link.footer-list-link-bold Подписка
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Получайте специальные предложения и новости сервиса 
-           
-        
+                .footer-item.footer-item-logo
+                    .footer_logo 
+                        a(href="/mock-address/change-me"): img(src=require("./logo.svg"), alt="Logo")
+                    .footer_logo_text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                .footer-item.footer-item-nav
+                    ul.footer-list 
+                        li.footer-list-item 
+                            .footer-list-link-bold Навигация
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link О нас 
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Новости
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Служба поддержки
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Услуги
+                .footer-item.footer-item-about
+                    ul.footer-list 
+                        li.footer-list-item 
+                            .footer-list-link-bold О нас
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link О сервисе 
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Наша команда
+                        li.footer-list-item 
+                             a(href="/mock-address/change-me").footer-list-link Вакансии
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Инвесторы
+                .footer-item.footer-item-support
+                    ul.footer-list 
+                        li.footer-list-item 
+                            .footer-list-link-bold Служба поддержки
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Соглашения 
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Сообщества
+                        li.footer-list-item 
+                            a(href="/mock-address/change-me").footer-list-link Связь с нами   
+                .footer-item.footer-item-subscribe
+                    h3.footer-subscribe-bold Подписка
+                    .footer-subscribe-text Получайте специальные предложения и новости сервиса
+                    form.footer-email(action="/mock-address/change-me") 
+                        input.input-text(type="email" name="emails" placeholder="Email")
+                        button.input-btn(type="submit") arrow_forward
+                        

@@ -27,6 +27,7 @@
     "html-webpack-pug-plugin": "^3.0.0",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
+    "material-design-icons": "^3.0.1",
     "mini-css-extract-plugin": "^2.1.0",
     "normalize.css": "^8.0.1",
     "path": "^0.12.7",

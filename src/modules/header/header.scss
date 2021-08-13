@@ -29,7 +29,6 @@
 
 .nav {
     display: flex;
-    justify-content: space-between;
     width: 447px;
     height: 21px;
     margin-left: 264.31px;
@@ -46,6 +45,7 @@
   //  padding-right: 2rem;
     list-style-type: none;
     padding-right: 0px;
+    margin-right: 20px;
    
         
     
@@ -59,6 +59,8 @@
     color: rgba(31, 32, 65, 0.5);
     font-family: 'MontserratRegular';
     font-style: normal;
+  //  width: 92px;
+ //   height: 18px;
 }
 
 
@@ -69,10 +71,20 @@
 
     
 }
-
+.nav-item-arrow {
+    width: 74px;
+    display: flex;
+       
+}
 .nav-arrow {
-    margin-left: 6px;
-    margin-right: 6px;
+    font-family: 'MaterialIcons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
 }
 
 
