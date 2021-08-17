@@ -2,14 +2,18 @@
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/footer/footer.scss ***!
   \***********************************************************************************************************************/
 .footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0;
   background-color: #FFFFFF;
-  max-width: 1920px;
   height: 443px;
+  width: 100%;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   font-family: "MontserratRegular";
 }
 
 .footer_section-1 {
+  position: relative;
   display: flex;
   flex-flow: nowrap;
   flex-direction: row;
@@ -18,8 +22,8 @@
   align-items: stretch;
   justify-content: start;
   padding-top: 100px;
-  max-width: 1440px;
-  min-height: 372px;
+  width: 100%;
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
 
 .footer-item-logo {
@@ -38,7 +42,7 @@
   padding-top: 20px;
   font-size: 14px;
   line-height: 24px;
-  color: black;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .footer-item-nav {
@@ -117,6 +121,7 @@
   font-family: "MontserratRegular";
   font-style: normal;
   font-weight: normal;
+  color: rgba(31, 32, 65, 0.75);
   font-size: 14px;
   line-height: 24px;
   padding-top: 0px;
@@ -128,7 +133,8 @@
   width: 260px;
   height: 44px;
   border: none;
-  border-radius: 4px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .input-text {
@@ -137,35 +143,64 @@
   height: 44px;
   font-size: 17px;
   padding: 0px;
-  padding-left: 0px;
+  padding-left: 15px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   background: #FFFFFF;
-}
-
-.input-text::placeholder {
-  padding-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
   font-family: "MontserratRegular";
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
 }
 
 .input-btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   font-family: "MaterialIcons";
   font-size: 24px;
-  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   padding: 2px;
   margin-left: 215px;
   margin-top: 2px;
   margin-bottom: 2px;
-  background: #FFFFFF;
   border: none;
   cursor: pointer;
+}
+
+.footer_section-2 {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 70px;
+  border: 1px solid rgba(31, 32, 65, 0.05);
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+  width: 100%;
+}
+
+.footer_section-2-text {
+  padding-right: 676px;
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.far.fa-twitter {
+  font-family: "FontAwesome";
 }
 /*!**********************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/footer/fonts.scss ***!
@@ -184,6 +219,14 @@
   font-weight: 400;
   src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
 }
+/*@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/FontAwesom/fa-brands-400.svg') format('svg'),
+  url('../../fonts/FontAwesom/fa-brands-400.woff') format('woff'),
+  url('../../fonts/FontAwesom/fa-brands-400.ttf') format('truetype');
+}*/
 /*!***********************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/header/header.scss ***!
   \***********************************************************************************************************************/
@@ -266,6 +309,7 @@
   box-shadow: 2px 1000px 1px #FFFFFF inset;
   font-family: "MontserratBold";
   font-size: 12px;
+  line-height: 15px;
   text-transform: uppercase;
 }
 
