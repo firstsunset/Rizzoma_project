@@ -3,8 +3,29 @@
 
 
 
+
 body {
-    font-family: 'MontserratBold';
-    color:black;
-    font-size: 24px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+.content {
+    height: 684px;
+    padding-bottom: 453px;
+    margin-top: 0px;
+    background: url(image4.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+  //  background-attachment: scroll;
+    background-size: cover;
+    
+}
+.content-img {
+    max-width: 100%;
+ //   height: auto;
+      
 }
