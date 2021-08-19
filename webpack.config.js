@@ -84,6 +84,7 @@ module.exports = {
         new HtmlWebpackPugPlugin({
           adjustIndent: true
         }),
+        
     
         new CleanWebpackPlugin (),
         new MiniCssExtractPlugin({
@@ -154,7 +155,9 @@ module.exports = {
                     
                     'css-loader',
                     'sass-loader'
+                    
                   ],
+                  
             },
             {
                 test: /\.(ico|gif|png|jpg|jpeg|svg)$/i,
