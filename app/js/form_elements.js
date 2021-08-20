@@ -4477,62 +4477,6 @@
 
 /***/ }),
 
-/***/ "./modules/footer/footer.js":
-/*!**********************************!*\
-  !*** ./modules/footer/footer.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.scss */ "./modules/footer/footer.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/footer/fonts.scss");
-/* harmony import */ var _mixin_subscription_text_field_subscription_text_field__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../mixin/subscription_text_field/subscription_text_field */ "./modules/mixin/subscription_text_field/subscription_text_field.js");
-
-
-
-
-
-/***/ }),
-
-/***/ "./modules/header-login/header-login.js":
-/*!**********************************************!*\
-  !*** ./modules/header-login/header-login.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _header_login_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-login.scss */ "./modules/header-login/header-login.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/header-login/fonts.scss");
-
-
-
-
-/***/ }),
-
-/***/ "./modules/header/header.js":
-/*!**********************************!*\
-  !*** ./modules/header/header.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.scss */ "./modules/header/header.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/header/fonts.scss");
-
-
-
-
-/***/ }),
-
 /***/ "./modules/mixin/subscription_text_field/subscription_text_field.js":
 /*!**************************************************************************!*\
   !*** ./modules/mixin/subscription_text_field/subscription_text_field.js ***!
@@ -4543,6 +4487,21 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fonts.scss */ "./modules/mixin/subscription_text_field/fonts.scss");
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription_text_field.scss */ "./modules/mixin/subscription_text_field/subscription_text_field.scss");
+
+
+
+/***/ }),
+
+/***/ "./modules/mixin/text_field/text_field.js":
+/*!************************************************!*\
+  !*** ./modules/mixin/text_field/text_field.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_field.scss */ "./modules/mixin/text_field/text_field.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fonts.scss */ "./modules/mixin/text_field/fonts.scss");
 
 
 
@@ -21760,84 +21719,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./modules/footer/fonts.scss":
-/*!***********************************!*\
-  !*** ./modules/footer/fonts.scss ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/footer/footer.scss":
-/*!************************************!*\
-  !*** ./modules/footer/footer.scss ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/header-login/fonts.scss":
-/*!*****************************************!*\
-  !*** ./modules/header-login/fonts.scss ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/header-login/header-login.scss":
-/*!************************************************!*\
-  !*** ./modules/header-login/header-login.scss ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/header/fonts.scss":
-/*!***********************************!*\
-  !*** ./modules/header/fonts.scss ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/header/header.scss":
-/*!************************************!*\
-  !*** ./modules/header/header.scss ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./modules/mixin/subscription_text_field/fonts.scss":
 /*!**********************************************************!*\
   !*** ./modules/mixin/subscription_text_field/fonts.scss ***!
@@ -21864,10 +21745,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/uikit/fonts.scss":
-/*!********************************!*\
-  !*** ./pages/uikit/fonts.scss ***!
-  \********************************/
+/***/ "./modules/mixin/text_field/fonts.scss":
+/*!*********************************************!*\
+  !*** ./modules/mixin/text_field/fonts.scss ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21877,10 +21758,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/uikit/settings.scss":
-/*!***********************************!*\
-  !*** ./pages/uikit/settings.scss ***!
-  \***********************************/
+/***/ "./modules/mixin/text_field/text_field.scss":
+/*!**************************************************!*\
+  !*** ./modules/mixin/text_field/text_field.scss ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21890,10 +21771,36 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/uikit/uikit.scss":
-/*!********************************!*\
-  !*** ./pages/uikit/uikit.scss ***!
-  \********************************/
+/***/ "./pages/form_elements/fonts.scss":
+/*!****************************************!*\
+  !*** ./pages/form_elements/fonts.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./pages/form_elements/form_elements.scss":
+/*!************************************************!*\
+  !*** ./pages/form_elements/form_elements.scss ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./pages/form_elements/settings.scss":
+/*!*******************************************!*\
+  !*** ./pages/form_elements/settings.scss ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21999,21 +21906,19 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!******************************!*\
-  !*** ./pages/uikit/uikit.js ***!
-  \******************************/
+/*!**********************************************!*\
+  !*** ./pages/form_elements/form_elements.js ***!
+  \**********************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/@fortawesome/fontawesome-free/js/all */ "../node_modules/@fortawesome/fontawesome-free/js/all.js");
 /* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
-/* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");
-/* harmony import */ var _uikit_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./uikit.scss */ "./pages/uikit/uikit.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fonts.scss */ "./pages/uikit/fonts.scss");
-/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./settings.scss */ "./pages/uikit/settings.scss");
-
+/* harmony import */ var _form_elements_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form_elements.scss */ "./pages/form_elements/form_elements.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fonts.scss */ "./pages/form_elements/fonts.scss");
+/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./settings.scss */ "./pages/form_elements/settings.scss");
+/* harmony import */ var _modules_mixin_text_field_text_field__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/mixin/text_field/text_field */ "./modules/mixin/text_field/text_field.js");
+/* harmony import */ var _modules_mixin_subscription_text_field_subscription_text_field__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/mixin/subscription_text_field/subscription_text_field */ "./modules/mixin/subscription_text_field/subscription_text_field.js");
 
 
 
@@ -22025,4 +21930,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=uikit.js.map
+//# sourceMappingURL=form_elements.js.map

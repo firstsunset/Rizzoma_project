@@ -1,0 +1,19 @@
+include ../../modules/mixin/text_field/text_field
+include ../../modules/mixin/subscription_text_field/subscription_text_field
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title= "Toxin"
+      
+      
+    
+  body
+    div.logogroup 
+        a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group")
+    .container 
+        h3 Text Field
+        +text_field
+        h3 subscription text field
+        +subscription_text_field
