@@ -2,6 +2,8 @@ include ../../modules/mixin/text_field/text_field
 include ../../modules/mixin/subscription_text_field/subscription_text_field
 include ../../modules/mixin/dropdown/dropdown
 include ../../modules/mixin/plusminus/plusminus
+include ../../modules/mixin/dropbtn/dropbtn
+
 
 
 doctype html
@@ -25,12 +27,16 @@ html(lang="ru")
         h3 Dropdown
         +dropdown 
         p 
-        h3 plusminus 
-        +plusminus 
+        h3 Plusminus 
+        +plusminus
+        
+         
     script 
       include ../../modules/mixin/dropdown/script_dropdown.js
     script 
-      include ../../modules/mixin/plusminus/plusminus.js
+      include ../../modules/mixin/plusminus/script_plusminus.js
+    
+  
       
 
   

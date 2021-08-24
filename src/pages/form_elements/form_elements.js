@@ -14,6 +14,6 @@ import '../../modules/mixin/subscription_text_field/subscription_text_field';
 import '../../modules/mixin/dropdown/dropdown';
 import '../../modules/mixin/dropdown/script_dropdown';
 import '../../modules/mixin/plusminus/plusminus';
-import '../../modules/mixin/plusminus/plusminus';
+import '../../modules/mixin/plusminus/script_plusminus';
 
 

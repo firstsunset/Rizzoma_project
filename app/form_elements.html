@@ -20,32 +20,46 @@
       <p> </p>
       <h3>Dropdown</h3>
       <div class="dropdown">
-        <button class="dropbtn" onclick="myFunction()">Сколько гостей</button>
+        <div class="dropdown-form" onclick="myFunction()">
+          <button class="dropbtn-input">Сколько гостей</button>
+          <button class="dropbtn">expand_more</button>
+        </div>
         <div class="dropdown-content" id="myDropdown">
           <div class="iqdropdown-menu-option" data-id="item1">
-            <div class="iqdropdown-item">Взрослые</div>
-            <div class="input-group">
-              <input class="button-minus" type="button" value="-" data-field="quantity">
-              <input class="quantity-field" type="number" step="1" max="" value="1" name="quantity">
-              <input class="button-plus" type="button" value="+" data-field="quantity">
+            <label class="iqdropdown-item" for="">Взрослые</label>
+            <div class="number">
+              <input class="minus" id="minus" type="button" value="-" onclick="minus()">
+              <input class="plusminus-input" id="count" type="text" value="0">
+              <input class="plus" id="plus" type="button" value="+" onclick="plus()">
             </div>
           </div>
-          <div class="iqdropdown-menu-option" data-id="item1">
-            <div class="iqdropdown-item">Дети</div>
+          <div class="iqdropdown-menu-option" data-id="item2">
+            <label class="iqdropdown-item" for="">Дети</label>
+            <div class="number">
+              <input class="minus" id="minus" type="button" value="-" onclick="minus()">
+              <input class="plusminus-input" id="count" type="text" value="0">
+              <input class="plus" id="plus" type="button" value="+" onclick="plus()">
+            </div>
           </div>
-          <div class="iqdropdown-menu-option" data-id="item1">
-            <div class="iqdropdown-item">Младенцы</div>
+          <div class="iqdropdown-menu-option" data-id="item3">
+            <label class="iqdropdown-item" for="">Младенцы</label>
+            <div class="number">
+              <input class="minus" id="minus" type="button" value="-" onclick="minus()">
+              <input class="plusminus-input" id="count" type="text" value="0">
+              <input class="plus" id="plus" type="button" value="+" onclick="plus()">
+            </div>
           </div>
-          <button class="iqdropdown-menu-close">Применить</button>
-          <button class="iqdropdown-menu-close">Очистить</button>
+          <div class="iqdropdown-menu-buttons">
+            <button class="iqdropdown-menu-apply">Применить</button>
+          </div>
         </div>
       </div>
       <p> </p>
-      <h3>plusminus </h3>
-      <div class="number"> 
-        <label class="iqdropdown-item" for="">Взрослые <span class="minus">-</span>
-          <input type="text" value="1"><span class="plus">+</span>
-        </label>
+      <h3>Plusminus </h3>
+      <div class="number">
+        <input class="minus" id="minus" type="button" value="-" onclick="minus()">
+        <input class="plusminus-input" id="count" type="text" value="0">
+        <input class="plus" id="plus" type="button" value="+" onclick="plus()">
       </div>
     </div>
     <script>
@@ -71,33 +85,26 @@ function myFunction() {
     }
   }
 
-  
+ 
 
  
  
   
     </script>
     <script>
-       import './plusminus.scss';
-import $ from 'jquery';
-
-
-$(document).ready(function() {
-  $('.minus').click(function () {
-    var $input = $(this).parent().find('input');
-    var count = parseInt($input.val()) - 1;
-    count = count < 1 ? 1 : count;
-    $input.val(count);
-    $input.change();
-    return false;
-  });
-  $('.plus').click(function () {
-    var $input = $(this).parent().find('input');
-    $input.val(parseInt($input.val()) + 1);
-    $input.change();
-    return false;
-  });
-});
+       
+var count = 0;
+var countEl = document.getElementById("count");
+function plus(){
+    count++;
+    countEl.value = count;
+}
+function minus(){
+  if (count > 0) {
+    count--;
+    countEl.value = count;
+  }  
+}
     </script>
   </body>
 </html>

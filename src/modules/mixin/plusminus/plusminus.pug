@@ -1,6 +1,5 @@
 mixin plusminus
-    .number 
-        label(for="").iqdropdown-item Взрослые 
-            span.minus -
-            input(type='text' value='1')
-            span.plus +
+    .number
+        input#minus.minus(type='button' value='-' onclick='minus()')        
+        input#count.plusminus-input(type='text' value='0')
+        input#plus.plus(type='button' value='+' onclick='plus()')
