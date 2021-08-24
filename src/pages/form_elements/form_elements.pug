@@ -1,5 +1,8 @@
 include ../../modules/mixin/text_field/text_field
 include ../../modules/mixin/subscription_text_field/subscription_text_field
+include ../../modules/mixin/dropdown/dropdown
+include ../../modules/mixin/plusminus/plusminus
+
 
 doctype html
 html(lang="ru")
@@ -15,5 +18,20 @@ html(lang="ru")
     .container 
         h3 Text Field
         +text_field
+        p 
         h3 subscription text field
         +subscription_text_field
+        p 
+        h3 Dropdown
+        +dropdown 
+        p 
+        h3 plusminus 
+        +plusminus 
+    script 
+      include ../../modules/mixin/dropdown/script_dropdown.js
+    script 
+      include ../../modules/mixin/plusminus/plusminus.js
+      
+
+  
+    

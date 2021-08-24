@@ -11,11 +11,93 @@
       <form class="text_field_form" action="/mock-address/change-me">
         <input class="text_field_input" type="email" name="emails" placeholder="Email">
       </form>
+      <p> </p>
       <h3>subscription text field</h3>
       <form class="footer-email" action="/mock-address/change-me"> 
         <input class="input-text" type="email" name="emails" placeholder="Email">
         <button class="input-btn" type="submit">arrow_forward</button>
       </form>
+      <p> </p>
+      <h3>Dropdown</h3>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Сколько гостей</button>
+        <div class="dropdown-content" id="myDropdown">
+          <div class="iqdropdown-menu-option" data-id="item1">
+            <div class="iqdropdown-item">Взрослые</div>
+            <div class="input-group">
+              <input class="button-minus" type="button" value="-" data-field="quantity">
+              <input class="quantity-field" type="number" step="1" max="" value="1" name="quantity">
+              <input class="button-plus" type="button" value="+" data-field="quantity">
+            </div>
+          </div>
+          <div class="iqdropdown-menu-option" data-id="item1">
+            <div class="iqdropdown-item">Дети</div>
+          </div>
+          <div class="iqdropdown-menu-option" data-id="item1">
+            <div class="iqdropdown-item">Младенцы</div>
+          </div>
+          <button class="iqdropdown-menu-close">Применить</button>
+          <button class="iqdropdown-menu-close">Очистить</button>
+        </div>
+      </div>
+      <p> </p>
+      <h3>plusminus </h3>
+      <div class="number"> 
+        <label class="iqdropdown-item" for="">Взрослые <span class="minus">-</span>
+          <input type="text" value="1"><span class="plus">+</span>
+        </label>
+      </div>
     </div>
+    <script>
+       
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  
+
+ 
+ 
+  
+    </script>
+    <script>
+       import './plusminus.scss';
+import $ from 'jquery';
+
+
+$(document).ready(function() {
+  $('.minus').click(function () {
+    var $input = $(this).parent().find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+  });
+  $('.plus').click(function () {
+    var $input = $(this).parent().find('input');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+  });
+});
+    </script>
   </body>
 </html>

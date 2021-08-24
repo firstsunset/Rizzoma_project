@@ -1,0 +1,19 @@
+mixin dropdown
+    .dropdown
+      button.dropbtn(onclick='myFunction()') Сколько гостей
+      #myDropdown.dropdown-content
+        .iqdropdown-menu-option(data-id='item1')
+          .iqdropdown-item Взрослые
+          .input-group
+            input.button-minus(type='button' value='-' data-field='quantity')
+            input.quantity-field(type='number' step='1' max='' value='1' name='quantity')
+            input.button-plus(type='button' value='+' data-field='quantity')
+        .iqdropdown-menu-option(data-id='item1')
+          .iqdropdown-item Дети
+        .iqdropdown-menu-option(data-id='item1')
+          .iqdropdown-item Младенцы
+        button.iqdropdown-menu-close Применить
+        button.iqdropdown-menu-close Очистить
+
+
+       
