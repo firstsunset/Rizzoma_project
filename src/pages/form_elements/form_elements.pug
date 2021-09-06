@@ -3,6 +3,8 @@ include ../../modules/mixin/subscription_text_field/subscription_text_field
 include ../../modules/mixin/dropdown/dropdown
 include ../../modules/mixin/plusminus/plusminus
 include ../../modules/mixin/dropbtn/dropbtn
+include ../../modules/mixin/dropdown_room/dropdown_room
+include ../../modules/mixin/checkbox_list/checkbox_list
 
 
 
@@ -29,12 +31,22 @@ html(lang="ru")
         p 
         h3 Plusminus 
         +plusminus
+        p 
+        h3 Room dropdown 
+        +dropdown_room
+        p 
+        h3 Checkbox list 
+        +checkbox_list
         
          
     script 
       include ../../modules/mixin/dropdown/script_dropdown.js
-    script 
+    script(type='text/javascript') 
       include ../../modules/mixin/plusminus/script_plusminus.js
+    script(type='text/javascript') 
+      include ../../modules/mixin/dropdown_room/dropdown_room_script.js  
+    script(type='text/javascript') 
+      include ../../modules/mixin/checkbox_list/checkbox_list_script.js  
     
   
       

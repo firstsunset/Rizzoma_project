@@ -1,0 +1,8 @@
+mixin dropdown_room 
+    select#sel1.form-control(name='sellist1' style='width:auto' multiple)
+      option(value='' selected='' disabled='' hidden='') Choose here
+      option(value='1' selected) Спальни
+      option(value='2' selected) Кровати
+      option(value='3' selected) Ванные комнаты
+    button.btn.btn-primary(type='button' onclick='getSelectedValue()') Add
+    #displaydiv

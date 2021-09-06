@@ -4477,6 +4477,44 @@
 
 /***/ }),
 
+/***/ "./modules/mixin/checkbox_list/checkbox_list.js":
+/*!******************************************************!*\
+  !*** ./modules/mixin/checkbox_list/checkbox_list.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox_list.scss */ "./modules/mixin/checkbox_list/checkbox_list.scss");
+/* harmony import */ var _checkbox_list_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox_list_script */ "./modules/mixin/checkbox_list/checkbox_list_script.js");
+/* harmony import */ var _checkbox_list_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_checkbox_list_script__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./modules/mixin/checkbox_list/checkbox_list_script.js":
+/*!*************************************************************!*\
+  !*** ./modules/mixin/checkbox_list/checkbox_list_script.js ***!
+  \*************************************************************/
+/***/ (() => {
+
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+
+/***/ }),
+
 /***/ "./modules/mixin/dropdown/dropdown.js":
 /*!********************************************!*\
   !*** ./modules/mixin/dropdown/dropdown.js ***!
@@ -4527,6 +4565,70 @@ window.onclick = function (event) {
 
 /***/ }),
 
+/***/ "./modules/mixin/dropdown_room/dropdown_room.js":
+/*!******************************************************!*\
+  !*** ./modules/mixin/dropdown_room/dropdown_room.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _dropdown_room_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdown_room.scss */ "./modules/mixin/dropdown_room/dropdown_room.scss");
+/* harmony import */ var _dropdown_room_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown_room_script */ "./modules/mixin/dropdown_room/dropdown_room_script.js");
+/* harmony import */ var _dropdown_room_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dropdown_room_script__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./modules/mixin/dropdown_room/dropdown_room_script.js":
+/*!*************************************************************!*\
+  !*** ./modules/mixin/dropdown_room/dropdown_room_script.js ***!
+  \*************************************************************/
+/***/ (() => {
+
+/*function fun1() {
+    var sel = document.getElementById('mySelect').selectedIndex;
+    var options = document.getElementById('mySelect').options;
+    alert('выбрана' +options[sel].text);
+
+}*/
+function getSelectedValue() {
+  var e = document.getElementById("sel1");
+  var choiceValue = e.value; // to get value only
+
+  var choicetext = e.options[e.selectedIndex].text;
+  alert(choiceValue + " " + choicetext);
+  var newDiv = document.createElement('span');
+  newDiv.setAttribute("class", "badge badge-primary");
+  newDiv.innerHTML = choicetext + " ";
+  var spanDiv = document.createElement('i');
+  spanDiv.setAttribute("class", "fa fa-close");
+  spanDiv.setAttribute("onclick", 'closeDiv(this)'); //clsbtn.appendChild(spanDiv)
+
+  newDiv.appendChild(spanDiv);
+  var displaydiv = document.getElementById('displaydiv');
+  displaydiv.appendChild(newDiv);
+}
+
+function closeDiv(x) {
+  var parentDiv = x.parentNode.parentNode;
+  parentDiv.removeChild(x.parentNode);
+}
+
+function getSelection(o) {
+  if (!o.options) return "";
+  var selectedOptions = [];
+
+  for (var i = 0; i < o.options.length; i++) {
+    if (o.options[i].selected) selectedOptions.push(o.options[i].value);
+  }
+
+  return selectedOptions.join(",");
+}
+
+/***/ }),
+
 /***/ "./modules/mixin/plusminus/plusminus.js":
 /*!**********************************************!*\
   !*** ./modules/mixin/plusminus/plusminus.js ***!
@@ -4549,20 +4651,57 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************************/
 /***/ (() => {
 
-var count = 0;
+/*var count = 0;
 var countEl = document.getElementById("count");
-
-function plus() {
-  count++;
-  countEl.value = count;
+function plus(){
+    count++;
+    countEl.value = count;
 }
-
-function minus() {
+function minus(){
   if (count > 0) {
     count--;
     countEl.value = count;
+  }  
+}*/
+var value,
+    quantity = document.getElementsByClassName('number');
+
+function createBindings(numberContainer) {
+  var count = numberContainer.getElementsByClassName('count')[0];
+  var plus = numberContainer.getElementsByClassName('plus')[0];
+  var minus = numberContainer.getElementsByClassName('minus')[0];
+  plus.addEventListener('click', function () {
+    plusValue(count);
+  });
+  minus.addEventListener('click', function () {
+    minusValue(count);
+  });
+}
+
+function init() {
+  for (var i = 0; i < quantity.length; i++) {
+    createBindings(quantity[i]);
   }
 }
+
+;
+
+function plusValue(count) {
+  value = parseInt(count.value, 10);
+  console.log(count, count.value);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  count.value = value;
+}
+
+function minusValue(count) {
+  value = parseInt(count.value, 10);
+  value = isNaN(value) ? 0 : value;
+  if (value > 0) value--;
+  count.value = value;
+}
+
+init();
 
 /***/ }),
 
@@ -31856,6 +31995,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./modules/mixin/checkbox_list/checkbox_list.scss":
+/*!********************************************************!*\
+  !*** ./modules/mixin/checkbox_list/checkbox_list.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/mixin/dropdown/dropdown.scss":
 /*!**********************************************!*\
   !*** ./modules/mixin/dropdown/dropdown.scss ***!
@@ -31873,6 +32025,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************!*\
   !*** ./modules/mixin/dropdown/fonts.scss ***!
   \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/mixin/dropdown_room/dropdown_room.scss":
+/*!********************************************************!*\
+  !*** ./modules/mixin/dropdown_room/dropdown_room.scss ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32103,6 +32268,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mixin_plusminus_plusminus__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/mixin/plusminus/plusminus */ "./modules/mixin/plusminus/plusminus.js");
 /* harmony import */ var _modules_mixin_plusminus_script_plusminus__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/plusminus/script_plusminus */ "./modules/mixin/plusminus/script_plusminus.js");
 /* harmony import */ var _modules_mixin_plusminus_script_plusminus__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_plusminus_script_plusminus__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _modules_mixin_dropdown_room_dropdown_room__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/mixin/dropdown_room/dropdown_room */ "./modules/mixin/dropdown_room/dropdown_room.js");
+/* harmony import */ var _modules_mixin_dropdown_room_dropdown_room_script__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../modules/mixin/dropdown_room/dropdown_room_script */ "./modules/mixin/dropdown_room/dropdown_room_script.js");
+/* harmony import */ var _modules_mixin_dropdown_room_dropdown_room_script__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_dropdown_room_dropdown_room_script__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../modules/mixin/checkbox_list/checkbox_list */ "./modules/mixin/checkbox_list/checkbox_list.js");
+/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../modules/mixin/checkbox_list/checkbox_list_script */ "./modules/mixin/checkbox_list/checkbox_list_script.js");
+/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_15__);
+
+
+
+
 
 
 

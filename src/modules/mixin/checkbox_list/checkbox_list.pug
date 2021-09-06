@@ -1,0 +1,26 @@
+mixin checkbox_list 
+    form
+      .multiselect
+        .selectBox(onclick='showCheckboxes()')
+          select
+            option Дополнительные удобства
+          .overSelect
+        #checkboxes
+          label(for='one')
+            input#one(type='checkbox')
+            | Завтрак
+          label(for='two')
+            input#two(type='checkbox')
+            | Письменный стол
+          label(for='three')
+            input#three(type='checkbox')
+            | Стул для кормления
+          label(for='three')
+            input#three(type='checkbox')
+            | Кроватка
+          label(for='three')
+            input#three(type='checkbox')
+            | Телевизор
+          label(for='three')
+            input#three(type='checkbox')
+            | Шампунь

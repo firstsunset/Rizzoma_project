@@ -20,47 +20,89 @@
       <p> </p>
       <h3>Dropdown</h3>
       <div class="dropdown">
-        <div class="dropdown-form" onclick="myFunction()">
-          <button class="dropbtn-input">Сколько гостей</button>
+        <div class="dropdown-form" id="sel1" onclick="myFunction()">
+          <button class="dropbtn-input" id="displaydiv">Сколько гостей</button>
           <button class="dropbtn">expand_more</button>
         </div>
         <div class="dropdown-content" id="myDropdown">
           <div class="iqdropdown-menu-option" data-id="item1">
             <label class="iqdropdown-item" for="">Взрослые</label>
             <div class="number">
-              <input class="minus" id="minus" type="button" value="-" onclick="minus()">
-              <input class="plusminus-input" id="count" type="text" value="0">
-              <input class="plus" id="plus" type="button" value="+" onclick="plus()">
+              <input class="minus minus" type="button" value="-" onclick="minus()">
+              <input class="count plusminus-input" type="text" value="0">
+              <input class="plus plus" type="button" value="+" onclick="plus()">
             </div>
           </div>
           <div class="iqdropdown-menu-option" data-id="item2">
             <label class="iqdropdown-item" for="">Дети</label>
             <div class="number">
-              <input class="minus" id="minus" type="button" value="-" onclick="minus()">
-              <input class="plusminus-input" id="count" type="text" value="0">
-              <input class="plus" id="plus" type="button" value="+" onclick="plus()">
+              <input class="minus minus" type="button" value="-" onclick="minus()">
+              <input class="count plusminus-input" type="text" value="0">
+              <input class="plus plus" type="button" value="+" onclick="plus()">
             </div>
           </div>
           <div class="iqdropdown-menu-option" data-id="item3">
             <label class="iqdropdown-item" for="">Младенцы</label>
             <div class="number">
-              <input class="minus" id="minus" type="button" value="-" onclick="minus()">
-              <input class="plusminus-input" id="count" type="text" value="0">
-              <input class="plus" id="plus" type="button" value="+" onclick="plus()">
+              <input class="minus minus" type="button" value="-" onclick="minus()">
+              <input class="count plusminus-input" type="text" value="0">
+              <input class="plus plus" type="button" value="+" onclick="plus()">
             </div>
           </div>
           <div class="iqdropdown-menu-buttons">
-            <button class="iqdropdown-menu-apply">Применить</button>
+            <button class="iqdropdown-menu-apply" type="button" onclick="getSelectedValue()">Применить</button>
           </div>
         </div>
       </div>
       <p> </p>
       <h3>Plusminus </h3>
       <div class="number">
-        <input class="minus" id="minus" type="button" value="-" onclick="minus()">
-        <input class="plusminus-input" id="count" type="text" value="0">
-        <input class="plus" id="plus" type="button" value="+" onclick="plus()">
+        <input class="minus minus" type="button" value="-" onclick="minus()">
+        <input class="count plusminus-input" type="text" value="0">
+        <input class="plus plus" type="button" value="+" onclick="plus()">
       </div>
+      <p> </p>
+      <h3>Room dropdown </h3>
+      <select class="form-control" id="sel1" name="sellist1" style="width:auto" multiple>
+        <option value="" selected="" disabled="" hidden="">Choose here</option>
+        <option value="1" selected>Спальни</option>
+        <option value="2" selected>Кровати</option>
+        <option value="3" selected>Ванные комнаты</option>
+      </select>
+      <button class="btn btn-primary" type="button" onclick="getSelectedValue()">Add</button>
+      <div id="displaydiv"></div>
+      <p> </p>
+      <h3>Checkbox list </h3>
+      <form>
+        <div class="multiselect">
+          <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option>Дополнительные удобства</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+          <div id="checkboxes">
+            <label for="one">
+              <input id="one" type="checkbox">Завтрак
+            </label>
+            <label for="two">
+              <input id="two" type="checkbox">Письменный стол
+            </label>
+            <label for="three">
+              <input id="three" type="checkbox">Стул для кормления
+            </label>
+            <label for="three">
+              <input id="three" type="checkbox">Кроватка
+            </label>
+            <label for="three">
+              <input id="three" type="checkbox">Телевизор
+            </label>
+            <label for="three">
+              <input id="three" type="checkbox">Шампунь
+            </label>
+          </div>
+        </div>
+      </form>
     </div>
     <script>
        
@@ -91,9 +133,9 @@ function myFunction() {
  
   
     </script>
-    <script>
+    <script type="text/javascript">
        
-var count = 0;
+/*var count = 0;
 var countEl = document.getElementById("count");
 function plus(){
     count++;
@@ -104,6 +146,98 @@ function minus(){
     count--;
     countEl.value = count;
   }  
+}*/
+
+var value,
+    quantity = document.getElementsByClassName('number');
+
+		function createBindings(numberContainer) {
+      var count = numberContainer.getElementsByClassName('count')[0];
+      var plus = numberContainer.getElementsByClassName('plus')[0];
+      var minus = numberContainer.getElementsByClassName('minus')[0];
+      plus.addEventListener('click', function () { plusValue(count); });
+      minus.addEventListener('click', function () { minusValue(count); });
+    }
+
+    function init() {
+        for (var i = 0; i < quantity.length; i++ ) {
+					createBindings(quantity[i]);
+        }
+    };
+
+    function plusValue(count) {
+        value = parseInt(count.value, 10);
+
+        console.log(count, count.value);
+
+        value = isNaN(value) ? 0 : value;
+        value++;
+        count.value = value;
+    }
+
+    function minusValue(count) {
+        value = parseInt(count.value, 10);
+
+        value = isNaN(value) ? 0 : value;
+        if (value > 0) value--;
+
+        count.value = value;
+    }
+    
+    init();
+
+
+    </script>
+    <script type="text/javascript">
+       /*function fun1() {
+    var sel = document.getElementById('mySelect').selectedIndex;
+    var options = document.getElementById('mySelect').options;
+    alert('выбрана' +options[sel].text);
+
+}*/
+
+function getSelectedValue(){
+    var e = document.getElementById("sel1");
+    var choiceValue = e.value; // to get value only
+    var choicetext = e.options[e.selectedIndex].text;
+    alert(choiceValue+" "+choicetext);
+
+    var newDiv = document.createElement('span');
+    newDiv.setAttribute("class","badge badge-primary");
+    newDiv.innerHTML=choicetext+ " ";
+    var spanDiv = document.createElement('i');
+    spanDiv.setAttribute("class","fa fa-close");
+    spanDiv.setAttribute("onclick",'closeDiv(this)');
+    //clsbtn.appendChild(spanDiv)
+    newDiv.appendChild(spanDiv);
+    var displaydiv=document.getElementById('displaydiv');
+    displaydiv.appendChild(newDiv);
+
+}
+
+function closeDiv(x){
+    var parentDiv=x.parentNode.parentNode;
+    parentDiv.removeChild(x.parentNode);
+}
+function getSelection(o){
+    if (!o.options) return "";
+    var selectedOptions = [];
+    for (var i = 0; i < o.options.length; i++) if (o.options[i].selected) selectedOptions.push(o.options[i].value);
+    return selectedOptions.join(",");
+}
+    </script>
+    <script type="text/javascript">
+       var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
 }
     </script>
   </body>

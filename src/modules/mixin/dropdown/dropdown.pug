@@ -1,8 +1,8 @@
 include ../plusminus/plusminus
 mixin dropdown
     .dropdown
-      .dropdown-form(onclick='myFunction()')
-        button.dropbtn-input Сколько гостей
+      #sel1.dropdown-form(onclick='myFunction()')
+        button#displaydiv.dropbtn-input Сколько гостей
         button.dropbtn expand_more
       #myDropdown.dropdown-content
         .iqdropdown-menu-option(data-id='item1')
@@ -15,7 +15,7 @@ mixin dropdown
           label(for="").iqdropdown-item Младенцы
           +plusminus
         .iqdropdown-menu-buttons
-          button.iqdropdown-menu-apply Применить
+          button.iqdropdown-menu-apply(type='button' onclick='getSelectedValue()') Применить
          
 
 
