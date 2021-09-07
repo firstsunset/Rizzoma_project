@@ -11,7 +11,15 @@
   .selectBox select {
     width: 320px;
     height: 44px;
-    
+    border: none;
+    background: #FFFFFF;
+    font-family: 'MontserratBold';
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    font-size: 12px;
+    line-height: 15px;
   }
   
   .overSelect {
@@ -24,15 +32,71 @@
   
   #checkboxes {
     display: none;
-    border: 1px #dadada solid;
+    //border: 1px #dadada solid;
   }
   
-  #checkboxes label {
+  .check {
     display: block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-family: 'MontserratRegular';
+    color: rgba(31, 32, 65, 0.5);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
   }
-  
-  #checkboxes label:hover {
-    background-color: #1e90ff;
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0
   }
-  
+.checkmark {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+}
+.check input:checked ~ .checkmark {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(188, 156, 255, 1);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+.check .checkmark:after {
+  left: 8px;
+  top: 6px;
+  width: 6px;
+  height: 8px;
+  border: solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 1em 1em #FFFFFF inset;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
   
