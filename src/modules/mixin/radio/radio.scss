@@ -1,5 +1,5 @@
 .check-radio {
-  margin-bottom: 10px;
+ //margin-bottom: 10px;
   display: block;
   position: relative;
   -webkit-user-select: none;
@@ -7,12 +7,9 @@
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
-  font-family: 'MontserratRegular';
-  color: rgba(31, 32, 65, 0.5);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+  height: 20px;
+  width: 20px;
+  
 }
 /* Hide the browser's default checkbox */
 .checkbox-radio {
@@ -25,14 +22,13 @@
 /* Create a custom checkbox */
 .checkmark-radio {
     display: inline-block;
-    
-    height: 19px;
-    width: 19px;
+    height: 20px;
+    width: 20px;
     background: #FFFFFF;
     border: 1px solid rgba(24, 29, 175, 0.25);
     border-radius: 50%;
 }
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add  background */
 .check-radio input:checked ~ .checkmark-radio {
     background-color: #FFFFFF;
     border: 1px solid rgba(188, 156, 255, 1);
@@ -54,5 +50,5 @@
   width: 13px;
 	height: 13px;
 	border-radius: 50%;
-	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

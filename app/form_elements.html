@@ -6,117 +6,130 @@
   <script defer src="js/form_elements.js"></script><link href="./css/form_elements.css" rel="stylesheet"></head>
   <body>
     <div class="logogroup"> <a href="#"><img src="images/logo_groupc2a93d6ae04f381031de.svg" alt="logo_group"></a></div>
-    <div class="container"> 
-      <h3>Text Field</h3>
-      <form class="text_field_form" action="/mock-address/change-me">
-        <input class="text_field_input" type="email" name="emails" placeholder="Email">
-      </form>
-      <p> </p>
-      <h3>subscription text field</h3>
-      <form class="footer-email" action="/mock-address/change-me"> 
-        <input class="input-text" type="email" name="emails" placeholder="Email">
-        <button class="input-btn" type="submit">arrow_forward</button>
-      </form>
-      <p> </p>
-      <h3>Dropdown</h3>
-      <div class="dropdown">
-        <div class="dropdown-form" id="sel1" onclick="myFunction()">
-          <button class="dropbtn-input" id="displaydiv">Сколько гостей</button>
-          <button class="dropbtn">expand_more</button>
-        </div>
-        <div class="dropdown-content" id="myDropdown">
-          <div class="iqdropdown-menu-option" data-id="item1">
-            <label class="iqdropdown-item" for="">Взрослые</label>
-            <div class="number">
-              <input class="minus minus" type="button" value="-" onclick="minus()">
-              <input class="count plusminus-input" type="text" value="0">
-              <input class="plus plus" type="button" value="+" onclick="plus()">
+    <div class="container">
+      <div class="form-elements"> 
+        <div class="form-elements-first">
+          <h3>Text Field</h3>
+          <form class="text_field_form" action="/mock-address/change-me">
+            <input class="text_field_input" type="email" name="emails" placeholder="Email">
+          </form>
+          <p> </p>
+          <h3>subscription text field</h3>
+          <form class="footer-email" action="/mock-address/change-me"> 
+            <input class="input-text" type="email" name="emails" placeholder="Email">
+            <button class="input-btn" type="submit">arrow_forward</button>
+          </form>
+          <p> </p>
+          <h3>Dropdown</h3>
+          <div class="dropdown">
+            <div class="dropdown-form" id="sel1" onclick="myFunction()">
+              <button class="dropbtn-input" id="displaydiv">Сколько гостей</button>
+              <button class="dropbtn">expand_more</button>
+            </div>
+            <div class="dropdown-content" id="myDropdown">
+              <div class="iqdropdown-menu-option" data-id="item1">
+                <label class="iqdropdown-item" for="">Взрослые</label>
+                <div class="number">
+                  <input class="minus minus" type="button" value="-" onclick="minus()">
+                  <input class="count plusminus-input" type="text" value="0">
+                  <input class="plus plus" type="button" value="+" onclick="plus()">
+                </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="item2">
+                <label class="iqdropdown-item" for="">Дети</label>
+                <div class="number">
+                  <input class="minus minus" type="button" value="-" onclick="minus()">
+                  <input class="count plusminus-input" type="text" value="0">
+                  <input class="plus plus" type="button" value="+" onclick="plus()">
+                </div>
+              </div>
+              <div class="iqdropdown-menu-option" data-id="item3">
+                <label class="iqdropdown-item" for="">Младенцы</label>
+                <div class="number">
+                  <input class="minus minus" type="button" value="-" onclick="minus()">
+                  <input class="count plusminus-input" type="text" value="0">
+                  <input class="plus plus" type="button" value="+" onclick="plus()">
+                </div>
+              </div>
+              <div class="iqdropdown-menu-buttons">
+                <button class="iqdropdown-menu-apply" type="button" onclick="getSelectedValue()">Применить</button>
+              </div>
             </div>
           </div>
-          <div class="iqdropdown-menu-option" data-id="item2">
-            <label class="iqdropdown-item" for="">Дети</label>
-            <div class="number">
-              <input class="minus minus" type="button" value="-" onclick="minus()">
-              <input class="count plusminus-input" type="text" value="0">
-              <input class="plus plus" type="button" value="+" onclick="plus()">
+          <p> </p>
+          <h3>Plusminus </h3>
+          <div class="number">
+            <input class="minus minus" type="button" value="-" onclick="minus()">
+            <input class="count plusminus-input" type="text" value="0">
+            <input class="plus plus" type="button" value="+" onclick="plus()">
+          </div>
+          <p> </p>
+          <h3>Room dropdown </h3>
+          <select class="form-control" id="sel1" name="sellist1" style="width:auto" multiple>
+            <option value="" selected="" disabled="" hidden="">Choose here</option>
+            <option value="1" selected>Спальни</option>
+            <option value="2" selected>Кровати</option>
+            <option value="3" selected>Ванные комнаты</option>
+          </select>
+          <button class="btn btn-primary" type="button" onclick="getSelectedValue()">Add</button>
+          <div id="displaydiv"></div>
+          <p> </p>
+          <h3>Checkbox list </h3>
+          <form>
+            <div class="multiselect">
+              <div class="selectBox" onclick="showCheckboxes()">
+                <select>
+                  <option>Дополнительные удобства</option>
+                </select>
+                <div class="overSelect"></div>
+              </div>
+              <div id="checkboxes">
+                <label class="check">
+                  <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>Завтрак
+                </label>
+                <label class="check">
+                  <input class="checkbox" id="two" type="checkbox"><span class="checkmark checkmark-arrow"></span>Письменный стол
+                </label>
+                <label class="check">
+                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Стул для кормления
+                </label>
+                <label class="check">
+                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Кроватка
+                </label>
+                <label class="check">
+                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Телевизор
+                </label>
+                <label class="check">
+                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Шампунь
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-elements-second">
+          <h3>Radio buttons</h3>
+          <div class="radio">
+            <div class="radio-group">
+              <label class="check-radio">
+                <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
+              </label>
+              <div class="radio-group-text">Мужчина</div>
+            </div>
+            <div class="radio-group">
+              <label class="check-radio">
+                <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
+              </label>
+              <div class="radio-group-text">Женщина</div>
             </div>
           </div>
-          <div class="iqdropdown-menu-option" data-id="item3">
-            <label class="iqdropdown-item" for="">Младенцы</label>
-            <div class="number">
-              <input class="minus minus" type="button" value="-" onclick="minus()">
-              <input class="count plusminus-input" type="text" value="0">
-              <input class="plus plus" type="button" value="+" onclick="plus()">
-            </div>
+          <p> </p>
+          <h3>Toggle </h3>
+          <div class="toggle">
+            <label class="check-toggle">
+              <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle round"></span>
+            </label>
+            <div class="toggle-text">Получать спецпредложения</div>
           </div>
-          <div class="iqdropdown-menu-buttons">
-            <button class="iqdropdown-menu-apply" type="button" onclick="getSelectedValue()">Применить</button>
-          </div>
-        </div>
-      </div>
-      <p> </p>
-      <h3>Plusminus </h3>
-      <div class="number">
-        <input class="minus minus" type="button" value="-" onclick="minus()">
-        <input class="count plusminus-input" type="text" value="0">
-        <input class="plus plus" type="button" value="+" onclick="plus()">
-      </div>
-      <p> </p>
-      <h3>Room dropdown </h3>
-      <select class="form-control" id="sel1" name="sellist1" style="width:auto" multiple>
-        <option value="" selected="" disabled="" hidden="">Choose here</option>
-        <option value="1" selected>Спальни</option>
-        <option value="2" selected>Кровати</option>
-        <option value="3" selected>Ванные комнаты</option>
-      </select>
-      <button class="btn btn-primary" type="button" onclick="getSelectedValue()">Add</button>
-      <div id="displaydiv"></div>
-      <p> </p>
-      <h3>Checkbox list </h3>
-      <form>
-        <div class="multiselect">
-          <div class="selectBox" onclick="showCheckboxes()">
-            <select>
-              <option>Дополнительные удобства</option>
-            </select>
-            <div class="overSelect"></div>
-          </div>
-          <div id="checkboxes">
-            <label class="check">
-              <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>Завтрак
-            </label>
-            <label class="check">
-              <input class="checkbox" id="two" type="checkbox"><span class="checkmark checkmark-arrow"></span>Письменный стол
-            </label>
-            <label class="check">
-              <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Стул для кормления
-            </label>
-            <label class="check">
-              <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Кроватка
-            </label>
-            <label class="check">
-              <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Телевизор
-            </label>
-            <label class="check">
-              <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Шампунь
-            </label>
-          </div>
-        </div>
-      </form>
-      <p> </p>
-      <h3>Radio buttons</h3>
-      <div class="radio">
-        <div class="radio-group">
-          <label class="check-radio">
-            <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
-          </label>
-          <div class="radio-group-text">Мужчина</div>
-        </div>
-        <div class="radio-group">
-          <label class="check-radio">
-            <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
-          </label>
-          <div class="radio-group-text">Женщина</div>
         </div>
       </div>
     </div>

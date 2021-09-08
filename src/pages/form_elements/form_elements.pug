@@ -7,6 +7,7 @@ include ../../modules/mixin/dropdown_room/dropdown_room
 include ../../modules/mixin/checkbox_list/checkbox_list
 include ../../modules/mixin/radio_buttons/radio_buttons
 include ../../modules/mixin/radio/radio
+include ../../modules/mixin/toggle/toggle
 
 
 
@@ -21,27 +22,32 @@ html(lang="ru")
   body
     div.logogroup 
         a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group")
-    .container 
-        h3 Text Field
-        +text_field
-        p 
-        h3 subscription text field
-        +subscription_text_field
-        p 
-        h3 Dropdown
-        +dropdown 
-        p 
-        h3 Plusminus 
-        +plusminus
-        p 
-        h3 Room dropdown 
-        +dropdown_room
-        p 
-        h3 Checkbox list 
-        +checkbox_list
-        p 
-        h3 Radio buttons
-        +radio_buttons
+    .container
+      .form-elements 
+        .form-elements-first
+          h3 Text Field
+          +text_field
+          p 
+          h3 subscription text field
+          +subscription_text_field
+          p 
+          h3 Dropdown
+          +dropdown 
+          p 
+          h3 Plusminus 
+          +plusminus
+          p 
+          h3 Room dropdown 
+          +dropdown_room
+          p 
+          h3 Checkbox list 
+          +checkbox_list
+        .form-elements-second
+          h3 Radio buttons
+          +radio_buttons
+          p 
+          h3 Toggle 
+          +toggle
         
         
          

@@ -4761,6 +4761,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/toggle/toggle.js":
+/*!****************************************!*\
+  !*** ./modules/mixin/toggle/toggle.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle.scss */ "./modules/mixin/toggle/toggle.scss");
+
+
+/***/ }),
+
 /***/ "../node_modules/jquery/dist/jquery.js":
 /*!*********************************************!*\
   !*** ../node_modules/jquery/dist/jquery.js ***!
@@ -32164,6 +32177,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/toggle/toggle.scss":
+/*!******************************************!*\
+  !*** ./modules/mixin/toggle/toggle.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./pages/form_elements/fonts.scss":
 /*!****************************************!*\
   !*** ./pages/form_elements/fonts.scss ***!
@@ -32328,6 +32354,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _modules_mixin_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../modules/mixin/radio_buttons/radio_buttons */ "./modules/mixin/radio_buttons/radio_buttons.js");
 /* harmony import */ var _modules_mixin_radio_radio__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../modules/mixin/radio/radio */ "./modules/mixin/radio/radio.js");
+/* harmony import */ var _modules_mixin_toggle_toggle__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../modules/mixin/toggle/toggle */ "./modules/mixin/toggle/toggle.js");
+
 
 
 

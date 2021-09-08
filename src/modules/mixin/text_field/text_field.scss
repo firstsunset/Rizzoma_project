@@ -19,6 +19,7 @@
     background: #FFFFFF;
     margin-top: 0px;
     margin-bottom: 0px;
+    
 }
 .text_field_input::placeholder{
     color: rgba(31, 32, 65, 0.25);
@@ -31,7 +32,7 @@
 }
 .text_field_input[type='email'] {
     color: rgba(31, 32, 65, 0.75);
-    padding-left: 15px;
+    
     font-family: 'MontserratRegular';
     font-style: normal;
     font-weight: normal;
