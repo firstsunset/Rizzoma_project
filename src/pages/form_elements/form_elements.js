@@ -21,4 +21,5 @@ import '../../modules/mixin/dropdown_room/dropdown_room_script';
 import '../../modules/mixin/checkbox_list/checkbox_list';
 import '../../modules/mixin/checkbox_list/checkbox_list_script';
 import '../../modules/mixin/radio_buttons/radio_buttons';
+import '../../modules/mixin/radio/radio';
 

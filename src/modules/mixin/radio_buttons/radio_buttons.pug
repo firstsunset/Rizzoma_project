@@ -1,10 +1,9 @@
+include ../radio/radio
 mixin radio_buttons
-  .radio-group
-    label.check-radio
-            input#one.checkbox-radio(type='radio' name='radio' checked="checked")
-            span.checkmark-radio
-            |Мужчина
-    label.check-radio
-            input#one.checkbox-radio(type='radio' name='radio' checked="checked")
-            span.checkmark-radio
-            |Женщина
+  .radio
+    .radio-group
+      +radio
+      .radio-group-text Мужчина
+    .radio-group
+      +radio
+      .radio-group-text Женщина
