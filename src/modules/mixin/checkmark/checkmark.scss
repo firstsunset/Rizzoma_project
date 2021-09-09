@@ -1,0 +1,17 @@
+.span-select {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.span-rect {
+  left: 3px;
+  top: 3px;
+  fill: none;
+  stroke: url(#Gradient-1);
+  stroke-width: 2px; 
+  stroke-linecap: square;
+ 
+}
+

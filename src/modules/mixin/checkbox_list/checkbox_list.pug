@@ -1,3 +1,4 @@
+include ../checkmark/checkmark
 mixin checkbox_list 
     form
       .multiselect
@@ -6,27 +7,4 @@ mixin checkbox_list
             option Дополнительные удобства
           .overSelect
         #checkboxes
-          label.check
-            input#one.checkbox(type='checkbox')
-            span.checkmark.checkmark-arrow
-            |Завтрак
-          label.check
-            input#two.checkbox(type='checkbox')
-            span.checkmark.checkmark-arrow
-            |Письменный стол
-          label.check
-            input#three.checkbox(type='checkbox')
-            span.checkmark.checkmark-arrow
-            |Стул для кормления
-          label.check
-            input#three.checkbox(type='checkbox')
-            span.checkmark.checkmark-arrow
-            |Кроватка
-          label.check
-            input#three.checkbox(type='checkbox')
-            span.checkmark.checkmark-arrow
-            |Телевизор
-          label.check
-            input#three.checkbox(type='checkbox')
-            span.checkmark.checkmark-arrow
-            |Шампунь
+          +checkmark

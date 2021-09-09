@@ -4488,6 +4488,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox_list.scss */ "./modules/mixin/checkbox_list/checkbox_list.scss");
 /* harmony import */ var _checkbox_list_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox_list_script */ "./modules/mixin/checkbox_list/checkbox_list_script.js");
 /* harmony import */ var _checkbox_list_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_checkbox_list_script__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _checkmark_checkmark__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../checkmark/checkmark */ "./modules/mixin/checkmark/checkmark.js");
+
 
 
 
@@ -4512,6 +4514,19 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+
+/***/ }),
+
+/***/ "./modules/mixin/checkmark/checkmark.js":
+/*!**********************************************!*\
+  !*** ./modules/mixin/checkmark/checkmark.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _checkmark_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkmark.scss */ "./modules/mixin/checkmark/checkmark.scss");
+
 
 /***/ }),
 
@@ -32047,6 +32062,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/checkmark/checkmark.scss":
+/*!************************************************!*\
+  !*** ./modules/mixin/checkmark/checkmark.scss ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/mixin/dropdown/dropdown.scss":
 /*!**********************************************!*\
   !*** ./modules/mixin/dropdown/dropdown.scss ***!
@@ -32355,6 +32383,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mixin_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../modules/mixin/radio_buttons/radio_buttons */ "./modules/mixin/radio_buttons/radio_buttons.js");
 /* harmony import */ var _modules_mixin_radio_radio__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../modules/mixin/radio/radio */ "./modules/mixin/radio/radio.js");
 /* harmony import */ var _modules_mixin_toggle_toggle__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../modules/mixin/toggle/toggle */ "./modules/mixin/toggle/toggle.js");
+/* harmony import */ var _modules_mixin_checkmark_checkmark__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../modules/mixin/checkmark/checkmark */ "./modules/mixin/checkmark/checkmark.js");
+
 
 
 

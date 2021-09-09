@@ -2198,77 +2198,23 @@ input {
 #checkboxes {
   display: none;
 }
-
-.check {
-  margin-bottom: 10px;
-  display: block;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  font-family: "MontserratRegular";
-  color: rgba(31, 32, 65, 0.5);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-/* Hide the browser's default checkbox */
-.checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  display: inline-block;
-  height: 20px;
+/*!***********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkmark/checkmark.scss ***!
+  \***********************************************************************************************************************************/
+.span-select {
   width: 20px;
-  background: #FFFFFF;
+  height: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
 
-/* When the checkbox is checked, add a blue background */
-.check input:checked ~ .checkmark {
-  background-color: #FFFFFF;
-  border: 1px solid #bc9cff;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.check input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.check .checkmark:after {
-  left: 6px;
-  right: 5px;
-  top: 4px;
-  bottom: 6px;
-  width: 6px;
-  height: 8px;
-  border: 3px solid transparent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 1em 1em #FFFFFF inset;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-left: none;
-  border-top: none;
-  transform: rotate(45deg);
+.span-rect {
+  left: 3px;
+  top: 3px;
+  fill: none;
+  stroke: url(#Gradient-1);
+  stroke-width: 2px;
+  stroke-linecap: square;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/radio_buttons/radio_buttons.scss ***!

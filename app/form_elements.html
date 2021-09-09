@@ -58,21 +58,17 @@
           </div>
           <p> </p>
           <h3>Plusminus </h3>
-          <div class="number">
-            <input class="minus minus" type="button" value="-" onclick="minus()">
-            <input class="count plusminus-input" type="text" value="0">
-            <input class="plus plus" type="button" value="+" onclick="plus()">
-          </div>
+          <svg class="span-select">
+            <defs>
+              <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
+                <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
+              </lineargradient>
+            </defs>
+            <polyline class="span-rect" points="5,9 9,14 15,9"></polyline>
+          </svg>
           <p> </p>
           <h3>Room dropdown </h3>
-          <select class="form-control" id="sel1" name="sellist1" style="width:auto" multiple>
-            <option value="" selected="" disabled="" hidden="">Choose here</option>
-            <option value="1" selected>Спальни</option>
-            <option value="2" selected>Кровати</option>
-            <option value="3" selected>Ванные комнаты</option>
-          </select>
-          <button class="btn btn-primary" type="button" onclick="getSelectedValue()">Add</button>
-          <div id="displaydiv"></div>
           <p> </p>
           <h3>Checkbox list </h3>
           <form>
@@ -84,24 +80,15 @@
                 <div class="overSelect"></div>
               </div>
               <div id="checkboxes">
-                <label class="check">
-                  <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>Завтрак
-                </label>
-                <label class="check">
-                  <input class="checkbox" id="two" type="checkbox"><span class="checkmark checkmark-arrow"></span>Письменный стол
-                </label>
-                <label class="check">
-                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Стул для кормления
-                </label>
-                <label class="check">
-                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Кроватка
-                </label>
-                <label class="check">
-                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Телевизор
-                </label>
-                <label class="check">
-                  <input class="checkbox" id="three" type="checkbox"><span class="checkmark checkmark-arrow"></span>Шампунь
-                </label>
+                <svg class="span-select">
+                  <defs>
+                    <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
+                      <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
+                      <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
+                    </lineargradient>
+                  </defs>
+                  <polyline class="span-rect" points="5,9 9,14 15,9"></polyline>
+                </svg>
               </div>
             </div>
           </form>
@@ -126,7 +113,7 @@
           <h3>Toggle </h3>
           <div class="toggle">
             <label class="check-toggle">
-              <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle round"></span>
+              <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle"></span>
             </label>
             <div class="toggle-text">Получать спецпредложения</div>
           </div>
