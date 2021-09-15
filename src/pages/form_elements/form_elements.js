@@ -24,4 +24,10 @@ import '../../modules/mixin/radio_buttons/radio_buttons';
 import '../../modules/mixin/radio/radio';
 import '../../modules/mixin/toggle/toggle';
 import '../../modules/mixin/checkmark/checkmark';
+import '../../modules/mixin/checkbox/checkbox';
+import '../../modules/mixin/checkbox_button/checkbox_button';
+import '../../modules/mixin/checkbox/checkbox_script';
+import '../../modules/mixin/like_button/like_button';
+import '../../modules/mixin/like_button/script_likebutton';
+import '../../modules/mixin/like/like';
 

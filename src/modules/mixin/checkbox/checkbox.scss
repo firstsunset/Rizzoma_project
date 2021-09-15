@@ -1,0 +1,51 @@
+
+
+.btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+   
+   
+}
+.blockbefore {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.block {
+  
+  display: none;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  
+  
+}
+
+
+.show-block {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(188, 156, 255, 1);
+  border-radius: 4px;
+}
+
+
+.show-block svg {
+  stroke: url(#Gradient-1);
+  stroke-width: 2px; /* width of checkmark */
+  fill: none;
+  stroke-linecap: square;
+  bottom: 1px;
+  width: 20px;
+  height: 20px;
+}

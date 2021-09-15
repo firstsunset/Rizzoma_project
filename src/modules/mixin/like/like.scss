@@ -1,0 +1,23 @@
+.like {
+    $b: &;
+    user-select: none;
+    &__input {
+      &:checked {
+        ~ #{$b}__value {
+          display: none;
+          &_checked {
+            display: inline;
+          }
+        }
+      }
+      &:not(:checked) {
+        ~ #{$b}__value {
+          display: inline;
+          &_checked {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  

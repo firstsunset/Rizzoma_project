@@ -1,0 +1,8 @@
+mixin like(defaultValue, isChecked)
+    -
+        const checked = !!isChecked
+        const checkedValue = defaultValue + 1
+    label.like
+        input.like_input(type="checkbox" checked=checked)
+        span.like_value=devaulyValue 
+        span.like_value.like_value_checked=checkedValue

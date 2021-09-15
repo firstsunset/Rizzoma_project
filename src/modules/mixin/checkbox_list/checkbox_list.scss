@@ -35,7 +35,30 @@
     display: none;
     //border: 1px #dadada solid;
   }
-  
+  .checkboxes {
+    display: flex;
+    flex-direction: row;
+    width: 222px;
+    height: 171px;
+  }
+  .checkbox-group {
+    display: flex;
+    flex-direction: row;
+    width: 222px;
+    height: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: 'MontserratRegular';
+    color: rgba(31, 32, 65, 0.5);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 20px;
+  }
+  .checkbox-group-text {
+    margin-left: 10px;
+  }
 
 
 

@@ -57,20 +57,9 @@
             </div>
           </div>
           <p> </p>
-          <h3>Plusminus </h3>
-          <svg class="span-select">
-            <defs>
-              <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
-                <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
-                <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
-              </lineargradient>
-            </defs>
-            <polyline class="span-rect" points="5,9 9,14 15,9"></polyline>
-          </svg>
-          <p> </p>
           <h3>Room dropdown </h3>
           <p> </p>
-          <h3>Checkbox list </h3>
+          <h3>Checkbox list</h3>
           <form>
             <div class="multiselect">
               <div class="selectBox" onclick="showCheckboxes()">
@@ -79,43 +68,111 @@
                 </select>
                 <div class="overSelect"></div>
               </div>
-              <div id="checkboxes">
-                <svg class="span-select">
-                  <defs>
-                    <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
-                      <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
-                      <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
-                    </lineargradient>
-                  </defs>
-                  <polyline class="span-rect" points="5,9 9,14 15,9"></polyline>
-                </svg>
+              <div class="checkboxes" id="checkboxes"> 
+                <div class="checkbox-group">
+                  <label class="check">
+                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                  </label>
+                  <div class="checkbox-group-text">Завтрак</div>
+                </div>
+                <div class="checkbox-group">
+                  <label class="check">
+                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                  </label>
+                  <div class="checkbox-group-text">Письменный стол</div>
+                </div>
+                <div class="checkbox-group">
+                  <label class="check">
+                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                  </label>
+                  <div class="checkbox-group-text">Стул для кормления</div>
+                </div>
+                <div class="checkbox-group">
+                  <label class="check">
+                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                  </label>
+                  <div class="checkbox-group-text">Кроватка</div>
+                </div>
+                <div class="checkbox-group">
+                  <label class="check">
+                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                  </label>
+                  <div class="checkbox-group-text">Телевизор</div>
+                </div>
+                <div class="checkbox-group">
+                  <label class="check">
+                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                  </label>
+                  <div class="checkbox-group-text">Шампунь</div>
+                </div>
               </div>
             </div>
           </form>
         </div>
         <div class="form-elements-second">
-          <h3>Radio buttons</h3>
-          <div class="radio">
-            <div class="radio-group">
-              <label class="check-radio">
-                <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
-              </label>
-              <div class="radio-group-text">Мужчина</div>
-            </div>
-            <div class="radio-group">
-              <label class="check-radio">
-                <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
-              </label>
-              <div class="radio-group-text">Женщина</div>
+          <div class="form-elements-1">
+            <h3>Правила дома</h3>
+            <div class="checkbox-button"> 
+              <div class="checkbox-button-group"> 
+                <label class="check">
+                  <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                </label>
+                <div class="checkbox-button-text">Можно курить</div>
+              </div>
+              <div class="checkbox-button-group"> 
+                <label class="check">
+                  <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                </label>
+                <div class="checkbox-button-text">Можно с питомцами</div>
+              </div>
+              <div class="checkbox-button-group"> 
+                <label class="check">
+                  <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
+                </label>
+                <div class="checkbox-button-text">Можно пригласить гостей (до 10 человек)</div>
+              </div>
             </div>
           </div>
-          <p> </p>
-          <h3>Toggle </h3>
-          <div class="toggle">
-            <label class="check-toggle">
-              <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle"></span>
-            </label>
-            <div class="toggle-text">Получать спецпредложения</div>
+          <div class="form-elements-2">
+            <h3>Radio buttons</h3>
+            <div class="radio">
+              <div class="radio-group">
+                <label class="check-radio">
+                  <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
+                </label>
+                <div class="radio-group-text">Мужчина</div>
+              </div>
+              <div class="radio-group">
+                <label class="check-radio">
+                  <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
+                </label>
+                <div class="radio-group-text">Женщина</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-elements-3"> 
+            <h3>Toggle </h3>
+            <div class="toggle">
+              <label class="check-toggle">
+                <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle"></span>
+              </label>
+              <div class="toggle-text">Получать спецпредложения</div>
+            </div>
+          </div>
+          <div class="form-elements-4"> 
+            <h3>Like button</h3>
+            <div class="like-button">
+              <button class="like-btn" id="like-button">
+                <div class="like-checkmark-before" id="likeCheckmarkBefore">favorite_border</div>
+                <input class="like-btn-count" id="like-count" type="text" value="2">
+              </button>
+              <div id="likeCheckmarkAfter">
+                <div class="like-checkmark-after">favorite</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-elements-5"> 
+            <h3>Rate button</h3>
           </div>
         </div>
       </div>
@@ -255,6 +312,55 @@ function showCheckboxes() {
     expanded = false;
   }
 }
+    </script>
+    <script type="text/javascript">
+       /*var count = 0;
+var countEl = document.getElementById("like-count");
+function plus(){
+    count++;
+    countEl.value = count;
+}*/
+
+
+document.getElementById("like-button").addEventListener("click", likeFunction);
+var expanded = false;
+
+function likeFunction() {
+  var likeCheckmarkAfter = document.getElementById("likeCheckmarkAfter");
+  if (!expanded) {
+    likeCheckmarkAfter.style.display = "block";
+    expanded = true;
+  } else {
+    likeCheckmarkAfter.style.display = "none";
+    expanded = false;
+  }
+}
+
+
+
+/*function likeFunction() {
+    var element = document.getElementById("like-ceckmark");
+    document.getElementById("like-ceckmark").innerHTML = element;
+   /* element.classList.toggle("like-checkmark-after");
+ }*/
+/*function likeFunction() {
+    document.getElementById("like-button").innerHTML = "favorite";
+ }*/
+
+
+ 
+
+var count = 0;
+var countEl = document.getElementById("like-count");
+document.getElementById("like-button").addEventListener("click", plusLike)
+ function plusLike(){
+    count ++;
+    countEl.value = count;
+    
+ }
+
+
+ 
     </script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+.checkbox-button {
+    width: 222px;
+    height: 100px;
+    margin-top: 12px;
+}
+.checkbox-button-group {
+    display: flex;
+    flex-direction: row;
+    width: 222px;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-family: 'MontserratRegular';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.checkbox-button-text {
+    margin-left: 10px;
+}

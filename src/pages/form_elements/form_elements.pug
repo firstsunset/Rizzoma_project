@@ -9,6 +9,10 @@ include ../../modules/mixin/radio_buttons/radio_buttons
 include ../../modules/mixin/radio/radio
 include ../../modules/mixin/toggle/toggle
 include ../../modules/mixin/checkmark/checkmark
+include ../../modules/mixin/checkbox/checkbox
+include ../../modules/mixin/checkbox_button/checkbox_button
+include ../../modules/mixin/like_button/like_button
+include ../../modules/mixin/like/like
 
 
 
@@ -34,21 +38,32 @@ html(lang="ru")
           p 
           h3 Dropdown
           +dropdown 
-          p 
-          h3 Plusminus 
-          +checkmark
+                  
           p 
           h3 Room dropdown 
           
           p 
-          h3 Checkbox list 
-          +checkbox_list
+          h3 Checkbox list
+          +checkbox_list 
+          
         .form-elements-second
-          h3 Radio buttons
-          +radio_buttons
-          p 
-          h3 Toggle 
-          +toggle
+          .form-elements-1
+            h3 Правила дома
+            +checkbox_button
+          
+          .form-elements-2
+            h3 Radio buttons
+            +radio_buttons
+          .form-elements-3 
+            h3 Toggle 
+            +toggle
+          .form-elements-4 
+            h3 Like button
+            +like_button
+            
+          .form-elements-5 
+            h3 Rate button
+
         
         
          
@@ -60,7 +75,8 @@ html(lang="ru")
       include ../../modules/mixin/dropdown_room/dropdown_room_script.js  
     script(type='text/javascript') 
       include ../../modules/mixin/checkbox_list/checkbox_list_script.js  
-    
+    script(type='text/javascript') 
+      include ../../modules/mixin/like_button/script_likebutton.js
   
       
 

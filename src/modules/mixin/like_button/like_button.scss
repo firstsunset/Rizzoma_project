@@ -1,0 +1,60 @@
+.like-button {
+    width: 40px;
+height: 20px;
+}
+.like-btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    width: 40px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+}
+#likeCheckmark {
+    display: none;
+    
+}
+.like-checkmark-after {
+    position: absolute;
+    cursor: pointer;
+    margin-top: -14px;
+    margin-left: 5px;
+    font-family: 'MaterialIcons';
+    font-size: 10px;
+    line-height: 10px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+#likeCheckmarkBefore {
+    display: block;
+}
+.like-checkmark-before {
+    position: absolute;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 10px;
+    height: 10px;
+    font-family: 'MaterialIcons';
+    font-size: 10px;
+    line-height: 9px;
+    color: rgba(31, 32, 65, 0.25);
+    margin: 0px;
+    
+}
+.like-btn-count {
+    position: absolute;
+    padding-top: 3px;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+    font-family: 'MontserratRegular';
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(31, 32, 65, 0.25);
+}

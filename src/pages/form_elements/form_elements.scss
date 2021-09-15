@@ -50,4 +50,7 @@ h3 {
 }
 .form-elements-second {
     width: 320px;
+    display: inline-flex;
+    flex-direction: column;
+   justify-content: space-between;
 }

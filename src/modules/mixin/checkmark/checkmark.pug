@@ -1,7 +1,4 @@
 mixin checkmark 
-    svg.span-select
-        defs
-            lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
-                stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
-                stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
-        polyline(points="5,9 9,14 15,9").span-rect
+    label.check
+      input#one.checkbox(type='checkbox')
+      span.checkmark.checkmark-arrow
