@@ -2598,15 +2598,15 @@ label:hover {
   border-radius: 10px;
 }
 
-#likeCheckmark {
-  display: none;
+.like-btn-checked {
+  border-color: #BC9CFF;
 }
 
 .like-checkmark-after {
   position: absolute;
   cursor: pointer;
-  margin-top: -14px;
-  margin-left: 5px;
+  margin-top: -15px;
+  margin-left: 6px;
   font-family: "MaterialIcons";
   font-size: 10px;
   line-height: 10px;
@@ -2614,10 +2614,6 @@ label:hover {
   -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-#likeCheckmarkBefore {
-  display: block;
 }
 
 .like-checkmark-before {
@@ -2637,9 +2633,9 @@ label:hover {
 .like-btn-count {
   position: absolute;
   padding-top: 3px;
-  margin-left: 20px;
-  width: 10px;
-  height: 10px;
+  margin-left: 15px;
+  width: 20px;
+  height: 20px;
   font-family: "MontserratRegular";
   font-size: 10px;
   line-height: 12px;

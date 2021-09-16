@@ -158,13 +158,28 @@
               </label>
               <div class="toggle-text">Получать спецпредложения</div>
             </div>
+            <div class="toggle">
+              <label class="check-toggle">
+                <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle"></span>
+              </label>
+              <div class="toggle-text">Получать спецпредложения</div>
+            </div>
           </div>
           <div class="form-elements-4"> 
             <h3>Like button</h3>
             <div class="like-button">
               <button class="like-btn" id="like-button">
                 <div class="like-checkmark-before" id="likeCheckmarkBefore">favorite_border</div>
-                <input class="like-btn-count" id="like-count" type="text" value="2">
+                <div class="like-btn-count" id="like-count">3</div>
+              </button>
+              <div id="likeCheckmarkAfter">
+                <div class="like-checkmark-after">favorite</div>
+              </div>
+            </div>
+            <div class="like-button">
+              <button class="like-btn" id="like-button">
+                <div class="like-checkmark-before" id="likeCheckmarkBefore">favorite_border</div>
+                <div class="like-btn-count" id="like-count">3</div>
               </button>
               <div id="likeCheckmarkAfter">
                 <div class="like-checkmark-after">favorite</div>
@@ -314,50 +329,34 @@ function showCheckboxes() {
 }
     </script>
     <script type="text/javascript">
-       /*var count = 0;
-var countEl = document.getElementById("like-count");
-function plus(){
-    count++;
-    countEl.value = count;
-}*/
-
-
-document.getElementById("like-button").addEventListener("click", likeFunction);
+       
 var expanded = false;
-
 function likeFunction() {
   var likeCheckmarkAfter = document.getElementById("likeCheckmarkAfter");
   if (!expanded) {
-    likeCheckmarkAfter.style.display = "block";
+    likeCheckmarkAfter.style.display = "none";
     expanded = true;
   } else {
-    likeCheckmarkAfter.style.display = "none";
+    likeCheckmarkAfter.style.display = "block";
     expanded = false;
   }
 }
-
-
-
-/*function likeFunction() {
-    var element = document.getElementById("like-ceckmark");
-    document.getElementById("like-ceckmark").innerHTML = element;
-   /* element.classList.toggle("like-checkmark-after");
- }*/
-/*function likeFunction() {
-    document.getElementById("like-button").innerHTML = "favorite";
- }*/
+document.getElementById("like-button").addEventListener("click", likeFunction);
 
 
  
 
-var count = 0;
-var countEl = document.getElementById("like-count");
-document.getElementById("like-button").addEventListener("click", plusLike)
- function plusLike(){
-    count ++;
-    countEl.value = count;
-    
+
+function plusLike() {
+  var count = document.getElementById("like-count");
+   if (count.firstChild.nodeValue == "2") {
+    count.firstChild.nodeValue = "3";
+  } else {
+    count.firstChild.nodeValue = "2";
+  }
  }
+ document.getElementById("like-button").addEventListener("click", plusLike, false);
+ 
 
 
  
