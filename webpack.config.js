@@ -24,7 +24,8 @@ const PATHS = {
 module.exports = {
     
     externals: {
-    paths: PATHS
+    paths: PATHS,
+    
   },
     context: path.resolve(__dirname, 'src'), 
     mode: 'development',
@@ -103,6 +104,7 @@ module.exports = {
             ]
           }),
          
+          
        
           
       ],

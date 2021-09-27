@@ -1,0 +1,12 @@
+mixin rate_button(options) 
+    - const { quantity = 0 } = options || {};
+
+    - var i = 0;
+    - var starType = '';
+
+    .rate
+        while i < 5
+            -
+                starType = quantity > i ? '' : '_border'
+                i += 1
+            i.material-icons='star' + starType

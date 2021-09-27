@@ -1,0 +1,114 @@
+@import '../../../pages/form_elements/veriables.scss';
+.button {
+    display: block;
+    border: solid 2px transparent;
+    border-radius: 22px;
+    padding: 0.1667rem;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #FFFFFF inset;
+    cursor: pointer;
+    text-decoration-line: none;
+    width: 99px;
+    height: 44px;
+  
+    &:hover,
+    &.button_hovered {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+    }
+  
+    &__wrapper {
+      display: flex;
+      padding: 0px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 22px;
+      height: 15px;
+      
+    }
+
+    &_default {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      box-shadow: none;
+      border: none;
+    }
+  
+    
+
+    &_bordercolor {
+      height: 44px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    
+  
+    &_bordercolor &__wrapper {
+      background-color: white;
+    }
+  
+    &_bordercolor &__text {
+      color: #BC9CFF;
+    }
+  
+    &_link {
+      padding: 0;
+      width: auto;
+      padding: 0;
+
+    }
+  
+    &.button_link {
+      background: white;
+    }
+  
+    &_link &__wrapper {
+      padding: 0;
+    }
+  
+    &_link &__text {
+      color: #BC9CFF;
+      line-height: 15px;
+    }
+    &.button_link &__wrapper &__text:hover,
+    &.button_link.button_hovered &__wrapper &__text {
+      color: rgba(31, 32, 65, 0.5);
+    }
+  
+    &_long.button {
+      width: 320px;
+      height: 44px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      box-shadow: none;
+      border: none;
+    }
+  
+    &_long &__wrapper {
+      padding: 0;
+      width: 100%;
+    }
+    &_long &__text {
+      margin-left: 95px;
+    }
+  
+    &__text {
+      font-family: 'MontserratRegular';
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      font-size: 12px;
+      line-height: 3.3333rem;
+      white-space: nowrap;
+      height: 44px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      
+    }
+  
+    &__arrow {
+      font-family: 'MaterialIcons';
+      color: white;
+      font-size: 24px;
+      margin-left: auto;
+      padding-right: 10px;
+    }
+  }

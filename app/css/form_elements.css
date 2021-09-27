@@ -1720,6 +1720,29 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.form-elements-1 {
+  padding-bottom: 40px;
+}
+
+.form-elements-2 {
+  padding-bottom: 40px;
+}
+
+.form-elements-3 {
+  padding-bottom: 40px;
+}
+
+.form-elements-4 {
+  padding-bottom: 40px;
+}
+
+.buttons-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
 /*!***************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/fonts.scss ***!
   \***************************************************************************************************************************/
@@ -1752,6 +1775,10 @@ h3 {
   width: 1160px;
   max-width: 100%;
 }
+/*!*******************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/veriables.scss ***!
+  \*******************************************************************************************************************************/
+
 /*!*************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/text_field/text_field.scss ***!
   \*************************************************************************************************************************************/
@@ -2658,6 +2685,237 @@ label:hover {
 }
 .like__input:not(:checked) ~ .like__value_checked {
   display: none;
+}
+/*!***************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/rate_button/rate_button.scss ***!
+  \***************************************************************************************************************************************/
+.rate {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.material-icons {
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 20px;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: transparent;
+  font-style: normal;
+  cursor: pointer;
+}
+/*!*********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/calendar/calendar.scss ***!
+  \*********************************************************************************************************************************/
+.calendar {
+  position: relative;
+}
+.calendar__card {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 320px;
+  padding: 20px;
+  background: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.calendar__card__visible {
+  display: block;
+}
+.calendar__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.datepicker--nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.datepicker--nav-action {
+  height: 24px;
+  width: 24px;
+}
+.datepicker--nav-title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1f2041;
+  cursor: pointer;
+}
+.datepicker--body {
+  display: none;
+}
+.datepicker .active {
+  display: block;
+}
+.datepicker--days-names {
+  display: flex;
+}
+.datepicker--day-name {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 40px;
+  color: #bc9cff;
+  text-align: center;
+}
+.datepicker--cells-days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.datepicker--cell {
+  cursor: pointer;
+}
+.datepicker--cell-day {
+  width: calc(100% / 7);
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+  color: rgba(31, 32, 65, 0.5);
+  position: relative;
+}
+.datepicker .-other-month- {
+  color: rgba(31, 32, 65, 0.25);
+}
+.datepicker .-current- {
+  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+}
+.datepicker .-current-.-in-range- {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 0;
+}
+.datepicker .-selected- {
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+}
+.datepicker .-range-from-::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 22px 0 0 22px;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+.datepicker .-in-range- {
+  background: rgba(188, 156, 255, 0.25);
+}
+.datepicker .-range-to-::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  border-radius: 0 22px 22px 0;
+}
+.datepicker--buttons {
+  margin-top: 20px;
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
+  \*****************************************************************************************************************************/
+.button {
+  display: block;
+  border: solid 2px transparent;
+  border-radius: 22px;
+  padding: 0.1667rem;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #FFFFFF inset;
+  cursor: pointer;
+  text-decoration-line: none;
+  width: 99px;
+  height: 44px;
+}
+.button:hover, .button.button_hovered {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.button__wrapper {
+  display: flex;
+  padding: 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  height: 15px;
+}
+.button_default {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_bordercolor {
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor .button__wrapper {
+  background-color: white;
+}
+.button_bordercolor .button__text {
+  color: #BC9CFF;
+}
+.button_link {
+  padding: 0;
+  width: auto;
+  padding: 0;
+}
+.button.button_link {
+  background: white;
+}
+.button_link .button__wrapper {
+  padding: 0;
+}
+.button_link .button__text {
+  color: #BC9CFF;
+  line-height: 15px;
+}
+.button.button_link .button__wrapper .button__text:hover, .button.button_link.button_hovered .button__wrapper .button__text {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button_long.button {
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_long .button__wrapper {
+  padding: 0;
+  width: 100%;
+}
+.button_long .button__text {
+  margin-left: 95px;
+}
+.button__text {
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  line-height: 3.3333rem;
+  white-space: nowrap;
+  height: 44px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.button__arrow {
+  font-family: "MaterialIcons";
+  color: white;
+  font-size: 24px;
+  margin-left: auto;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=form_elements.css.map*/

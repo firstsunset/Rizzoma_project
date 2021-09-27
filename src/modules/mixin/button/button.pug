@@ -1,0 +1,21 @@
+mixin button(options)
+  -
+    const {
+      text = 'click me',
+      link,
+      size,
+      isHovered = false,
+      type = 'default',
+      isLink = false
+    } = options || {}
+    var tag = ''
+    tag += isLink ? 'a' : 'button'
+    var classes = ''
+    classes += ' button_' + type 
+    classes += size ? ' button_' + size : ''
+    classes += isHovered ? ' button_hovered' : ''
+  #{tag}.button(class=classes, href=link)
+    .button__wrapper 
+      span.button__text= text
+      if type === 'long'
+        span.button__arrow.material-icons arrow_forward

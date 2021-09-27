@@ -1,13 +1,11 @@
 import _ from 'lodash';
 import '../../../node_modules/@fortawesome/fontawesome-free/js/all';
-import $ from 'jquery';
-
-
 
 
 import './form_elements.scss';
 import './fonts.scss';
 import './settings.scss';
+import './veriables.scss';
 
 
 import '../../modules/mixin/text_field/text_field';
@@ -30,4 +28,6 @@ import '../../modules/mixin/checkbox/checkbox_script';
 import '../../modules/mixin/like_button/like_button';
 import '../../modules/mixin/like_button/script_likebutton';
 import '../../modules/mixin/like/like';
-
+import '../../modules/mixin/rate_button/rate_button';
+import '../../modules/mixin/calendar/calendar';
+import '../../modules/mixin/button/button';

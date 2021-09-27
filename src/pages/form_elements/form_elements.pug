@@ -13,6 +13,9 @@ include ../../modules/mixin/checkbox/checkbox
 include ../../modules/mixin/checkbox_button/checkbox_button
 include ../../modules/mixin/like_button/like_button
 include ../../modules/mixin/like/like
+include ../../modules/mixin/rate_button/rate_button
+include ../../modules/mixin/calendar/calendar
+include ../../modules/mixin/button/button
 
 
 
@@ -57,15 +60,32 @@ html(lang="ru")
           .form-elements-3 
             h3 Toggle 
             +toggle
+            p
             +toggle
           .form-elements-4 
             h3 Like button
-            +like_button
+            +like_button 
             +like_button
             
           .form-elements-5 
             h3 Rate button
+            +rate_button({quantity: 4})
+            +rate_button({quantity: 5})
 
+        .form-elements-third
+          h3 Range slider
+          h3 Buttons
+          p
+            .buttons-group
+              +button({ type: 'default', isHovered: true, })
+              +button({ text: 'войти', })
+            .buttons-group
+              +button({ type: 'bordercolor', isHovered: true, })
+              +button({ type: 'bordercolor', })
+            .buttons-group
+              +button({ type: 'link', })
+              +button({ type: 'link', isHovered: true, })
+            +button({ type: 'long', text: 'перейти к оплате', })
         
         
          
@@ -79,6 +99,11 @@ html(lang="ru")
       include ../../modules/mixin/checkbox_list/checkbox_list_script.js  
     script(type='text/javascript') 
       include ../../modules/mixin/like_button/script_likebutton.js
+    script(type='text/javascript') 
+      include ../../modules/mixin/rate_button/script_rate_button.js
+    
+  
+
   
       
 

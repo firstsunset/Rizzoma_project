@@ -158,6 +158,7 @@
               </label>
               <div class="toggle-text">Получать спецпредложения</div>
             </div>
+            <p></p>
             <div class="toggle">
               <label class="check-toggle">
                 <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle"></span>
@@ -188,7 +189,51 @@
           </div>
           <div class="form-elements-5"> 
             <h3>Rate button</h3>
+            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+            </div>
+            <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+            </div>
           </div>
+        </div>
+        <div class="form-elements-third">
+          <h3>Range slider</h3>
+          <h3>Buttons</h3>
+          <p>
+            <div class="buttons-group">
+              <button class="button  button_default button_hovered">
+                <div class="button__wrapper"> <span class="button__text">click me</span>
+                </div>
+              </button>
+              <button class="button  button_default">
+                <div class="button__wrapper"> <span class="button__text">войти</span>
+                </div>
+              </button>
+            </div>
+            <div class="buttons-group">
+              <button class="button  button_bordercolor button_hovered">
+                <div class="button__wrapper"> <span class="button__text">click me</span>
+                </div>
+              </button>
+              <button class="button  button_bordercolor">
+                <div class="button__wrapper"> <span class="button__text">click me</span>
+                </div>
+              </button>
+            </div>
+            <div class="buttons-group">
+              <button class="button  button_link">
+                <div class="button__wrapper"> <span class="button__text">click me</span>
+                </div>
+              </button>
+              <button class="button  button_link button_hovered">
+                <div class="button__wrapper"> <span class="button__text">click me</span>
+                </div>
+              </button>
+            </div>
+            <button class="button  button_long">
+              <div class="button__wrapper"> <span class="button__text">перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span>
+              </div>
+            </button>
+          </p>
         </div>
       </div>
     </div>
@@ -360,6 +405,59 @@ function plusLike() {
 
 
  
+    </script>
+    <script type="text/javascript">
+       import $ from 'jquery';
+$.fn.addRating = function(options) {
+    var obj = this;
+    var settings = $.extend({
+        max : 5,
+        half : true,
+        fieldName : 'rating',
+        fieldId : 'rating',
+        icon : 'star'
+
+    }, options );
+    this.settings = settings;
+
+    // create the stars
+    for(var i = 1 ; i <= settings.max ; i++)
+    {
+        var star = $('<i/>').addClass('material-icons').html(this.settings.icon+'_border').data('rating', i).appendTo(this).click(
+            function(){
+                obj.setRating($(this).data('rating'));
+            }
+        ).hover(
+            function(e){
+                obj.showRating($(this).data('rating'), false);
+            }, function(){
+                obj.showRating(0,false);
+            }
+        );
+    }
+    $(this).append('<input type="hidden" name="'+settings.fieldName+'" id="'+settings.fieldId+'" />');
+};
+
+$.fn.setRating = function(numRating) {
+    var obj = this;
+    $('#'+obj.settings.fieldId).val(numRating);
+    obj.showRating(numRating, true);
+};
+
+$.fn.showRating = function(numRating, force) {
+    var obj = this;
+    if($('#'+obj.settings.fieldId).val() == '' || force)
+    {
+        $(obj).find('i').each(function(){
+            var icon = obj.settings.icon+'_border';
+            if($(this).data('rating') <= numRating)
+            {
+                icon = obj.settings.icon;
+            }
+            $(this).html(icon);
+        })
+    }
+}
     </script>
   </body>
 </html>
