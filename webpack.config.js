@@ -2,12 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-//const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-//const fs =require('fs');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
-
-
+const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
@@ -68,7 +65,11 @@ module.exports = {
       }, 
     // optimization: optimization(),
       plugins: [
-        
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery',
+          'window.jQuery': 'jquery',
+        }),
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, 'src/pages/registration/registration.pug'),
           inject: true,

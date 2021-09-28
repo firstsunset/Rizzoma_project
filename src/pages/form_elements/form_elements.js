@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import $ from 'jquery';
 import '../../../node_modules/@fortawesome/fontawesome-free/js/all';
 
 
@@ -31,3 +32,5 @@ import '../../modules/mixin/like/like';
 import '../../modules/mixin/rate_button/rate_button';
 import '../../modules/mixin/calendar/calendar';
 import '../../modules/mixin/button/button';
+import '../../modules/mixin/range_slider/range_slider';
+import '../../modules/mixin/range_slider/range_slider_script';

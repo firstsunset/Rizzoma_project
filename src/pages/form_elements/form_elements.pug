@@ -16,6 +16,7 @@ include ../../modules/mixin/like/like
 include ../../modules/mixin/rate_button/rate_button
 include ../../modules/mixin/calendar/calendar
 include ../../modules/mixin/button/button
+include ../../modules/mixin/range_slider/range_slider
 
 
 
@@ -64,16 +65,19 @@ html(lang="ru")
             +toggle
           .form-elements-4 
             h3 Like button
-            +like_button 
-            +like_button
+            .like-button-group
+              +like_button 
+              +like_button
             
           .form-elements-5 
             h3 Rate button
-            +rate_button({quantity: 4})
-            +rate_button({quantity: 5})
+            .rate-button-group
+              +rate_button({quantity: 4})
+              +rate_button({quantity: 5})
 
         .form-elements-third
           h3 Range slider
+          +range-slider
           h3 Buttons
           p
             .buttons-group
@@ -100,7 +104,7 @@ html(lang="ru")
     script(type='text/javascript') 
       include ../../modules/mixin/like_button/script_likebutton.js
     script(type='text/javascript') 
-      include ../../modules/mixin/rate_button/script_rate_button.js
+      include ../../modules/mixin/range_slider/range_slider_script.js
     
   
 

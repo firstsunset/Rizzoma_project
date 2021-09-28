@@ -50,7 +50,7 @@ h3 {
     width: 320px;
 }
 .form-elements-second {
-    width: 320px;
+    width: 100%;
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,6 +66,15 @@ h3 {
 }
 .form-elements-4 {
     padding-bottom: 40px;
+}
+.like-button-group {
+    display: flex;
+    flex-direction: row;
+}
+.rate-button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 .buttons-group {
     display: flex;
