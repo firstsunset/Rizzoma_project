@@ -1,0 +1,17 @@
+mixin pagination
+    .pagination
+        ul
+            li(onclick="createPagination(totalPages, 1)").pagination-first.numb 
+                span 1
+            li(onclick="createPagination(totalPages, 2)").numb 
+                span 2
+            li(onclick="createPagination(totalPages, 3)").numb 
+                span 3
+            li(onclick="createPagination(totalPages, 4)").numb 
+                span 4
+            li.dots 
+                span ...
+            li(onclick="createPagination(totalPages, 15)").numb 
+                span 15
+            li(onclick="createPagination(totalPages, 15)").pagination-btn 
+                span.pagination-arrow arrow_forward

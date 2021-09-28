@@ -7233,6 +7233,109 @@ document.getElementById("like-button").addEventListener("click", plusLike, false
 
 /***/ }),
 
+/***/ "./modules/mixin/pagination/pagination.js":
+/*!************************************************!*\
+  !*** ./modules/mixin/pagination/pagination.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _pagination_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pagination.scss */ "./modules/mixin/pagination/pagination.scss");
+/* harmony import */ var _pagination_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pagination_script */ "./modules/mixin/pagination/pagination_script.js");
+/* harmony import */ var _pagination_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_pagination_script__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./modules/mixin/pagination/pagination_script.js":
+/*!*******************************************************!*\
+  !*** ./modules/mixin/pagination/pagination_script.js ***!
+  \*******************************************************/
+/***/ (() => {
+
+// selecting required element
+var element = document.querySelector(".pagination ul");
+var totalPages = 15;
+var page = 1; //calling function with passing parameters and adding inside element which is ul tag
+
+element.innerHTML = createPagination(totalPages, page);
+
+function createPagination(totalPages, page) {
+  var liTag = '';
+  var active;
+  var beforePage = page - 1;
+  var afterPage = page + 1;
+
+  if (page > 2) {
+    //if page value is less than 2 then add 1 after the previous button
+    liTag += "<li class=\"paginaton-first numb\" onclick=\"createPagination(totalPages, 1)\"><span>1</span></li>";
+
+    if (page > 3) {
+      //if page value is greater than 3 then add this (...) after the first li or page
+      liTag += "<li class=\"dots\"><span>...</span></li>";
+    }
+  } // how many pages or li show before the current li
+
+
+  if (page == totalPages) {
+    beforePage = beforePage - 2;
+  } else if (page == totalPages - 1) {
+    beforePage = beforePage - 1;
+  } // how many pages or li show after the current li
+
+
+  if (page == 1) {
+    afterPage = afterPage + 2;
+  } else if (page == 2) {
+    afterPage = afterPage + 1;
+  }
+
+  for (var plength = beforePage; plength <= afterPage; plength++) {
+    if (plength > totalPages) {
+      //if plength is greater than totalPage length then continue
+      continue;
+    }
+
+    if (plength == 0) {
+      //if plength is 0 than add +1 in plength value
+      plength = plength + 1;
+    }
+
+    if (page == plength) {
+      //if page is equal to plength than assign active string in the active variable
+      active = "active";
+    } else {
+      //else leave empty to the active variable
+      active = "";
+    }
+
+    liTag += "<li class=\"numb ".concat(active, "\" onclick=\"createPagination(totalPages, ").concat(plength, ")\"><span>").concat(plength, "</span></li>");
+  }
+
+  if (page < totalPages - 1) {
+    //if page value is less than totalPage value by -1 then show the last li or page
+    if (page < totalPages - 2) {
+      //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+      liTag += "<li class=\"dots\"><span>...</span></li>";
+    }
+
+    liTag += "<li class=\"last numb\" onclick=\"createPagination(totalPages, ".concat(totalPages, ")\"><span>").concat(totalPages, "</span></li>");
+  }
+
+  if (page < totalPages) {
+    //show the next button if the page value is less than totalPage(20)
+    liTag += "<li class=\"pagination-btn\" onclick=\"createPagination(totalPages, ".concat(page + 1, ")\"><span class=\"pagination-arrow\">arrow_forward</span></li>");
+  }
+
+  element.innerHTML = liTag; //add li tag inside ul tag
+
+  return liTag; //reurn the li tag
+}
+
+/***/ }),
+
 /***/ "./modules/mixin/plusminus/plusminus.js":
 /*!**********************************************!*\
   !*** ./modules/mixin/plusminus/plusminus.js ***!
@@ -35872,6 +35975,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/pagination/pagination.scss":
+/*!**************************************************!*\
+  !*** ./modules/mixin/pagination/pagination.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/mixin/plusminus/plusminus.scss":
 /*!************************************************!*\
   !*** ./modules/mixin/plusminus/plusminus.scss ***!
@@ -36196,6 +36312,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mixin_range_slider_range_slider__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../modules/mixin/range_slider/range_slider */ "./modules/mixin/range_slider/range_slider.js");
 /* harmony import */ var _modules_mixin_range_slider_range_slider_script__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../modules/mixin/range_slider/range_slider_script */ "./modules/mixin/range_slider/range_slider_script.js");
 /* harmony import */ var _modules_mixin_range_slider_range_slider_script__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_range_slider_range_slider_script__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var _modules_mixin_pagination_pagination__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../../modules/mixin/pagination/pagination */ "./modules/mixin/pagination/pagination.js");
+
 
 
 

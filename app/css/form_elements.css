@@ -2931,14 +2931,19 @@ label:hover {
 /*!*****************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/range_slider/range_slider.scss ***!
   \*****************************************************************************************************************************************/
+.range-slider {
+  width: 266px;
+  height: 48px;
+}
+
 .content {
-  width: 320px;
+  width: 266px;
 }
 
 .slider {
   display: block;
   position: relative;
-  height: 36px;
+  height: 12px;
   width: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2983,13 +2988,107 @@ label:hover {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
+.range-text {
+  font-family: "MontserratRegular";
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+  color: #1F2041;
+}
+
 .range-result {
+  margin-top: -15px;
   font-family: "MontserratRegular";
   color: rgba(31, 32, 65, 0.5);
   font-size: 12px;
   line-height: 15px;
   text-align: right;
   text-transform: uppercase;
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/pagination/pagination.scss ***!
+  \*************************************************************************************************************************************/
+.pagination {
+  width: 241px;
+  height: 41px;
+}
+
+.pagination ul {
+  width: 261px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  border: none;
+}
+
+.pagination ul li {
+  color: rgba(31, 32, 65, 0.5);
+  font-family: "MontserratRegular";
+  list-style: none;
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li.numb {
+  list-style: none;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.pagination ul li.numb.first {
+  margin: 0px 3px 0 -5px;
+}
+
+.pagination ul li.numb.last {
+  margin: 0px -5px 0 3px;
+}
+
+.pagination ul li.dots {
+  padding-top: 10px;
+  cursor: default;
+}
+
+.pagination ul li.pagination-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.pagination ul li.numb:hover,
+.pagination ul li:first-child:hover,
+.pagination ul li:last-child:hover {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.pagination li.active {
+  color: #FFFFFF;
+  font-weight: bold;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.pagination-arrow {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 /*# sourceMappingURL=form_elements.css.map*/

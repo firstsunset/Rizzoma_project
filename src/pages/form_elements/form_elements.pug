@@ -17,6 +17,7 @@ include ../../modules/mixin/rate_button/rate_button
 include ../../modules/mixin/calendar/calendar
 include ../../modules/mixin/button/button
 include ../../modules/mixin/range_slider/range_slider
+include ../../modules/mixin/pagination/pagination
 
 
 
@@ -25,8 +26,6 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     title= "Toxin"
-      
-      
     
   body
     div.logogroup 
@@ -90,6 +89,8 @@ html(lang="ru")
               +button({ type: 'link', })
               +button({ type: 'link', isHovered: true, })
             +button({ type: 'long', text: 'перейти к оплате', })
+          H3 Pagination
+          +pagination
         
         
          
@@ -105,6 +106,8 @@ html(lang="ru")
       include ../../modules/mixin/like_button/script_likebutton.js
     script(type='text/javascript') 
       include ../../modules/mixin/range_slider/range_slider_script.js
+    script(type='text/javascript') 
+      include ../../modules/mixin/pagination/pagination_script.js
     
   
 
