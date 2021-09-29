@@ -1,185 +1,157 @@
+.wrap {
+  width: 320px;
+  height: 300px;
+  position: relative;
+
+  
+}
 .dropdown {
   position: relative;
-  display: inline-block;
-  border-radius: 2px;
-
-}
-.dropdown-form {
-  display: flex;
-  flex-direction: row;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
   width: 320px;
-  height: 44px;
-
-}
-.dropbtn-input {
-  position: relative;
-  width: 320px;
-  height: 44px;
-  padding-left: 15px;
-  padding-right: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  background: #FFFFFF;
-  text-align: start;
   font-family: 'MontserratRegular';
-  text-transform: none;
-  font-style: normal;
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  
-}
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
 
-
-
-
-.dropbtn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: #FFFFFF;
-    color: rgba(31, 32, 65, 0.75);
-    border: none;
-    box-sizing: border-box;
-    padding: 2px;
-    cursor: pointer;
-    font-family: 'MaterialIcons';
-    font-size: 24px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.5);
-    margin-left: 276px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-right: 2px;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background: #FFFFFF;
-  }
-  
-  
-  
-  .dropdown-content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 7px;
-    width: 320px;
-    height: 159px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-sizing: border-box;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF;
-    overflow: auto;
-    
-    
-  }
-  .iqdropdown-menu-option {
-    padding-left: 15px;
-    padding-top: 7px;
-    padding-right: 7px;
-  }
-  
- 
-  
-  .dropdown a:hover {background-color: #FFFFFF;}
-  
-  .show {display: block;}
-  .iqdropdown-menu-option {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    font-family: 'MontserratBold';
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1F2041;
-  }
-
-  
-  .iqdropdown-menu-buttons {
-    display: flex;
-    flex-direction: row;
-    padding-top: 12px;
-    
-  }
-  .iqdropdown-menu-apply {
-    padding-right: 7px;
-    width: 84px;
-    height: 15px;
-    padding-left: 229px;
-    border: none;
-    background-color: #FFFFFF;
-    font-family: 'MontserratBold';
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #BC9CFF;
-  }
-
-/*.dropdown {
-    
-    display: inline-block;
-    padding-top: 0px;
-    overflow: hidden;
-    
-}
-.dropdown-button {
-    display: flex;
-    width: 320px;
-    height: 44px;
-    padding-top: 0px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-   
-}
-.dropdown-btn {
+  &__heading {
     position: relative;
-    width: 320px;
-    height: 44px;
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    padding: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: rgba(31, 32, 65, 0.75);
-    color: rgba(31, 32, 65, 0.75);
-    text-align: start;
+    min-height: 44px;
     padding-left: 15px;
-    font-family: 'MontserratRegular';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    
+    top: 15px;
+  }
+  &_hide {
+    & > .dropdown__content{
+      display: none;
+      
+
+    }
+  }
+}
+.dropdown__content {
+  height: 160px;
+  width: 320px;
+  padding-top: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px; 
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  position: absolute;
+  background-color: #FFFFFF;
+  overflow: auto;
+  
 
 }
 
-.dropdown-arrow {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    font-family: 'MaterialIcons';
-    font-size: 24px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.5);
-    margin-left: 278px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-right: 2px;
-    padding: 2px;
-    background: #FFFFFF;
-    border: none;
-    
+
+.item-quantity {
+  width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+  align-content: center;
 }
-.dropdown-content {
-    display: block;
-    position: absolute;
-}*/
+.item-quantity__nam {
+  width: 83px;
+  height: 15px;
+  padding-right: 123px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: 'MontserratRegular';
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
+
+}
+.dropdown__dropbtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: 'MaterialIcons';
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 276px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+
+}
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+.item-quantity__controls {
+    display: flex;
+    flex-direction: row;
+}
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;   
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041
+}
+
+
+.dropdown__buttons {
+  width: 300px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-left: 10px;
+  
+}
+.dropdown__clear,
+.dropdown__apply {
+  padding: 0px;
+  width: 84px;
+  height: 15px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  text-align: start;
+}
+.dropdown__apply {
+    text-align: right;
+}
 
 

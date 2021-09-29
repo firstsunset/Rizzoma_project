@@ -1,21 +1,29 @@
-include ../plusminus/plusminus
-mixin dropdown
-    .dropdown
-      #sel1.dropdown-form(onclick='myFunction()')
-        button#displaydiv.dropbtn-input Сколько гостей
-        button.dropbtn expand_more
-      #myDropdown.dropdown-content
-        .iqdropdown-menu-option(data-id='item1')
-          label(for="").iqdropdown-item Взрослые
-          +plusminus
-        .iqdropdown-menu-option(data-id='item2')
-          label(for="").iqdropdown-item Дети
-          +plusminus
-        .iqdropdown-menu-option(data-id='item3')
-          label(for="").iqdropdown-item Младенцы
-          +plusminus
-        .iqdropdown-menu-buttons
-          button.iqdropdown-menu-apply(type='button' onclick='getSelectedValue()') Применить
+mixin dropdown(name,value,wordForms,min)
+  -
+    const data = {
+      'data-words': wordForms || undefined,
+      'data-min': min || undefined
+    }
+  .item-quantity&attributes(data)
+    span.item-quantity__nam= name
+    .item-quantity__controls
+      button.item-quantity__button.item-quantity__button_minus -
+      span.item-quantity__value= value
+      button.item-quantity__button.item-quantity__button_plus +
+
+.wrap
+  .dropdown(data-words="Гость,Гостя,Гостей", data-default="Сколько гостей?")
+    button.dropdown__dropbtn expand_more
+    .dropdown__heading
+    .dropdown__content
+      .dropdown__items
+        +dropdown('Взрослые',0)
+        +dropdown('Дети',0)
+        +dropdown('Младенцы',0)
+
+      .dropdown__buttons
+        button.dropdown__clear Очистить
+        button.dropdown__apply Применить
          
 
 

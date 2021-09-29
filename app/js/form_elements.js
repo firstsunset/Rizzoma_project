@@ -7080,27 +7080,209 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************/
 /***/ (() => {
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-} // Close the dropdown if the user clicks outside of it
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-window.onclick = function (event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
+function num2str(n, text_forms) {
+  n = Math.abs(n) % 100;
+  var n1 = n % 10;
+  if (n > 10 && n < 20) return text_forms[2];
+  if (n1 > 1 && n1 < 5) return text_forms[1];
+  if (n1 == 1) return text_forms[0];
+  return text_forms[2];
+}
 
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+var ItemQuantity = function ItemQuantity(element, onChangeCallback) {
+  var _this = this;
 
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+  _classCallCheck(this, ItemQuantity);
+
+  _defineProperty(this, "_checkButton", function () {
+    if (_this.value === _this.min) {
+      _this.minusEl.disabled = true;
+    } else {
+      _this.minusEl.disabled = false;
     }
-  }
+  });
+
+  _defineProperty(this, "_render", function () {
+    return _this.valueEl.innerHTML = _this.value;
+  });
+
+  _defineProperty(this, "setValue", function (newValue) {
+    var value = newValue > _this.min ? newValue : _this.min;
+    _this.value = value;
+
+    _this._render();
+
+    _this.onChange(_this.value);
+
+    _this._checkButton();
+  });
+
+  _defineProperty(this, "getValue", function () {
+    return _this.value;
+  });
+
+  _defineProperty(this, "isMinimal", function () {
+    return _this.value === _this.min;
+  });
+
+  _defineProperty(this, "isZerro", function () {
+    return _this.value === 0;
+  });
+
+  _defineProperty(this, "getString", function () {
+    if (_this.words !== undefined) {
+      var words = _this.words.split(",");
+
+      return _this.value > 0 ? "".concat(_this.value, " ").concat(num2str(_this.value, words)) : null;
+    } else {
+      return _this.getValue();
+    }
+  });
+
+  _defineProperty(this, "increment", function () {
+    return _this.setValue(_this.value + 1);
+  });
+
+  _defineProperty(this, "decriment", function () {
+    return _this.setValue(_this.value - 1);
+  });
+
+  this.el = element;
+  this.onChange = onChangeCallback;
+  this.words = this.el.dataset.words;
+  this.min = this.el.dataset.min ? parseInt(this.el.dataset.min) : 0;
+  this.minusEl = this.el.querySelector(".item-quantity__button_minus");
+  this.plusEl = this.el.querySelector(".item-quantity__button_plus");
+  this.minusEl.onclick = this.decriment;
+  this.plusEl.onclick = this.increment;
+  this.valueEl = this.el.querySelector(".item-quantity__value");
+  this.value = parseInt(this.valueEl.innerHTML);
+
+  this._checkButton();
 };
+
+var Dropdown = function Dropdown(element) {
+  var _this2 = this;
+
+  _classCallCheck(this, Dropdown);
+
+  _defineProperty(this, "hide", function (e) {
+    e !== undefined && e.stopPropagation();
+    !_this2.el.classList.contains("dropdown_hide") && _this2.el.classList.add("dropdown_hide");
+  });
+
+  _defineProperty(this, "show", function () {
+    _this2.el.classList.contains("dropdown_hide") && _this2.el.classList.remove("dropdown_hide");
+  });
+
+  _defineProperty(this, "getSum", function () {
+    var sum = 0;
+
+    _this2.items.forEach(function (item) {
+      sum += item.getValue();
+    });
+
+    _this2.sum = sum;
+    return sum;
+  });
+
+  _defineProperty(this, "_render", function () {
+    //this._renderHeader();
+    _this2._checkClear(); // this._checkApply();
+
+  });
+
+  _defineProperty(this, "_clearClick", function () {
+    _this2.items.forEach(function (item) {
+      item.setValue(0);
+    });
+  });
+
+  _defineProperty(this, "_checkClear", function () {
+    var allMinimal = !_this2.items.map(function (item) {
+      return item.isMinimal();
+    }).includes(false);
+
+    if (_this2.clear && allMinimal) {
+      _this2.clear.style.display = 'none';
+    } else {
+      _this2.clear.style.display = 'inline-block';
+    }
+
+    _this2.clear && (_this2.clear.disabled = allMinimal);
+  });
+
+  _defineProperty(this, "_checkApply", function () {
+    var isAllZerro = !_this2.items.map(function (item) {
+      return item.isZerro();
+    }).includes(false);
+
+    if (_this2.apply && isAllZerro) {
+      _this2.apply.style.display = 'none';
+    } else {
+      _this2.apply.style.display = 'inline-block';
+    }
+
+    _this2.apply && (_this2.apply.disabled = isAllZerro);
+  });
+
+  _defineProperty(this, "_renderHeader", function () {
+    var sum = _this2.getSum();
+
+    if (_this2.words !== undefined) {
+      var words = _this2.words.split(",");
+
+      _this2.heading.innerHTML = sum > 0 ? "".concat(sum, " ").concat(num2str(sum, words)) : _this2["default"];
+    } else {
+      var arr = _this2.items.map(function (item) {
+        return item.getString();
+      });
+
+      arr = arr.filter(function (el) {
+        return el !== null;
+      });
+      _this2.heading.innerHTML = sum > 0 ? arr.join(", ") : _this2["default"];
+    }
+  });
+
+  this.el = element;
+  document.addEventListener('click', function (e) {
+    return !_this2.el.contains(e.target) && _this2.hide(e);
+  });
+  this.el.onclick = this.show;
+  this["default"] = this.el.dataset["default"] || "";
+  this.words = this.el.dataset.words;
+  this.items = Array.from(this.el.querySelectorAll(".item-quantity")).map(function (item) {
+    return new ItemQuantity(item, function () {
+      return _this2._render();
+    });
+  });
+  this.sum = this.getSum();
+  this.clear = this.el.querySelector(".dropdown__clear");
+  this.clear && (this.clear.onclick = this._clearClick);
+  this.apply = this.el.querySelector(".dropdown__apply");
+  this.apply && this.apply.addEventListener('click', function (e) {
+    _this2._renderHeader();
+
+    _this2.hide(e);
+  });
+  this.heading = this.el.querySelector(".dropdown__heading");
+
+  this._render();
+
+  this._renderHeader();
+
+  this.hide();
+};
+
+var dropdowns = document.querySelectorAll(".dropdown");
+var Dropdowns = Array.from(dropdowns).map(function (dd) {
+  return new Dropdown(dd);
+});
 
 /***/ }),
 
@@ -7126,45 +7308,209 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************************/
 /***/ (() => {
 
-/*function fun1() {
-    var sel = document.getElementById('mySelect').selectedIndex;
-    var options = document.getElementById('mySelect').options;
-    alert('выбрана' +options[sel].text);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-}*/
-function getSelectedValue() {
-  var e = document.getElementById("sel1");
-  var choiceValue = e.value; // to get value only
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-  var choicetext = e.options[e.selectedIndex].text;
-  alert(choiceValue + " " + choicetext);
-  var newDiv = document.createElement('span');
-  newDiv.setAttribute("class", "badge badge-primary");
-  newDiv.innerHTML = choicetext + " ";
-  var spanDiv = document.createElement('i');
-  spanDiv.setAttribute("class", "fa fa-close");
-  spanDiv.setAttribute("onclick", 'closeDiv(this)'); //clsbtn.appendChild(spanDiv)
-
-  newDiv.appendChild(spanDiv);
-  var displaydiv = document.getElementById('displaydiv');
-  displaydiv.appendChild(newDiv);
+function num2str(n, text_forms) {
+  n = Math.abs(n) % 100;
+  var n1 = n % 10;
+  if (n > 10 && n < 20) return text_forms[2];
+  if (n1 > 1 && n1 < 5) return text_forms[1];
+  if (n1 == 1) return text_forms[0];
+  return text_forms[2];
 }
 
-function closeDiv(x) {
-  var parentDiv = x.parentNode.parentNode;
-  parentDiv.removeChild(x.parentNode);
-}
+var ItemQuantity = function ItemQuantity(element, onChangeCallback) {
+  var _this = this;
 
-function getSelection(o) {
-  if (!o.options) return "";
-  var selectedOptions = [];
+  _classCallCheck(this, ItemQuantity);
 
-  for (var i = 0; i < o.options.length; i++) {
-    if (o.options[i].selected) selectedOptions.push(o.options[i].value);
-  }
+  _defineProperty(this, "_checkButton", function () {
+    if (_this.value === _this.min) {
+      _this.minusEl.disabled = true;
+    } else {
+      _this.minusEl.disabled = false;
+    }
+  });
 
-  return selectedOptions.join(",");
-}
+  _defineProperty(this, "_render", function () {
+    return _this.valueEl.innerHTML = _this.value;
+  });
+
+  _defineProperty(this, "setValue", function (newValue) {
+    var value = newValue > _this.min ? newValue : _this.min;
+    _this.value = value;
+
+    _this._render();
+
+    _this.onChange(_this.value);
+
+    _this._checkButton();
+  });
+
+  _defineProperty(this, "getValue", function () {
+    return _this.value;
+  });
+
+  _defineProperty(this, "isMinimal", function () {
+    return _this.value === _this.min;
+  });
+
+  _defineProperty(this, "isZerro", function () {
+    return _this.value === 0;
+  });
+
+  _defineProperty(this, "getString", function () {
+    if (_this.words !== undefined) {
+      var words = _this.words.split(",");
+
+      return _this.value > 0 ? "".concat(_this.value, " ").concat(num2str(_this.value, words)) : null;
+    } else {
+      return _this.getValue();
+    }
+  });
+
+  _defineProperty(this, "increment", function () {
+    return _this.setValue(_this.value + 1);
+  });
+
+  _defineProperty(this, "decriment", function () {
+    return _this.setValue(_this.value - 1);
+  });
+
+  this.el = element;
+  this.onChange = onChangeCallback;
+  this.words = this.el.dataset.words;
+  this.min = this.el.dataset.min ? parseInt(this.el.dataset.min) : 0;
+  this.minusEl = this.el.querySelector(".item-quantity__button_minus");
+  this.plusEl = this.el.querySelector(".item-quantity__button_plus");
+  this.minusEl.onclick = this.decriment;
+  this.plusEl.onclick = this.increment;
+  this.valueEl = this.el.querySelector(".item-quantity__value");
+  this.value = parseInt(this.valueEl.innerHTML);
+
+  this._checkButton();
+};
+
+var Dropdown = function Dropdown(element) {
+  var _this2 = this;
+
+  _classCallCheck(this, Dropdown);
+
+  _defineProperty(this, "hide", function (e) {
+    e !== undefined && e.stopPropagation();
+    !_this2.el.classList.contains("dropdown_hide") && _this2.el.classList.add("dropdown_hide");
+  });
+
+  _defineProperty(this, "show", function () {
+    _this2.el.classList.contains("dropdown_hide") && _this2.el.classList.remove("dropdown_hide");
+  });
+
+  _defineProperty(this, "getSum", function () {
+    var sum = 0;
+
+    _this2.items.forEach(function (item) {
+      sum += item.getValue();
+    });
+
+    _this2.sum = sum;
+    return sum;
+  });
+
+  _defineProperty(this, "_render", function () {
+    //this._renderHeader();
+    _this2._checkClear(); // this._checkApply();
+
+  });
+
+  _defineProperty(this, "_clearClick", function () {
+    _this2.items.forEach(function (item) {
+      item.setValue(0);
+    });
+  });
+
+  _defineProperty(this, "_checkClear", function () {
+    var allMinimal = !_this2.items.map(function (item) {
+      return item.isMinimal();
+    }).includes(false);
+
+    if (_this2.clear && allMinimal) {
+      _this2.clear.style.display = 'none';
+    } else {
+      _this2.clear.style.display = 'inline-block';
+    }
+
+    _this2.clear && (_this2.clear.disabled = allMinimal);
+  });
+
+  _defineProperty(this, "_checkApply", function () {
+    var isAllZerro = !_this2.items.map(function (item) {
+      return item.isZerro();
+    }).includes(false);
+
+    if (_this2.apply && isAllZerro) {
+      _this2.apply.style.display = 'none';
+    } else {
+      _this2.apply.style.display = 'inline-block';
+    }
+
+    _this2.apply && (_this2.apply.disabled = isAllZerro);
+  });
+
+  _defineProperty(this, "_renderHeader", function () {
+    var sum = _this2.getSum();
+
+    if (_this2.words !== undefined) {
+      var words = _this2.words.split(",");
+
+      _this2.heading.innerHTML = sum > 0 ? "".concat(sum, " ").concat(num2str(sum, words)) : _this2["default"];
+    } else {
+      var arr = _this2.items.map(function (item) {
+        return item.getString();
+      });
+
+      arr = arr.filter(function (el) {
+        return el !== null;
+      });
+      _this2.heading.innerHTML = sum > 0 ? arr.join(", ") : _this2["default"];
+    }
+  });
+
+  this.el = element;
+  document.addEventListener('click', function (e) {
+    return !_this2.el.contains(e.target) && _this2.hide(e);
+  });
+  this.el.onclick = this.show;
+  this["default"] = this.el.dataset["default"] || "";
+  this.words = this.el.dataset.words;
+  this.items = Array.from(this.el.querySelectorAll(".item-quantity")).map(function (item) {
+    return new ItemQuantity(item, function () {
+      return _this2._render();
+    });
+  });
+  this.sum = this.getSum();
+  this.clear = this.el.querySelector(".dropdown__clear");
+  this.clear && (this.clear.onclick = this._clearClick);
+  this.apply = this.el.querySelector(".dropdown__apply");
+  this.apply && this.apply.addEventListener('click', function (e) {
+    _this2._renderHeader();
+
+    _this2.hide(e);
+  });
+  this.heading = this.el.querySelector(".dropdown__heading");
+
+  this._render();
+
+  this._renderHeader();
+
+  this.hide();
+};
+
+var dropdowns = document.querySelectorAll(".dropdown");
+var Dropdowns = Array.from(dropdowns).map(function (dd) {
+  return new Dropdown(dd);
+});
 
 /***/ }),
 
@@ -7681,6 +8027,19 @@ newRangeSlider.didChanged = function (min, max) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rate_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rate_button.scss */ "./modules/mixin/rate_button/rate_button.scss");
+/* harmony import */ var _script_rate_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_rate_button */ "./modules/mixin/rate_button/script_rate_button.js");
+/* harmony import */ var _script_rate_button__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_rate_button__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./modules/mixin/rate_button/script_rate_button.js":
+/*!*********************************************************!*\
+  !*** ./modules/mixin/rate_button/script_rate_button.js ***!
+  \*********************************************************/
+/***/ (() => {
+
 
 
 /***/ }),

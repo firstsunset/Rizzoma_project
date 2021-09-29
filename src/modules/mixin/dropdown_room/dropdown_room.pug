@@ -1,8 +1,26 @@
-mixin dropdown_room 
-    select#sel1.form-control(name='sellist1' style='width:auto' multiple)
-      option(value='' selected='' disabled='' hidden='') Choose here
-      option(value='1' selected) Спальни
-      option(value='2' selected) Кровати
-      option(value='3' selected) Ванные комнаты
-    button.btn.btn-primary(type='button' onclick='getSelectedValue()') Add
-    #displaydiv
+mixin dropdown__item(name,value,wordForms,min)
+  -
+    const data = {
+      'data-words': wordForms || undefined,
+      'data-min': min || undefined
+    }
+  .item-quantity&attributes(data)
+    span.item-quantity__nam= name
+    .item-quantity__controls
+      button.item-quantity__button.item-quantity__button_minus -
+      span.item-quantity__value= value
+      button.item-quantity__button.item-quantity__button_plus +
+
+.wrap
+  .dropdown(data-default="Сколько комнат и кроватей?")
+    button.dropdown__dropbtn expand_more
+    .dropdown__heading
+    .dropdown__content
+      .dropdown__items
+        +dropdown__item('Cпальня',2,'Спальня,Спальни,Спален',0)
+        +dropdown__item('Кровать',2,'Кровать, Кровати, Кроватей',0)
+        +dropdown__item('Ванные комнаты',0,'Ванная, Ванные, Ванных',0)
+
+      .dropdown__buttons
+        button.dropdown__clear Очистить
+        button.dropdown__apply Применить
