@@ -30,6 +30,7 @@ module.exports = {
       registration: PATHS.src + '/pages/registration/registration.js',
       uikit: PATHS.src + '/pages/uikit/uikit.js',
       form_elements: PATHS.src + '/pages/form_elements/form_elements.js',
+      cards: PATHS.src + '/pages/cards/cards.js',
       
     },
   
@@ -87,6 +88,12 @@ module.exports = {
           inject: true,
           chunks: ['form_elements'],
           filename: 'form_elements.html'
+        }),
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/pages/cards/cards.pug'),
+          inject: true,
+          chunks: ['cards'],
+          filename: 'cards.html'
         }),
     
         

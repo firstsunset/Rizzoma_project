@@ -1,0 +1,15 @@
+include ../../modules/cards/registration/registration
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title= "Toxin"
+    
+  body
+    div.logogroup 
+        a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group")
+    .container
+        .cards-registration 
+        +registration

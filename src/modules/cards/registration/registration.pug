@@ -1,0 +1,35 @@
+include ../../mixin/text_field/text_field
+include ../../mixin/radio_buttons/radio_buttons
+include ../../mixin/toggle/toggle
+include ../../mixin/button/button
+
+mixin registration 
+    .registration
+        .registration-item
+            .registration-head Регистрация аккаунта
+            .registration-firstname 
+            +text_field('Имя')
+            .registration-lastname 
+            +text_field('Фамилия')
+            .registration-radio 
+            +radio_buttons
+            .registration-date Дата рождения               
+            +text_field('ДД.ММ.ГГГГ')
+            .registration-sign 
+                .registration-sign-head Данные для входа в сервис
+                +text_field('Email')
+                .registration-sign-password 
+                +text_field('Пароль')
+            .registration-toggle 
+            +toggle
+            .registration-buttonlong 
+            +button({ type: 'long', text: 'перейти к оплате', })
+            .registration-lastgroup 
+                .registration-toxin Уже есть аккаунт на Toxin 
+                .ragistration-button
+                +button({ type: 'bordercolor', text: 'Войти', })
+
+
+
+
+

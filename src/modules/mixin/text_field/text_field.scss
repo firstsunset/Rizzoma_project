@@ -2,17 +2,15 @@
     display: flex;
     flex-direction: column;
     width: 320px;
-    height: 67px;   
+    height: 44px;   
     border: none;
     
 }
-.text_field_label {
-    line-height: 15px;
-}
+
 
 .text_field_input{
     position: relative;
-    width: 320px;
+    width: 305px;
     height: 44px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
@@ -21,28 +19,22 @@
     margin-bottom: 0px;
     
 }
-.text_field_input::placeholder{
+
+.text_field_form input[type="text"]{
     color: rgba(31, 32, 65, 0.25);
     font-family: 'MontserratRegular';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    
+    padding-left: 15px;
+
 }
-.text_field_input[type='email'] {
-    color: rgba(31, 32, 65, 0.75);
-    
-    font-family: 'MontserratRegular';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-}
+
 
 
 .text_field_input:focus,
 .text_field_input:hover {
     outline: none;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid rgba(31, 32, 65, 0.25);
 }

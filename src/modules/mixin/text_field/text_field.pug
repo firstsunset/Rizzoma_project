@@ -1,3 +1,3 @@
-mixin text_field
+mixin text_field(text)
     form.text_field_form(action="/mock-address/change-me")
-        input.text_field_input(type="email" name="emails" placeholder="Email")
+        input.text_field_input(type="text" name="emails" placeholder= text)

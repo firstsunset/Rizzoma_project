@@ -351,9 +351,9 @@ template {
   display: none;
 }
 
-/*!***********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/form_elements.scss ***!
-  \***********************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/cards/cards.scss ***!
+  \*******************************************************************************************************************/
 .container {
   box-sizing: border-box;
   margin-left: auto;
@@ -1681,10 +1681,9 @@ template {
   }
 }
 body {
-  background-color: white;
+  background-color: #E5E5E5;
   margin: 0;
   padding: 0;
-  font-family: "MontserratRegular";
 }
 
 h3 {
@@ -1699,64 +1698,12 @@ h3 {
 .logogroup {
   width: 48px;
   height: 48px;
-  margin-top: 30px;
-  margin-bottom: 62px;
   margin-left: 30px;
+  margin-top: 30px;
 }
-
-.form-elements {
-  display: flex;
-  flex-direction: row;
-}
-
-.form-elements-first {
-  margin-right: 126px;
-  width: 320px;
-}
-
-.form-elements-second {
-  width: 100%;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.form-elements-1 {
-  padding-bottom: 40px;
-}
-
-.form-elements-2 {
-  padding-bottom: 40px;
-}
-
-.form-elements-3 {
-  padding-bottom: 40px;
-}
-
-.form-elements-4 {
-  padding-bottom: 40px;
-}
-
-.like-button-group {
-  display: flex;
-  flex-direction: row;
-}
-
-.rate-button-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.buttons-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 30px;
-}
-/*!***************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/fonts.scss ***!
-  \***************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/cards/fonts.scss ***!
+  \*******************************************************************************************************************/
 @font-face {
   font-family: "MontserratRegular";
   src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
@@ -1777,19 +1724,105 @@ h3 {
   font-weight: 400;
   src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
 }
-/*!******************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/settings.scss ***!
-  \******************************************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/cards/settings.scss ***!
+  \**********************************************************************************************************************/
 .container {
   margin: 0 140px;
   padding: 0 0;
   width: 1160px;
   max-width: 100%;
 }
-/*!*******************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/veriables.scss ***!
-  \*******************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/registration/registration.scss ***!
+  \*****************************************************************************************************************************************/
+.registration {
+  width: 380px;
+  height: 646px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: "MontserratRegular";
+}
 
+.registration-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.registration-head {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+  padding-bottom: 20px;
+}
+
+.registration-lastname {
+  padding-top: 10px;
+}
+
+.registration-radio {
+  padding-top: 10px;
+}
+
+.registration-date {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+}
+
+.registration-sign {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.registration-sign-head {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  padding-bottom: 5px;
+}
+
+.registration-sign-password {
+  padding-top: 10px;
+}
+
+.registration-toggle {
+  padding-top: 10px;
+}
+
+.registration-buttonlong {
+  padding-top: 20px;
+}
+
+.registration-lastgroup {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.registration-toxin {
+  padding-top: 14px;
+  padding-right: 35px;
+  width: 186px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/text_field/text_field.scss ***!
   \*************************************************************************************************************************************/
@@ -1826,674 +1859,6 @@ h3 {
 .text_field_input:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.25);
-}
-/*!*********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/fonts.scss ***!
-  \*********************************************************************************************************************************************/
-@font-face {
-  font-family: "MontserratRegular";
-  src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
-}
-@font-face {
-  font-family: "MontserratBold";
-  src: url(../fonts/Montserrat-Bold0f78db24da2c5f98591a.woff) format("woff"), url(../fonts/Montserrat-Bold079ca05d3ded9bc107ab.ttf) format("truetype"), url(../fonts/Montserrat-Bold946d834c14da9a5a8710.svg) format("svg");
-}
-@font-face {
-  font-family: "MaterialIcons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
-}
-/*!***************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/subscription_text_field.scss ***!
-  \***************************************************************************************************************************************************************/
-.footer-email {
-  display: flex;
-  padding-top: 0px;
-  width: 260px;
-  height: 44px;
-  border: none;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-
-.input-text {
-  position: relative;
-  width: 260px;
-  height: 44px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  background: #FFFFFF;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.input-text:focus,
-.input-text:hover {
-  outline: none;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-.input-text[type=email] {
-  color: rgba(31, 32, 65, 0.75);
-  padding-left: 15px;
-  font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.input-text::placeholder {
-  color: rgba(31, 32, 65, 0.25);
-  font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  padding-left: 15px;
-}
-
-.input-btn {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  padding: 2px;
-  margin-left: 215px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  border: none;
-  cursor: pointer;
-}
-/*!******************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown/fonts.scss ***!
-  \******************************************************************************************************************************/
-@font-face {
-  font-family: "MontserratRegular";
-  src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
-}
-@font-face {
-  font-family: "MontserratBold";
-  src: url(../fonts/Montserrat-Bold0f78db24da2c5f98591a.woff) format("woff"), url(../fonts/Montserrat-Bold079ca05d3ded9bc107ab.ttf) format("truetype"), url(../fonts/Montserrat-Bold946d834c14da9a5a8710.svg) format("svg");
-}
-@font-face {
-  font-family: "MaterialIcons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
-}
-/*!*********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown/dropdown.scss ***!
-  \*********************************************************************************************************************************/
-.wrap {
-  width: 320px;
-  height: 300px;
-  position: relative;
-}
-
-.dropdown {
-  position: relative;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  margin-bottom: 20px;
-  width: 320px;
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  border-radius: 4px;
-  background: #FFFFFF;
-  text-align: start;
-}
-.dropdown__heading {
-  position: relative;
-  min-height: 44px;
-  padding-left: 15px;
-  top: 15px;
-}
-.dropdown_hide > .dropdown__content {
-  display: none;
-}
-
-.dropdown__content {
-  height: 160px;
-  width: 320px;
-  padding-top: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
-  background-color: #FFFFFF;
-  overflow: auto;
-}
-
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
-}
-
-.dropdown__dropbtn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  color: rgba(31, 32, 65, 0.75);
-  border: none;
-  box-sizing: border-box;
-  padding: 2px;
-  cursor: pointer;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
-
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-.item-quantity__controls {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
-}
-
-.dropdown__buttons {
-  width: 300px;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  padding-top: 13px;
-  padding-left: 10px;
-}
-
-.dropdown__clear,
-.dropdown__apply {
-  padding: 0px;
-  width: 84px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
-  text-align: start;
-}
-
-.dropdown__apply {
-  text-align: right;
-}
-/*!***********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/plusminus/plusminus.scss ***!
-  \***********************************************************************************************************************************/
-.number {
-  display: flex;
-  flex-direction: row;
-  width: 92px;
-  height: 30px;
-}
-
-.minus, .plus {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-input {
-  width: 32px;
-  height: 30px;
-  text-align: center;
-  padding: 0px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
-}
-/*!*******************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_room/dropdown_room.scss ***!
-  \*******************************************************************************************************************************************/
-.wrap {
-  width: 320px;
-  height: 300px;
-  position: relative;
-}
-
-.dropdown {
-  position: relative;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  margin-bottom: 20px;
-  width: 320px;
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  border-radius: 4px;
-  background: #FFFFFF;
-  text-align: start;
-}
-.dropdown__heading {
-  position: relative;
-  min-height: 44px;
-  padding-left: 15px;
-  top: 15px;
-}
-.dropdown_hide > .dropdown__content {
-  display: none;
-}
-
-.dropdown__content {
-  height: 160px;
-  width: 320px;
-  padding-top: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
-  background-color: #FFFFFF;
-  overflow: auto;
-}
-
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
-}
-
-.dropdown__dropbtn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  color: rgba(31, 32, 65, 0.75);
-  border: none;
-  box-sizing: border-box;
-  padding: 2px;
-  cursor: pointer;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
-
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-.item-quantity__controls {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
-}
-
-.dropdown__buttons {
-  width: 300px;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  padding-top: 13px;
-  padding-left: 10px;
-}
-
-.dropdown__clear,
-.dropdown__apply {
-  padding: 0px;
-  width: 84px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
-  text-align: start;
-}
-
-.dropdown__apply {
-  text-align: right;
-}
-/*!*******************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox_list/checkbox_list.scss ***!
-  \*******************************************************************************************************************************************/
-.multiselect {
-  width: 320px;
-  height: 44px;
-}
-
-.selectBox {
-  position: relative;
-}
-
-.selectBox select {
-  width: 320px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  border: none;
-  background: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.overSelect {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-#checkboxes {
-  display: none;
-}
-
-.checkboxes {
-  display: flex;
-  flex-direction: row;
-  width: 222px;
-  height: 171px;
-}
-
-.checkbox-group {
-  display: flex;
-  flex-direction: row;
-  width: 222px;
-  height: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-family: "MontserratRegular";
-  color: rgba(31, 32, 65, 0.5);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  margin-right: 20px;
-}
-
-.checkbox-group-text {
-  margin-left: 10px;
-}
-/*!*********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox/checkbox.scss ***!
-  \*********************************************************************************************************************************/
-.btn {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  position: absolute;
-  opacity: 0;
-}
-
-.blockbefore {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.block {
-  display: none;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.show-block {
-  display: block;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid #bc9cff;
-  border-radius: 4px;
-}
-
-.show-block svg {
-  stroke: url(#Gradient-1);
-  stroke-width: 2px;
-  /* width of checkmark */
-  fill: none;
-  stroke-linecap: square;
-  bottom: 1px;
-  width: 20px;
-  height: 20px;
-}
-/*!***********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkmark/checkmark.scss ***!
-  \***********************************************************************************************************************************/
-.check {
-  display: block;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  font-family: "MontserratRegular";
-  color: rgba(31, 32, 65, 0.5);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkmark {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.check input:checked ~ .checkmark {
-  background-color: #FFFFFF;
-  border: 1px solid #bc9cff;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.check input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.check .checkmark:after {
-  left: 8px;
-  top: 6px;
-  width: 6px;
-  height: 8px;
-  border: solid transparent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 1em 1em #FFFFFF inset;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-/* Show the checkmark when checked */
-/* Style the checkmark/indicator */
-label:hover {
-  cursor: pointer;
-}
-
-.checkMark {
-  stroke: url(#Gradient-1);
-  stroke-width: 2px;
-  /* width of checkmark */
-  fill: none;
-  stroke-linecap: square;
-  bottom: 1px;
-}
-
-.checkbox {
-  position: absolute;
-  opacity: 0;
-  /* hides default style checkbox */
-  width: 20px;
-  height: 20px;
-}
-
-.checkbox:checked + .checkMarkBox {
-  border: 1px solid #bc9cff;
-  /* border of checkbox when checked*/
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/radio_buttons/radio_buttons.scss ***!
@@ -2677,249 +2042,6 @@ label:hover {
   line-height: 18px;
   margin-right: 20px;
 }
-/*!***********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox_button/checkbox_button.scss ***!
-  \***********************************************************************************************************************************************/
-.checkbox-button {
-  width: 222px;
-  height: 100px;
-  margin-top: 12px;
-}
-
-.checkbox-button-group {
-  display: flex;
-  flex-direction: row;
-  width: 222px;
-  height: 20px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.5);
-}
-
-.checkbox-button-text {
-  margin-left: 10px;
-}
-/*!***************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/like_button/like_button.scss ***!
-  \***************************************************************************************************************************************/
-.like-button {
-  width: 40px;
-  height: 20px;
-}
-
-.like-btn {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  width: 40px;
-  height: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
-}
-
-.like-btn-checked {
-  border-color: #BC9CFF;
-}
-
-.like-checkmark-after {
-  position: absolute;
-  cursor: pointer;
-  margin-top: -15px;
-  margin-left: 6px;
-  font-family: "MaterialIcons";
-  font-size: 10px;
-  line-height: 10px;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.like-checkmark-before {
-  position: absolute;
-  cursor: pointer;
-  padding-left: 5px;
-  padding-top: 5px;
-  width: 10px;
-  height: 10px;
-  font-family: "MaterialIcons";
-  font-size: 10px;
-  line-height: 9px;
-  color: rgba(31, 32, 65, 0.25);
-  margin: 0px;
-}
-
-.like-btn-count {
-  position: absolute;
-  padding-top: 3px;
-  margin-left: 15px;
-  width: 20px;
-  height: 20px;
-  font-family: "MontserratRegular";
-  font-size: 10px;
-  line-height: 12px;
-  color: rgba(31, 32, 65, 0.25);
-}
-/*!*************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/like/like.scss ***!
-  \*************************************************************************************************************************/
-.like {
-  user-select: none;
-}
-.like__input:checked ~ .like__value {
-  display: none;
-}
-.like__input:checked ~ .like__value_checked {
-  display: inline;
-}
-.like__input:not(:checked) ~ .like__value {
-  display: inline;
-}
-.like__input:not(:checked) ~ .like__value_checked {
-  display: none;
-}
-/*!***************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/rate_button/rate_button.scss ***!
-  \***************************************************************************************************************************************/
-.rate {
-  display: inline-flex;
-  gap: 4px;
-}
-
-.material-icons {
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 20px;
-  background-clip: text;
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: transparent;
-  font-style: normal;
-  cursor: pointer;
-}
-/*!*********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/calendar/calendar.scss ***!
-  \*********************************************************************************************************************************/
-.calendar {
-  position: relative;
-}
-.calendar__card {
-  display: none;
-  position: absolute;
-  z-index: 100;
-  width: 320px;
-  padding: 20px;
-  background: white;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  border-radius: 4px;
-  margin-top: 5px;
-}
-.calendar__card__visible {
-  display: block;
-}
-.calendar__buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 18px;
-}
-
-.datepicker--nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-.datepicker--nav-action {
-  height: 24px;
-  width: 24px;
-}
-.datepicker--nav-title {
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
-  color: #1f2041;
-  cursor: pointer;
-}
-.datepicker--body {
-  display: none;
-}
-.datepicker .active {
-  display: block;
-}
-.datepicker--days-names {
-  display: flex;
-}
-.datepicker--day-name {
-  flex-grow: 1;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 40px;
-  color: #bc9cff;
-  text-align: center;
-}
-.datepicker--cells-days {
-  display: flex;
-  flex-wrap: wrap;
-}
-.datepicker--cell {
-  cursor: pointer;
-}
-.datepicker--cell-day {
-  width: calc(100% / 7);
-  text-align: center;
-  font-size: 12px;
-  line-height: 40px;
-  color: rgba(31, 32, 65, 0.5);
-  position: relative;
-}
-.datepicker .-other-month- {
-  color: rgba(31, 32, 65, 0.25);
-}
-.datepicker .-current- {
-  color: #ffffff;
-  font-weight: bold;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-  border-radius: 22px;
-}
-.datepicker .-current-.-in-range- {
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-  border-radius: 0;
-}
-.datepicker .-selected- {
-  font-weight: bold;
-  color: #ffffff;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 22px;
-}
-.datepicker .-range-from-::before {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 22px 0 0 22px;
-  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-}
-.datepicker .-in-range- {
-  background: rgba(188, 156, 255, 0.25);
-}
-.datepicker .-range-to-::before {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-  border-radius: 0 22px 22px 0;
-}
-.datepicker--buttons {
-  margin-top: 20px;
-}
 /*!*****************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
   \*****************************************************************************************************************************/
@@ -3014,167 +2136,5 @@ label:hover {
   margin-left: auto;
   padding-right: 10px;
 }
-/*!*****************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/range_slider/range_slider.scss ***!
-  \*****************************************************************************************************************************************/
-.range-slider {
-  width: 266px;
-  height: 48px;
-}
 
-.content {
-  width: 266px;
-}
-
-.slider {
-  display: block;
-  position: relative;
-  height: 12px;
-  width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.slider .slider-touch-left, .slider .slider-touch-right {
-  display: block;
-  position: absolute;
-  height: 12px;
-  width: 12px;
-  padding: 0px;
-  z-index: 2;
-}
-.slider .slider-touch-left span, .slider .slider-touch-right span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  margin-top: 12px;
-}
-.slider .slider-line {
-  margin-right: 90px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  top: 16px;
-  height: 6px;
-  border-radius: 3px;
-  background: #FFFFFF;
-  z-index: 0;
-  overflow: hidden;
-}
-.slider .slider-line span {
-  display: block;
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-}
-
-.range-text {
-  font-family: "MontserratRegular";
-  font-size: 12px;
-  line-height: 15px;
-  text-align: right;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: left;
-  color: #1F2041;
-}
-
-.range-result {
-  margin-top: -15px;
-  font-family: "MontserratRegular";
-  color: rgba(31, 32, 65, 0.5);
-  font-size: 12px;
-  line-height: 15px;
-  text-align: right;
-  text-transform: uppercase;
-}
-/*!*************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/pagination/pagination.scss ***!
-  \*************************************************************************************************************************************/
-.pagination {
-  width: 241px;
-  height: 41px;
-}
-
-.pagination ul {
-  width: 261px;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  border: none;
-}
-
-.pagination ul li {
-  color: rgba(31, 32, 65, 0.5);
-  font-family: "MontserratRegular";
-  list-style: none;
-  text-align: center;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: normal;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.3s ease;
-}
-
-.pagination ul li.numb {
-  list-style: none;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-}
-
-.pagination ul li.numb.first {
-  margin: 0px 3px 0 -5px;
-}
-
-.pagination ul li.numb.last {
-  margin: 0px -5px 0 3px;
-}
-
-.pagination ul li.dots {
-  padding-top: 10px;
-  cursor: default;
-}
-
-.pagination ul li.pagination-btn {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-}
-
-.pagination ul li.numb:hover,
-.pagination ul li:first-child:hover,
-.pagination ul li:last-child:hover {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-}
-
-.pagination li.active {
-  color: #FFFFFF;
-  font-weight: bold;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.pagination-arrow {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 24px;
-  height: 24px;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 20px;
-  color: #FFFFFF;
-  text-align: center;
-}
-
-/*# sourceMappingURL=form_elements.css.map*/
+/*# sourceMappingURL=cards.css.map*/
