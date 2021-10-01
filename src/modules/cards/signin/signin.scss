@@ -1,12 +1,11 @@
-.registration {
+.signin{
     width: 378px;
-    height: 644px;
+    height: 356px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     font-family: 'MontserratRegular';
-    
 
     &-item {
         display: flex;
@@ -15,7 +14,7 @@
         margin-left: 30px;
         margin-right: 30px;
     }
-    
+
     &-head {
         font-style: normal;
         font-weight: bold;
@@ -24,49 +23,20 @@
         color: #1F2041;
         padding-bottom: 20px;
     }
-    &-lastname{
+    &-password{
         padding-top: 10px;
     }
-    &-radio{
-        padding-top: 10px;
-    }
-    &-date{
-        text-transform: uppercase;
-        padding-bottom: 5px;
-        padding-top: 20px;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        color: #1F2041;
-    
-    }
-    &-sign{
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-    }
-    &-sign-head{
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
-        color: #1F2041;
-        padding-bottom: 5px;
-    }
-    &-sign-password{
-        padding-top: 10px;
-    }
-    &-toggle{
-        padding-top: 10px;
-    }
+
     &-buttonlong{
         padding-top: 20px;
     }
+    
     &-lastgroup{
         padding-top: 30px;
         display: flex;
         flex-direction: row;
     }
+
     &-toxin{
         padding-top: 14px;
         padding-right: 35px;
@@ -77,7 +47,3 @@
         color: #000000;
     }
 }
-
-
-
-

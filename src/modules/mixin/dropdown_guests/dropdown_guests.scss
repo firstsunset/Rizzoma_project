@@ -1,6 +1,6 @@
 .wrap {
   width: 320px;
-  height: 300px;
+  height: 205px;
   position: relative;
 
   
@@ -49,29 +49,7 @@
 }
 
 
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: 'MontserratRegular';
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
 
-}
 .dropdown__dropbtn {
   position: absolute;
   width: 40px;
@@ -92,40 +70,6 @@
   margin-right: 2px;
 
 }
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-.item-quantity__controls {
-    display: flex;
-    flex-direction: row;
-}
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;   
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041
-}
-
 
 .dropdown__buttons {
   width: 300px;

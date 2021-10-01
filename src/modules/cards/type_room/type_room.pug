@@ -1,0 +1,22 @@
+include ../../mixin/rate_button/rate_button
+
+mixin type_room(number,type,cost,rate)
+    .type-room
+        .type-room-first
+            .type-room-first-arrow 
+                button.type-room-first-btn-arrow chevron_left
+                button.type-room-first-btn-arrow chevron_right 
+            .type-room-first-circle 
+                .type-room-first-group-circle
+                .type-room-first-group-circle
+                .type-room-first-group-circle
+        .type-room-second
+            span.type-room-second-number= number 
+            span.type-room-second-type= type 
+            span.type-room-second-cost= cost
+        .type-room-line
+        .type-room-fird 
+            +rate_button({quantity: 5})
+            .type-room-fird-rates= rate
+        
+        

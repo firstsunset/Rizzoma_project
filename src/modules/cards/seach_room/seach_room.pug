@@ -1,0 +1,24 @@
+include ../../mixin/date_dropdown/date_dropdown
+include ../../mixin/dropdown_guests/dropdown_guests
+
+include ../../mixin/button/button
+
+mixin seach_room
+    .seach-room 
+        .seach-room-item
+            .seach-room-head Найдём номера под ваши пожелания
+            .seach-room-group
+                .seach-room-group-row
+                    .seach-room-date-group-head Прибытие
+                    +date_dropdown('ДД.ММ.ГГГГ')
+                .seach-room-group-row
+                    .seach-room-date-group-head Выезд
+                    +date_dropdown('ДД.ММ.ГГГГ')
+            .seach-room-group-row
+                .seach-room-date-group-head Гости
+                +dropdown_guests('Сколько гостей')                    
+            .seach-room-buttonlong 
+            +button({ type: 'long', text: 'подобрать номер', })
+            
+
+

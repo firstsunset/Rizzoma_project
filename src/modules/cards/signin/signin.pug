@@ -1,0 +1,18 @@
+include ../../mixin/text_field/text_field
+
+mixin signin 
+    .signin
+        .signin-item 
+            .signin-head Войти
+            .signin-email 
+            +text_field('Email')
+            .signin-password 
+            +text_field('Пароль')
+            .signin-buttonlong 
+            +button({ type: 'long', text: 'Войти', })
+            .signin-lastgroup 
+                .signin-toxin Уже есть аккаунт на Toxin 
+                .signin-button
+                +button({ type: 'bordercolor', text: 'Войти', })
+
+

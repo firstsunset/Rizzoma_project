@@ -1,68 +1,4 @@
-
-<div class="wrap">
-  <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей?">
-    <button class="dropdown__dropbtn">expand_more</button>
-    <div class="dropdown__heading"></div>
-    <div class="dropdown__content">
-      <div class="dropdown__items">
-        <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
-          <div class="item-quantity__controls">
-            <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-            <button class="item-quantity__button item-quantity__button_plus">+</button>
-          </div>
-        </div>
-        <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
-          <div class="item-quantity__controls">
-            <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-            <button class="item-quantity__button item-quantity__button_plus">+</button>
-          </div>
-        </div>
-        <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
-          <div class="item-quantity__controls">
-            <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-            <button class="item-quantity__button item-quantity__button_plus">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="dropdown__buttons">
-        <button class="dropdown__clear">Очистить</button>
-        <button class="dropdown__apply">Применить</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wrap">
-  <div class="dropdown" data-default="Сколько комнат и кроватей?">
-    <button class="dropdown__dropbtn">expand_more</button>
-    <div class="dropdown__heading"></div>
-    <div class="dropdown__content">
-      <div class="dropdown__items">
-        <div class="item-quantity" data-words="Спальня,Спальни,Спален"><span class="item-quantity__nam">Cпальня</span>
-          <div class="item-quantity__controls">
-            <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">2</span>
-            <button class="item-quantity__button item-quantity__button_plus">+</button>
-          </div>
-        </div>
-        <div class="item-quantity" data-words="Кровать, Кровати, Кроватей"><span class="item-quantity__nam">Кровать</span>
-          <div class="item-quantity__controls">
-            <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">2</span>
-            <button class="item-quantity__button item-quantity__button_plus">+</button>
-          </div>
-        </div>
-        <div class="item-quantity" data-words="Ванная, Ванные, Ванных"><span class="item-quantity__nam">Ванные комнаты</span>
-          <div class="item-quantity__controls">
-            <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-            <button class="item-quantity__button item-quantity__button_plus">+</button>
-          </div>
-        </div>
-      </div>
-      <div class="dropdown__buttons">
-        <button class="dropdown__clear">Очистить</button>
-        <button class="dropdown__apply">Применить</button>
-      </div>
-    </div>
-  </div>
-</div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -84,21 +20,78 @@
             <button class="input-btn" type="submit">arrow_forward</button>
           </form>
           <p> </p>
+          <h3>Date dropdown </h3>
+          <div class="date-dropdown">
+            <input class="date-dropdown-input" type="text" name="date" placeholder="дд.мм.гггг">
+            <button class="date-dropdown-btn">expand_more</button>
+          </div>
           <h3>Dropdown</h3>
-          <div class="item-quantity"><span class="item-quantity__nam"></span>
-            <div class="item-quantity__controls">
-              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value"></span>
-              <button class="item-quantity__button item-quantity__button_plus">+</button>
+          <div class="wrap">
+            <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей">
+              <button class="dropdown__dropbtn">expand_more</button>
+              <div class="dropdown__heading"></div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
+                    <div class="item-quantity__controls">
+                      <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                      <button class="item-quantity__button item-quantity__button_plus">+</button>
+                    </div>
+                  </div>
+                  <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
+                    <div class="item-quantity__controls">
+                      <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                      <button class="item-quantity__button item-quantity__button_plus">+</button>
+                    </div>
+                  </div>
+                  <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
+                    <div class="item-quantity__controls">
+                      <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                      <button class="item-quantity__button item-quantity__button_plus">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown__buttons">
+                  <button class="dropdown__clear">Очистить</button>
+                  <button class="dropdown__apply">Применить </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrap">
+            <div class="dropdown" data-default="Сколько комнат и кроватей?">
+              <button class="dropdown__dropbtn">expand_more</button>
+              <div class="dropdown__heading"></div>
+              <div class="dropdown__content">
+                <div class="dropdown__items">
+                  <div class="item-quantity" data-words="Спальня,Спальни,Спален"><span class="item-quantity__nam">Cпальня</span>
+                    <div class="item-quantity__controls">
+                      <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">2</span>
+                      <button class="item-quantity__button item-quantity__button_plus">+</button>
+                    </div>
+                  </div>
+                  <div class="item-quantity" data-words="Кровать, Кровати, Кроватей"><span class="item-quantity__nam">Кровать</span>
+                    <div class="item-quantity__controls">
+                      <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">2</span>
+                      <button class="item-quantity__button item-quantity__button_plus">+</button>
+                    </div>
+                  </div>
+                  <div class="item-quantity" data-words="Ванная, Ванные, Ванных"><span class="item-quantity__nam">Ванные комнаты</span>
+                    <div class="item-quantity__controls">
+                      <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                      <button class="item-quantity__button item-quantity__button_plus">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown__buttons">
+                <button class="dropdown__clear">Очистить</button>
+                <button class="dropdown__apply">Применить</button>
+              </div>
             </div>
           </div>
           <p> </p>
           <h3>Room dropdown </h3>
-          <div class="item-quantity"><span class="item-quantity__nam"></span>
-            <div class="item-quantity__controls">
-              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value"></span>
-              <button class="item-quantity__button item-quantity__button_plus">+</button>
-            </div>
-          </div>
           <p> </p>
           <h3>Checkbox list</h3>
           <form>
@@ -305,357 +298,6 @@
         </div>
       </div>
     </div>
-    <script>
-       function num2str(n, text_forms) {
-  n = Math.abs(n) % 100;
-  let n1 = n % 10;
-  if (n > 10 && n < 20) return text_forms[2];
-  if (n1 > 1 && n1 < 5) return text_forms[1];
-  if (n1 == 1) return text_forms[0];
-  return text_forms[2];
-}
-
-class ItemQuantity {
-  constructor(element, onChangeCallback) {
-    this.el = element;
-    this.onChange = onChangeCallback;
-    this.words = this.el.dataset.words;
-    this.min = this.el.dataset.min ? parseInt(this.el.dataset.min) : 0;
-    this.minusEl = this.el.querySelector(".item-quantity__button_minus");
-    this.plusEl = this.el.querySelector(".item-quantity__button_plus");
-    this.minusEl.onclick = this.decriment;
-    this.plusEl.onclick = this.increment;
-    this.valueEl = this.el.querySelector(".item-quantity__value");
-    this.value = parseInt(this.valueEl.innerHTML);
-    this._checkButton();
-  }
-  _checkButton = () => {
-    if (this.value === this.min) {
-      this.minusEl.disabled = true;
-    } else {
-      this.minusEl.disabled = false;
-    }
-  };
-  _render = () => (this.valueEl.innerHTML = this.value);
-  setValue = (newValue) => {
-    const value = newValue > this.min ? newValue : this.min;
-    this.value = value;
-    this._render();
-    this.onChange(this.value);
-    this._checkButton();
-  };
-  getValue = () => this.value;
-  isMinimal = () => this.value === this.min;
-  isZerro = () => this.value === 0
-  getString = () => {
-    if (this.words !== undefined) {
-      const words = this.words.split(",");
-      return this.value > 0
-        ? `${this.value} ${num2str(this.value, words)}`
-        : null;
-    } else {
-      return this.getValue();
-    }
-  };
-  increment = () => this.setValue(this.value + 1);
-  decriment = () => this.setValue(this.value - 1);
-}
-
-class Dropdown {
-  constructor(element) {
-    this.el = element;
-    document.addEventListener('click',(e)=> !this.el.contains(e.target) && this.hide(e))
-    this.el.onclick = this.show
-    this.default = this.el.dataset.default || "";
-    this.words = this.el.dataset.words;
-    this.items = Array.from(this.el.querySelectorAll(".item-quantity")).map(
-      (item) => new ItemQuantity(item, () => this._render())
-    );
-    this.sum = this.getSum();
-    this.clear = this.el.querySelector(".dropdown__clear");
-    this.clear && (this.clear.onclick = this._clearClick);
-    this.apply= this.el.querySelector(".dropdown__apply");
-    this.apply && (this.apply.addEventListener('click', (e)=> {
-      this._renderHeader()      
-      this.hide(e)
-    }));
-    this.heading = this.el.querySelector(".dropdown__heading");
-    this._render();
-    this._renderHeader();
-    this.hide()
-  }
-  hide = (e) => {
-    e !== undefined && e.stopPropagation()
-    !this.el.classList.contains("dropdown_hide") &&
-      this.el.classList.add("dropdown_hide");
-  };
-  show = () => {
-    this.el.classList.contains("dropdown_hide") &&
-      this.el.classList.remove("dropdown_hide");
-  };
-  getSum = () => {
-    let sum = 0;
-    this.items.forEach((item) => {
-      sum += item.getValue();
-    });
-    this.sum = sum;
-    return sum;
-  };
-  _render = () => {
-    //this._renderHeader();
-    this._checkClear();
-   // this._checkApply();
-  };
-  _clearClick = () => {
-    this.items.forEach((item) => {
-      item.setValue(0);
-    });
-  };
-  _checkClear = () => {
-    const allMinimal = !this.items
-      .map((item) => item.isMinimal())
-      .includes(false);
-    if(this.clear && allMinimal){
-      this.clear.style.display = 'none';
-    }
-    else{
-      this.clear.style.display = 'inline-block';
-    }
-    this.clear && (this.clear.disabled = allMinimal);
-  };
-  _checkApply = () => {
-    const isAllZerro = !this.items.map((item)=>item.isZerro()).includes(false)
-    if(this.apply&& isAllZerro){
-      this.apply.style.display = 'none';
-    }
-    else{
-      this.apply.style.display = 'inline-block';
-    }
-    this.apply && (this.apply.disabled = isAllZerro)
-  }
-  _renderHeader = () => {
-    const sum = this.getSum();
-    if (this.words !== undefined) {
-      const words = this.words.split(",");
-      this.heading.innerHTML =
-        sum > 0 ? `${sum} ${num2str(sum, words)}` : this.default;
-    } else {
-      let arr = this.items.map((item) => item.getString());
-      arr = arr.filter((el) => el !== null);
-      this.heading.innerHTML = sum > 0 ? arr.join(", ") : this.default;
-    }
-  };
-}
-
-const dropdowns = document.querySelectorAll(".dropdown");
-const Dropdowns = Array.from(dropdowns).map((dd) => new Dropdown(dd));
-
- 
-
- 
- 
-  
-    </script>
-    <script type="text/javascript">
-       
-/*var count = 0;
-var countEl = document.getElementById("count");
-function plus(){
-    count++;
-    countEl.value = count;
-}
-function minus(){
-  if (count > 0) {
-    count--;
-    countEl.value = count;
-  }  
-}*/
-
-var value,
-    quantity = document.getElementsByClassName('number');
-
-		function createBindings(numberContainer) {
-      var count = numberContainer.getElementsByClassName('count')[0];
-      var plus = numberContainer.getElementsByClassName('plus')[0];
-      var minus = numberContainer.getElementsByClassName('minus')[0];
-      plus.addEventListener('click', function () { plusValue(count); });
-      minus.addEventListener('click', function () { minusValue(count); });
-    }
-
-    function init() {
-        for (var i = 0; i < quantity.length; i++ ) {
-					createBindings(quantity[i]);
-        }
-    };
-
-    function plusValue(count) {
-        value = parseInt(count.value, 10);
-
-        console.log(count, count.value);
-
-        value = isNaN(value) ? 0 : value;
-        value++;
-        count.value = value;
-    }
-
-    function minusValue(count) {
-        value = parseInt(count.value, 10);
-
-        value = isNaN(value) ? 0 : value;
-        if (value > 0) value--;
-
-        count.value = value;
-    }
-    
-    init();
-
-
-    </script>
-    <script type="text/javascript">
-       function num2str(n, text_forms) {
-    n = Math.abs(n) % 100;
-    let n1 = n % 10;
-    if (n > 10 && n < 20) return text_forms[2];
-    if (n1 > 1 && n1 < 5) return text_forms[1];
-    if (n1 == 1) return text_forms[0];
-    return text_forms[2];
-  }
-  
-  class ItemQuantity {
-    constructor(element, onChangeCallback) {
-      this.el = element;
-      this.onChange = onChangeCallback;
-      this.words = this.el.dataset.words;
-      this.min = this.el.dataset.min ? parseInt(this.el.dataset.min) : 0;
-      this.minusEl = this.el.querySelector(".item-quantity__button_minus");
-      this.plusEl = this.el.querySelector(".item-quantity__button_plus");
-      this.minusEl.onclick = this.decriment;
-      this.plusEl.onclick = this.increment;
-      this.valueEl = this.el.querySelector(".item-quantity__value");
-      this.value = parseInt(this.valueEl.innerHTML);
-      this._checkButton();
-    }
-    _checkButton = () => {
-      if (this.value === this.min) {
-        this.minusEl.disabled = true;
-      } else {
-        this.minusEl.disabled = false;
-      }
-    };
-    _render = () => (this.valueEl.innerHTML = this.value);
-    setValue = (newValue) => {
-      const value = newValue > this.min ? newValue : this.min;
-      this.value = value;
-      this._render();
-      this.onChange(this.value);
-      this._checkButton();
-    };
-    getValue = () => this.value;
-    isMinimal = () => this.value === this.min;
-    isZerro = () => this.value === 0
-    getString = () => {
-      if (this.words !== undefined) {
-        const words = this.words.split(",");
-        return this.value > 0
-          ? `${this.value} ${num2str(this.value, words)}`
-          : null;
-      } else {
-        return this.getValue();
-      }
-    };
-    increment = () => this.setValue(this.value + 1);
-    decriment = () => this.setValue(this.value - 1);
-  }
-  
-  class Dropdown {
-    constructor(element) {
-      this.el = element;
-      document.addEventListener('click',(e)=> !this.el.contains(e.target) && this.hide(e))
-      this.el.onclick = this.show
-      this.default = this.el.dataset.default || "";
-      this.words = this.el.dataset.words;
-      this.items = Array.from(this.el.querySelectorAll(".item-quantity")).map(
-        (item) => new ItemQuantity(item, () => this._render())
-      );
-      this.sum = this.getSum();
-      this.clear = this.el.querySelector(".dropdown__clear");
-      this.clear && (this.clear.onclick = this._clearClick);
-      this.apply= this.el.querySelector(".dropdown__apply");
-      this.apply && (this.apply.addEventListener('click', (e)=> {
-        this._renderHeader()      
-        this.hide(e)
-      }));
-      this.heading = this.el.querySelector(".dropdown__heading");
-      this._render();
-      this._renderHeader();
-      this.hide()
-    }
-    hide = (e) => {
-      e !== undefined && e.stopPropagation()
-      !this.el.classList.contains("dropdown_hide") &&
-        this.el.classList.add("dropdown_hide");
-    };
-    show = () => {
-      this.el.classList.contains("dropdown_hide") &&
-        this.el.classList.remove("dropdown_hide");
-    };
-    getSum = () => {
-      let sum = 0;
-      this.items.forEach((item) => {
-        sum += item.getValue();
-      });
-      this.sum = sum;
-      return sum;
-    };
-    _render = () => {
-      //this._renderHeader();
-      this._checkClear();
-     // this._checkApply();
-    };
-    _clearClick = () => {
-      this.items.forEach((item) => {
-        item.setValue(0);
-      });
-    };
-    _checkClear = () => {
-      const allMinimal = !this.items
-        .map((item) => item.isMinimal())
-        .includes(false);
-      if(this.clear && allMinimal){
-        this.clear.style.display = 'none';
-      }
-      else{
-        this.clear.style.display = 'inline-block';
-      }
-      this.clear && (this.clear.disabled = allMinimal);
-    };
-    _checkApply = () => {
-      const isAllZerro = !this.items.map((item)=>item.isZerro()).includes(false)
-      if(this.apply&& isAllZerro){
-        this.apply.style.display = 'none';
-      }
-      else{
-        this.apply.style.display = 'inline-block';
-      }
-      this.apply && (this.apply.disabled = isAllZerro)
-    }
-    _renderHeader = () => {
-      const sum = this.getSum();
-      if (this.words !== undefined) {
-        const words = this.words.split(",");
-        this.heading.innerHTML =
-          sum > 0 ? `${sum} ${num2str(sum, words)}` : this.default;
-      } else {
-        let arr = this.items.map((item) => item.getString());
-        arr = arr.filter((el) => el !== null);
-        this.heading.innerHTML = sum > 0 ? arr.join(", ") : this.default;
-      }
-    };
-  }
-  
-  const dropdowns = document.querySelectorAll(".dropdown");
-  const Dropdowns = Array.from(dropdowns).map((dd) => new Dropdown(dd));
-    </script>
     <script type="text/javascript">
        var expanded = false;
 

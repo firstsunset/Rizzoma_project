@@ -1796,8 +1796,8 @@ h3 {
 .text_field_form {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  height: 44px;
+  width: 318px;
+  height: 42px;
   border: none;
 }
 
@@ -1826,29 +1826,6 @@ h3 {
 .text_field_input:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.25);
-}
-/*!*********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/fonts.scss ***!
-  \*********************************************************************************************************************************************/
-@font-face {
-  font-family: "MontserratRegular";
-  src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
-}
-@font-face {
-  font-family: "MontserratBold";
-  src: url(../fonts/Montserrat-Bold0f78db24da2c5f98591a.woff) format("woff"), url(../fonts/Montserrat-Bold079ca05d3ded9bc107ab.ttf) format("truetype"), url(../fonts/Montserrat-Bold946d834c14da9a5a8710.svg) format("svg");
-}
-@font-face {
-  font-family: "MaterialIcons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
 }
 /*!***************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/subscription_text_field.scss ***!
@@ -1918,35 +1895,74 @@ h3 {
   border: none;
   cursor: pointer;
 }
-/*!******************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown/fonts.scss ***!
-  \******************************************************************************************************************************/
-@font-face {
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
+  \*******************************************************************************************************************************************/
+.item-quantity {
+  width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+  align-content: center;
+}
+
+.item-quantity__nam {
+  width: 83px;
+  height: 15px;
+  padding-right: 123px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
   font-family: "MontserratRegular";
-  src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
 }
-@font-face {
+
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-quantity__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
   font-family: "MontserratBold";
-  src: url(../fonts/Montserrat-Bold0f78db24da2c5f98591a.woff) format("woff"), url(../fonts/Montserrat-Bold079ca05d3ded9bc107ab.ttf) format("truetype"), url(../fonts/Montserrat-Bold946d834c14da9a5a8710.svg) format("svg");
-}
-@font-face {
-  font-family: "MaterialIcons";
   font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041;
 }
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
-}
-/*!*********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown/dropdown.scss ***!
-  \*********************************************************************************************************************************/
+/*!***********************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
+  \***********************************************************************************************************************************************/
 .wrap {
   width: 320px;
-  height: 300px;
+  height: 205px;
   position: relative;
 }
 
@@ -1987,30 +2003,6 @@ h3 {
   overflow: auto;
 }
 
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
-}
-
 .dropdown__dropbtn {
   position: absolute;
   width: 40px;
@@ -2029,42 +2021,6 @@ h3 {
   margin-top: 2px;
   margin-bottom: 2px;
   margin-right: 2px;
-}
-
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-.item-quantity__controls {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
 }
 
 .dropdown__buttons {
@@ -2093,46 +2049,6 @@ h3 {
 
 .dropdown__apply {
   text-align: right;
-}
-/*!***********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/plusminus/plusminus.scss ***!
-  \***********************************************************************************************************************************/
-.number {
-  display: flex;
-  flex-direction: row;
-  width: 92px;
-  height: 30px;
-}
-
-.minus, .plus {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-input {
-  width: 32px;
-  height: 30px;
-  text-align: center;
-  padding: 0px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_room/dropdown_room.scss ***!
@@ -2993,7 +2909,10 @@ label:hover {
   width: 100%;
 }
 .button_long .button__text {
-  margin-left: 95px;
+  width: 280px;
+  height: 15px;
+  margin-left: 20px;
+  margin-top: -30px;
 }
 .button__text {
   font-family: "MontserratRegular";
@@ -3175,6 +3094,59 @@ label:hover {
   line-height: 20px;
   color: #FFFFFF;
   text-align: center;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
+  \*******************************************************************************************************************************************/
+.date-dropdown {
+  width: 148px;
+  height: 42px;
+  position: relative;
+}
+.date-dropdown-input {
+  position: absolute;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  margin-bottom: 0px;
+  width: 148px;
+  height: 42px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+.date-dropdown-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  left: 110px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.date-dropdown input[type=text] {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  width: 133px;
+  height: 42px;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px;
 }
 
 /*# sourceMappingURL=form_elements.css.map*/

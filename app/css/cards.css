@@ -1700,6 +1700,37 @@ h3 {
   height: 48px;
   margin-left: 30px;
   margin-top: 30px;
+  margin-bottom: 62px;
+}
+
+.cards-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+}
+
+.cards-seach-room {
+  width: 380px;
+  height: 374px;
+}
+
+.cards-registration {
+  padding-left: 40px;
+  width: 380px;
+  height: 646px;
+}
+
+.cards-signin {
+  padding-left: 40px;
+  width: 380px;
+  height: 358px;
+}
+
+.cards-typeroom {
+  width: 270px;
+  height: 257px;
+  padding-left: 40px;
 }
 /*!*******************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/cards/fonts.scss ***!
@@ -1737,15 +1768,14 @@ h3 {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/registration/registration.scss ***!
   \*****************************************************************************************************************************************/
 .registration {
-  width: 380px;
-  height: 646px;
+  width: 378px;
+  height: 644px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   font-family: "MontserratRegular";
 }
-
 .registration-item {
   display: flex;
   flex-direction: column;
@@ -1753,7 +1783,6 @@ h3 {
   margin-left: 30px;
   margin-right: 30px;
 }
-
 .registration-head {
   font-style: normal;
   font-weight: bold;
@@ -1762,15 +1791,12 @@ h3 {
   color: #1F2041;
   padding-bottom: 20px;
 }
-
 .registration-lastname {
   padding-top: 10px;
 }
-
 .registration-radio {
   padding-top: 10px;
 }
-
 .registration-date {
   text-transform: uppercase;
   padding-bottom: 5px;
@@ -1780,13 +1806,11 @@ h3 {
   line-height: 15px;
   color: #1F2041;
 }
-
 .registration-sign {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
 }
-
 .registration-sign-head {
   text-transform: uppercase;
   font-weight: bold;
@@ -1795,29 +1819,24 @@ h3 {
   color: #1F2041;
   padding-bottom: 5px;
 }
-
 .registration-sign-password {
   padding-top: 10px;
 }
-
 .registration-toggle {
   padding-top: 10px;
 }
-
 .registration-buttonlong {
   padding-top: 20px;
 }
-
 .registration-lastgroup {
   padding-top: 30px;
   display: flex;
   flex-direction: row;
 }
-
 .registration-toxin {
   padding-top: 14px;
   padding-right: 35px;
-  width: 186px;
+  width: 188px;
   height: 18px;
   font-size: 14px;
   line-height: 18px;
@@ -1829,8 +1848,8 @@ h3 {
 .text_field_form {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  height: 44px;
+  width: 318px;
+  height: 42px;
   border: none;
 }
 
@@ -2115,7 +2134,10 @@ h3 {
   width: 100%;
 }
 .button_long .button__text {
-  margin-left: 95px;
+  width: 280px;
+  height: 15px;
+  margin-left: 20px;
+  margin-top: -30px;
 }
 .button__text {
   font-family: "MontserratRegular";
@@ -2135,6 +2157,396 @@ h3 {
   font-size: 24px;
   margin-left: auto;
   padding-right: 10px;
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/signin/signin.scss ***!
+  \*****************************************************************************************************************************/
+.signin {
+  width: 378px;
+  height: 356px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: "MontserratRegular";
+}
+.signin-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.signin-head {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+  padding-bottom: 20px;
+}
+.signin-password {
+  padding-top: 10px;
+}
+.signin-buttonlong {
+  padding-top: 20px;
+}
+.signin-lastgroup {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.signin-toxin {
+  padding-top: 14px;
+  padding-right: 35px;
+  width: 188px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/seach_room/seach_room.scss ***!
+  \*************************************************************************************************************************************/
+.seach-room {
+  width: 378px;
+  height: 372px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: "MontserratRegular";
+  font-weight: bold;
+}
+.seach-room-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.seach-room-head {
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+  padding-bottom: 20px;
+}
+.seach-room-group {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 64px;
+  padding-bottom: 20px;
+}
+.seach-room-group-row {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.seach-room-date-group-head {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  padding-bottom: 5px;
+}
+.seach-room-buttonlong {
+  margin-top: -125px;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
+  \*******************************************************************************************************************************************/
+.date-dropdown {
+  width: 148px;
+  height: 42px;
+  position: relative;
+}
+.date-dropdown-input {
+  position: absolute;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  margin-bottom: 0px;
+  width: 148px;
+  height: 42px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+.date-dropdown-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  left: 110px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.date-dropdown input[type=text] {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  width: 133px;
+  height: 42px;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
+  \***********************************************************************************************************************************************/
+.wrap {
+  width: 320px;
+  height: 205px;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
+  width: 320px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+.dropdown__heading {
+  position: relative;
+  min-height: 44px;
+  padding-left: 15px;
+  top: 15px;
+}
+.dropdown_hide > .dropdown__content {
+  display: none;
+}
+
+.dropdown__content {
+  height: 160px;
+  width: 320px;
+  padding-top: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  position: absolute;
+  background-color: #FFFFFF;
+  overflow: auto;
+}
+
+.dropdown__dropbtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 276px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.dropdown__buttons {
+  width: 300px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+.dropdown__clear,
+.dropdown__apply {
+  padding: 0px;
+  width: 84px;
+  height: 15px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "MontserratBold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  text-align: start;
+}
+
+.dropdown__apply {
+  text-align: right;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
+  \*******************************************************************************************************************************************/
+.item-quantity {
+  width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+  align-content: center;
+}
+
+.item-quantity__nam {
+  width: 83px;
+  height: 15px;
+  padding-right: 123px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
+}
+
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-quantity__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+/*!***********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/type_room/type_room.scss ***!
+  \***********************************************************************************************************************************/
+.type-room {
+  width: 270px;
+  height: 257px;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.type-room-first {
+  width: 270px;
+  height: 152px;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/image1fbe3ac10fc9d756e9771.svg);
+}
+.type-room-first-arrow {
+  padding-top: 53px;
+  width: 270px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.type-room-first-btn-arrow {
+  background-color: transparent;
+  font-family: "MaterialIcons";
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 24px;
+  border: none;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+.type-room-first-circle {
+  width: 42px;
+  height: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 210px;
+  padding-top: 31px;
+}
+.type-room-first-group-circle {
+  width: 8px;
+  height: 8px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+  cursor: pointer;
+}
+.type-room-second {
+  padding-top: 20px;
+  height: 20px;
+  width: 230px;
+  padding-left: 20px;
+}
+.type-room-line {
+  width: 230px;
+  height: 1px;
+  background: rgba(31, 32, 65, 0.1);
+  margin-top: 10px;
+  margin-left: 20px;
+}
+/*!***************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/rate_button/rate_button.scss ***!
+  \***************************************************************************************************************************************/
+.rate {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.material-icons {
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 20px;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: transparent;
+  font-style: normal;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=cards.css.map*/

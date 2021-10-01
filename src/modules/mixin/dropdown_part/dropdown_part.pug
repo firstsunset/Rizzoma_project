@@ -1,0 +1,12 @@
+mixin dropdown_part(name,value,wordForms,min)
+    -
+        const data = {
+        'data-words': wordForms || undefined,
+        'data-min': min || undefined
+        }
+    .item-quantity&attributes(data)
+        span.item-quantity__nam= name
+        .item-quantity__controls
+            button.item-quantity__button.item-quantity__button_minus -
+            span.item-quantity__value= value
+            button.item-quantity__button.item-quantity__button_plus +

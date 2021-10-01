@@ -1,0 +1,56 @@
+.date-dropdown{
+    width: 148px;
+    height: 42px;
+    position: relative;
+
+    
+
+    
+    &-input{
+        position: absolute;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        margin-bottom: 0px;
+        width: 148px;
+        height: 42px;
+        font-family: 'MontserratRegular';
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.75);
+        border-radius: 4px;
+        background: #FFFFFF;
+        text-align: start;
+
+    }
+
+    &-btn{
+        position: absolute;
+      
+        width: 40px;
+        height: 40px;
+        background: #FFFFFF;
+        color: rgba(31, 32, 65, 0.75);
+        border: none;
+        box-sizing: border-box;
+        padding: 2px;
+        cursor: pointer;
+        font-family: 'MaterialIcons';
+        font-size: 24px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.5);
+        left: 110px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-right: 2px;
+    }
+}
+.date-dropdown input[type="text"]{
+    color: rgba(31, 32, 65, 0.75);
+    font-family: "MontserratRegular";
+    font-style: normal;
+    font-weight: normal;
+    width: 133px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 15px;
+}

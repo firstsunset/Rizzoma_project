@@ -1930,29 +1930,6 @@ path {
   font-weight: 400;
   src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
 }
-/*!*********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/fonts.scss ***!
-  \*********************************************************************************************************************************************/
-@font-face {
-  font-family: "MontserratRegular";
-  src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
-}
-@font-face {
-  font-family: "MontserratBold";
-  src: url(../fonts/Montserrat-Bold0f78db24da2c5f98591a.woff) format("woff"), url(../fonts/Montserrat-Bold079ca05d3ded9bc107ab.ttf) format("truetype"), url(../fonts/Montserrat-Bold946d834c14da9a5a8710.svg) format("svg");
-}
-@font-face {
-  font-family: "MaterialIcons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
-}
 /*!***************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/subscription_text_field.scss ***!
   \***************************************************************************************************************************************************************/

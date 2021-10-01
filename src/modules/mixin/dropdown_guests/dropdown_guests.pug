@@ -1,0 +1,23 @@
+include ../dropdown_part/dropdown_part
+mixin dropdown_guests(words)
+  -
+    const data = {
+      'data-words': wordForms || undefined,
+      'data-min': min || undefined
+    }
+  
+  .wrap
+    .dropdown(data-words="Гость,Гостя,Гостей", data-default= words)
+      button.dropdown__dropbtn expand_more
+      .dropdown__heading
+      .dropdown__content
+        .dropdown__items
+          +dropdown_part('Взрослые',0)
+          +dropdown_part('Дети',0)
+          +dropdown_part('Младенцы',0)
+        .dropdown__buttons
+          button.dropdown__clear Очистить
+          button.dropdown__apply Применить 
+
+
+       

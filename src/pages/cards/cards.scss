@@ -22,4 +22,31 @@ h3 {
     height: 48px;
     margin-left: 30px;
     margin-top: 30px;
+    margin-bottom: 62px;
+}
+.cards-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+}
+.cards-seach-room {
+    width: 380px;
+    height: 374px;
+}
+.cards-registration {
+    padding-left: 40px;
+    width: 380px;
+    height: 646px;
+
+}
+.cards-signin {
+    padding-left: 40px;
+    width: 380px;
+    height: 358px;
+}
+.cards-typeroom {
+    width: 270px;
+    height: 257px;
+    padding-left: 40px;
 }

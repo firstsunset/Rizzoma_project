@@ -12,3 +12,6 @@ import '../../../node_modules/@fortawesome/fontawesome-free/js/all';
 
 
 import '../../modules/cards/registration/registration';
+import '../../modules/cards/signin/signin';
+import '../../modules/cards/seach_room/seach_room';
+import '../../modules/cards/type_room/type_room';
