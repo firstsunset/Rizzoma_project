@@ -22,4 +22,5 @@ html(lang="ru")
         .cards-signin 
           +signin
         .cards-typeroom 
-          +type_room('№ 888','люкс','9 990₽','145')
+          +type_room({ number: '№ 888', lux: 'люкс', cost: '9 990₽', count: '5', rate: '65' })(class='type-room-picture1')
+          +type_room({ number: '№ 840', cost: '9 990₽', count: '4', rate: '145' })(class='type-room-picture2')

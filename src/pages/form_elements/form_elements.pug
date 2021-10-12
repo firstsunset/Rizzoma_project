@@ -78,7 +78,8 @@ html(lang="ru")
           .form-elements-5 
             h3 Rate button
             .rate-button-group
-              +rate_button({quantity: 4})
+              +rate_button
+              +rate_button({quantity: 3})
               +rate_button({quantity: 5})
 
         .form-elements-third
@@ -110,7 +111,6 @@ html(lang="ru")
       include ../../modules/mixin/range_slider/range_slider_script.js
     script(type='text/javascript') 
       include ../../modules/mixin/pagination/pagination_script.js
-    
   
 
   

@@ -1,22 +1,34 @@
 include ../../mixin/rate_button/rate_button
 
-mixin type_room(number,type,cost,rate)
+mixin type_room(options)
+    -
+        const {
+            number,
+            lux = false,
+            cost,
+            count,
+            rate
+        } = options || {}
     .type-room
-        .type-room-first
-            .type-room-first-arrow 
+        .type-room-picture1(class!=attributes.class)
+            .type-room-first-arrow
                 button.type-room-first-btn-arrow chevron_left
                 button.type-room-first-btn-arrow chevron_right 
             .type-room-first-circle 
                 .type-room-first-group-circle
-                .type-room-first-group-circle
-                .type-room-first-group-circle
+                .type-room-first-group-circle2
+                    .type-room-first-group-circle2-color
+                .type-room-first-group-circle2
+                    .type-room-first-group-circle2-color
         .type-room-second
             span.type-room-second-number= number 
-            span.type-room-second-type= type 
+            input.type-room-second-type(type="text" placeholder= lux) 
             span.type-room-second-cost= cost
+                span в сутки
         .type-room-line
         .type-room-fird 
-            +rate_button({quantity: 5})
-            .type-room-fird-rates= rate
+            +rate_button({quantity: count})            
+            span.type-room-fird-rates= rate
+                span Отзывов 
         
         

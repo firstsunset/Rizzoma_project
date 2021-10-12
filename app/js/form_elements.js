@@ -8194,19 +8194,6 @@ newRangeSlider.didChanged = function (min, max) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rate_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rate_button.scss */ "./modules/mixin/rate_button/rate_button.scss");
-/* harmony import */ var _script_rate_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_rate_button */ "./modules/mixin/rate_button/script_rate_button.js");
-/* harmony import */ var _script_rate_button__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_rate_button__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-/***/ }),
-
-/***/ "./modules/mixin/rate_button/script_rate_button.js":
-/*!*********************************************************!*\
-  !*** ./modules/mixin/rate_button/script_rate_button.js ***!
-  \*********************************************************/
-/***/ (() => {
-
 
 
 /***/ }),
