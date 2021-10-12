@@ -28,26 +28,33 @@ h3 {
 .cards-group{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     align-content: flex-start;
+}
+.cards-group-column {
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    padding: 40px;
+}
+.cards-room-number {
+    width: 380px;
+    height: 512px;
 }
 .cards-seach-room {
     width: 380px;
     height: 374px;
 }
 .cards-registration {
-    padding-left: 40px;
     width: 380px;
     height: 646px;
 
 }
 .cards-signin {
-    padding-left: 40px;
     width: 380px;
     height: 358px;
 }
 .cards-typeroom {
     width: 270px;
     height: 257px;
-    padding-left: 40px;
 }

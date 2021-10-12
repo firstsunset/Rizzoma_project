@@ -79,44 +79,59 @@
             border-radius: 3px;
             background: transparent;
             border: none;
-
-
         }
     }
 
     &-second {
+        width: 232px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
         padding-top: 20px;
         height: 20px;
         padding-left: 20px;
         margin-bottom: 1px;
 
         &-number {
-            font-family: 'MontserratBold';
+            width: 60px;
+            font-family: 'MontserratRegular';
             font-size: 14px;
             line-height: 17px;
             color: #1F2041;
         }
+        &-number span {
+            font-family: 'MontserratBold';
+            font-size: 19px;
+        }
+
 
         &-type {
+            
             width: 41px;
             height: 15px;
-            padding-left: 2px;
             font-family: 'MontserratBold';
             font-size: 12px;
             line-height: 15px;
             text-transform: uppercase;
             color: #BC9CFF;
             border: none;
+            padding-top: 5px;
+            padding-right: 20px;
+            padding-left: 0px;
+        }
+        &-type:focus {
+            outline: none;
+            caret-color: transparent;
         }
 
         &-cost {
-            width: 100px;
+            padding-top: 3px;
+            height: 20px;
             font-family: 'MontserratBold';
             font-size: 14px;
             line-height: 18px;
             color: rgba(31, 32, 65, 0.5);
-            padding-left: 32px;
-    
+                
         }
 
         &-cost span {

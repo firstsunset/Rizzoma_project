@@ -3118,6 +3118,9 @@ label:hover {
   background: #FFFFFF;
   text-align: start;
 }
+.date-dropdown-input:focus {
+  outline: none;
+}
 .date-dropdown-btn {
   position: absolute;
   width: 40px;

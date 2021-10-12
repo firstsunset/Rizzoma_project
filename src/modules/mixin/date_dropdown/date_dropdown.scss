@@ -21,6 +21,9 @@
         text-align: start;
 
     }
+    &-input:focus {
+        outline: none;
+    }
 
     &-btn{
         position: absolute;

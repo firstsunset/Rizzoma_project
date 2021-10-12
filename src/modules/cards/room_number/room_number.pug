@@ -1,0 +1,48 @@
+include ../../mixin/date_dropdown/date_dropdown
+include ../../mixin/dropdown_guests/dropdown_guests
+include ../../mixin/button/button
+
+
+mixin room_number 
+    .room-number
+        .room-number-item
+            .room-number-head
+                .room-number-head-number № 
+                    span 888
+                input.room-number-head-type(type="text" placeholder= "люкс") 
+                span.room-number-head-cost 9 990₽
+                    span в сутки
+            .room-number-date
+                .room-number-date-row 
+                    .room-number-date-row-head Прибытие 
+                    +date_dropdown('ДД.ММ.ГГГГ')
+                .room-number-date-row
+                    .room-number-date-row-head Выезд
+                    +date_dropdown('ДД.ММ.ГГГГ')
+            .room-number-guest
+                .room-number-guest-head Гости
+                +dropdown_guests('Сколько гостей') 
+            .room-number-table
+                table 
+                    tr.room-number-table-line 
+                        td.room-number-table-line-box 9 990₽ х 4 суток
+                        td
+                        td.room-number-table-line-right 39 960₽
+                    tr.room-number-table-line 
+                        td.room-number-table-line-box Сбор за услуги: скидка 2 179₽
+                        td
+                            input.room-number-table-circle(type="text" placeholder= "i").room-number-table-circle
+                        td.room-number-table-line-right 0₽
+                    tr.room-number-table-line
+                        td.room-number-table-line-box Сбор за дополнительные услуги
+                        td
+                            input.room-number-table-circle(type="text" placeholder= "i").room-number-table-circle
+                        td.room-number-table-line-right 300₽
+            .room-number-total 
+                .room-number-total-text Итого
+                .room-number-total-rect 
+                .room-number-total-text 38 081₽
+            .room-number-button 
+            +button({ type: 'long', text: 'забронировать', })
+
+

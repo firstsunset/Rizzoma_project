@@ -14,8 +14,8 @@ mixin seach_room
                 .seach-room-group-row
                     .seach-room-date-group-head Выезд
                     +date_dropdown('ДД.ММ.ГГГГ')
-            .seach-room-group-row
-                .seach-room-date-group-head Гости
+            .seach-room-guest
+                .seach-room-guest-head Гости
                 +dropdown_guests('Сколько гостей')                    
             .seach-room-buttonlong 
             +button({ type: 'long', text: 'подобрать номер', })
