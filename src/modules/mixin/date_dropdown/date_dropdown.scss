@@ -1,12 +1,22 @@
 .date-dropdown{
-    width: 148px;
-    height: 42px;
+    width: 320px;
+    height: 44px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
 
     
-
+    &-block {
+        border: none;
+        width: 150px;
+        height: 44px;
+    }
     
     &-input{
+        
+        
         position: absolute;
         border: 1px solid rgba(31, 32, 65, 0.25);
         margin-bottom: 0px;
@@ -19,15 +29,16 @@
         border-radius: 4px;
         background: #FFFFFF;
         text-align: start;
+        cursor: pointer;
 
     }
     &-input:focus {
-        outline: none;
+        color: none;
+        color: red;
     }
 
     &-btn{
-        position: absolute;
-      
+        position: relative;
         width: 40px;
         height: 40px;
         background: #FFFFFF;
@@ -35,15 +46,16 @@
         border: none;
         box-sizing: border-box;
         padding: 2px;
+        margin: 2px;
         cursor: pointer;
         font-family: 'MaterialIcons';
         font-size: 24px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.5);
         left: 110px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-        margin-right: 2px;
+        top: 0px;
+        background: transparent;
+        
     }
 }
 .date-dropdown input[type="text"]{

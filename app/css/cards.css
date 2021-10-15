@@ -1739,6 +1739,11 @@ h3 {
   height: 358px;
 }
 
+.cards-datepicker {
+  width: 380px;
+  height: 420px;
+}
+
 .cards-typeroom {
   width: 270px;
   height: 257px;
@@ -2273,9 +2278,18 @@ h3 {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
   \*******************************************************************************************************************************************/
 .date-dropdown {
-  width: 148px;
-  height: 42px;
+  width: 320px;
+  height: 44px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.date-dropdown-block {
+  border: none;
+  width: 150px;
+  height: 44px;
 }
 .date-dropdown-input {
   position: absolute;
@@ -2290,12 +2304,14 @@ h3 {
   border-radius: 4px;
   background: #FFFFFF;
   text-align: start;
+  cursor: pointer;
 }
 .date-dropdown-input:focus {
-  outline: none;
+  color: none;
+  color: red;
 }
 .date-dropdown-btn {
-  position: absolute;
+  position: relative;
   width: 40px;
   height: 40px;
   background: #FFFFFF;
@@ -2303,15 +2319,15 @@ h3 {
   border: none;
   box-sizing: border-box;
   padding: 2px;
+  margin: 2px;
   cursor: pointer;
   font-family: "MaterialIcons";
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
   left: 110px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 2px;
+  top: 0px;
+  background: transparent;
 }
 
 .date-dropdown input[type=text] {
@@ -2324,6 +2340,121 @@ h3 {
   font-size: 14px;
   line-height: 18px;
   padding-left: 15px;
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/datepicker/datepicker.scss ***!
+  \*************************************************************************************************************************************/
+@charset "UTF-8";
+.datepicker-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.datepicker {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-top: 6px;
+  margin-left: 30px;
+  width: 320px;
+  height: 369px;
+}
+
+/* Базовые стили таблицы календаря */
+table.calendar {
+  width: 320px;
+  height: 369px;
+  height: 40px;
+  text-align: center;
+  font-family: "MontserratRegular";
+  font-weight: normal;
+  font-size: 12px;
+  padding: 3px;
+}
+
+/* Панель сетки календаря */
+td.in_month {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  font-family: "MontserratRegular";
+  font-size: 12px;
+  color: rgba(31, 32, 65, 0.5);
+  border: none;
+  background: transparent;
+}
+
+/* Панель выбора месяца и года */
+table.calendar caption {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border: none;
+  font-family: "MontserratBold";
+  font-size: 19px;
+  height: 24px;
+  line-height: 23px;
+  background: #FFFFFF;
+  text-align: center;
+}
+
+/* Дни недели */
+table.calendar th {
+  color: #BC9CFF;
+}
+
+/* Текущая дата */
+table.calendar td.selected {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  color: #FFFFFF;
+  font-family: "MontserratBold";
+  line-height: 15px;
+  font-size: 12px;
+}
+
+/* Выделенная дата */
+table.calendar td.clicked {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: #FFFFFF;
+  font-family: "MontserratBold";
+  line-height: 15px;
+  font-size: 12px;
+}
+
+/* Ссылки сетки дат календаря */
+table.calendar a {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4e4ead;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* Ссылки навигации календаря */
+table.calendar caption a {
+  width: 24px;
+  height: 24px;
+  font-family: "MaterialIcons";
+  display: inline-flex;
+  font-size: 24px;
+  color: #BC9CFF;
+}
+
+#demo {
+  width: 60px;
+  height: 40px;
+}
+
+.datepicker-date-dropdown {
+  width: 320px;
+  height: 44px;
 }
 /*!***********************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
@@ -2801,6 +2932,125 @@ h3 {
   border-left: none;
   border-right: none;
   padding-top: 16px;
+}
+/*!*********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/calendar/calendar.scss ***!
+  \*********************************************************************************************************************************/
+.calendar {
+  position: relative;
+}
+.calendar__card {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 320px;
+  padding: 20px;
+  background: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.calendar__card__visible {
+  display: block;
+}
+.calendar__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.datepicker--nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.datepicker--nav-action {
+  height: 24px;
+  width: 24px;
+}
+.datepicker--nav-title {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1f2041;
+  cursor: pointer;
+}
+.datepicker--body {
+  display: none;
+}
+.datepicker .active {
+  display: block;
+}
+.datepicker--days-names {
+  display: flex;
+}
+.datepicker--day-name {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 40px;
+  color: #bc9cff;
+  text-align: center;
+}
+.datepicker--cells-days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.datepicker--cell {
+  cursor: pointer;
+}
+.datepicker--cell-day {
+  width: calc(100% / 7);
+  text-align: center;
+  font-size: 12px;
+  line-height: 40px;
+  color: rgba(31, 32, 65, 0.5);
+  position: relative;
+}
+.datepicker .-other-month- {
+  color: rgba(31, 32, 65, 0.25);
+}
+.datepicker .-current- {
+  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+}
+.datepicker .-current-.-in-range- {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 0;
+}
+.datepicker .-selected- {
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+}
+.datepicker .-range-from-::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 22px 0 0 22px;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+.datepicker .-in-range- {
+  background: rgba(188, 156, 255, 0.25);
+}
+.datepicker .-range-to-::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  border-radius: 0 22px 22px 0;
+}
+.datepicker--buttons {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=cards.css.map*/

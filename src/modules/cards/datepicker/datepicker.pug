@@ -1,0 +1,11 @@
+include ../../mixin/date_dropdown/date_dropdown
+mixin datepicker
+  .datepicker-block
+    .datepicker-date-dropdown
+      +date_dropdown
+    .datepicker 
+      #cal_placeholder
+      .dropdown__buttons
+        button.dropdown__clear Очистить
+        button.dropdown__apply#apply Применить
+        #demo

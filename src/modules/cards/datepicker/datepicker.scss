@@ -1,0 +1,109 @@
+.datepicker-block {
+    display: flex;
+    flex-direction: column;
+}
+.datepicker {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    background: #FFFFFF;
+    margin-top: 6px;
+    margin-left: 30px;
+    width: 320px;
+    height: 369px;
+}
+
+/* Базовые стили таблицы календаря */
+table.calendar {
+    width: 320px;
+    height: 369px;
+    height: 40px;
+    text-align: center;
+    font-family: 'MontserratRegular';
+    font-weight: normal; 
+    font-size: 12px;
+    padding: 3px;
+    
+}
+/* Панель сетки календаря */
+td.in_month {
+    width: 38px;
+    height: 38px;
+    text-align: center; 
+    font-family: 'MontserratRegular';
+    font-size: 12px; 
+    color: rgba(31, 32, 65, 0.5);
+    border: none;
+    background: transparent;
+} 
+
+/* Панель выбора месяца и года */      
+table.calendar caption {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border: none;
+    font-family: 'MontserratBold';
+    font-size: 19px;
+    height: 24px;
+    line-height: 23px; 
+    background: #FFFFFF;
+    text-align: center;
+
+
+}
+/* Дни недели */       
+table.calendar th{
+    color: #BC9CFF;
+}
+/* Текущая дата */
+table.calendar td.selected { 
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    color: #FFFFFF;
+    font-family: 'MontserratBold';
+    line-height: 15px;
+    font-size: 12px; 
+}
+/* Выделенная дата */
+table.calendar td.clicked { 
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #FFFFFF;
+    font-family: 'MontserratBold';
+    line-height: 15px;
+    font-size: 12px; 
+}
+
+
+/* Ссылки сетки дат календаря */
+table.calendar a {
+    display: block; 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #4e4ead;  
+    text-align: center; 
+    font-size: 10px; 
+}
+/* Ссылки навигации календаря */
+table.calendar caption a {
+    width: 24px;
+    height: 24px;
+    font-family: 'MaterialIcons';
+    display: inline-flex;
+    font-size: 24px;
+    color: #BC9CFF;
+    
+}
+#demo {
+    width: 60px;
+    height: 40px;
+    
+}
+.datepicker-date-dropdown {
+    width: 320px;
+    height: 44px;
+}
