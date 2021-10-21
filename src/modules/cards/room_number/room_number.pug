@@ -1,6 +1,7 @@
 include ../../mixin/date_dropdown/date_dropdown
 include ../../mixin/dropdown_guests/dropdown_guests
 include ../../mixin/button/button
+include ../../cards/datepicker/datepicker
 
 
 mixin room_number 
@@ -15,10 +16,9 @@ mixin room_number
             .room-number-date
                 .room-number-date-row 
                     .room-number-date-row-head Прибытие 
-                    
-                .room-number-date-row
                     .room-number-date-row-head Выезд
-                    
+                .room-number-date-datepicker 
+                +datepicker                 
             .room-number-guest
                 .room-number-guest-head Гости
                 +dropdown_guests('Сколько гостей') 

@@ -140,9 +140,18 @@
                 <div class="room-number-date">
                   <div class="room-number-date-row"> 
                     <div class="room-number-date-row-head">Прибытие </div>
-                  </div>
-                  <div class="room-number-date-row">
                     <div class="room-number-date-row-head">Выезд</div>
+                  </div>
+                  <div class="room-number-date-datepicker"> </div>
+                  <div class="datepicker-block">
+                    <div class="datepicker-block-lable">
+                      <input class="datepicker-here" id="start_one" type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
+                      <button class="datepicker-btn">expand_more  </button>
+                    </div>
+                    <div class="datepicker-block-lable">
+                      <input class="date-end" id="end_one" type="text" placeholder="ДД.ММ.ГГГГ">
+                      <button class="datepicker-btn">expand_more </button>
+                    </div>
                   </div>
                 </div>
                 <div class="room-number-guest">
@@ -246,32 +255,7 @@
           </div>
         </div>
         <div class="cards-group-column">
-          <div class="card cards-datepicker"> 
-            <div class="datepicker-block">
-              <div class="datepicker-date-dropdown">
-                <div class="date-dropdown">
-                  <div class="date-dropdown-block">
-                    <div class="date-dropdown-input" id="start-date">
-                      <button class="date-dropdown-btn">expand_more</button>
-                    </div>
-                  </div>
-                  <div class="date-dropdown-block">
-                    <div class="date-dropdown-input" id="end-date">
-                      <button class="date-dropdown-btn">expand_more</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="datepicker"> 
-                <div id="cal_placeholder"></div>
-                <div class="dropdown__buttons">
-                  <button class="dropdown__clear">Очистить</button>
-                  <button class="dropdown__apply" id="apply">Применить</button>
-                  <div id="demo"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="card cards-datepicker"> </div>
           <div class="card cards-typeroom"> 
             <div class="type-room">
               <div class="type-room-picture1 type-room-picture1">

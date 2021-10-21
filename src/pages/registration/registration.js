@@ -8,3 +8,4 @@ import './fonts.scss';
 import '../../modules/footer/footer';
 import '../../modules/header/header';
 import '../../modules/header-login/header-login';
+import '../../modules/cards/registration/registration';

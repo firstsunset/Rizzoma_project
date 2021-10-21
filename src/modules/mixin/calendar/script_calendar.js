@@ -1,141 +1,117 @@
-import 'air-datepicker';
+const date_picker_element = document.querySelector('.date-picker');
+const selected_date_element = document.querySelector('.date-picker .selected-date');
+const dates_element = document.querySelector('.date-picker .dates');
+const mth_element = document.querySelector('.date-picker .dates .month .mth');
+const next_mth_element = document.querySelector('.date-picker .dates .month .next-mth');
+const prev_mth_element = document.querySelector('.date-picker .dates .month .prev-mth');
+const days_element = document.querySelector('.date-picker .dates .days');
 
-class Calendar {
-    constructor($node) {
-      this.$node = $node;
-  
-      this._init();
-    }
-  
-    _init() {
-      this._findNodes();
-      this._addValueToInputs();
-      this._initDatepicker();
-      this._attachEventsHandler();
-    }
-  
-    _findNodes() {
-      this.$inputs = this.$node.find('.js-calendar__inputs input');
-      this.$apply = this.$node.find('.js-calendar__apply');
-      this.$clear = this.$node.find('.js-calendar__clear');
-      this.$button = this.$node.find('.js-calendar__inputs button');
-      this.$menu = this.$node.find('.js-calendar__menu');
-      this.$nodeForDatepicker = this.$node.find('.js-calendar__datepicker');
-    }
-  
-    _addValueToInputs() {
-      this.$inputs.each((i) => {
-        this.$inputs[i].value = 'ДД.ММ.ГГГГ';
-      });
-    }
-  
-    _initDatepicker() {
-      const calendarOptions = {
-        range: true,
-        navTitles: {
-          days: 'MM yyyy',
-        },
-        prevHtml: '<span class="material-icons">arrow_back</span>',
-        nextHtml: '<span class="material-icons">arrow_forward</span>',
-        minDate: new Date(),
-      };
-  
-      this.datepicker = this.$nodeForDatepicker.datepicker(calendarOptions).data().datepicker;
-    }
-  
-    _attachEventsHandler() {
-      this.$apply.on('click', () => {
-        this._applyDates();
-      });
-      this.$clear.on('click', () => {
-        this._clearDates();
-      });
-      this.$button.on('click', () => {
-        this._toggleVisible();
-      });
-    }
-  
-    _applyDates() {
-      const dates = this.datepicker.selectedDates;
-  
-      if (dates.length !== 2) {
-        return;
-      }
-  
-      if (this.$inputs.length === 2) {
-        const firstDate = this._calculateFullDate(dates[0]);
-        const secondDate = this._calculateFullDate(dates[1]);
-  
-        this.$inputs[0].value = firstDate;
-        this.$inputs[1].value = secondDate;
-        this._toggleVisible();
-        return;
-      }
-  
-      const firstDate = this._calculateDayAndMount(dates[0]);
-      const secondDate = this._calculateDayAndMount(dates[1]);
-  
-      this.$inputs[0].value = `${firstDate} - ${secondDate}`;
-      this._toggleVisible();
-    }
-  
-    _calculateFullDate(date) {
-      let day = String(date.getDate());
-      let month = String(Number(date.getMonth()) + 1);
-      const year = date.getFullYear();
-  
-      if (day.length !== 2) {
-        day = `0${day}`;
-      }
-  
-      if (month.length !== 2) {
-        month = `0${month}`;
-      }
-  
-      return `${day}.${month}.${year}`;
-    }
-  
-    _clearDates() {
-      this.datepicker.clear();
-    }
-  
-    _toggleVisible() {
-      this.$menu.toggleClass('calendar__menu__visible');
-  
-      this.$inputs.each((i) => {
-        const isFocus = this.$inputs[i].dataset.focus === 'true';
-  
-        this.$inputs[i].dataset.focus = isFocus ? 'false' : 'true';
-      });
-    }
-  
-    _calculateDayAndMount(date) {
-      const namesOfMonth = [
-        'янв',
-        'фев',
-        'мар',
-        'апр',
-        'май',
-        'июн',
-        'июл',
-        'авг',
-        'сен',
-        'окт',
-        'ноя',
-        'дек',
-      ];
-  
-      const day = date.getDate();
-      const monthNumber = date.getMonth();
-  
-      const month = namesOfMonth[monthNumber];
-  
-      return `${day} ${month}`;
-    }
-  }
-  
-  $(() => {
-    $('.js-calendar').each((i, node) => {
-      new Calendar($(node));
-    });
-  });
+const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth();
+let year = date.getFullYear();
+
+let selectedDate = date;
+let selectedDay = day;
+let selectedMonth = month;
+let selectedYear = year;
+
+mth_element.textContent = months[month] + ' ' + year;
+
+selected_date_element.textContent = formatDate(date);
+selected_date_element.dataset.value = selectedDate;
+
+populateDates();
+
+// EVENT LISTENERS
+date_picker_element.addEventListener('click', toggleDatePicker);
+next_mth_element.addEventListener('click', goToNextMonth);
+prev_mth_element.addEventListener('click', goToPrevMonth);
+
+// FUNCTIONS
+function toggleDatePicker (e) {
+	if (!checkEventPathForClass(e.path, 'dates')) {
+		dates_element.classList.toggle('active');
+	}
+}
+
+function goToNextMonth (e) {
+	month++;
+	if (month > 11) {
+		month = 0;
+		year++;
+	}
+	mth_element.textContent = months[month] + ' ' + year;
+	populateDates();
+}
+
+function goToPrevMonth (e) {
+	month--;
+	if (month < 0) {
+		month = 11;
+		year--;
+	}
+	mth_element.textContent = months[month] + ' ' + year;
+	populateDates();
+}
+
+function populateDates (e) {
+	days_element.innerHTML = '';
+	let amount_days = 31;
+
+	if (month == 1) {
+		amount_days = 28;
+	}
+
+	for (let i = 0; i < amount_days; i++) {
+		const day_element = document.createElement('div');
+		day_element.classList.add('day');
+		day_element.textContent = i + 1;
+
+		if (selectedDay == (i + 1) && selectedYear == year && selectedMonth == month) {
+			day_element.classList.add('selected');
+		}
+
+		day_element.addEventListener('click', function () {
+			selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1));
+			selectedDay = (i + 1);
+			selectedMonth = month;
+			selectedYear = year;
+
+			selected_date_element.textContent = formatDate(selectedDate);
+			selected_date_element.dataset.value = selectedDate;
+
+			populateDates();
+		});
+
+		days_element.appendChild(day_element);
+	}
+}
+
+// HELPER FUNCTIONS
+function checkEventPathForClass (path, selector) {
+	for (let i = 0; i < path.length; i++) {
+		if (path[i].classList && path[i].classList.contains(selector)) {
+			return true;
+		}
+	}
+	
+	return false;
+}
+function formatDate (d) {
+	let day = d.getDate();
+	if (day < 10) {
+		day = '0' + day;
+	}
+
+	let month = d.getMonth() + 1;
+	if (month < 10) {
+		month = '0' + month;
+	}
+
+	let year = d.getFullYear();
+
+	return day + ' . ' + month + ' . ' + year;
+}

@@ -1,14 +1,11 @@
-include ../button/button
 
 
 mixin calendar
-  .calendar.js-calendar
-    .calendar__inputs
-      block
-    .calendar__card
-      .calendar__datepicker.js-calendar__datepicker
-      .calendar__buttons
-        .calendar__cancel
-          +button({type: 'link', text: 'очистить'})
-        .calendar__apply
-          +button({type: 'link', text: 'применить'})
+  .date-picker
+    .selected-date
+    .dates
+      .month
+        .arrows.prev-mth arrow
+        .mth
+        .arrows.next-mth arrow
+      .days

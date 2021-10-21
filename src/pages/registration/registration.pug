@@ -1,3 +1,6 @@
+include ../../modules/cards/registration/registration
+
+
 doctype html
 html(lang="ru")
   head
@@ -10,5 +13,6 @@ html(lang="ru")
     .wrapper
       include ../../modules/header/header
       .content.content-img
-      
+        .registration-page-registration-card
+          +registration      
       include ../../modules/footer/footer

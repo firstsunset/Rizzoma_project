@@ -1,11 +1,9 @@
-include ../../mixin/date_dropdown/date_dropdown
+
 mixin datepicker
   .datepicker-block
-    .datepicker-date-dropdown
-      +date_dropdown
-    .datepicker 
-      #cal_placeholder
-      .dropdown__buttons
-        button.dropdown__clear Очистить
-        button.dropdown__apply#apply Применить
-        #demo
+    .datepicker-block-lable
+      input#start_one.datepicker-here(type='text' data-range='true' data-multiple-dates-separator=' - ' placeholder='ДД.ММ.ГГГГ')
+      button.datepicker-btn expand_more  
+    .datepicker-block-lable
+      input#end_one.date-end(type='text' placeholder='ДД.ММ.ГГГГ')
+      button.datepicker-btn expand_more 

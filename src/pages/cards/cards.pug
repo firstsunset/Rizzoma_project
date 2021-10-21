@@ -3,8 +3,8 @@ include ../../modules/cards/signin/signin
 include ../../modules/cards/seach_room/seach_room
 include ../../modules/cards/type_room/type_room
 include ../../modules/cards/room_number/room_number
-include ../../modules/cards/datepicker/datepicker
 include ../../modules/mixin/calendar/calendar
+include ../../modules/cards/datepicker/datepicker
 
 
 doctype html
@@ -30,7 +30,7 @@ html(lang="ru")
             +signin
         .cards-group-column
           .card.cards-datepicker 
-            +datepicker
+           
           .card.cards-typeroom 
             +type_room({ number: '888', lux: 'люкс', cost: '9 990₽', count: '5', rate: '65' })(class='type-room-picture1')
           .card.cards-typeroom 

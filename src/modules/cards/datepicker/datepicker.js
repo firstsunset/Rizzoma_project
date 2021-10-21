@@ -1,3 +1,3 @@
 import './datepicker.scss';
 import './script_datepicker';
-import '../../mixin/date_dropdown/date_dropdown';
+import '../../../../node_modules/air-datepicker/dist/js/datepicker.min';

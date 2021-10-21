@@ -1684,6 +1684,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -1693,17 +1695,18 @@ body {
 }
 
 .content {
-  height: 684px;
-  padding-bottom: 453px;
+  height: 685px;
   margin-top: 0px;
-  background: url(../images/image4754e4c057ad03cbf3bf1.png);
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-image: url(../images/image4754e4c057ad03cbf3bf1.png);
   background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-.content-img {
-  max-width: 100%;
+.registration-page-registration-card {
+  margin: 20px 530px 20px 530px;
 }
 /*!*****************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/registration/settings.scss ***!
@@ -2213,6 +2216,400 @@ path {
 @font-face {
   font-family: "MontserratBold";
   src: url(../fonts/Montserrat-Bold0f78db24da2c5f98591a.woff) format("woff"), url(../fonts/Montserrat-Bold079ca05d3ded9bc107ab.ttf) format("truetype"), url(../fonts/Montserrat-Bold946d834c14da9a5a8710.svg) format("svg");
+}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/registration/registration.scss ***!
+  \*****************************************************************************************************************************************/
+.registration {
+  width: 378px;
+  height: 644px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: "MontserratRegular";
+}
+.registration-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.registration-head {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+  padding-bottom: 20px;
+}
+.registration-lastname {
+  padding-top: 10px;
+}
+.registration-radio {
+  padding-top: 10px;
+}
+.registration-date {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+}
+.registration-sign {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.registration-sign-head {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #1F2041;
+  padding-bottom: 5px;
+}
+.registration-sign-password {
+  padding-top: 10px;
+}
+.registration-toggle {
+  padding-top: 10px;
+}
+.registration-buttonlong {
+  padding-top: 20px;
+}
+.registration-lastgroup {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.registration-toxin {
+  padding-top: 14px;
+  padding-right: 35px;
+  width: 188px;
+  height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/text_field/text_field.scss ***!
+  \*************************************************************************************************************************************/
+.text_field_form {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  height: 42px;
+  border: none;
+}
+
+.text_field_input {
+  position: relative;
+  width: 305px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background: #FFFFFF;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.text_field_form input[type=text] {
+  color: rgba(31, 32, 65, 0.25);
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+
+.text_field_input:focus,
+.text_field_input:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/radio_buttons/radio_buttons.scss ***!
+  \*******************************************************************************************************************************************/
+.radio {
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+  width: 241px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  width: 98px;
+  cursor: pointer;
+  font-family: "MontserratRegular";
+  color: rgba(31, 32, 65, 0.5);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 20px;
+}
+
+.radio-group-text {
+  margin-left: 10px;
+}
+/*!***************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/radio/radio.scss ***!
+  \***************************************************************************************************************************/
+.check-radio {
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-radio {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(24, 29, 175, 0.25);
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, add  background */
+.check-radio input:checked ~ .checkmark-radio {
+  background-color: #FFFFFF;
+  border: 1px solid #bc9cff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-radio input:checked ~ .checkmark-radio:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check-radio .checkmark-radio:after {
+  top: 4px;
+  left: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/toggle/toggle.scss ***!
+  \*****************************************************************************************************************************/
+.toggle {
+  display: flex;
+  flex-direction: row;
+}
+
+.check-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-toggle {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.checkmark-toggle:before {
+  position: absolute;
+  content: "";
+  left: 3px;
+  top: 3px;
+  background-color: #FFFFFF;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/* When the checkbox is checked, add background */
+.check-toggle input:checked ~ .checkmark-toggle:before {
+  background-color: #FFFFFF;
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.check-toggle input:checked ~ .checkmark-toggle {
+  background-color: #FFFFFF;
+  border: 1px solid #bc9cff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-toggle:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check-toggle input:checked ~ .checkmark-toggle:after {
+  display: block;
+}
+
+.toggle-text {
+  font-family: "MontserratRegular";
+  color: rgba(31, 32, 65, 0.5);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 20px;
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
+  \*****************************************************************************************************************************/
+.button {
+  display: block;
+  border: solid 2px transparent;
+  border-radius: 22px;
+  padding: 0.1667rem;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #FFFFFF inset;
+  cursor: pointer;
+  text-decoration-line: none;
+  width: 99px;
+  height: 44px;
+}
+.button:hover, .button.button_hovered {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.button__wrapper {
+  display: flex;
+  padding: 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  height: 15px;
+}
+.button_default {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_bordercolor {
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor .button__wrapper {
+  background-color: white;
+}
+.button_bordercolor .button__text {
+  color: #BC9CFF;
+}
+.button_link {
+  padding: 0;
+  width: auto;
+  padding: 0;
+}
+.button.button_link {
+  background: white;
+}
+.button_link .button__wrapper {
+  padding: 0;
+}
+.button_link .button__text {
+  color: #BC9CFF;
+  line-height: 15px;
+}
+.button.button_link .button__wrapper .button__text:hover, .button.button_link.button_hovered .button__wrapper .button__text {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button_long.button {
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_long .button__wrapper {
+  padding: 0;
+  width: 100%;
+}
+.button_long .button__text {
+  width: 280px;
+  height: 15px;
+  margin-left: 20px;
+  margin-top: -30px;
+}
+.button__text {
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  line-height: 3.3333rem;
+  white-space: nowrap;
+  height: 44px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.button__arrow {
+  font-family: "MaterialIcons";
+  color: white;
+  font-size: 24px;
+  margin-left: auto;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=registration.css.map*/

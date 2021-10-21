@@ -4477,6 +4477,27 @@
 
 /***/ }),
 
+/***/ "./modules/cards/registration/registration.js":
+/*!****************************************************!*\
+  !*** ./modules/cards/registration/registration.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _registration_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./registration.scss */ "./modules/cards/registration/registration.scss");
+/* harmony import */ var _mixin_text_field_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/text_field/text_field */ "./modules/mixin/text_field/text_field.js");
+/* harmony import */ var _mixin_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/radio_buttons/radio_buttons */ "./modules/mixin/radio_buttons/radio_buttons.js");
+/* harmony import */ var _mixin_toggle_toggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixin/toggle/toggle */ "./modules/mixin/toggle/toggle.js");
+/* harmony import */ var _mixin_button_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixin/button/button */ "./modules/mixin/button/button.js");
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./modules/footer/footer.js":
 /*!**********************************!*\
   !*** ./modules/footer/footer.js ***!
@@ -4533,6 +4554,47 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/button/button.js":
+/*!****************************************!*\
+  !*** ./modules/mixin/button/button.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.scss */ "./modules/mixin/button/button.scss");
+
+
+/***/ }),
+
+/***/ "./modules/mixin/radio/radio.js":
+/*!**************************************!*\
+  !*** ./modules/mixin/radio/radio.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _radio_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio.scss */ "./modules/mixin/radio/radio.scss");
+
+
+/***/ }),
+
+/***/ "./modules/mixin/radio_buttons/radio_buttons.js":
+/*!******************************************************!*\
+  !*** ./modules/mixin/radio_buttons/radio_buttons.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio_buttons.scss */ "./modules/mixin/radio_buttons/radio_buttons.scss");
+/* harmony import */ var _radio_radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../radio/radio */ "./modules/mixin/radio/radio.js");
+
+
+
+/***/ }),
+
 /***/ "./modules/mixin/subscription_text_field/subscription_text_field.js":
 /*!**************************************************************************!*\
   !*** ./modules/mixin/subscription_text_field/subscription_text_field.js ***!
@@ -4542,6 +4604,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription_text_field.scss */ "./modules/mixin/subscription_text_field/subscription_text_field.scss");
+
+
+/***/ }),
+
+/***/ "./modules/mixin/text_field/text_field.js":
+/*!************************************************!*\
+  !*** ./modules/mixin/text_field/text_field.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_field.scss */ "./modules/mixin/text_field/text_field.scss");
+
+
+/***/ }),
+
+/***/ "./modules/mixin/toggle/toggle.js":
+/*!****************************************!*\
+  !*** ./modules/mixin/toggle/toggle.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle.scss */ "./modules/mixin/toggle/toggle.scss");
 
 
 /***/ }),
@@ -21758,6 +21846,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./modules/cards/registration/registration.scss":
+/*!******************************************************!*\
+  !*** ./modules/cards/registration/registration.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/footer/fonts.scss":
 /*!***********************************!*\
   !*** ./modules/footer/fonts.scss ***!
@@ -21836,10 +21937,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/button/button.scss":
+/*!******************************************!*\
+  !*** ./modules/mixin/button/button.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/mixin/radio/radio.scss":
+/*!****************************************!*\
+  !*** ./modules/mixin/radio/radio.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/mixin/radio_buttons/radio_buttons.scss":
+/*!********************************************************!*\
+  !*** ./modules/mixin/radio_buttons/radio_buttons.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/mixin/subscription_text_field/subscription_text_field.scss":
 /*!****************************************************************************!*\
   !*** ./modules/mixin/subscription_text_field/subscription_text_field.scss ***!
   \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/mixin/text_field/text_field.scss":
+/*!**************************************************!*\
+  !*** ./modules/mixin/text_field/text_field.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/mixin/toggle/toggle.scss":
+/*!******************************************!*\
+  !*** ./modules/mixin/toggle/toggle.scss ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21998,7 +22164,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
 /* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");
+/* harmony import */ var _modules_cards_registration_registration__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/registration/registration */ "./modules/cards/registration/registration.js");
  //import $ from 'jquery';
+
 
 
 
