@@ -1,13 +1,11 @@
+
 import _ from 'lodash';
-//import $ from 'jquery';
+import './settings.scss';
+import './fonts.scss';
+import './sign_in.scss';
 import '@fortawesome/fontawesome-free/js/all';
 
-import './registration.scss';
-import './settings.scss'
-import './fonts.scss';
 import '../../modules/footer/footer';
 import '../../modules/header/header';
 import '../../modules/header-login/header-login';
-import '../../modules/cards/registration/registration';
-
-
+import '../../modules/cards/signin/signin';

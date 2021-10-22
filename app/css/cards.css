@@ -2124,6 +2124,14 @@ h3 {
   width: auto;
   padding: 0;
 }
+.button_bordercolor_header {
+  width: 87px;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor_header .button__text {
+  color: #BC9CFF;
+}
 .button.button_link {
   background: white;
 }
@@ -2153,6 +2161,13 @@ h3 {
   height: 15px;
   margin-left: 20px;
   margin-top: -30px;
+}
+.button_long_header.button {
+  width: 196px;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
 }
 .button__text {
   font-family: "MontserratRegular";

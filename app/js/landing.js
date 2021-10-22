@@ -4545,48 +4545,6 @@ $(function () {
 
 /***/ }),
 
-/***/ "./modules/cards/registration/registration.js":
-/*!****************************************************!*\
-  !*** ./modules/cards/registration/registration.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _registration_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./registration.scss */ "./modules/cards/registration/registration.scss");
-/* harmony import */ var _mixin_text_field_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/text_field/text_field */ "./modules/mixin/text_field/text_field.js");
-/* harmony import */ var _mixin_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/radio_buttons/radio_buttons */ "./modules/mixin/radio_buttons/radio_buttons.js");
-/* harmony import */ var _mixin_toggle_toggle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixin/toggle/toggle */ "./modules/mixin/toggle/toggle.js");
-/* harmony import */ var _mixin_button_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixin/button/button */ "./modules/mixin/button/button.js");
-
-
-
-
-
-
-/***/ }),
-
-/***/ "./modules/cards/room_number/room_number.js":
-/*!**************************************************!*\
-  !*** ./modules/cards/room_number/room_number.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _room_number_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room_number.scss */ "./modules/cards/room_number/room_number.scss");
-/* harmony import */ var _mixin_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/date_dropdown/date_dropdown */ "./modules/mixin/date_dropdown/date_dropdown.js");
-/* harmony import */ var _mixin_button_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/button/button */ "./modules/mixin/button/button.js");
-/* harmony import */ var _mixin_dropdown_guests_dropdown_guests__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixin/dropdown_guests/dropdown_guests */ "./modules/mixin/dropdown_guests/dropdown_guests.js");
-/* harmony import */ var _cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-
-
-
-
-
-
-/***/ }),
-
 /***/ "./modules/cards/seach_room/seach_room.js":
 /*!************************************************!*\
   !*** ./modules/cards/seach_room/seach_room.js ***!
@@ -4608,33 +4566,57 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/cards/signin/signin.js":
-/*!****************************************!*\
-  !*** ./modules/cards/signin/signin.js ***!
-  \****************************************/
+/***/ "./modules/footer/footer.js":
+/*!**********************************!*\
+  !*** ./modules/footer/footer.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _signin_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./signin.scss */ "./modules/cards/signin/signin.scss");
-/* harmony import */ var _mixin_text_field_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/text_field/text_field */ "./modules/mixin/text_field/text_field.js");
-/* harmony import */ var _mixin_button_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/button/button */ "./modules/mixin/button/button.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.scss */ "./modules/footer/footer.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/footer/fonts.scss");
+/* harmony import */ var _mixin_subscription_text_field_subscription_text_field__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../mixin/subscription_text_field/subscription_text_field */ "./modules/mixin/subscription_text_field/subscription_text_field.js");
+
 
 
 
 
 /***/ }),
 
-/***/ "./modules/cards/type_room/type_room.js":
+/***/ "./modules/header-login/header-login.js":
 /*!**********************************************!*\
-  !*** ./modules/cards/type_room/type_room.js ***!
+  !*** ./modules/header-login/header-login.js ***!
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _type_room_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./type_room.scss */ "./modules/cards/type_room/type_room.scss");
-/* harmony import */ var _mixin_rate_button_rate_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/rate_button/rate_button */ "./modules/mixin/rate_button/rate_button.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header_login_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-login.scss */ "./modules/header-login/header-login.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/header-login/fonts.scss");
+
+
+
+
+/***/ }),
+
+/***/ "./modules/header/header.js":
+/*!**********************************!*\
+  !*** ./modules/header/header.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.scss */ "./modules/header/header.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/header/fonts.scss");
+
 
 
 
@@ -4650,147 +4632,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.scss */ "./modules/mixin/button/button.scss");
 
-
-/***/ }),
-
-/***/ "./modules/mixin/calendar/calendar.js":
-/*!********************************************!*\
-  !*** ./modules/mixin/calendar/calendar.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _calendar_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calendar.scss */ "./modules/mixin/calendar/calendar.scss");
-/* harmony import */ var _script_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_calendar */ "./modules/mixin/calendar/script_calendar.js");
-/* harmony import */ var _script_calendar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_calendar__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-/***/ }),
-
-/***/ "./modules/mixin/calendar/script_calendar.js":
-/*!***************************************************!*\
-  !*** ./modules/mixin/calendar/script_calendar.js ***!
-  \***************************************************/
-/***/ (() => {
-
-var date_picker_element = document.querySelector('.date-picker');
-var selected_date_element = document.querySelector('.date-picker .selected-date');
-var dates_element = document.querySelector('.date-picker .dates');
-var mth_element = document.querySelector('.date-picker .dates .month .mth');
-var next_mth_element = document.querySelector('.date-picker .dates .month .next-mth');
-var prev_mth_element = document.querySelector('.date-picker .dates .month .prev-mth');
-var days_element = document.querySelector('.date-picker .dates .days');
-var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-var date = new Date();
-var day = date.getDate();
-var month = date.getMonth();
-var year = date.getFullYear();
-var selectedDate = date;
-var selectedDay = day;
-var selectedMonth = month;
-var selectedYear = year;
-mth_element.textContent = months[month] + ' ' + year;
-selected_date_element.textContent = formatDate(date);
-selected_date_element.dataset.value = selectedDate;
-populateDates(); // EVENT LISTENERS
-
-date_picker_element.addEventListener('click', toggleDatePicker);
-next_mth_element.addEventListener('click', goToNextMonth);
-prev_mth_element.addEventListener('click', goToPrevMonth); // FUNCTIONS
-
-function toggleDatePicker(e) {
-  if (!checkEventPathForClass(e.path, 'dates')) {
-    dates_element.classList.toggle('active');
-  }
-}
-
-function goToNextMonth(e) {
-  month++;
-
-  if (month > 11) {
-    month = 0;
-    year++;
-  }
-
-  mth_element.textContent = months[month] + ' ' + year;
-  populateDates();
-}
-
-function goToPrevMonth(e) {
-  month--;
-
-  if (month < 0) {
-    month = 11;
-    year--;
-  }
-
-  mth_element.textContent = months[month] + ' ' + year;
-  populateDates();
-}
-
-function populateDates(e) {
-  days_element.innerHTML = '';
-  var amount_days = 31;
-
-  if (month == 1) {
-    amount_days = 28;
-  }
-
-  var _loop = function _loop(i) {
-    var day_element = document.createElement('div');
-    day_element.classList.add('day');
-    day_element.textContent = i + 1;
-
-    if (selectedDay == i + 1 && selectedYear == year && selectedMonth == month) {
-      day_element.classList.add('selected');
-    }
-
-    day_element.addEventListener('click', function () {
-      selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1));
-      selectedDay = i + 1;
-      selectedMonth = month;
-      selectedYear = year;
-      selected_date_element.textContent = formatDate(selectedDate);
-      selected_date_element.dataset.value = selectedDate;
-      populateDates();
-    });
-    days_element.appendChild(day_element);
-  };
-
-  for (var i = 0; i < amount_days; i++) {
-    _loop(i);
-  }
-} // HELPER FUNCTIONS
-
-
-function checkEventPathForClass(path, selector) {
-  for (var i = 0; i < path.length; i++) {
-    if (path[i].classList && path[i].classList.contains(selector)) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
-function formatDate(d) {
-  var day = d.getDate();
-
-  if (day < 10) {
-    day = '0' + day;
-  }
-
-  var month = d.getMonth() + 1;
-
-  if (month < 10) {
-    month = '0' + month;
-  }
-
-  var year = d.getFullYear();
-  return day + ' . ' + month + ' . ' + year;
-}
 
 /***/ }),
 
@@ -5280,69 +5121,15 @@ var Dropdowns = Array.from(dropdowns).map(function (dd) {
 
 /***/ }),
 
-/***/ "./modules/mixin/radio/radio.js":
-/*!**************************************!*\
-  !*** ./modules/mixin/radio/radio.js ***!
-  \**************************************/
+/***/ "./modules/mixin/subscription_text_field/subscription_text_field.js":
+/*!**************************************************************************!*\
+  !*** ./modules/mixin/subscription_text_field/subscription_text_field.js ***!
+  \**************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _radio_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio.scss */ "./modules/mixin/radio/radio.scss");
-
-
-/***/ }),
-
-/***/ "./modules/mixin/radio_buttons/radio_buttons.js":
-/*!******************************************************!*\
-  !*** ./modules/mixin/radio_buttons/radio_buttons.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./radio_buttons.scss */ "./modules/mixin/radio_buttons/radio_buttons.scss");
-/* harmony import */ var _radio_radio__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../radio/radio */ "./modules/mixin/radio/radio.js");
-
-
-
-/***/ }),
-
-/***/ "./modules/mixin/rate_button/rate_button.js":
-/*!**************************************************!*\
-  !*** ./modules/mixin/rate_button/rate_button.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _rate_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rate_button.scss */ "./modules/mixin/rate_button/rate_button.scss");
-
-
-/***/ }),
-
-/***/ "./modules/mixin/text_field/text_field.js":
-/*!************************************************!*\
-  !*** ./modules/mixin/text_field/text_field.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_field.scss */ "./modules/mixin/text_field/text_field.scss");
-
-
-/***/ }),
-
-/***/ "./modules/mixin/toggle/toggle.js":
-/*!****************************************!*\
-  !*** ./modules/mixin/toggle/toggle.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle.scss */ "./modules/mixin/toggle/toggle.scss");
+/* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription_text_field.scss */ "./modules/mixin/subscription_text_field/subscription_text_field.scss");
 
 
 /***/ }),
@@ -33464,32 +33251,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/cards/registration/registration.scss":
-/*!******************************************************!*\
-  !*** ./modules/cards/registration/registration.scss ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/cards/room_number/room_number.scss":
-/*!****************************************************!*\
-  !*** ./modules/cards/room_number/room_number.scss ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./modules/cards/seach_room/seach_room.scss":
 /*!**************************************************!*\
   !*** ./modules/cards/seach_room/seach_room.scss ***!
@@ -33503,10 +33264,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/cards/signin/signin.scss":
-/*!******************************************!*\
-  !*** ./modules/cards/signin/signin.scss ***!
-  \******************************************/
+/***/ "./modules/footer/fonts.scss":
+/*!***********************************!*\
+  !*** ./modules/footer/fonts.scss ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33516,10 +33277,62 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/cards/type_room/type_room.scss":
+/***/ "./modules/footer/footer.scss":
+/*!************************************!*\
+  !*** ./modules/footer/footer.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/header-login/fonts.scss":
+/*!*****************************************!*\
+  !*** ./modules/header-login/fonts.scss ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/header-login/header-login.scss":
 /*!************************************************!*\
-  !*** ./modules/cards/type_room/type_room.scss ***!
+  !*** ./modules/header-login/header-login.scss ***!
   \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/header/fonts.scss":
+/*!***********************************!*\
+  !*** ./modules/header/fonts.scss ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/header/header.scss":
+/*!************************************!*\
+  !*** ./modules/header/header.scss ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33533,19 +33346,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************!*\
   !*** ./modules/mixin/button/button.scss ***!
   \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/mixin/calendar/calendar.scss":
-/*!**********************************************!*\
-  !*** ./modules/mixin/calendar/calendar.scss ***!
-  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33594,10 +33394,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/mixin/radio/radio.scss":
-/*!****************************************!*\
-  !*** ./modules/mixin/radio/radio.scss ***!
-  \****************************************/
+/***/ "./modules/mixin/subscription_text_field/subscription_text_field.scss":
+/*!****************************************************************************!*\
+  !*** ./modules/mixin/subscription_text_field/subscription_text_field.scss ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33607,10 +33407,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/mixin/radio_buttons/radio_buttons.scss":
-/*!********************************************************!*\
-  !*** ./modules/mixin/radio_buttons/radio_buttons.scss ***!
-  \********************************************************/
+/***/ "./pages/landing/fonts.scss":
+/*!**********************************!*\
+  !*** ./pages/landing/fonts.scss ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33620,10 +33420,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/mixin/rate_button/rate_button.scss":
-/*!****************************************************!*\
-  !*** ./modules/mixin/rate_button/rate_button.scss ***!
-  \****************************************************/
+/***/ "./pages/landing/landing.scss":
+/*!************************************!*\
+  !*** ./pages/landing/landing.scss ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33633,62 +33433,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/mixin/text_field/text_field.scss":
-/*!**************************************************!*\
-  !*** ./modules/mixin/text_field/text_field.scss ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/mixin/toggle/toggle.scss":
-/*!******************************************!*\
-  !*** ./modules/mixin/toggle/toggle.scss ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./pages/cards/cards.scss":
-/*!********************************!*\
-  !*** ./pages/cards/cards.scss ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./pages/cards/fonts.scss":
-/*!********************************!*\
-  !*** ./pages/cards/fonts.scss ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./pages/cards/settings.scss":
-/*!***********************************!*\
-  !*** ./pages/cards/settings.scss ***!
-  \***********************************/
+/***/ "./pages/landing/settings.scss":
+/*!*************************************!*\
+  !*** ./pages/landing/settings.scss ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33794,30 +33542,21 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!******************************!*\
-  !*** ./pages/cards/cards.js ***!
-  \******************************/
+/*!**********************************!*\
+  !*** ./pages/landing/landing.js ***!
+  \**********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.scss */ "./pages/cards/cards.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fonts.scss */ "./pages/cards/fonts.scss");
-/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./settings.scss */ "./pages/cards/settings.scss");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../node_modules/@fortawesome/fontawesome-free/js/all */ "../node_modules/@fortawesome/fontawesome-free/js/all.js");
-/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _modules_cards_registration_registration__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/cards/registration/registration */ "./modules/cards/registration/registration.js");
-/* harmony import */ var _modules_cards_signin_signin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/cards/signin/signin */ "./modules/cards/signin/signin.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/all */ "../node_modules/@fortawesome/fontawesome-free/js/all.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _landing_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./landing.scss */ "./pages/landing/landing.scss");
+/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./settings.scss */ "./pages/landing/settings.scss");
+/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./fonts.scss */ "./pages/landing/fonts.scss");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
+/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
+/* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");
 /* harmony import */ var _modules_cards_seach_room_seach_room__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/seach_room/seach_room */ "./modules/cards/seach_room/seach_room.js");
-/* harmony import */ var _modules_cards_type_room_type_room__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/cards/type_room/type_room */ "./modules/cards/type_room/type_room.js");
-/* harmony import */ var _modules_cards_room_number_room_number__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/cards/room_number/room_number */ "./modules/cards/room_number/room_number.js");
-/* harmony import */ var _modules_mixin_calendar_calendar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/calendar/calendar */ "./modules/mixin/calendar/calendar.js");
-/* harmony import */ var _modules_cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-
-
-
-
 
 
 
@@ -33831,4 +33570,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=cards.js.map
+//# sourceMappingURL=landing.js.map

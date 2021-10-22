@@ -31,6 +31,9 @@ module.exports = {
       uikit: PATHS.src + '/pages/uikit/uikit.js',
       form_elements: PATHS.src + '/pages/form_elements/form_elements.js',
       cards: PATHS.src + '/pages/cards/cards.js',
+      sign_in: PATHS.src + '/pages/sign_in/sign_in.js',
+      landing: PATHS.src + '/pages/landing/landing.js',
+
       
     },
   
@@ -94,6 +97,18 @@ module.exports = {
           inject: true,
           chunks: ['cards'],
           filename: 'cards.html'
+        }),
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/pages/sign_in/sign_in.pug'),
+          inject: true,
+          chunks: ['sign_in'],
+          filename: 'sign_in.html'
+        }),
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/pages/landing/landing.pug'),
+          inject: true,
+          chunks: ['landing'],
+          filename: 'landing.html'
         }),
     
         

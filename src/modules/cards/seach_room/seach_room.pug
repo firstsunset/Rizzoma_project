@@ -1,5 +1,6 @@
 include ../../mixin/date_dropdown/date_dropdown
 include ../../mixin/dropdown_guests/dropdown_guests
+include ../../cards/datepicker/datepicker
 
 include ../../mixin/button/button
 
@@ -7,13 +8,12 @@ mixin seach_room
     .seach-room 
         .seach-room-item
             .seach-room-head Найдём номера под ваши пожелания
-            .seach-room-group
-                .seach-room-group-row
-                    .seach-room-date-group-head Прибытие
-                    
-                .seach-room-group-row
-                    .seach-room-date-group-head Выезд
-                    
+            .seach-room-date
+                .seach-room-date-row 
+                    .seach-room-date-row-head Прибытие 
+                    .seach-room-date-row-head Выезд
+                .seach-room-date-datepicker 
+                                      
             .seach-room-guest
                 .seach-room-guest-head Гости
                 +dropdown_guests('Сколько гостей')                    

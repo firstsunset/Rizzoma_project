@@ -134,7 +134,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
     border: 1px solid rgba(31, 32, 65, 0.05);
@@ -145,8 +145,9 @@
     
   }
   .footer_section-2-text {
-    padding-left: 140px;
-    padding-right: 676px;
+    width: 372px;
+    height: 18px;
+    padding-left: 0px;
     font-family: 'MontserratRegular';
     font-style: normal;
     font-weight: normal;
@@ -157,6 +158,8 @@
   .social {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 112px;
   }
 
 
@@ -170,7 +173,6 @@
  .gradient-icon {
   font-family: 'Font Awesome 5 Brands';
   font-size: 24px;
-  padding-right: 20px;
   text-align: right;
   
  }

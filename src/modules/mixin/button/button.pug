@@ -2,6 +2,7 @@ mixin button(options)
   -
     const {
       text = 'click me',
+      click = 'window.location.href = ',
       link,
       size,
       isHovered = false,
@@ -14,7 +15,7 @@ mixin button(options)
     classes += ' button_' + type 
     classes += size ? ' button_' + size : ''
     classes += isHovered ? ' button_hovered' : ''
-  #{tag}.button(class=classes, href=link)
+  #{tag}.button(class=classes, type=type, onclick = click + link,)
     .button__wrapper 
       span.button__text= text
       if type === 'long'

@@ -1,5 +1,6 @@
+include ../../modules/mixin/button/button
 header 
-    div.header 
+    .header 
         .container
             .header_body
                 .header_logo 
@@ -7,7 +8,7 @@ header
                 nav 
                     ul.nav
                         li.nav-item 
-                            a(href="/mock-address/change-me").nav-link.nav-link-about О нас 
+                            a(href="/mock-address/change-me").nav-link О нас 
                         li.nav-item.nav-item-arrow
                             a(href="/mock-address/change-me").nav-link Услуги 
                             span.nav-arrow expand_more
@@ -20,8 +21,10 @@ header
                         li.nav-item.nav-item-arrow
                             a(href="/mock-address/change-me").nav-link Соглашения 
                             span.nav-arrow expand_more
-                button.headerbtn.headerbtn-log-in Войти
-                button.headerbtn.headerbtn-sign-up Зарегистрироваться
+                .headerbtn
+                    +button({ type: 'bordercolor_header', text: 'войти', isHovered: false, link: '"sign_in.html"', })
+                .headerbtn 
+                    +button({ type: 'long_header', text: 'зарегистрироваться', link: '"registration.html"' })
 
                         
 

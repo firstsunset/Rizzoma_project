@@ -1,4 +1,4 @@
-include ../../modules/cards/registration/registration
+include ../../modules/cards/signin/signin
 
 
 doctype html
@@ -6,13 +6,13 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title= "Registration"
+    title= "Sign in"
 
 
   body 
     include ../../modules/header/header
-    .registration-content
+    .signin-content
       .container
-        .registration-page-registration-card
-          +registration      
+          .signin-page-signin-card
+            +signin      
     include ../../modules/footer/footer

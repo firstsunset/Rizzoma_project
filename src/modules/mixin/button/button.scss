@@ -1,4 +1,4 @@
-@import '../../../pages/form_elements/veriables.scss';
+
 .button {
     display: block;
     border: solid 2px transparent;
@@ -56,6 +56,18 @@
       padding: 0;
 
     }
+
+    &_bordercolor_header {
+      width: 87px;
+      height: 34px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      
+    }
+    
+
+    &_bordercolor_header &__text {
+      color: #BC9CFF;
+    }
   
     &.button_link {
       background: white;
@@ -91,6 +103,13 @@
       height: 15px;
       margin-left: 20px;
       margin-top: -30px;
+    }
+    &_long_header.button {
+      width: 196px;
+      height: 34px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      box-shadow: none;
+      border: none;
     }
   
     &__text {
