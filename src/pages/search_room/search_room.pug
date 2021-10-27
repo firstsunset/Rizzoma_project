@@ -1,0 +1,75 @@
+include ../../modules/cards/datepicker/datepicker
+include ../../modules/mixin/dropdown_guests/dropdown_guests
+include ../../modules/mixin/range_slider/range_slider
+include ../../modules/mixin/rich_checkbox/rich_checkbox
+include ../../modules/mixin/dropdown_guests/dropdown_guests
+include ../../modules/mixin/checkbox_list/checkbox_list
+include ../../modules/cards/type_room/type_room
+include ../../modules/mixin/pagination/pagination
+include ../../modules/mixin/dropdown/dropdown
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= "Search room"
+
+
+  body 
+    include ../../modules/header/header
+    .wrapper
+        .searchroom
+            .searchroom-firstcolumn 
+              .searchroom-firstcolumn-heading даты пребывания в отеле
+              .searchroom-firstcolumn-calendar 
+                +dropdown('19 авг - 23 авг')
+              .searchroom-firstcolumn-heading Гости
+              .searchroom-firstcolumn-guests
+                +dropdown('3 гостя, 1 младенец')
+              .searchroom-firstcolumn-range 
+                +range-slider
+                .searchroom-firstcolumn-range-text Стоимость за сутки пребывания в номере
+              .searchroom-firstcolumn-heading Правила дома
+              .searchroom-firstcolumn-checkbox
+                +checkbox-list({ items: [ {text: "Можно курить"}, {text: "Можно с питомцами", isChecked: true}, {text: "Можно пригласить гостей (до 10 человек)", isChecked: true}, ]})
+              .searchroom-firstcolumn-heading Доступность
+              .searchroom-firstcolumn-checkbox
+                +checkbox-list({ isRich: true, items: [ {text: "Широкий коридор", subText: 'Ширина коридоров в номере не менее 91 см.'}, {text: "Помощник для инвалидов", subText: 'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
+              .searchroom-firstcolumn-heading Удобства номера
+              .searchroom-firstcolumn-comfort
+                +dropdown_guests('2 спальни, 2 кровати...')
+              .searchroom-firstcolumn-newcomfort
+                +checkbox-dropdown
+            .searchroom-secondcolumn
+              .searchroom-secondcolumn-heading Номера, которые мы для вас подобрали
+              .searchroom-secondcolumn-room
+                .searchroom-secondcolumn-room-row
+                  +type_room({ number: '888', chevron_left: 'chevron_left', chevron_right: 'chevron_right', lux: 'люкс', cost: '9 990₽', count: '5', rate: '145' })(class='.type-room-first-arrow-none')
+                  +type_room({ number: '840', cost: '9 990₽', count: '4', rate: '65' })(class='type-room-picture2')
+                  +type_room({ number: '980', lux: 'люкс', cost: '8 500₽', count: '3', rate: '35' })(class='type-room-picture3')
+                .searchroom-secondcolumn-room-row
+                  +type_room({ number: '856', cost: '7 300₽', count: '5', rate: '19' })(class='type-room-picture4')
+                  +type_room({ number: '740', cost: '6 000₽', count: '4', rate: '44' })(class='type-room-picture5')
+                  +type_room({ number: '982', cost: '5 800₽', count: '3', rate: '56' })(class='type-room-picture6')
+                .searchroom-secondcolumn-room-row
+                  +type_room({ number: '678', cost: '5 500₽', count: '5', rate: '45' })(class='type-room-picture7')
+                  +type_room({ number: '450', cost: '5 300₽', count: '4', rate: '39' })(class='type-room-picture8')
+                  +type_room({ number: '350', cost: '5 000₽', count: '3', rate: '77' })(class='type-room-picture9')
+                .searchroom-secondcolumn-room-row
+                  +type_room({ number: '666', cost: '5 000₽', count: '5', rate: '25' })(class='type-room-picture10')
+                  +type_room({ number: '444', cost: '5 000₽', count: '3', rate: '15' })(class='type-room-picture11')
+                  +type_room({ number: '352', cost: '5 000₽', count: '3', rate: '55' })(class='type-room-picture12')
+              .searchroom-secondcolumn-pagination
+                .searchroom-secondcolumn-block
+                  +pagination
+                .searchroom-secondcolumn-pagination-text 1 – 12 из 100+ вариантов аренды
+    include ../../modules/footer/footer
+    script(type='text/javascript') 
+      include ../../modules/mixin/checkbox_list/checkbox_list_script.js
+    script(type='text/javascript') 
+      include ../../modules/mixin/pagination/pagination_script.js
+
+
+             
+    

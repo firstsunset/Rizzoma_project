@@ -1,0 +1,104 @@
+@import '~normalize.css';
+@import '~flexboxgrid2';
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.searchroom{
+    position: relative;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 70px;
+    gap: 60px;
+    
+    &-firstcolumn{
+        display: flex;
+        flex-direction: column;
+
+        &-heading{
+            font-family: 'MontserratBold';
+            font-style: normal;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+            margin-top: 30px;
+        }
+
+        &-calendar{
+            margin-top: 5px;
+        }
+
+        &-guests{
+            margin-top: 5px;
+        }
+        &-range{
+            margin-top: 5px;
+
+            &-text{
+                font-family: 'MontserratRegular';
+                font-size: 12px;
+                line-height: 14px;
+                color: rgba(31, 32, 65, 0.5);
+
+            }
+        }
+        &-comfort{
+            margin-top: 5px;
+        }
+        &-newcomfort{
+            position: absolute;
+            margin-top: 740px;
+        }
+
+    }
+
+    &-secondcolumn{
+        margin-top: 30px;
+        margin-left: 0px;
+
+        &-heading{
+            font-family: 'MontserratBold';
+            font-style: normal;
+            font-size: 24px;
+            line-height: 29px;
+            color: #1F2041;
+            margin-bottom: 20px;
+        }
+
+        &-room{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &-row {
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+            }
+        }
+
+        &-pagination{
+            width: 241px;
+            align-content: center;
+            margin-left: 296px;
+            display: flex;
+            flex-direction: column;
+
+            &-text{
+                font-family: 'MontserratRegular';
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+                margin-top: 10px;
+                padding-left: 10px;
+            }
+        }
+
+    }
+}

@@ -1,37 +1,32 @@
 include ../../modules/mixin/button/button
 header 
     .header 
-        .container
-            .header_body
-                .header_logo 
-                    a(href="/mock-address/change-me"): img(src=require("./logo.svg"), alt="Logo")
-                nav 
-                    ul.nav
-                        li.nav-item 
-                            a(href="/mock-address/change-me").nav-link О нас 
-                        li.nav-item.nav-item-arrow
-                            a(href="/mock-address/change-me").nav-link Услуги 
-                            span.nav-arrow expand_more
-                        li.nav-item
-                            .nav-item-text
-                                a(href="/mock-address/change-me").nav-link Вакансии
-                        li.nav-item
-                            .nav-item-text
-                                a(href="/mock-address/change-me").nav-link Новости
-                        li.nav-item.nav-item-arrow
-                            a(href="/mock-address/change-me").nav-link Соглашения 
-                            span.nav-arrow expand_more
-                .headerbtn
-                    +button({ type: 'bordercolor_header', text: 'войти', isHovered: false, link: '"sign_in.html"', })
-                .headerbtn 
-                    +button({ type: 'long_header', text: 'зарегистрироваться', link: '"registration.html"' })
-
-                        
-
-    
-            
-            
-                        
-
-
-
+        .container 
+            .row
+                .col-xs-2.col-md-2.col-lg-2
+                    .header_logo 
+                        a(href="/mock-address/change-me"): img(src=require("./logo.svg"), alt="Logo")
+                .col-xs-offset-2.col-xs-2.col-md-offset-0.col-md-6.col-lg-offset-2.col-lg-4
+                    .row
+                        nav 
+                            ul.nav
+                                li.nav-item 
+                                    a(href="/mock-address/change-me").nav-link О нас 
+                                li.nav-item.nav-item-arrow
+                                    a(href="/mock-address/change-me").nav-link Услуги 
+                                    span.nav-arrow expand_more
+                                li.nav-item
+                                    .nav-item-text
+                                        a(href="/mock-address/change-me").nav-link Вакансии
+                                li.nav-item
+                                    .nav-item-text
+                                        a(href="/mock-address/change-me").nav-link Новости
+                                li.nav-item.nav-item-arrow
+                                    a(href="/mock-address/change-me").nav-link Соглашения 
+                                    span.nav-arrow expand_more
+                .col-xs-1.col-md-1.col-lg-1.col-xs-offset-0.col-md-offset-0.col-lg-offset-0
+                    .headerbtn_signin
+                        +button({ type: 'bordercolor_header', text: 'войти', isHovered: false, link: '"sign_in.html"', })
+                .col-xs-1.col-md-2.col-lg-2.col-xs-offset-1.col-lg-offset-1.col-md-offset-1
+                    .headerbtn_registration 
+                        +button({ type: 'long_header', text: 'зарегистрироваться', link: '"registration.html"' })

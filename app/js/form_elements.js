@@ -4775,9 +4775,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./checkbox_list.scss */ "./modules/mixin/checkbox_list/checkbox_list.scss");
 /* harmony import */ var _checkbox_list_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox_list_script */ "./modules/mixin/checkbox_list/checkbox_list_script.js");
 /* harmony import */ var _checkbox_list_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_checkbox_list_script__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _checkbox_checkbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../checkbox/checkbox */ "./modules/mixin/checkbox/checkbox.js");
-/* harmony import */ var _checkmark_checkmark__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../checkmark/checkmark */ "./modules/mixin/checkmark/checkmark.js");
-
+/* harmony import */ var _rich_checkbox_rich_checkbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../rich_checkbox/rich_checkbox */ "./modules/mixin/rich_checkbox/rich_checkbox.js");
 
 
 
@@ -4794,12 +4792,15 @@ var expanded = false;
 
 function showCheckboxes() {
   var checkboxes = document.getElementById("checkboxes");
+  var button = document.getElementById("checkBoxBtn");
 
   if (!expanded) {
     checkboxes.style.display = "block";
     expanded = true;
+    button.style.transform = "rotate(-180deg)";
   } else {
     checkboxes.style.display = "none";
+    button.style.transform = "none";
     expanded = false;
   }
 }
@@ -5974,6 +5975,19 @@ newRangeSlider.didChanged = function (min, max) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rate_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rate_button.scss */ "./modules/mixin/rate_button/rate_button.scss");
+
+
+/***/ }),
+
+/***/ "./modules/mixin/rich_checkbox/rich_checkbox.js":
+/*!******************************************************!*\
+  !*** ./modules/mixin/rich_checkbox/rich_checkbox.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _rich_checkbox_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rich_checkbox.scss */ "./modules/mixin/rich_checkbox/rich_checkbox.scss");
 
 
 /***/ }),
@@ -34346,6 +34360,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************************!*\
   !*** ./modules/mixin/rate_button/rate_button.scss ***!
   \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./modules/mixin/rich_checkbox/rich_checkbox.scss":
+/*!********************************************************!*\
+  !*** ./modules/mixin/rich_checkbox/rich_checkbox.scss ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

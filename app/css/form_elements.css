@@ -2207,18 +2207,13 @@ h3 {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox_list/checkbox_list.scss ***!
   \*******************************************************************************************************************************************/
 .multiselect {
-  width: 320px;
+  width: 266px;
   height: 44px;
 }
 
 .selectBox {
   position: relative;
-}
-
-.selectBox select {
-  width: 320px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  width: 266px;
   border: none;
   background: #FFFFFF;
   font-family: "MontserratBold";
@@ -2226,16 +2221,20 @@ h3 {
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
-  font-size: 12px;
-  line-height: 15px;
 }
 
-.overSelect {
+.checkbox-dropdown-btn {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  background: transparent;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin: -5px 2px 0px 30px;
 }
 
 #checkboxes {
@@ -2268,148 +2267,74 @@ h3 {
 .checkbox-group-text {
   margin-left: 10px;
 }
-/*!*********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox/checkbox.scss ***!
-  \*********************************************************************************************************************************/
-.btn {
-  width: 20px;
-  height: 20px;
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/rich_checkbox/rich_checkbox.scss ***!
+  \*******************************************************************************************************************************************/
+.checkbox-list {
+  display: grid;
+  gap: 12px;
+}
+.checkbox-list_rich {
+  gap: 10px;
+}
+.checkbox-list__list {
+  margin: 0px;
+}
+.checkbox-list__item {
+  list-style: none;
+}
+.checkbox-list__label {
+  width: 236px;
+  padding-left: 30px;
+  position: relative;
+  display: block;
   cursor: pointer;
+}
+.checkbox-list__input {
   position: absolute;
   opacity: 0;
 }
-
-.blockbefore {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
+.checkbox-list__input:checked + .checkbox-list__text::before {
+  border-color: #bc9cff;
 }
-
-.block {
-  display: none;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.show-block {
+.checkbox-list__input:checked + .checkbox-list__text::after {
+  content: "";
   display: block;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid #bc9cff;
-  border-radius: 4px;
+  border-bottom: 2px solid #bc9cff;
+  border-right: 2px solid #bc9cff;
+  transform: rotate(45deg);
+  width: 5px;
+  height: 6px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
 }
-
-.show-block svg {
-  stroke: url(#Gradient-1);
-  stroke-width: 2px;
-  /* width of checkmark */
-  fill: none;
-  stroke-linecap: square;
-  bottom: 1px;
-  width: 20px;
-  height: 20px;
-}
-/*!***********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkmark/checkmark.scss ***!
-  \***********************************************************************************************************************************/
-.check {
-  display: block;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
+.checkbox-list__text {
   font-family: "MontserratRegular";
-  color: rgba(31, 32, 65, 0.5);
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
 }
-
-.checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkmark {
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.check input:checked ~ .checkmark {
-  background-color: #FFFFFF;
-  border: 1px solid #bc9cff;
-}
-
-.checkmark:after {
+.checkbox-list__text::before {
   content: "";
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  width: 18px;
+  height: 18px;
   position: absolute;
-  display: none;
-}
-
-.check input:checked ~ .checkmark:after {
   display: block;
+  border-radius: 4px;
+  left: 0;
 }
-
-.check .checkmark:after {
-  left: 8px;
-  top: 6px;
-  width: 6px;
-  height: 8px;
-  border: solid transparent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 1em 1em #FFFFFF inset;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.checkbox-list_rich .checkbox-list__text {
+  font-weight: bold;
+  color: rgba(31, 32, 65, 0.75);
 }
-
-/* Create the checkmark/indicator (hidden when not checked) */
-/* Show the checkmark when checked */
-/* Style the checkmark/indicator */
-label:hover {
-  cursor: pointer;
-}
-
-.checkMark {
-  stroke: url(#Gradient-1);
-  stroke-width: 2px;
-  /* width of checkmark */
-  fill: none;
-  stroke-linecap: square;
-  bottom: 1px;
-}
-
-.checkbox {
-  position: absolute;
-  opacity: 0;
-  /* hides default style checkbox */
-  width: 20px;
-  height: 20px;
-}
-
-.checkbox:checked + .checkMarkBox {
-  border: 1px solid #bc9cff;
-  /* border of checkbox when checked*/
+.checkbox-list__sub-text {
+  margin-top: 4px;
+  color: rgba(31, 32, 65, 0.5);
+  font-family: "MontserratRegular";
+  font-size: 12px;
+  line-height: 14px;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/radio_buttons/radio_buttons.scss ***!
@@ -2592,6 +2517,149 @@ label:hover {
   font-size: 14px;
   line-height: 18px;
   margin-right: 20px;
+}
+/*!***********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkmark/checkmark.scss ***!
+  \***********************************************************************************************************************************/
+.check {
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-family: "MontserratRegular";
+  color: rgba(31, 32, 65, 0.5);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.check input:checked ~ .checkmark {
+  background-color: #FFFFFF;
+  border: 1px solid #bc9cff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check .checkmark:after {
+  left: 8px;
+  top: 6px;
+  width: 6px;
+  height: 8px;
+  border: solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 1em 1em #FFFFFF inset;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/* Show the checkmark when checked */
+/* Style the checkmark/indicator */
+label:hover {
+  cursor: pointer;
+}
+
+.checkMark {
+  stroke: url(#Gradient-1);
+  stroke-width: 2px;
+  /* width of checkmark */
+  fill: none;
+  stroke-linecap: square;
+  bottom: 1px;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  /* hides default style checkbox */
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox:checked + .checkMarkBox {
+  border: 1px solid #bc9cff;
+  /* border of checkbox when checked*/
+}
+/*!*********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox/checkbox.scss ***!
+  \*********************************************************************************************************************************/
+.btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+}
+
+.blockbefore {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.block {
+  display: none;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.show-block {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: #FFFFFF;
+  border: 1px solid #bc9cff;
+  border-radius: 4px;
+}
+
+.show-block svg {
+  stroke: url(#Gradient-1);
+  stroke-width: 2px;
+  /* width of checkmark */
+  fill: none;
+  stroke-linecap: square;
+  bottom: 1px;
+  width: 20px;
+  height: 20px;
 }
 /*!***********************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox_button/checkbox_button.scss ***!
@@ -2978,12 +3046,11 @@ label:hover {
 }
 
 .range-text {
-  font-family: "MontserratRegular";
+  font-family: "MontserratBold";
   font-size: 12px;
   line-height: 15px;
   text-align: right;
   text-transform: uppercase;
-  font-weight: bold;
   text-align: left;
   color: #1F2041;
 }

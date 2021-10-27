@@ -33,6 +33,7 @@ module.exports = {
       cards: PATHS.src + '/pages/cards/cards.js',
       sign_in: PATHS.src + '/pages/sign_in/sign_in.js',
       landing: PATHS.src + '/pages/landing/landing.js',
+      search_room: PATHS.src + '/pages/search_room/search_room.js',
 
       
     },
@@ -109,6 +110,12 @@ module.exports = {
           inject: true,
           chunks: ['landing'],
           filename: 'landing.html'
+        }),
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/pages/search_room/search_room.pug'),
+          inject: true,
+          chunks: ['search_room'],
+          filename: 'search_room.html'
         }),
     
         

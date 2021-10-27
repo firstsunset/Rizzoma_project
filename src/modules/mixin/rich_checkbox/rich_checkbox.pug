@@ -1,0 +1,29 @@
+mixin checkbox-list(options)
+  -
+    const {  
+      isRich = false,
+      items = [
+        {text: "Завтрак"},
+        {text: "Письменный стол", isChecked: true},
+        {text: "Стул для кормления", isChecked: true},
+        {text: "Кроватка", isChecked: true},
+        {text: "Телевизор"},
+        {text: "Шампунь"},
+      ],
+    } = options || {}
+  -
+    var classes = ''
+    classes += isRich ? ' checkbox-list_rich' : ''
+  .checkbox-list(class=classes)
+    ul.checkbox-list__list
+    each item in items 
+      li.checkbox-list__item
+        label.checkbox-list__label
+          input(
+            class="checkbox-list__input"
+            type="checkbox" 
+            checked=item.isChecked
+          )
+          span.checkbox-list__text= item.text
+          if isRich
+            p.checkbox-list__sub-text= item.subText

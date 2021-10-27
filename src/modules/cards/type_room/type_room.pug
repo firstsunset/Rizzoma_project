@@ -4,6 +4,8 @@ mixin type_room(options)
     -
         const {
             number,
+            chevron_left,
+            chevron_right,
             lux = false,
             cost,
             count,
@@ -12,8 +14,8 @@ mixin type_room(options)
     .type-room
         .type-room-picture1(class!=attributes.class)
             .type-room-first-arrow
-                button.type-room-first-btn-arrow chevron_left
-                button.type-room-first-btn-arrow chevron_right 
+                button.type-room-first-btn-arrow= chevron_left
+                button.type-room-first-btn-arrow= chevron_right 
             .type-room-first-circle 
                 .type-room-first-group-circle
                 .type-room-first-group-circle2

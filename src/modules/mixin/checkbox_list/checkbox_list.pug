@@ -1,27 +1,8 @@
-include ../checkmark/checkmark
-mixin checkbox_list 
+include ../../mixin/rich_checkbox/rich_checkbox
+mixin checkbox-dropdown 
     form
       .multiselect
-        .selectBox(onclick='showCheckboxes()')
-          select
-            option Дополнительные удобства
-          .overSelect
+        .selectBox(onclick='showCheckboxes()') Дополнительные удобства
+          button#checkBoxBtn.checkbox-dropdown-btn expand_more
         #checkboxes.checkboxes 
-          .checkbox-group
-            +checkmark
-            .checkbox-group-text Завтрак
-          .checkbox-group
-            +checkmark
-            .checkbox-group-text Письменный стол
-          .checkbox-group
-            +checkmark
-            .checkbox-group-text Стул для кормления
-          .checkbox-group
-            +checkmark
-            .checkbox-group-text Кроватка
-          .checkbox-group
-            +checkmark
-            .checkbox-group-text Телевизор
-          .checkbox-group
-            +checkmark
-            .checkbox-group-text Шампунь
+          +checkbox-list({ items: [ {text: "завтрак"}, {text: "Письменный стол", isChecked: true}, {text: "Стул для кормления", isChecked: true}, {text: "Кроватка", isChecked: true}, {text: "Телевизор"}, {text: "Шампунь"} ]})

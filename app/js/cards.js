@@ -4545,6 +4545,23 @@ $(function () {
 
 /***/ }),
 
+/***/ "./modules/cards/datepicker_page/datepicker_page.js":
+/*!**********************************************************!*\
+  !*** ./modules/cards/datepicker_page/datepicker_page.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _datepicker_page_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./datepicker_page.scss */ "./modules/cards/datepicker_page/datepicker_page.scss");
+/* harmony import */ var air_datepicker_dist_js_datepicker_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! air-datepicker/dist/js/datepicker.min */ "../node_modules/air-datepicker/dist/js/datepicker.min.js");
+/* harmony import */ var air_datepicker_dist_js_datepicker_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(air_datepicker_dist_js_datepicker_min__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+/***/ }),
+
 /***/ "./modules/cards/registration/registration.js":
 /*!****************************************************!*\
   !*** ./modules/cards/registration/registration.js ***!
@@ -4650,147 +4667,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.scss */ "./modules/mixin/button/button.scss");
 
-
-/***/ }),
-
-/***/ "./modules/mixin/calendar/calendar.js":
-/*!********************************************!*\
-  !*** ./modules/mixin/calendar/calendar.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _calendar_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calendar.scss */ "./modules/mixin/calendar/calendar.scss");
-/* harmony import */ var _script_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_calendar */ "./modules/mixin/calendar/script_calendar.js");
-/* harmony import */ var _script_calendar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_calendar__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-/***/ }),
-
-/***/ "./modules/mixin/calendar/script_calendar.js":
-/*!***************************************************!*\
-  !*** ./modules/mixin/calendar/script_calendar.js ***!
-  \***************************************************/
-/***/ (() => {
-
-var date_picker_element = document.querySelector('.date-picker');
-var selected_date_element = document.querySelector('.date-picker .selected-date');
-var dates_element = document.querySelector('.date-picker .dates');
-var mth_element = document.querySelector('.date-picker .dates .month .mth');
-var next_mth_element = document.querySelector('.date-picker .dates .month .next-mth');
-var prev_mth_element = document.querySelector('.date-picker .dates .month .prev-mth');
-var days_element = document.querySelector('.date-picker .dates .days');
-var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-var date = new Date();
-var day = date.getDate();
-var month = date.getMonth();
-var year = date.getFullYear();
-var selectedDate = date;
-var selectedDay = day;
-var selectedMonth = month;
-var selectedYear = year;
-mth_element.textContent = months[month] + ' ' + year;
-selected_date_element.textContent = formatDate(date);
-selected_date_element.dataset.value = selectedDate;
-populateDates(); // EVENT LISTENERS
-
-date_picker_element.addEventListener('click', toggleDatePicker);
-next_mth_element.addEventListener('click', goToNextMonth);
-prev_mth_element.addEventListener('click', goToPrevMonth); // FUNCTIONS
-
-function toggleDatePicker(e) {
-  if (!checkEventPathForClass(e.path, 'dates')) {
-    dates_element.classList.toggle('active');
-  }
-}
-
-function goToNextMonth(e) {
-  month++;
-
-  if (month > 11) {
-    month = 0;
-    year++;
-  }
-
-  mth_element.textContent = months[month] + ' ' + year;
-  populateDates();
-}
-
-function goToPrevMonth(e) {
-  month--;
-
-  if (month < 0) {
-    month = 11;
-    year--;
-  }
-
-  mth_element.textContent = months[month] + ' ' + year;
-  populateDates();
-}
-
-function populateDates(e) {
-  days_element.innerHTML = '';
-  var amount_days = 31;
-
-  if (month == 1) {
-    amount_days = 28;
-  }
-
-  var _loop = function _loop(i) {
-    var day_element = document.createElement('div');
-    day_element.classList.add('day');
-    day_element.textContent = i + 1;
-
-    if (selectedDay == i + 1 && selectedYear == year && selectedMonth == month) {
-      day_element.classList.add('selected');
-    }
-
-    day_element.addEventListener('click', function () {
-      selectedDate = new Date(year + '-' + (month + 1) + '-' + (i + 1));
-      selectedDay = i + 1;
-      selectedMonth = month;
-      selectedYear = year;
-      selected_date_element.textContent = formatDate(selectedDate);
-      selected_date_element.dataset.value = selectedDate;
-      populateDates();
-    });
-    days_element.appendChild(day_element);
-  };
-
-  for (var i = 0; i < amount_days; i++) {
-    _loop(i);
-  }
-} // HELPER FUNCTIONS
-
-
-function checkEventPathForClass(path, selector) {
-  for (var i = 0; i < path.length; i++) {
-    if (path[i].classList && path[i].classList.contains(selector)) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
-function formatDate(d) {
-  var day = d.getDate();
-
-  if (day < 10) {
-    day = '0' + day;
-  }
-
-  var month = d.getMonth() + 1;
-
-  if (month < 10) {
-    month = '0' + month;
-  }
-
-  var year = d.getFullYear();
-  return day + ' . ' + month + ' . ' + year;
-}
 
 /***/ }),
 
@@ -33464,6 +33340,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/cards/datepicker_page/datepicker_page.scss":
+/*!************************************************************!*\
+  !*** ./modules/cards/datepicker_page/datepicker_page.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/cards/registration/registration.scss":
 /*!******************************************************!*\
   !*** ./modules/cards/registration/registration.scss ***!
@@ -33533,19 +33422,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************!*\
   !*** ./modules/mixin/button/button.scss ***!
   \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/mixin/calendar/calendar.scss":
-/*!**********************************************!*\
-  !*** ./modules/mixin/calendar/calendar.scss ***!
-  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33812,8 +33688,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cards_seach_room_seach_room__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/seach_room/seach_room */ "./modules/cards/seach_room/seach_room.js");
 /* harmony import */ var _modules_cards_type_room_type_room__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/cards/type_room/type_room */ "./modules/cards/type_room/type_room.js");
 /* harmony import */ var _modules_cards_room_number_room_number__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/cards/room_number/room_number */ "./modules/cards/room_number/room_number.js");
-/* harmony import */ var _modules_mixin_calendar_calendar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/calendar/calendar */ "./modules/mixin/calendar/calendar.js");
-/* harmony import */ var _modules_cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
+/* harmony import */ var _modules_cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
+/* harmony import */ var _modules_cards_datepicker_page_datepicker_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/cards/datepicker_page/datepicker_page */ "./modules/cards/datepicker_page/datepicker_page.js");
 
 
 

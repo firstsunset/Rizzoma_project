@@ -1,0 +1,80 @@
+@import '../../../scss/veriables.scss';
+
+.checkbox-list {
+  display: grid;
+  gap: 12px;
+
+  &_rich {
+    gap: 10px;
+  }
+  &__list {
+    margin: 0px;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__label {
+    width: 236px;
+    padding-left: 30px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__input:checked + &__text {
+    &::before {
+      border-color: $color-second;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 2px solid $color-second;
+      border-right: 2px solid $color-second;
+      transform: rotate(45deg);
+      width: 5px;
+      height: 6px;
+      position: absolute;
+      top: 5px;
+      left: 6px;
+    }
+  }
+
+  &__text {
+    font-family: 'MontserratRegular';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba($color-first, 0.5);
+
+    &::before {
+      content: '';
+      border: 1px solid rgba($color-first, 0.25);
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      display: block;
+      border-radius: 4px;
+      left: 0;
+    }
+  }
+
+  &_rich &__text {
+    font-weight: bold;
+    color: rgba($color-first, 0.75);
+  }
+
+  &__sub-text {
+    margin-top: 4px;
+    color: rgba($color-first, 0.5);
+    font-family: 'MontserratRegular';
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

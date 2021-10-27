@@ -104,48 +104,42 @@
           <h3>Checkbox list</h3>
           <form>
             <div class="multiselect">
-              <div class="selectBox" onclick="showCheckboxes()">
-                <select>
-                  <option>Дополнительные удобства</option>
-                </select>
-                <div class="overSelect"></div>
+              <div class="selectBox" onclick="showCheckboxes()">Дополнительные удобства
+                <button class="checkbox-dropdown-btn" id="checkBoxBtn">expand_more</button>
               </div>
               <div class="checkboxes" id="checkboxes"> 
-                <div class="checkbox-group">
-                  <label class="check">
-                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
-                  </label>
-                  <div class="checkbox-group-text">Завтрак</div>
-                </div>
-                <div class="checkbox-group">
-                  <label class="check">
-                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
-                  </label>
-                  <div class="checkbox-group-text">Письменный стол</div>
-                </div>
-                <div class="checkbox-group">
-                  <label class="check">
-                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
-                  </label>
-                  <div class="checkbox-group-text">Стул для кормления</div>
-                </div>
-                <div class="checkbox-group">
-                  <label class="check">
-                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
-                  </label>
-                  <div class="checkbox-group-text">Кроватка</div>
-                </div>
-                <div class="checkbox-group">
-                  <label class="check">
-                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
-                  </label>
-                  <div class="checkbox-group-text">Телевизор</div>
-                </div>
-                <div class="checkbox-group">
-                  <label class="check">
-                    <input class="checkbox" id="one" type="checkbox"><span class="checkmark checkmark-arrow"></span>
-                  </label>
-                  <div class="checkbox-group-text">Шампунь</div>
+                <div class="checkbox-list">
+                  <ul class="checkbox-list__list"></ul>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox-list__label">
+                      <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">завтрак</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox-list__label">
+                      <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Письменный стол</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox-list__label">
+                      <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Стул для кормления</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox-list__label">
+                      <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Кроватка</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox-list__label">
+                      <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Телевизор</span>
+                    </label>
+                  </li>
+                  <li class="checkbox-list__item">
+                    <label class="checkbox-list__label">
+                      <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Шампунь</span>
+                    </label>
+                  </li>
                 </div>
               </div>
             </div>
@@ -313,11 +307,14 @@
 
 function showCheckboxes() {
   var checkboxes = document.getElementById("checkboxes");
+  var button = document.getElementById("checkBoxBtn");
   if (!expanded) {
     checkboxes.style.display = "block";
     expanded = true;
+    button.style.transform = "rotate(-180deg)";
   } else {
     checkboxes.style.display = "none";
+    button.style.transform = "none";
     expanded = false;
   }
 }

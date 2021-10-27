@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search room</title>
+  <script defer src="js/search_room.js"></script><link href="./css/search_room.css" rel="stylesheet"></head>
+  <body> 
+    <header> 
+      <div class="header"> 
+        <div class="container"> 
+          <div class="row">
+            <div class="col-xs-2 col-md-2 col-lg-2">
+              <div class="header_logo"> <a href="/mock-address/change-me"><img src="images/logo37dcbdff522b4259045e.svg" alt="Logo"></a></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-2 col-md-offset-0 col-md-6 col-lg-offset-2 col-lg-4">
+              <div class="row">
+                <nav> 
+                  <ul class="nav">
+                    <li class="nav-item"> <a class="nav-link" href="/mock-address/change-me">О нас </a></li>
+                    <li class="nav-item nav-item-arrow"><a class="nav-link" href="/mock-address/change-me">Услуги </a><span class="nav-arrow">expand_more</span></li>
+                    <li class="nav-item">
+                      <div class="nav-item-text"><a class="nav-link" href="/mock-address/change-me">Вакансии</a></div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="nav-item-text"><a class="nav-link" href="/mock-address/change-me">Новости</a></div>
+                    </li>
+                    <li class="nav-item nav-item-arrow"><a class="nav-link" href="/mock-address/change-me">Соглашения </a><span class="nav-arrow">expand_more</span></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-xs-1 col-md-1 col-lg-1 col-xs-offset-0 col-md-offset-0 col-lg-offset-0">
+              <div class="headerbtn_signin">
+                    <button class="button  button_bordercolor_header" type="bordercolor_header" onclick="window.location.href = &quot;sign_in.html&quot;">
+                      <div class="button__wrapper"> <span class="button__text">войти</span>
+                      </div>
+                    </button>
+              </div>
+            </div>
+            <div class="col-xs-1 col-md-2 col-lg-2 col-xs-offset-1 col-lg-offset-1 col-md-offset-1">
+              <div class="headerbtn_registration"> 
+                    <button class="button  button_long_header" type="long_header" onclick="window.location.href = &quot;registration.html&quot;">
+                      <div class="button__wrapper"> <span class="button__text">зарегистрироваться</span>
+                      </div>
+                    </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="searchroom">
+        <div class="searchroom-firstcolumn"> 
+          <div class="searchroom-firstcolumn-heading">даты пребывания в отеле</div>
+          <div class="searchroom-firstcolumn-calendar"> 
+            <div class="dropdown-page">
+              <div class="dropdown-page-text">19 авг - 23 авг</div>
+              <button class="dropdown-page-btn">expand_more</button>
+            </div>
+          </div>
+          <div class="searchroom-firstcolumn-heading">Гости</div>
+          <div class="searchroom-firstcolumn-guests">
+            <div class="dropdown-page">
+              <div class="dropdown-page-text">3 гостя, 1 младенец</div>
+              <button class="dropdown-page-btn">expand_more</button>
+            </div>
+          </div>
+          <div class="searchroom-firstcolumn-range"> 
+            <div class="range-slider"> 
+              <div class="range-text">Диапазон Цены</div>
+              <div class="range-result" id="result">5 000₽ - 10 000₽</div>
+              <div class="content">
+                <div class="slider" id="my-slider" se-min="0" se-step="1" se-min-value="5000" se-max-value="10000" se-max="15000">
+                  <div class="slider-touch-left"><span></span></div>
+                  <div class="slider-touch-right"><span></span></div>
+                  <div class="slider-line"><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="searchroom-firstcolumn-range-text">Стоимость за сутки пребывания в номере</div>
+          </div>
+          <div class="searchroom-firstcolumn-heading">Правила дома</div>
+          <div class="searchroom-firstcolumn-checkbox">
+            <div class="checkbox-list">
+              <ul class="checkbox-list__list"></ul>
+              <li class="checkbox-list__item">
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Можно курить</span>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Можно с питомцами</span>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Можно пригласить гостей (до 10 человек)</span>
+                </label>
+              </li>
+            </div>
+          </div>
+          <div class="searchroom-firstcolumn-heading">Доступность</div>
+          <div class="searchroom-firstcolumn-checkbox">
+            <div class="checkbox-list  checkbox-list_rich">
+              <ul class="checkbox-list__list"></ul>
+              <li class="checkbox-list__item">
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Широкий коридор</span>
+                  <p class="checkbox-list__sub-text">Ширина коридоров в номере не менее 91 см.</p>
+                </label>
+              </li>
+              <li class="checkbox-list__item">
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Помощник для инвалидов</span>
+                  <p class="checkbox-list__sub-text">На 1 этаже вас встретит специалист и проводит до номера.</p>
+                </label>
+              </li>
+            </div>
+          </div>
+          <div class="searchroom-firstcolumn-heading">Удобства номера</div>
+          <div class="searchroom-firstcolumn-comfort">
+            <div class="wrap">
+              <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="2 спальни, 2 кровати...">
+                <button class="dropdown__dropbtn">expand_more</button>
+                <div class="dropdown__heading"></div>
+                <div class="dropdown__content">
+                  <div class="dropdown__items">
+                    <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
+                      <div class="item-quantity__controls">
+                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                        <button class="item-quantity__button item-quantity__button_plus">+</button>
+                      </div>
+                    </div>
+                    <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
+                      <div class="item-quantity__controls">
+                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                        <button class="item-quantity__button item-quantity__button_plus">+</button>
+                      </div>
+                    </div>
+                    <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
+                      <div class="item-quantity__controls">
+                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                        <button class="item-quantity__button item-quantity__button_plus">+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown__buttons">
+                    <button class="dropdown__clear">Очистить</button>
+                    <button class="dropdown__apply">Применить </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="searchroom-firstcolumn-newcomfort">
+            <form>
+              <div class="multiselect">
+                <div class="selectBox" onclick="showCheckboxes()">Дополнительные удобства
+                  <button class="checkbox-dropdown-btn" id="checkBoxBtn">expand_more</button>
+                </div>
+                <div class="checkboxes" id="checkboxes"> 
+                  <div class="checkbox-list">
+                    <ul class="checkbox-list__list"></ul>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label">
+                        <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">завтрак</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label">
+                        <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Письменный стол</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label">
+                        <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Стул для кормления</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label">
+                        <input class="checkbox-list__input" type="checkbox" checked><span class="checkbox-list__text">Кроватка</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label">
+                        <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Телевизор</span>
+                      </label>
+                    </li>
+                    <li class="checkbox-list__item">
+                      <label class="checkbox-list__label">
+                        <input class="checkbox-list__input" type="checkbox"><span class="checkbox-list__text">Шампунь</span>
+                      </label>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="searchroom-secondcolumn">
+          <div class="searchroom-secondcolumn-heading">Номера, которые мы для вас подобрали</div>
+          <div class="searchroom-secondcolumn-room">
+            <div class="searchroom-secondcolumn-room-row">
+              <div class="type-room">
+                <div class="type-room-picture1 .type-room-first-arrow-none">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow">chevron_left</button>
+                    <button class="type-room-first-btn-arrow">chevron_right</button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>888</span></div>
+                  <input class="type-room-second-type" type="text" placeholder="люкс"><span class="type-room-second-cost">9 990₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+                  </div><span class="type-room-fird-rates">145<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture2">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>840</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">9 990₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">65<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture3">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>980</span></div>
+                  <input class="type-room-second-type" type="text" placeholder="люкс"><span class="type-room-second-cost">8 500₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">35<span>Отзывов </span></span>
+                </div>
+              </div>
+            </div>
+            <div class="searchroom-secondcolumn-room-row">
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture4">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>856</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">7 300₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+                  </div><span class="type-room-fird-rates">19<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture5">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>740</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">6 000₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">44<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture6">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>982</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 800₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">56<span>Отзывов </span></span>
+                </div>
+              </div>
+            </div>
+            <div class="searchroom-secondcolumn-room-row">
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture7">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>678</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 500₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+                  </div><span class="type-room-fird-rates">45<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture8">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>450</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 300₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">39<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture9">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>350</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 000₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">77<span>Отзывов </span></span>
+                </div>
+              </div>
+            </div>
+            <div class="searchroom-secondcolumn-room-row">
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture10">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>666</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 000₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+                  </div><span class="type-room-fird-rates">25<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture11">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>444</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 000₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">15<span>Отзывов </span></span>
+                </div>
+              </div>
+              <div class="type-room">
+                <div class="type-room-picture1 type-room-picture12">
+                  <div class="type-room-first-arrow">
+                    <button class="type-room-first-btn-arrow"></button>
+                    <button class="type-room-first-btn-arrow"></button>
+                  </div>
+                  <div class="type-room-first-circle"> 
+                    <div class="type-room-first-group-circle"></div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                    <div class="type-room-first-group-circle2">
+                      <div class="type-room-first-group-circle2-color"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="type-room-second">
+                  <div class="type-room-second-number">№ <span>352</span></div>
+                  <input class="type-room-second-type" type="text"><span class="type-room-second-cost">5 000₽<span>в сутки</span></span>
+                </div>
+                <div class="type-room-line"></div>
+                <div class="type-room-fird"> 
+                  <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i><i class="material-icons">star_border</i>
+                  </div><span class="type-room-fird-rates">55<span>Отзывов </span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="searchroom-secondcolumn-pagination">
+            <div class="searchroom-secondcolumn-block">
+              <div class="pagination">
+                <ul>
+                  <li class="pagination-first numb" onclick="createPagination(totalPages, 1)"> <span>1</span></li>
+                  <li class="numb" onclick="createPagination(totalPages, 2)"> <span>2</span></li>
+                  <li class="numb" onclick="createPagination(totalPages, 3)"> <span>3</span></li>
+                  <li class="numb" onclick="createPagination(totalPages, 4)"> <span>4</span></li>
+                  <li class="dots"> <span>...</span></li>
+                  <li class="numb" onclick="createPagination(totalPages, 15)"> <span>15</span></li>
+                  <li class="pagination-btn" onclick="createPagination(totalPages, 15)"> <span class="pagination-arrow">arrow_forward</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="searchroom-secondcolumn-pagination-text">1 – 12 из 100+ вариантов аренды</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer> 
+      <div class="footer"> 
+        <div class="footer_section-1">
+          <div class="wrapper">
+            <div class="footer_section-1-body"> 
+              <div class="footer-item footer-item-logo">
+                <div class="footer_logo"> <a href="/mock-address/change-me"><img src="images/logo37dcbdff522b4259045e.svg" alt="Logo"></a></div>
+                <div class="footer_logo_text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+              </div>
+              <div class="footer-item footer-item-nav">
+                <ul class="footer-list"> 
+                  <li class="footer-list-item"> 
+                    <div class="footer-list-link-bold">Навигация</div>
+                  </li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">О нас </a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Новости</a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Служба поддержки</a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Услуги</a></li>
+                </ul>
+              </div>
+              <div class="footer-item footer-item-about">
+                <ul class="footer-list"> 
+                  <li class="footer-list-item"> 
+                    <div class="footer-list-link-bold">О нас</div>
+                  </li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">О сервисе </a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Наша команда</a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Вакансии</a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Инвесторы</a></li>
+                </ul>
+              </div>
+              <div class="footer-item footer-item-support">
+                <ul class="footer-list"> 
+                  <li class="footer-list-item"> 
+                    <div class="footer-list-link-bold">Служба поддержки</div>
+                  </li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Соглашения </a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Сообщества</a></li>
+                  <li class="footer-list-item"> <a class="footer-list-link" href="/mock-address/change-me">Связь с нами   </a></li>
+                </ul>
+              </div>
+              <div class="footer-item footer-item-subscribe">
+                <h3 class="footer-subscribe-bold">Подписка</h3>
+                <div class="footer-subscribe-text">Получайте специальные предложения и новости сервиса</div>
+                    <form class="footer-email" action="/mock-address/change-me"> 
+                      <input class="input-text" type="email" name="emails" placeholder="Email">
+                      <button class="input-btn" type="submit">arrow_forward</button>
+                    </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_section-2"> 
+          <div class="wrapper">
+            <p class="footer_section-2-text">Copyright © 2018 Toxin отель. Все права защищены.</p>
+            <div class="social">
+              <svg class="social-svg">
+                <defs>
+                  <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
+                    <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
+                  </lineargradient>
+                </defs>
+                <div class="fab fa-twitter gradient-icon"></div>
+              </svg>
+              <svg class="social-svg">
+                <defs>
+                  <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
+                    <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
+                  </lineargradient>
+                </defs>
+                <div class="fab fa-facebook-square gradient-icon"></div>
+              </svg>
+              <svg class="social-svg">
+                <defs>
+                  <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(188,156,255);stop-opacity:1.00"></stop>
+                    <stop offset="100%" style="stop-color:rgb(139,164,249);stop-opacity:1.00"></stop>
+                  </lineargradient>
+                </defs>
+                <div class="fab fa-instagram gradient-icon"></div>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+       var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  var button = document.getElementById("checkBoxBtn");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+    button.style.transform = "rotate(-180deg)";
+  } else {
+    checkboxes.style.display = "none";
+    button.style.transform = "none";
+    expanded = false;
+  }
+}
+    </script>
+    <script type="text/javascript">
+       // selecting required element
+const element = document.querySelector(".pagination ul");
+let totalPages = 15;
+let page = 1;
+
+//calling function with passing parameters and adding inside element which is ul tag
+element.innerHTML = createPagination(totalPages, page);
+function createPagination(totalPages, page){
+  let liTag = '';
+  let active;
+  let beforePage = page - 1;
+  let afterPage = page + 1;
+  
+  if(page > 2){ //if page value is less than 2 then add 1 after the previous button
+    liTag += `<li class="paginaton-first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+    if(page > 3){ //if page value is greater than 3 then add this (...) after the first li or page
+      liTag += `<li class="dots"><span>...</span></li>`;
+    }
+  }
+
+  // how many pages or li show before the current li
+  if (page == totalPages) {
+    beforePage = beforePage - 2;
+  } else if (page == totalPages - 1) {
+    beforePage = beforePage - 1;
+  }
+  // how many pages or li show after the current li
+  if (page == 1) {
+    afterPage = afterPage + 2;
+  } else if (page == 2) {
+    afterPage  = afterPage + 1;
+  }
+
+  for (var plength = beforePage; plength <= afterPage; plength++) {
+    if (plength > totalPages) { //if plength is greater than totalPage length then continue
+      continue;
+    }
+    if (plength == 0) { //if plength is 0 than add +1 in plength value
+      plength = plength + 1;
+    }
+    if(page == plength){ //if page is equal to plength than assign active string in the active variable
+      active = "active";
+    }else{ //else leave empty to the active variable
+      active = "";
+    }
+    liTag += `<li class="numb ${active}" onclick="createPagination(totalPages, ${plength})"><span>${plength}</span></li>`;
+  }
+
+  if(page < totalPages - 1){ //if page value is less than totalPage value by -1 then show the last li or page
+    if(page < totalPages - 2){ //if page value is less than totalPage value by -2 then add this (...) before the last li or page
+      liTag += `<li class="dots"><span>...</span></li>`;
+    }
+    liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+  }
+
+  if (page < totalPages) { //show the next button if the page value is less than totalPage(20)
+    liTag += `<li class="pagination-btn" onclick="createPagination(totalPages, ${page + 1})"><span class="pagination-arrow">arrow_forward</span></li>`;
+  }
+  element.innerHTML = liTag; //add li tag inside ul tag
+  return liTag; //reurn the li tag
+}
+    </script>
+  </body>
+</html>
