@@ -1,0 +1,46 @@
+include ../../modules/cards/room_number/room_number
+include ../../modules/mixin/icontext_list/icontext_list
+include ../../modules/mixin/feedback/feedback
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title= "Room details"
+
+
+  body 
+    include ../../modules/header/header
+    .room-details-pic
+      .room-details-pic-group
+        img(src=require("./image1.svg"), alt="first photo").room-details-pic-group-pic1
+      .room-details-pic-group 
+        img(src=require("./image2.svg"), width="100%", alt="second photo").room-details-pic-group-pic2 
+        img(src=require("./image3.svg"), alt="third photo").room-details-pic-group-pic3
+    .wrapper
+      .room-details-content
+        .room-details-content-column
+          .room-details-content-column-block
+            .room-details-content-column-block-group
+              .room-details-content-column-block-group-heading Сведения о номере
+              .room-details-content-column-block-group-icon
+                +icontext-list
+            .room-details-content-column-block-group
+              .room-details-content-column-block-group-heading Впечатления от номера
+                
+          .room-details-content-column-block
+            .room-details-content-column-block-group
+              .room-details-content-column-block-group-heading Отзывы посетителей номера
+              .room-details-content-column-block-group-feedback
+                +feedback
+          .room-details-content-column-block
+            .room-details-content-column-block-group
+              .room-details-content-column-block-group-heading Правила
+            .room-details-content-column-block-group
+              .room-details-content-column-block-group-heading Отмена
+        .room-details-content-column
+          .room-details-content-column-card
+            +room_number 
+    include ../../modules/footer/footer

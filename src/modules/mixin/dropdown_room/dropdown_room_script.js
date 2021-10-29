@@ -20,8 +20,9 @@ function num2str(n, text_forms) {
       this.valueEl = this.el.querySelector(".item-quantity__value");
       this.value = parseInt(this.valueEl.innerHTML);
       this._checkButton();
+      this.heading = this.el.querySelector(".dropdown__heading");
     }
-    _checkButton = () => {
+   _checkButton = () => {
       if (this.value === this.min) {
         this.minusEl.disabled = true;
       } else {
@@ -49,14 +50,20 @@ function num2str(n, text_forms) {
         return this.getValue();
       }
     };
-    increment = () => this.setValue(this.value + 1);
+    
+    increment = () => {
+      this.setValue(this.value + 1);
+      
+    };
+
+    
     decriment = () => this.setValue(this.value - 1);
   }
   
   class Dropdown {
     constructor(element) {
       this.el = element;
-      document.addEventListener('click',(e)=> !this.el.contains(e.target) && this.hide(e))
+      document.addEventListener('click',(e)=> !this.el.contains(e.target) && this.hide(e),)
       this.el.onclick = this.show
       this.default = this.el.dataset.default || "";
       this.words = this.el.dataset.words;
@@ -72,7 +79,9 @@ function num2str(n, text_forms) {
         this.hide(e)
       }));
       this.heading = this.el.querySelector(".dropdown__heading");
+      
       this._render();
+     
       this._renderHeader();
       this.hide()
     }
@@ -93,6 +102,7 @@ function num2str(n, text_forms) {
       this.sum = sum;
       return sum;
     };
+    
     _render = () => {
       //this._renderHeader();
       this._checkClear();
@@ -103,7 +113,7 @@ function num2str(n, text_forms) {
         item.setValue(0);
       });
     };
-    _checkClear = () => {
+   /* _checkClear = () => {
       const allMinimal = !this.items
         .map((item) => item.isMinimal())
         .includes(false);
@@ -114,7 +124,7 @@ function num2str(n, text_forms) {
         this.clear.style.display = 'inline-block';
       }
       this.clear && (this.clear.disabled = allMinimal);
-    };
+    };*/
     _checkApply = () => {
       const isAllZerro = !this.items.map((item)=>item.isZerro()).includes(false)
       if(this.apply&& isAllZerro){
@@ -136,6 +146,7 @@ function num2str(n, text_forms) {
         arr = arr.filter((el) => el !== null);
         this.heading.innerHTML = sum > 0 ? arr.join(", ") : this.default;
       }
+      
     };
   }
   

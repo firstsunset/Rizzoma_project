@@ -1688,7 +1688,6 @@ body {
 }
 
 .searchroom {
-  position: relative;
   background: transparent;
   display: flex;
   flex-direction: row;
@@ -1715,7 +1714,7 @@ body {
   margin-top: 5px;
 }
 .searchroom-firstcolumn-range {
-  margin-top: 5px;
+  margin-top: 30px;
 }
 .searchroom-firstcolumn-range-text {
   font-family: "MontserratRegular";
@@ -1724,11 +1723,11 @@ body {
   color: rgba(31, 32, 65, 0.5);
 }
 .searchroom-firstcolumn-comfort {
-  margin-top: 5px;
+  position: absolute;
+  margin-top: 707px;
 }
 .searchroom-firstcolumn-newcomfort {
-  position: absolute;
-  margin-top: 740px;
+  margin-top: 135px;
 }
 .searchroom-secondcolumn {
   margin-top: 30px;
@@ -1756,16 +1755,6 @@ body {
   width: 241px;
   align-content: center;
   margin-left: 296px;
-  display: flex;
-  flex-direction: column;
-}
-.searchroom-secondcolumn-pagination-text {
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  margin-top: 10px;
-  padding-left: 10px;
 }
 /*!*************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/search_room/fonts.scss ***!
@@ -1793,6 +1782,10 @@ body {
   width: 1160px;
   max-width: 100%;
 }
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/search_room/veriables.scss ***!
+  \*****************************************************************************************************************************/
+
 /*!***********************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/footer/footer.scss ***!
   \***********************************************************************************************************************/
@@ -2077,7 +2070,7 @@ path {
   \***********************************************************************************************************************/
 .header {
   background-color: #FFFFFF;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   color: #8f90a0;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -3176,6 +3169,15 @@ path {
   color: #FFFFFF;
   text-align: center;
 }
+
+.pagination-text {
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  margin-top: 10px;
+  padding-left: 10px;
+}
 /*!*********************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown/dropdown.scss ***!
   \*********************************************************************************************************************************/
@@ -3213,6 +3215,159 @@ path {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_room/dropdown_room.scss ***!
+  \*******************************************************************************************************************************************/
+.wrap {
+  width: 320px;
+  height: 300px;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
+  width: 320px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+.dropdown__heading {
+  position: relative;
+  min-height: 44px;
+  padding-left: 15px;
+  top: 15px;
+}
+.dropdown_hide > .dropdown__content {
+  display: none;
+}
+
+.dropdown__content {
+  height: 160px;
+  width: 320px;
+  padding-top: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  position: absolute;
+  background-color: #FFFFFF;
+  overflow: auto;
+}
+
+.item-quantity {
+  width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+  align-content: center;
+}
+
+.item-quantity__nam {
+  width: 83px;
+  height: 15px;
+  padding-right: 123px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
+}
+
+.dropdown__dropbtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 276px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-quantity__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.dropdown__buttons {
+  width: 300px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+.dropdown__clear,
+.dropdown__apply {
+  padding: 0px;
+  width: 84px;
+  height: 15px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "MontserratBold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  text-align: start;
+}
+
+.dropdown__apply {
+  text-align: right;
 }
 
 /*# sourceMappingURL=search_room.css.map*/

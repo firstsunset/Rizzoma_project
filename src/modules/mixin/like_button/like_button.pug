@@ -1,7 +1,17 @@
-mixin like_button 
+mixin like_button_violet(options)
+   
     .like-button
-        button#like-button.like-btn
-            #likeCheckmarkBefore.like-checkmark-before favorite_border
-            #like-count.like-btn-count 3
-        #likeCheckmarkAfter
-            .like-checkmark-after favorite
+        button#like-button.like-btn-violet
+            #likeCheckmarkBefore.like-heart-violet favorite
+            #like-count.like-btn-count-violet 12
+
+mixin like_button_grey(options)
+    -
+        const {
+            heart,
+            count,            
+        } = options || {} 
+    .like-button
+        button#like-button.like-btn-grey
+            #likeCheckmarkBefore.like-heart-grey favorite_border
+            #like-count.like-btn-count-grey 2

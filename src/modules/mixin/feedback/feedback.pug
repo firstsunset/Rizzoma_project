@@ -1,0 +1,43 @@
+include ../../mixin/like_button/like_button
+
+
+mixin feedback
+    .feedback
+        .feedback-group
+            .feedback-part
+                .feedback-part-column-first
+                    .feedback-part-column-img
+                        img(src= require("./men.svg"), alt="photo")
+                    .feedback-part-column-like 
+                        +like_button_violet               
+                .feedback-part-column-second
+                    .feedback-part-column-group
+                        .feedback-part-column-group-heading Мурад Сарафанов 
+                        .feedback-part-column-group-days 5 дней назад
+                    .feedback-part-column-group Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+        .feedback-group
+            .feedback-part
+                .feedback-part-column-first
+                    .feedback-part-column-img
+                        img(src= require("./women.svg"), alt="photo")
+                    .feedback-part-column-like 
+                        +like_button_grey               
+                .feedback-part-column-second
+                    .feedback-part-column-group
+                        .feedback-part-column-group-heading Патрисия Стёклышкова
+                        .feedback-part-column-group-days Неделю назад 
+                    .feedback-part-column-group Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент 
+
+mixin feedback_men 
+    .feedback-group
+            .feedback-part
+                .feedback-part-column-first
+                    .feedback-part-column-img
+                        img(src= require("./men.svg"), alt="photo")
+                    .feedback-part-column-like 
+                        +like_button_violet               
+                .feedback-part-column-second
+                    .feedback-part-column-group
+                        .feedback-part-column-group-heading Мурад Сарафанов 
+                        .feedback-part-column-group-days 5 дней назад
+                    .feedback-part-column-group Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.

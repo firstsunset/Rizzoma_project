@@ -34,3 +34,4 @@ import '../../modules/mixin/range_slider/range_slider';
 import '../../modules/mixin/range_slider/range_slider_script';
 import '../../modules/mixin/pagination/pagination';
 import '../../modules/mixin/date_dropdown/date_dropdown';
+import '../../modules/mixin/feedback/feedback';

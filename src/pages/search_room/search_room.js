@@ -1,6 +1,7 @@
 import './search_room.scss';
 import './fonts.scss';
 import './settings.scss';
+import './veriables.scss';
 
 
 
@@ -23,3 +24,4 @@ import '../../modules/mixin/checkbox_list/checkbox_list_script';
 import '../../modules/cards/type_room/type_room';
 import '../../modules/mixin/pagination/pagination';
 import '../../modules/mixin/dropdown/dropdown';
+import '../../modules/mixin/dropdown_room/dropdown_room';

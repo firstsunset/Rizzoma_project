@@ -636,6 +636,224 @@ var Dropdowns = Array.from(dropdowns).map(function (dd) {
 
 /***/ }),
 
+/***/ "./modules/mixin/dropdown_room/dropdown_room.js":
+/*!******************************************************!*\
+  !*** ./modules/mixin/dropdown_room/dropdown_room.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _dropdown_room_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdown_room.scss */ "./modules/mixin/dropdown_room/dropdown_room.scss");
+/* harmony import */ var _dropdown_room_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown_room_script */ "./modules/mixin/dropdown_room/dropdown_room_script.js");
+/* harmony import */ var _dropdown_room_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dropdown_room_script__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _dropdown_part_dropdown_part__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../dropdown_part/dropdown_part */ "./modules/mixin/dropdown_part/dropdown_part.js");
+
+
+
+
+/***/ }),
+
+/***/ "./modules/mixin/dropdown_room/dropdown_room_script.js":
+/*!*************************************************************!*\
+  !*** ./modules/mixin/dropdown_room/dropdown_room_script.js ***!
+  \*************************************************************/
+/***/ (() => {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function num2str(n, text_forms) {
+  n = Math.abs(n) % 100;
+  var n1 = n % 10;
+  if (n > 10 && n < 20) return text_forms[2];
+  if (n1 > 1 && n1 < 5) return text_forms[1];
+  if (n1 == 1) return text_forms[0];
+  return text_forms[2];
+}
+
+var ItemQuantity = function ItemQuantity(element, onChangeCallback) {
+  var _this = this;
+
+  _classCallCheck(this, ItemQuantity);
+
+  _defineProperty(this, "_checkButton", function () {
+    if (_this.value === _this.min) {
+      _this.minusEl.disabled = true;
+    } else {
+      _this.minusEl.disabled = false;
+    }
+  });
+
+  _defineProperty(this, "_render", function () {
+    return _this.valueEl.innerHTML = _this.value;
+  });
+
+  _defineProperty(this, "setValue", function (newValue) {
+    var value = newValue > _this.min ? newValue : _this.min;
+    _this.value = value;
+
+    _this._render();
+
+    _this.onChange(_this.value);
+
+    _this._checkButton();
+  });
+
+  _defineProperty(this, "getValue", function () {
+    return _this.value;
+  });
+
+  _defineProperty(this, "isMinimal", function () {
+    return _this.value === _this.min;
+  });
+
+  _defineProperty(this, "isZerro", function () {
+    return _this.value === 0;
+  });
+
+  _defineProperty(this, "getString", function () {
+    if (_this.words !== undefined) {
+      var words = _this.words.split(",");
+
+      return _this.value > 0 ? "".concat(_this.value, " ").concat(num2str(_this.value, words)) : null;
+    } else {
+      return _this.getValue();
+    }
+  });
+
+  _defineProperty(this, "increment", function () {
+    _this.setValue(_this.value + 1);
+  });
+
+  _defineProperty(this, "decriment", function () {
+    return _this.setValue(_this.value - 1);
+  });
+
+  this.el = element;
+  this.onChange = onChangeCallback;
+  this.words = this.el.dataset.words;
+  this.min = this.el.dataset.min ? parseInt(this.el.dataset.min) : 0;
+  this.minusEl = this.el.querySelector(".item-quantity__button_minus");
+  this.plusEl = this.el.querySelector(".item-quantity__button_plus");
+  this.minusEl.onclick = this.decriment;
+  this.plusEl.onclick = this.increment;
+  this.valueEl = this.el.querySelector(".item-quantity__value");
+  this.value = parseInt(this.valueEl.innerHTML);
+
+  this._checkButton();
+
+  this.heading = this.el.querySelector(".dropdown__heading");
+};
+
+var Dropdown = function Dropdown(element) {
+  var _this2 = this;
+
+  _classCallCheck(this, Dropdown);
+
+  _defineProperty(this, "hide", function (e) {
+    e !== undefined && e.stopPropagation();
+    !_this2.el.classList.contains("dropdown_hide") && _this2.el.classList.add("dropdown_hide");
+  });
+
+  _defineProperty(this, "show", function () {
+    _this2.el.classList.contains("dropdown_hide") && _this2.el.classList.remove("dropdown_hide");
+  });
+
+  _defineProperty(this, "getSum", function () {
+    var sum = 0;
+
+    _this2.items.forEach(function (item) {
+      sum += item.getValue();
+    });
+
+    _this2.sum = sum;
+    return sum;
+  });
+
+  _defineProperty(this, "_render", function () {
+    //this._renderHeader();
+    _this2._checkClear(); // this._checkApply();
+
+  });
+
+  _defineProperty(this, "_clearClick", function () {
+    _this2.items.forEach(function (item) {
+      item.setValue(0);
+    });
+  });
+
+  _defineProperty(this, "_checkApply", function () {
+    var isAllZerro = !_this2.items.map(function (item) {
+      return item.isZerro();
+    }).includes(false);
+
+    if (_this2.apply && isAllZerro) {
+      _this2.apply.style.display = 'none';
+    } else {
+      _this2.apply.style.display = 'inline-block';
+    }
+
+    _this2.apply && (_this2.apply.disabled = isAllZerro);
+  });
+
+  _defineProperty(this, "_renderHeader", function () {
+    var sum = _this2.getSum();
+
+    if (_this2.words !== undefined) {
+      var words = _this2.words.split(",");
+
+      _this2.heading.innerHTML = sum > 0 ? "".concat(sum, " ").concat(num2str(sum, words)) : _this2["default"];
+    } else {
+      var arr = _this2.items.map(function (item) {
+        return item.getString();
+      });
+
+      arr = arr.filter(function (el) {
+        return el !== null;
+      });
+      _this2.heading.innerHTML = sum > 0 ? arr.join(", ") : _this2["default"];
+    }
+  });
+
+  this.el = element;
+  document.addEventListener('click', function (e) {
+    return !_this2.el.contains(e.target) && _this2.hide(e);
+  });
+  this.el.onclick = this.show;
+  this["default"] = this.el.dataset["default"] || "";
+  this.words = this.el.dataset.words;
+  this.items = Array.from(this.el.querySelectorAll(".item-quantity")).map(function (item) {
+    return new ItemQuantity(item, function () {
+      return _this2._render();
+    });
+  });
+  this.sum = this.getSum();
+  this.clear = this.el.querySelector(".dropdown__clear");
+  this.clear && (this.clear.onclick = this._clearClick);
+  this.apply = this.el.querySelector(".dropdown__apply");
+  this.apply && this.apply.addEventListener('click', function (e) {
+    _this2._renderHeader();
+
+    _this2.hide(e);
+  });
+  this.heading = this.el.querySelector(".dropdown__heading");
+
+  this._render();
+
+  this._renderHeader();
+
+  this.hide();
+};
+
+var dropdowns = document.querySelectorAll(".dropdown");
+var Dropdowns = Array.from(dropdowns).map(function (dd) {
+  return new Dropdown(dd);
+});
+
+/***/ }),
+
 /***/ "./modules/mixin/pagination/pagination.js":
 /*!************************************************!*\
   !*** ./modules/mixin/pagination/pagination.js ***!
@@ -29246,6 +29464,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/dropdown_room/dropdown_room.scss":
+/*!********************************************************!*\
+  !*** ./modules/mixin/dropdown_room/dropdown_room.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/mixin/pagination/pagination.scss":
 /*!**************************************************!*\
   !*** ./modules/mixin/pagination/pagination.scss ***!
@@ -29341,6 +29572,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************!*\
   !*** ./pages/search_room/settings.scss ***!
   \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./pages/search_room/veriables.scss":
+/*!******************************************!*\
+  !*** ./pages/search_room/veriables.scss ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -29453,22 +29697,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _search_room_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./search_room.scss */ "./pages/search_room/search_room.scss");
 /* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fonts.scss */ "./pages/search_room/fonts.scss");
 /* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./settings.scss */ "./pages/search_room/settings.scss");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
-/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
-/* harmony import */ var _modules_cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-/* harmony import */ var _modules_mixin_dropdown_guests_dropdown_guests__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/mixin/dropdown_guests/dropdown_guests */ "./modules/mixin/dropdown_guests/dropdown_guests.js");
-/* harmony import */ var _modules_mixin_range_slider_range_slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/mixin/range_slider/range_slider */ "./modules/mixin/range_slider/range_slider.js");
-/* harmony import */ var _modules_mixin_rich_checkbox_rich_checkbox__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/mixin/rich_checkbox/rich_checkbox */ "./modules/mixin/rich_checkbox/rich_checkbox.js");
-/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/checkbox_list/checkbox_list */ "./modules/mixin/checkbox_list/checkbox_list.js");
-/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/mixin/checkbox_list/checkbox_list_script */ "./modules/mixin/checkbox_list/checkbox_list_script.js");
-/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _modules_cards_type_room_type_room__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../modules/cards/type_room/type_room */ "./modules/cards/type_room/type_room.js");
-/* harmony import */ var _modules_mixin_pagination_pagination__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../modules/mixin/pagination/pagination */ "./modules/mixin/pagination/pagination.js");
-/* harmony import */ var _modules_mixin_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../modules/mixin/dropdown/dropdown */ "./modules/mixin/dropdown/dropdown.js");
+/* harmony import */ var _veriables_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./veriables.scss */ "./pages/search_room/veriables.scss");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
+/* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
+/* harmony import */ var _modules_cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
+/* harmony import */ var _modules_mixin_dropdown_guests_dropdown_guests__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/mixin/dropdown_guests/dropdown_guests */ "./modules/mixin/dropdown_guests/dropdown_guests.js");
+/* harmony import */ var _modules_mixin_range_slider_range_slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/mixin/range_slider/range_slider */ "./modules/mixin/range_slider/range_slider.js");
+/* harmony import */ var _modules_mixin_rich_checkbox_rich_checkbox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/rich_checkbox/rich_checkbox */ "./modules/mixin/rich_checkbox/rich_checkbox.js");
+/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/mixin/checkbox_list/checkbox_list */ "./modules/mixin/checkbox_list/checkbox_list.js");
+/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../modules/mixin/checkbox_list/checkbox_list_script */ "./modules/mixin/checkbox_list/checkbox_list_script.js");
+/* harmony import */ var _modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_checkbox_list_checkbox_list_script__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _modules_cards_type_room_type_room__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../modules/cards/type_room/type_room */ "./modules/cards/type_room/type_room.js");
+/* harmony import */ var _modules_mixin_pagination_pagination__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../modules/mixin/pagination/pagination */ "./modules/mixin/pagination/pagination.js");
+/* harmony import */ var _modules_mixin_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../modules/mixin/dropdown/dropdown */ "./modules/mixin/dropdown/dropdown.js");
+/* harmony import */ var _modules_mixin_dropdown_room_dropdown_room__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../modules/mixin/dropdown_room/dropdown_room */ "./modules/mixin/dropdown_room/dropdown_room.js");
+
+
 
 
 

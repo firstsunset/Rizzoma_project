@@ -206,22 +206,16 @@
             <h3>Like button</h3>
             <div class="like-button-group">
               <div class="like-button">
-                <button class="like-btn" id="like-button">
-                  <div class="like-checkmark-before" id="likeCheckmarkBefore">favorite_border</div>
-                  <div class="like-btn-count" id="like-count">3</div>
+                <button class="like-btn-grey" id="like-button">
+                  <div class="like-heart-grey" id="likeCheckmarkBefore">favorite_border</div>
+                  <div class="like-btn-count-grey" id="like-count">2</div>
                 </button>
-                <div id="likeCheckmarkAfter">
-                  <div class="like-checkmark-after">favorite</div>
-                </div>
               </div>
               <div class="like-button">
-                <button class="like-btn" id="like-button">
-                  <div class="like-checkmark-before" id="likeCheckmarkBefore">favorite_border</div>
-                  <div class="like-btn-count" id="like-count">3</div>
+                <button class="like-btn-violet" id="like-button">
+                  <div class="like-heart-violet" id="likeCheckmarkBefore">favorite</div>
+                  <div class="like-btn-count-violet" id="like-count">12</div>
                 </button>
-                <div id="likeCheckmarkAfter">
-                  <div class="like-checkmark-after">favorite</div>
-                </div>
               </div>
             </div>
           </div>
@@ -298,6 +292,30 @@
               <li class="numb" onclick="createPagination(totalPages, 15)"> <span>15</span></li>
               <li class="pagination-btn" onclick="createPagination(totalPages, 15)"> <span class="pagination-arrow">arrow_forward</span></li>
             </ul>
+            <div class="pagination-text">1 – 12 из 100+ вариантов аренды</div>
+          </div>
+          <h3> </h3>
+          <div class="feedback-group">
+            <div class="feedback-part">
+              <div class="feedback-part-column-first">
+                <div class="feedback-part-column-img"><img src="images/menc7c31c75cebf362a836b.svg" alt="photo"></div>
+                <div class="feedback-part-column-like"> 
+                  <div class="like-button">
+                    <button class="like-btn-violet" id="like-button">
+                      <div class="like-heart-violet" id="likeCheckmarkBefore">favorite</div>
+                      <div class="like-btn-count-violet" id="like-count">12</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="feedback-part-column-second">
+                <div class="feedback-part-column-group">
+                  <div class="feedback-part-column-group-heading">Мурад Сарафанов </div>
+                  <div class="feedback-part-column-group-days">5 дней назад</div>
+                </div>
+                <div class="feedback-part-column-group">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -318,39 +336,6 @@ function showCheckboxes() {
     expanded = false;
   }
 }
-    </script>
-    <script type="text/javascript">
-       
-var expanded = false;
-function likeFunction() {
-  var likeCheckmarkAfter = document.getElementById("likeCheckmarkAfter");
-  if (!expanded) {
-    likeCheckmarkAfter.style.display = "none";
-    expanded = true;
-  } else {
-    likeCheckmarkAfter.style.display = "block";
-    expanded = false;
-  }
-}
-document.getElementById("like-button").addEventListener("click", likeFunction);
-
-
- 
-
-
-function plusLike() {
-  var count = document.getElementById("like-count");
-   if (count.firstChild.nodeValue == "2") {
-    count.firstChild.nodeValue = "3";
-  } else {
-    count.firstChild.nodeValue = "2";
-  }
- }
- document.getElementById("like-button").addEventListener("click", plusLike, false);
- 
-
-
- 
     </script>
     <script type="text/javascript">
        // THIS IS THE RANGE SLIDER LOGIC DO NOT CHANGE !!

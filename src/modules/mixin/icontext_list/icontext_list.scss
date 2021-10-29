@@ -1,0 +1,51 @@
+.icontext {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 280px;
+
+    &-group {
+        display: inline-flex;
+        gap: 10px;
+
+        &-icon {
+            border: none;
+            width: 48px;
+            height: 48px;
+            font-family: 'MaterialIcons';
+            font-size: 48px;
+            line-height: 41px;
+            color: transparent;
+            text-align: center;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            
+        }
+
+        &-text {
+            font-family: 'MontserratRegular';
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+
+            &-heading {
+                font-family: 'MontserratBold';
+            }
+        }
+    }
+
+    
+}
+
+.icontext-list {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+
+    &-line {
+        background: rgba(31, 32, 65, 0.1);
+        height: 1px;
+        margin-top: 17px;
+    }
+}

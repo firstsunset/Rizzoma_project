@@ -123,34 +123,34 @@
           <div class="searchroom-firstcolumn-heading">Удобства номера</div>
           <div class="searchroom-firstcolumn-comfort">
             <div class="wrap">
-              <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="2 спальни, 2 кровати...">
+              <div class="dropdown" data-default="Сколько комнат и кроватей?">
                 <button class="dropdown__dropbtn">expand_more</button>
                 <div class="dropdown__heading"></div>
                 <div class="dropdown__content">
                   <div class="dropdown__items">
-                    <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
+                    <div class="item-quantity" data-words="Спальня,Спальни,Спален"><span class="item-quantity__nam">Cпальня</span>
                       <div class="item-quantity__controls">
-                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">2</span>
                         <button class="item-quantity__button item-quantity__button_plus">+</button>
                       </div>
                     </div>
-                    <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
+                    <div class="item-quantity" data-words="Кровать, Кровати, Кроватей"><span class="item-quantity__nam">Кровать</span>
                       <div class="item-quantity__controls">
-                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                        <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">2</span>
                         <button class="item-quantity__button item-quantity__button_plus">+</button>
                       </div>
                     </div>
-                    <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
+                    <div class="item-quantity" data-words="Ванная, Ванные, Ванных"><span class="item-quantity__nam">Ванные комнаты</span>
                       <div class="item-quantity__controls">
                         <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
                         <button class="item-quantity__button item-quantity__button_plus">+</button>
                       </div>
                     </div>
                   </div>
-                  <div class="dropdown__buttons">
-                    <button class="dropdown__clear">Очистить</button>
-                    <button class="dropdown__apply">Применить </button>
-                  </div>
+                </div>
+                <div class="dropdown__buttons">
+                  <button class="dropdown__clear">Очистить</button>
+                  <button class="dropdown__apply">Применить</button>
                 </div>
               </div>
             </div>
@@ -525,20 +525,18 @@
             </div>
           </div>
           <div class="searchroom-secondcolumn-pagination">
-            <div class="searchroom-secondcolumn-block">
-              <div class="pagination">
-                <ul>
-                  <li class="pagination-first numb" onclick="createPagination(totalPages, 1)"> <span>1</span></li>
-                  <li class="numb" onclick="createPagination(totalPages, 2)"> <span>2</span></li>
-                  <li class="numb" onclick="createPagination(totalPages, 3)"> <span>3</span></li>
-                  <li class="numb" onclick="createPagination(totalPages, 4)"> <span>4</span></li>
-                  <li class="dots"> <span>...</span></li>
-                  <li class="numb" onclick="createPagination(totalPages, 15)"> <span>15</span></li>
-                  <li class="pagination-btn" onclick="createPagination(totalPages, 15)"> <span class="pagination-arrow">arrow_forward</span></li>
-                </ul>
-              </div>
+            <div class="pagination">
+              <ul>
+                <li class="pagination-first numb" onclick="createPagination(totalPages, 1)"> <span>1</span></li>
+                <li class="numb" onclick="createPagination(totalPages, 2)"> <span>2</span></li>
+                <li class="numb" onclick="createPagination(totalPages, 3)"> <span>3</span></li>
+                <li class="numb" onclick="createPagination(totalPages, 4)"> <span>4</span></li>
+                <li class="dots"> <span>...</span></li>
+                <li class="numb" onclick="createPagination(totalPages, 15)"> <span>15</span></li>
+                <li class="pagination-btn" onclick="createPagination(totalPages, 15)"> <span class="pagination-arrow">arrow_forward</span></li>
+              </ul>
+              <div class="pagination-text">1 – 12 из 100+ вариантов аренды</div>
             </div>
-            <div class="searchroom-secondcolumn-pagination-text">1 – 12 из 100+ вариантов аренды</div>
           </div>
         </div>
       </div>

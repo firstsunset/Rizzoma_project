@@ -1,0 +1,1 @@
+import './icontext_list.scss';

@@ -5394,7 +5394,7 @@ var ItemQuantity = function ItemQuantity(element, onChangeCallback) {
   });
 
   _defineProperty(this, "increment", function () {
-    return _this.setValue(_this.value + 1);
+    _this.setValue(_this.value + 1);
   });
 
   _defineProperty(this, "decriment", function () {
@@ -5413,6 +5413,8 @@ var ItemQuantity = function ItemQuantity(element, onChangeCallback) {
   this.value = parseInt(this.valueEl.innerHTML);
 
   this._checkButton();
+
+  this.heading = this.el.querySelector(".dropdown__heading");
 };
 
 var Dropdown = function Dropdown(element) {
@@ -5450,20 +5452,6 @@ var Dropdown = function Dropdown(element) {
     _this2.items.forEach(function (item) {
       item.setValue(0);
     });
-  });
-
-  _defineProperty(this, "_checkClear", function () {
-    var allMinimal = !_this2.items.map(function (item) {
-      return item.isMinimal();
-    }).includes(false);
-
-    if (_this2.clear && allMinimal) {
-      _this2.clear.style.display = 'none';
-    } else {
-      _this2.clear.style.display = 'inline-block';
-    }
-
-    _this2.clear && (_this2.clear.disabled = allMinimal);
   });
 
   _defineProperty(this, "_checkApply", function () {
@@ -5536,6 +5524,21 @@ var Dropdowns = Array.from(dropdowns).map(function (dd) {
 
 /***/ }),
 
+/***/ "./modules/mixin/feedback/feedback.js":
+/*!********************************************!*\
+  !*** ./modules/mixin/feedback/feedback.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _feedback_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./feedback.scss */ "./modules/mixin/feedback/feedback.scss");
+/* harmony import */ var _like_button_like_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../like_button/like_button */ "./modules/mixin/like_button/like_button.js");
+
+
+
+/***/ }),
+
 /***/ "./modules/mixin/like/like.js":
 /*!************************************!*\
   !*** ./modules/mixin/like/like.js ***!
@@ -5558,9 +5561,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _like_button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./like_button.scss */ "./modules/mixin/like_button/like_button.scss");
-/* harmony import */ var _script_likebutton__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_likebutton */ "./modules/mixin/like_button/script_likebutton.js");
-/* harmony import */ var _script_likebutton__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_likebutton__WEBPACK_IMPORTED_MODULE_1__);
-
 
 
 /***/ }),
@@ -34278,6 +34278,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./modules/mixin/feedback/feedback.scss":
+/*!**********************************************!*\
+  !*** ./modules/mixin/feedback/feedback.scss ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./modules/mixin/like/like.scss":
 /*!**************************************!*\
   !*** ./modules/mixin/like/like.scss ***!
@@ -34611,6 +34624,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_mixin_range_slider_range_slider_script__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_modules_mixin_range_slider_range_slider_script__WEBPACK_IMPORTED_MODULE_28__);
 /* harmony import */ var _modules_mixin_pagination_pagination__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../modules/mixin/pagination/pagination */ "./modules/mixin/pagination/pagination.js");
 /* harmony import */ var _modules_mixin_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../../modules/mixin/date_dropdown/date_dropdown */ "./modules/mixin/date_dropdown/date_dropdown.js");
+/* harmony import */ var _modules_mixin_feedback_feedback__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../../modules/mixin/feedback/feedback */ "./modules/mixin/feedback/feedback.js");
+
 
 
 

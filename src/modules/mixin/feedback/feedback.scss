@@ -1,0 +1,48 @@
+.feedback-group {
+    margin-bottom: 23px;
+}
+.feedback-part {
+    display: flex;
+    flex-direction: row;
+      
+
+    &-column-first {
+        width: 48px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+                     
+    }
+    &-column-img {
+        margin: -5px 0px -22px -22px;
+
+    }
+    &-column-second {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &-column-group {
+        font-family: 'MontserratRegular';
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+
+    &-column-group-heading {
+        font-family: 'MontserratBold';
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        
+    }
+
+    &-column-group-days {
+        font-family: 'MontserratRegular';
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        margin-bottom: 10px;
+    }
+}

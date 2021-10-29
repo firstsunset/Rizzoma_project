@@ -19,6 +19,7 @@ include ../../modules/mixin/button/button
 include ../../modules/mixin/range_slider/range_slider
 include ../../modules/mixin/pagination/pagination
 include ../../modules/mixin/date_dropdown/date_dropdown
+include ../../modules/mixin/feedback/feedback
 
 
 
@@ -72,8 +73,8 @@ html(lang="ru")
           .form-elements-4 
             h3 Like button
             .like-button-group
-              +like_button 
-              +like_button
+              +like_button_grey
+              +like_button_violet
             
           .form-elements-5 
             h3 Rate button
@@ -99,14 +100,14 @@ html(lang="ru")
             +button({ type: 'long', text: 'перейти к оплате', })
           H3 Pagination
           +pagination
+          h3 
+          +feedback_men
         
         
          
      
     script(type='text/javascript') 
       include ../../modules/mixin/checkbox_list/checkbox_list_script.js  
-    script(type='text/javascript') 
-      include ../../modules/mixin/like_button/script_likebutton.js
     script(type='text/javascript') 
       include ../../modules/mixin/range_slider/range_slider_script.js
     script(type='text/javascript') 
