@@ -102,6 +102,37 @@
             </div>
             <div class="room-details-content-column-block-group">
               <div class="room-details-content-column-block-group-heading">Впечатления от номера</div>
+              <div class="room-details-content-column-block-group-pieshart"> 
+                <div class="piechart">
+                  <div class="piechart-pie"> 
+                    <svg class="donut" width="100%" height="100%" viewBox="0 0 42 42">
+                      <defs>
+                        <lineargradient id="linearOrange" x1="50%" y1="0%" x2="50%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgba(255, 227, 156, 1);stop-opacity:1.00"></stop>
+                          <stop offset="100%" style="stop-color:rgba(255, 186, 156, 1);stop-opacity:1.00"></stop>
+                        </lineargradient>
+                        <lineargradient id="linearViolet" x1="50%" y1="0%" x2="50%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgba(188, 156, 255, 1);stop-opacity:1.00"></stop>
+                          <stop offset="100%" style="stop-color:rgba(139, 164, 249, 1);stop-opacity:1.00"></stop>
+                        </lineargradient>
+                        <lineargradient id="linearGreen" x1="50%" y1="0%" x2="50%" y2="100%">
+                          <stop offset="0%" style="stop-color:rgba(111, 207, 151, 1);stop-opacity:1.00"></stop>
+                          <stop offset="100%" style="stop-color:rgba(102, 210, 234, 1);stop-opacity:1.00"></stop>
+                        </lineargradient>
+                      </defs>
+                      <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#FFFFFF"></circle>
+                      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#linearGreen)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="0"></circle>
+                      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#linearViolet)" stroke-width="1" stroke-dasharray="25 75" stroke-dashoffset="25"></circle>
+                      <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="url(#linearOrange)" stroke-width="1" stroke-dasharray="50 50" stroke-dashoffset="75"></circle>
+                    </svg>
+                    <div class="chart-text">
+                      <text class="chart-number">260</text>
+                      <text class="chart-label">Голосов</text>
+                    </div>
+                  </div>
+                  <div class="pie-chart-list"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="room-details-content-column-block">
@@ -159,10 +190,33 @@
           </div>
           <div class="room-details-content-column-block">
             <div class="room-details-content-column-block-group">
-              <div class="room-details-content-column-block-group-heading">Правила</div>
+              <div class="room-details-content-column-block-group-heading-bullet">Правила</div>
+              <div class="room-details-content-column-block-group-bullet"> 
+                <div class="bullet"> 
+                  <div class="bullet-string">
+                    <div class="bullet-string-mark">
+                      <div class="bullet-string-circle"> </div>
+                    </div>
+                    <div class="bullet-string-text">Нельзя с питомцами</div>
+                  </div>
+                  <div class="bullet-string"> 
+                    <div class="bullet-string-mark">
+                      <div class="bullet-string-circle"> </div>
+                    </div>
+                    <div class="bullet-string-text">Без вечеринок и мероприятий</div>
+                  </div>
+                  <div class="bullet-string"> 
+                    <div class="bullet-string-mark">
+                      <div class="bullet-string-circle"> </div>
+                    </div>
+                    <div class="bullet-string-text">Время прибытия — после 13:00, выезд до 12:00</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="room-details-content-column-block-group">
               <div class="room-details-content-column-block-group-heading">Отмена</div>
+              <div class="room-details-content-column-block-group-cancel">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</div>
             </div>
           </div>
         </div>
@@ -320,7 +374,7 @@
         <div class="footer_section-2"> 
           <div class="wrapper">
             <p class="footer_section-2-text">Copyright © 2018 Toxin отель. Все права защищены.</p>
-            <div class="social">
+            <div class="social"> 
               <svg class="social-svg">
                 <defs>
                   <lineargradient id="Gradient-1" x1="50%" y1="0" x2="50%" y2="100%">

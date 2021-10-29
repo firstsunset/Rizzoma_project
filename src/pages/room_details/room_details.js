@@ -11,5 +11,6 @@ import '../../modules/header-login/header-login';
 import '../../modules/cards/room_number/room_number';
 import '../../modules/mixin/icontext_list/icontext_list';
 import '../../modules/mixin/feedback/feedback';
-
+import '../../modules/mixin/bullet_list/bullet_list';
+import '../../modules/mixin/pie_chart/pie_chart';
 

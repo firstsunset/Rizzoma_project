@@ -1724,6 +1724,7 @@ body {
   flex-direction: row;
   gap: 70px;
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 .room-details-content-column {
   display: flex;
@@ -1741,6 +1742,22 @@ body {
   line-height: 23px;
   color: #1F2041;
   margin-bottom: 23px;
+}
+.room-details-content-column-block-group-heading-bullet {
+  font-family: "MontserratBold";
+  font-size: 19px;
+  line-height: 23px;
+  color: #1F2041;
+  margin-bottom: 23px;
+  margin-left: 20px;
+}
+.room-details-content-column-block-group-cancel {
+  max-width: 341px;
+  height: auto;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 /*!*****************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/room_details/settings.scss ***!
@@ -3262,6 +3279,71 @@ path {
   font-size: 10px;
   line-height: 12px;
   color: rgba(31, 32, 65, 0.25);
+}
+/*!***************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/bullet_list/bullet_list.scss ***!
+  \***************************************************************************************************************************************/
+.bullet {
+  display: flex;
+  flex-direction: column;
+  max-width: 292px;
+  height: auto;
+}
+.bullet-string {
+  display: inline-flex;
+}
+.bullet-string-mark {
+  width: 24px;
+  height: 24px;
+}
+.bullet-string-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+  border: none;
+  margin: 7px;
+}
+.bullet-string-text {
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+/*!***********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/pie_chart/pie_chart.scss ***!
+  \***********************************************************************************************************************************/
+.piechart-pie {
+  width: 120px;
+  height: 120px;
+}
+
+.donut {
+  position: relative;
+}
+.chart-text {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #BC9CFF;
+}
+
+.chart-number {
+  font-family: "MontserratBold";
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.chart-label {
+  font-family: "MontserratRegular";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.donut-segment {
+  border: 3px;
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=room_details.css.map*/

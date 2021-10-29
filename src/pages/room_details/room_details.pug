@@ -1,7 +1,8 @@
 include ../../modules/cards/room_number/room_number
 include ../../modules/mixin/icontext_list/icontext_list
 include ../../modules/mixin/feedback/feedback
-
+include ../../modules/mixin/bullet_list/bullet_list
+include ../../modules/mixin/pie_chart/pie_chart
 
 doctype html
 html(lang="ru")
@@ -29,7 +30,8 @@ html(lang="ru")
                 +icontext-list
             .room-details-content-column-block-group
               .room-details-content-column-block-group-heading Впечатления от номера
-                
+              .room-details-content-column-block-group-pieshart 
+                +piechart  
           .room-details-content-column-block
             .room-details-content-column-block-group
               .room-details-content-column-block-group-heading Отзывы посетителей номера
@@ -37,9 +39,12 @@ html(lang="ru")
                 +feedback
           .room-details-content-column-block
             .room-details-content-column-block-group
-              .room-details-content-column-block-group-heading Правила
+              .room-details-content-column-block-group-heading-bullet Правила
+              .room-details-content-column-block-group-bullet 
+                +bullet-list
             .room-details-content-column-block-group
               .room-details-content-column-block-group-heading Отмена
+              .room-details-content-column-block-group-cancel Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room-details-content-column
           .room-details-content-column-card
             +room_number 

@@ -1,0 +1,1 @@
+import './pie_chart.scss';
