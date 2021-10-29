@@ -1,10 +1,17 @@
+.piechart {
+    display: flex;
+    flex-direction: row;
+    max-width: 310px;
+    height: auto;
+
+}
 .piechart-pie{
     width: 120px;
     height: 120px;
 }
 .donut {
     position: relative;
-
+    margin: -10px;
     &-ring {
         
     }
@@ -14,12 +21,15 @@
     flex-direction: column;
     position: absolute;
     color: #BC9CFF;
+    margin-left: 20px;
+    margin-top: -80px;
     
   }
   .chart-number {
     font-family: 'MontserratBold';
     font-size: 24px;
     line-height: 29px;
+    margin-left: 10px;
     
   }
   .chart-label {
@@ -30,8 +40,73 @@
     
   }
   .donut-segment {
-      border: 3px;
+     
       border-color: transparent;
+    
+  }
+  .pie-chart-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 160px;
+      height: auto;
+      margin-top: 15px;
+
+      &-string {
+        display: inline-flex;
+
+        &-mark {
+            width: 24px;
+            height: 24px;
+
+            &-circle1 {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+                border: none;
+                margin: 7px;
+            }
+            &-circle2 {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                border: none;
+                margin: 7px;
+            }
+    
+            &-circle3 {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                border: none;
+                margin: 7px;
+            }
+    
+            &-circle4 {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+                border: none;
+                margin: 7px;
+            }
+        }
+       
+        
+
+        &-text {
+            font-family: 'MontserratRegular';
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+            text-align: start;
+        }
+    }
+
+
+
   }
 
 

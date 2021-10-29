@@ -13,11 +13,27 @@ mixin piechart
                         stop(offset='0%' style='stop-color:rgba(111, 207, 151, 1);stop-opacity:1.00')
                         stop(offset='100%' style='stop-color:rgba(102, 210, 234, 1);stop-opacity:1.00')
                 circle.donut-hole(cx='21' cy='21' r='15.91549430918954' fill='#FFFFFF')
-                circle.donut-segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#linearGreen)' stroke-width='1' stroke-dasharray='25 75' stroke-dashoffset='0')
-                circle.donut-segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#linearViolet)' stroke-width='1' stroke-dasharray='25 75' stroke-dashoffset='25')
-                circle.donut-segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#linearOrange)' stroke-width='1' stroke-dasharray='50 50' stroke-dashoffset='75')
-                
+                circle.donut-segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#linearGreen)' stroke-width='1' stroke-dasharray='24 76' stroke-dashoffset='0')
+                circle.donut-segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#linearViolet)' stroke-width='1' stroke-dasharray='24 76' stroke-dashoffset='25')
+                circle.donut-segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke='url(#linearOrange)' stroke-width='1' stroke-dasharray='49 51' stroke-dashoffset='75')
             .chart-text
                 text.chart-number 260
                 text.chart-label Голосов
         .pie-chart-list
+            .pie-chart-list-string 
+                .pie-chart-list-string-mark
+                    .pie-chart-list-string-mark-circle1
+                .pie-chart-list-string-text Великолепно
+            .pie-chart-list-string 
+                .pie-chart-list-string-mark
+                    .pie-chart-list-string-mark-circle2
+                .pie-chart-list-string-text Хорошо
+            .pie-chart-list-string 
+                .pie-chart-list-string-mark
+                    .pie-chart-list-string-mark-circle3
+                .pie-chart-list-string-text Удовлетворительно
+            .pie-chart-list-string 
+                .pie-chart-list-string-mark
+                    .pie-chart-list-string-mark-circle4
+                .pie-chart-list-string-text Разочарован
+
