@@ -2258,24 +2258,24 @@ h3 {
   color: #1F2041;
   padding-bottom: 20px;
 }
-.seach-room-group {
+.seach-room-date {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 320px;
   height: 64px;
   padding-bottom: 20px;
-}
-.seach-room-group-row {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-}
-.seach-room-date-group-head {
   font-family: "MontserratBold";
-  text-transform: uppercase;
   font-size: 12px;
   line-height: 15px;
+  text-transform: uppercase;
   color: #1F2041;
+}
+.seach-room-date-row {
+  display: flex;
+  flex-direction: row;
+}
+.seach-room-date-row-head {
+  padding-right: 87px;
   padding-bottom: 5px;
 }
 .seach-room-guest-head {
@@ -3126,7 +3126,7 @@ h3 {
   width: 320px;
   height: 64px;
   padding-bottom: 20px;
-  font-family: "MontserratRegular";
+  font-family: "MontserratBold";
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;

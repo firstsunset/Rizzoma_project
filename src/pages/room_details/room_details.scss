@@ -5,14 +5,15 @@
 
 
 body {
-    height: 1440px;
+    max-width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     align-items: center;
 }
 
 .room-details-pic {
-    max-width: 100%;
+   // max-width: 100%;
     height: auto;
     margin-top: 0px;
     display: flex;
@@ -25,6 +26,7 @@ body {
        display: flex;
        flex-direction: column;
        max-width: 100%;
+       height: auto;
 
        &-pic1 {
         background-position: center;
@@ -51,6 +53,8 @@ body {
 }
 
 .room-details-content {
+    max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     gap: 70px;

@@ -4554,11 +4554,9 @@ $(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _room_number_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./room_number.scss */ "./modules/cards/room_number/room_number.scss");
-/* harmony import */ var _mixin_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/date_dropdown/date_dropdown */ "./modules/mixin/date_dropdown/date_dropdown.js");
-/* harmony import */ var _mixin_button_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/button/button */ "./modules/mixin/button/button.js");
-/* harmony import */ var _mixin_dropdown_guests_dropdown_guests__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixin/dropdown_guests/dropdown_guests */ "./modules/mixin/dropdown_guests/dropdown_guests.js");
-/* harmony import */ var _cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-
+/* harmony import */ var _mixin_button_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixin/button/button */ "./modules/mixin/button/button.js");
+/* harmony import */ var _mixin_dropdown_guests_dropdown_guests__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../mixin/dropdown_guests/dropdown_guests */ "./modules/mixin/dropdown_guests/dropdown_guests.js");
+/* harmony import */ var _cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
 
 
 
@@ -4644,34 +4642,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.scss */ "./modules/mixin/button/button.scss");
-
-
-/***/ }),
-
-/***/ "./modules/mixin/date_dropdown/date_dropdown.js":
-/*!******************************************************!*\
-  !*** ./modules/mixin/date_dropdown/date_dropdown.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _date_dropdown_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date_dropdown.scss */ "./modules/mixin/date_dropdown/date_dropdown.scss");
-/* harmony import */ var _script_date_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_date_dropdown */ "./modules/mixin/date_dropdown/script_date_dropdown.js");
-/* harmony import */ var _script_date_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_date_dropdown__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-
-
-
-
-/***/ }),
-
-/***/ "./modules/mixin/date_dropdown/script_date_dropdown.js":
-/*!*************************************************************!*\
-  !*** ./modules/mixin/date_dropdown/script_date_dropdown.js ***!
-  \*************************************************************/
-/***/ (() => {
-
 
 
 /***/ }),
@@ -33426,19 +33396,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************!*\
   !*** ./modules/mixin/button/button.scss ***!
   \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/mixin/date_dropdown/date_dropdown.scss":
-/*!********************************************************!*\
-  !*** ./modules/mixin/date_dropdown/date_dropdown.scss ***!
-  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

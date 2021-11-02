@@ -1681,14 +1681,14 @@ template {
   }
 }
 body {
-  height: 1440px;
+  max-width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
 .room-details-pic {
-  max-width: 100%;
   height: auto;
   margin-top: 0px;
   display: flex;
@@ -1698,6 +1698,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  height: auto;
 }
 .room-details-pic-group-pic1 {
   background-position: center;
@@ -1720,6 +1721,8 @@ body {
 }
 
 .room-details-content {
+  max-width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   gap: 70px;
@@ -1774,7 +1777,7 @@ body {
 .wrapper {
   margin: 0 140px;
   padding: 0 0;
-  width: 1160px;
+  width: 1440px;
   max-width: 100%;
 }
 /*!**************************************************************************************************************************!*\
@@ -1802,23 +1805,17 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #FFFFFF;
-  height: 443px;
+  height: 100%;
   width: 100%;
   border-top: 1px solid rgba(31, 32, 65, 0.25);
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   font-family: "MontserratRegular";
 }
 
-.wrapper {
-  width: 1160px;
-  margin-left: 120px;
-  margin-right: 120px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .footer_section-1 {
-  height: 372px;
+  max-width: 100%;
+  height: auto;
+  position: relative;
 }
 
 .footer_section-1-body {
@@ -1850,6 +1847,11 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+.footer-item.footer-item-block {
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-item-nav {
@@ -1936,17 +1938,19 @@ body {
 
 .footer_section-2 {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   height: 70px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-top: 1px solid rgba(31, 32, 65, 0.25);
   border-left: none;
   border-bottom: none;
   border-right: none;
-  width: 100%;
+  max-width: 100%;
+}
+
+.footer_section-2-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 
 .footer_section-2-text {
@@ -1981,6 +1985,141 @@ body {
 
 path {
   fill: url(#Gradient-1);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .footer {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .footer_section-1 {
+    max-width: 100%;
+    height: 160px;
+  }
+
+  .footer_section-1-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .footer_logo {
+    max-width: 100%;
+  }
+
+  .footer-item-nav,
+.footer-item-about,
+.footer-item-support,
+.footer-item-subscribe {
+    display: none;
+  }
+
+  .footer-item-logo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    padding-top: 20px;
+  }
+
+  .footer_logo_text {
+    display: none;
+  }
+
+  .footer_section-2 {
+    max-width: 100%;
+    height: 267px;
+    border-top: none;
+  }
+
+  .footer_section-2-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .social {
+    margin-top: 25px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .footer_section-1 {
+    max-width: 100%;
+    height: 160px;
+  }
+
+  .footer_section-1-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .footer_logo {
+    max-width: 100%;
+  }
+
+  .footer-item-nav,
+.footer-item-about,
+.footer-item-support,
+.footer-item-subscribe {
+    display: none;
+  }
+
+  .footer-item-logo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    padding-top: 20px;
+  }
+
+  .footer_logo_text {
+    display: none;
+  }
+
+  .footer_section-2 {
+    max-width: 100%;
+    height: 267px;
+    border-top: none;
+  }
+
+  .footer_section-2-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .social {
+    margin-top: 25px;
+  }
 }
 /*!**********************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/footer/fonts.scss ***!
@@ -2084,19 +2223,18 @@ path {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-.wrapper {
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.header-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
 }
 
-.header_logo {
+.header-logo {
   width: 106px;
   height: 40px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .header_nav {
@@ -2104,9 +2242,10 @@ path {
 }
 
 .nav {
+  width: 770px;
   display: flex;
-  width: 447px;
-  height: 21px;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 26px;
   margin-bottom: 26px;
   padding-left: 0px;
@@ -2117,7 +2256,8 @@ path {
 .nav-item {
   list-style-type: none;
   padding-right: 0px;
-  margin-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .nav-item-text {
@@ -2140,8 +2280,8 @@ path {
 }
 
 .nav-item-arrow {
-  width: 74px;
   display: flex;
+  flex-direction: row;
 }
 
 .nav-arrow {
@@ -2154,14 +2294,33 @@ path {
   margin-right: 0px;
 }
 
-.headerbtn_signin {
-  margin-top: 18px;
-  margin-left: 55px;
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .header-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .header-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.headerbtn_registration {
-  margin-top: 18px;
-  margin-left: -40px;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerbtn_signin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 /*!**********************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/header/fonts.scss ***!
@@ -2183,38 +2342,48 @@ path {
 /*!***********************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/header-login/header-login.scss ***!
   \***********************************************************************************************************************************/
-.header-login {
-  background-color: #FFFFFF;
-  width: 100%;
-  height: 70px;
-  color: #8f90a0;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  margin-bottom: 40px;
-  margin-top: 40px;
+/*.header-login {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 70px;
+    color: #8f90a0;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+
 }
 
 .header-login_body {
-  display: flex;
-  margin-top: auto;
+    display: flex;
+
+    margin-top: auto;
+    //margin-left: 14rem;
+    //margin-right: 14rem;   
 }
 
 .header_logo {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  //  width: 10.569rem;
+  //  height: 4rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
 }
 
 .nav-login {
-  display: flex;
-  width: 447px;
-  height: 30px;
-  margin-left: 466.31px;
-  margin-top: 26px;
-  margin-bottom: 26px;
-  padding-left: 0px;
-  padding-right: 0px;
-  font-size: 14px;
-}
+    display: flex;
+    width: 447px;
+    height: 30px;
+    margin-left: 466.31px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
 
+
+}*/
 /*/.nav-item {
   //  padding-right: 2rem;
     list-style-type: none;
@@ -2359,7 +2528,7 @@ path {
   width: 320px;
   height: 64px;
   padding-bottom: 20px;
-  font-family: "MontserratRegular";
+  font-family: "MontserratBold";
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
@@ -2438,29 +2607,132 @@ path {
   border-right: none;
   padding-top: 16px;
 }
-/*!*******************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
-  \*******************************************************************************************************************************************/
-.date-dropdown {
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
+  \*****************************************************************************************************************************/
+.button {
+  display: block;
+  border: solid 2px transparent;
+  border-radius: 22px;
+  padding: 0.1667rem;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #FFFFFF inset;
+  cursor: pointer;
+  text-decoration-line: none;
+  width: 99px;
+  height: 44px;
+}
+.button:hover, .button.button_hovered {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.button__wrapper {
+  display: flex;
+  padding: 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  height: 15px;
+}
+.button_default {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_bordercolor {
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor .button__wrapper {
+  background-color: white;
+}
+.button_bordercolor .button__text {
+  color: #BC9CFF;
+}
+.button_link {
+  padding: 0;
+  width: auto;
+  padding: 0;
+}
+.button_bordercolor_header {
+  width: 87px;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor_header .button__text {
+  color: #BC9CFF;
+}
+.button.button_link {
+  background: white;
+}
+.button_link .button__wrapper {
+  padding: 0;
+}
+.button_link .button__text {
+  color: #BC9CFF;
+  line-height: 15px;
+}
+.button.button_link .button__wrapper .button__text:hover, .button.button_link.button_hovered .button__wrapper .button__text {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button_long.button {
   width: 320px;
   height: 44px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 30px;
-}
-.date-dropdown-block {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
   border: none;
-  width: 150px;
-  height: 44px;
 }
-.date-dropdown-input {
-  position: absolute;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  margin-bottom: 0px;
-  width: 148px;
-  height: 42px;
+.button_long .button__wrapper {
+  padding: 0;
+  width: 100%;
+}
+.button_long .button__text {
+  width: 280px;
+  height: 15px;
+  margin-left: 20px;
+  margin-top: -30px;
+}
+.button_long_header.button {
+  width: 196px;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button__text {
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  line-height: 3.3333rem;
+  white-space: nowrap;
+  height: 44px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.button__arrow {
+  font-family: "MaterialIcons";
+  color: white;
+  font-size: 24px;
+  margin-left: auto;
+  padding-right: 10px;
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
+  \***********************************************************************************************************************************************/
+.wrap {
+  width: 320px;
+  height: 205px;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
+  width: 320px;
   font-family: "MontserratRegular";
   font-size: 14px;
   line-height: 18px;
@@ -2468,14 +2740,33 @@ path {
   border-radius: 4px;
   background: #FFFFFF;
   text-align: start;
-  cursor: pointer;
 }
-.date-dropdown-input:focus {
-  color: none;
-  color: red;
-}
-.date-dropdown-btn {
+.dropdown__heading {
   position: relative;
+  min-height: 44px;
+  padding-left: 15px;
+  top: 15px;
+}
+.dropdown_hide > .dropdown__content {
+  display: none;
+}
+
+.dropdown__content {
+  height: 160px;
+  width: 320px;
+  padding-top: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  position: absolute;
+  background-color: #FFFFFF;
+  overflow: auto;
+}
+
+.dropdown__dropbtn {
+  position: absolute;
   width: 40px;
   height: 40px;
   background: #FFFFFF;
@@ -2483,27 +2774,105 @@ path {
   border: none;
   box-sizing: border-box;
   padding: 2px;
-  margin: 2px;
   cursor: pointer;
   font-family: "MaterialIcons";
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  left: 110px;
-  top: 0px;
-  background: transparent;
+  margin-left: 276px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
 }
 
-.date-dropdown input[type=text] {
-  color: rgba(31, 32, 65, 0.75);
-  font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: normal;
-  width: 133px;
-  height: 42px;
-  font-size: 14px;
-  line-height: 18px;
+.dropdown__buttons {
+  width: 300px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+.dropdown__clear,
+.dropdown__apply {
+  padding: 0px;
+  width: 84px;
+  height: 15px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "MontserratBold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  text-align: start;
+}
+
+.dropdown__apply {
+  text-align: right;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
+  \*******************************************************************************************************************************************/
+.item-quantity {
+  width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
   padding-left: 15px;
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+  align-content: center;
+}
+
+.item-quantity__nam {
+  width: 83px;
+  height: 15px;
+  padding-right: 123px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
+}
+
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-quantity__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041;
 }
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/air-datepicker/dist/css/datepicker.min.css ***!
@@ -2827,273 +3196,6 @@ path {
   line-height: 15px;
   text-transform: uppercase;
   color: #BC9CFF;
-}
-/*!*****************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
-  \*****************************************************************************************************************************/
-.button {
-  display: block;
-  border: solid 2px transparent;
-  border-radius: 22px;
-  padding: 0.1667rem;
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #FFFFFF inset;
-  cursor: pointer;
-  text-decoration-line: none;
-  width: 99px;
-  height: 44px;
-}
-.button:hover, .button.button_hovered {
-  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-}
-.button__wrapper {
-  display: flex;
-  padding: 0px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 22px;
-  height: 15px;
-}
-.button_default {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-shadow: none;
-  border: none;
-}
-.button_bordercolor {
-  height: 44px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.button_bordercolor .button__wrapper {
-  background-color: white;
-}
-.button_bordercolor .button__text {
-  color: #BC9CFF;
-}
-.button_link {
-  padding: 0;
-  width: auto;
-  padding: 0;
-}
-.button_bordercolor_header {
-  width: 87px;
-  height: 34px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.button_bordercolor_header .button__text {
-  color: #BC9CFF;
-}
-.button.button_link {
-  background: white;
-}
-.button_link .button__wrapper {
-  padding: 0;
-}
-.button_link .button__text {
-  color: #BC9CFF;
-  line-height: 15px;
-}
-.button.button_link .button__wrapper .button__text:hover, .button.button_link.button_hovered .button__wrapper .button__text {
-  color: rgba(31, 32, 65, 0.5);
-}
-.button_long.button {
-  width: 320px;
-  height: 44px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-shadow: none;
-  border: none;
-}
-.button_long .button__wrapper {
-  padding: 0;
-  width: 100%;
-}
-.button_long .button__text {
-  width: 280px;
-  height: 15px;
-  margin-left: 20px;
-  margin-top: -30px;
-}
-.button_long_header.button {
-  width: 196px;
-  height: 34px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-shadow: none;
-  border: none;
-}
-.button__text {
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  font-weight: bold;
-  color: white;
-  font-size: 12px;
-  line-height: 3.3333rem;
-  white-space: nowrap;
-  height: 44px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.button__arrow {
-  font-family: "MaterialIcons";
-  color: white;
-  font-size: 24px;
-  margin-left: auto;
-  padding-right: 10px;
-}
-/*!***********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
-  \***********************************************************************************************************************************************/
-.wrap {
-  width: 320px;
-  height: 205px;
-  position: relative;
-}
-
-.dropdown {
-  position: relative;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  margin-bottom: 20px;
-  width: 320px;
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  border-radius: 4px;
-  background: #FFFFFF;
-  text-align: start;
-}
-.dropdown__heading {
-  position: relative;
-  min-height: 44px;
-  padding-left: 15px;
-  top: 15px;
-}
-.dropdown_hide > .dropdown__content {
-  display: none;
-}
-
-.dropdown__content {
-  height: 160px;
-  width: 320px;
-  padding-top: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
-  background-color: #FFFFFF;
-  overflow: auto;
-}
-
-.dropdown__dropbtn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  color: rgba(31, 32, 65, 0.75);
-  border: none;
-  box-sizing: border-box;
-  padding: 2px;
-  cursor: pointer;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
-
-.dropdown__buttons {
-  width: 300px;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  padding-top: 13px;
-  padding-left: 10px;
-}
-
-.dropdown__clear,
-.dropdown__apply {
-  padding: 0px;
-  width: 84px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
-  text-align: start;
-}
-
-.dropdown__apply {
-  text-align: right;
-}
-/*!*******************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
-  \*******************************************************************************************************************************************/
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
-}
-
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-.item-quantity__controls {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/icontext_list/icontext_list.scss ***!

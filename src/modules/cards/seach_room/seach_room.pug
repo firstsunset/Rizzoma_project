@@ -1,4 +1,3 @@
-include ../../mixin/date_dropdown/date_dropdown
 include ../../mixin/dropdown_guests/dropdown_guests
 include ../../cards/datepicker/datepicker
 
@@ -13,7 +12,7 @@ mixin seach_room
                     .seach-room-date-row-head Прибытие 
                     .seach-room-date-row-head Выезд
                 .seach-room-date-datepicker 
-                                      
+                +datepicker   
             .seach-room-guest
                 .seach-room-guest-head Гости
                 +dropdown_guests('Сколько гостей')                    

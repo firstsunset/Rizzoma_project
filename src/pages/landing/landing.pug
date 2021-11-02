@@ -1,6 +1,7 @@
 include ../../modules/cards/seach_room/seach_room
 
 
+
 doctype html
 html(lang="ru")
   head
@@ -11,8 +12,10 @@ html(lang="ru")
 
   body 
     include ../../modules/header/header
-    .registration-content
-      .container
-        .registration-page-registration-card
-          +seach_room    
+    .landing-content-img
+      .wrapper
+        .landing-content
+          .landing-card
+            +seach_room
+          .landing-text Лучшие номера для вашей работы, отдыха и просто вдохновения    
     include ../../modules/footer/footer

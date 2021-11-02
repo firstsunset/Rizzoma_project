@@ -1,18 +1,21 @@
 @import '~normalize.css';
 @import '~flexboxgrid2';
+@import './settings.scss';
 
 
 
 
 body {
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     align-items: center;
 }
 
 .signin-content {
-    height: 685px;
+    max-width: 100%;
+    height: auto;
     margin-top: 0px;
     background-image: url(image4.png);
     background-size: cover;
@@ -23,6 +26,6 @@ body {
 }
 
 .signin-page-signin-card{
-    padding: 172px 390px 172px 390px;
+    padding: 172px 0px 172px 0px;
 
 }

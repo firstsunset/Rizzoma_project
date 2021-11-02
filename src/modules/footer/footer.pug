@@ -8,66 +8,68 @@ footer
                         .footer_logo 
                             a(href="/mock-address/change-me"): img(src=require("./logo.svg"), alt="Logo")
                         .footer_logo_text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                    .footer-item.footer-item-nav
-                        ul.footer-list 
-                            li.footer-list-item 
-                                .footer-list-link-bold Навигация
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link О нас 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Новости
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Служба поддержки
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Услуги
-                    .footer-item.footer-item-about
-                        ul.footer-list 
-                            li.footer-list-item 
-                                .footer-list-link-bold О нас
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link О сервисе 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Наша команда
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Вакансии
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Инвесторы
-                    .footer-item.footer-item-support
-                        ul.footer-list 
-                            li.footer-list-item 
-                                .footer-list-link-bold Служба поддержки
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Соглашения 
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Сообщества
-                            li.footer-list-item 
-                                a(href="/mock-address/change-me").footer-list-link Связь с нами   
-                    .footer-item.footer-item-subscribe
-                        h3.footer-subscribe-bold Подписка
-                        .footer-subscribe-text Получайте специальные предложения и новости сервиса
-                        +subscription_text_field
+                    .footer-item.footer-item-block
+                        .footer-item.footer-item-nav
+                            ul.footer-list 
+                                li.footer-list-item 
+                                    .footer-list-link-bold Навигация
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link О нас 
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Новости
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Служба поддержки
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Услуги
+                        .footer-item.footer-item-about
+                            ul.footer-list 
+                                li.footer-list-item 
+                                    .footer-list-link-bold О нас
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link О сервисе 
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Наша команда
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Вакансии
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Инвесторы
+                        .footer-item.footer-item-support
+                            ul.footer-list 
+                                li.footer-list-item 
+                                    .footer-list-link-bold Служба поддержки
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Соглашения 
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Сообщества
+                                li.footer-list-item 
+                                    a(href="/mock-address/change-me").footer-list-link Связь с нами   
+                        .footer-item.footer-item-subscribe
+                            h3.footer-subscribe-bold Подписка
+                            .footer-subscribe-text Получайте специальные предложения и новости сервиса
+                            +subscription_text_field
         .footer_section-2 
             .wrapper
-                p.footer_section-2-text Copyright © 2018 Toxin отель. Все права защищены.
-                .social 
-                    svg.social-svg
-                        defs
-                            lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
-                                stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
-                                stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
-                        .fab.fa-twitter.gradient-icon
-                    svg.social-svg
-                        defs
-                            lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
-                                stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
-                                stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
-                        .fab.fa-facebook-square.gradient-icon
-                    svg.social-svg
-                        defs
-                            lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
-                                stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
-                                stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
-                        .fab.fa-instagram.gradient-icon
+                .footer_section-2-body
+                    .footer_section-2-text Copyright © 2018 Toxin отель. Все права защищены.
+                    .social 
+                        svg.social-svg
+                            defs
+                                lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
+                                    stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
+                                    stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
+                            .fab.fa-twitter.gradient-icon
+                        svg.social-svg
+                            defs
+                                lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
+                                    stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
+                                    stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
+                            .fab.fa-facebook-square.gradient-icon
+                        svg.social-svg
+                            defs
+                                lineargradient#Gradient-1(x1='50%' y1='0' x2='50%' y2='100%')
+                                    stop(offset='0%' style='stop-color:rgb(188,156,255);stop-opacity:1.00')
+                                    stop(offset='100%' style='stop-color:rgb(139,164,249);stop-opacity:1.00')
+                            .fab.fa-instagram.gradient-icon
                 
                
     

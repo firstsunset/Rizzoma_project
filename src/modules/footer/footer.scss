@@ -7,22 +7,18 @@
     flex-direction: column;
     background-color: #FFFFFF;
   //  max-width: 1920px;
-    height: 443px;
+    height: 100%;
     width: 100%;
     border-top: 1px solid rgba(31, 32, 65, 0.25);
    
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     font-family: 'MontserratRegular';
 }
-.wrapper {
-    width: 1160px;
-    margin-left: 120px;
-    margin-right: 120px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
 .footer_section-1 {
-    height: 372px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
 }
 
 .footer_section-1-body {
@@ -57,6 +53,10 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     
+}
+.footer-item.footer-item-block {
+    display: flex;
+    flex-direction: row;
 }
 .footer-item-nav {
   width: 143px;
@@ -140,18 +140,19 @@
 
   .footer_section-2 {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     height: 70px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-top: 1px solid rgba(31, 32, 65, 0.25);
     border-left: none;
     border-bottom: none;
     border-right: none;
-    width: 100%;
+    max-width: 100%;
     
+  }
+  .footer_section-2-body {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
   }
   .footer_section-2-text {
     width: 372px;
@@ -187,18 +188,133 @@
  }
  path {
     fill: url(#Gradient-1);
-  
-     
+      
  }
 
+ @media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .footer {
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+    }
+    .footer_section-1 {
+        max-width: 100%;
+        height: 160px;
+    }
+    .footer_section-1-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+        
+    }
+    .footer_logo {
+        max-width: 100%;
+       
+    }
+    .footer-item-nav, 
+    .footer-item-about, 
+    .footer-item-support,
+    .footer-item-subscribe {
+       display: none;
+    }
+    .footer-item-logo {
+        max-width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+        padding-top: 20px;
+    }
+    .footer_logo_text {
+        display: none;
+    }
+    .footer_section-2 {
+        max-width: 100%;
+        height: 267px;
+        border-top: none;
+    }
+    .footer_section-2-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .social {
+        margin-top: 25px;
+    }
+ }
  
- 
- 
- 
- 
- 
-
-  
-    
+ @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .footer {
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+    }
+    .footer_section-1 {
+        max-width: 100%;
+        height: 160px;
+    }
+    .footer_section-1-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+        
+    }
+    .footer_logo {
+        max-width: 100%;
+       
+    }
+    .footer-item-nav, 
+    .footer-item-about, 
+    .footer-item-support,
+    .footer-item-subscribe {
+       display: none;
+    }
+    .footer-item-logo {
+        max-width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+        padding-top: 20px;
+    }
+    .footer_logo_text {
+        display: none;
+    }
+    .footer_section-2 {
+        max-width: 100%;
+        height: 267px;
+        border-top: none;
+    }
+    .footer_section-2-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .social {
+        margin-top: 25px;
+    }
+ }
  
  
