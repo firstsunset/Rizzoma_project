@@ -1,12 +1,11 @@
 import './search_room.scss';
-import './fonts.scss';
-import './settings.scss';
-import './veriables.scss';
+import '../../scss/settings.scss';
+import '../../scss/fonts.scss';
 
 
 
 import _ from 'lodash';
-import $ from 'jquery';
+//import $ from 'jquery';
 
 
 

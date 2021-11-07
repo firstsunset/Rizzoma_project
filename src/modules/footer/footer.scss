@@ -2,12 +2,12 @@
 
 
 .footer {
-    position: absolute;
+   // position: absolute;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
   //  max-width: 1920px;
-    height: 100%;
+    
     width: 100%;
     border-top: 1px solid rgba(31, 32, 65, 0.25);
    
@@ -17,7 +17,7 @@
 
 .footer_section-1 {
     max-width: 100%;
-    height: auto;
+    height: 370px;
     position: relative;
 }
 

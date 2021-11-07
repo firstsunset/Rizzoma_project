@@ -351,9 +351,9 @@ template {
   display: none;
 }
 
-/*!***********************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/form_elements.scss ***!
-  \***********************************************************************************************************************************/
+/*!************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./ui_kit/form_elements/form_elements.scss ***!
+  \************************************************************************************************************************************/
 .container {
   box-sizing: border-box;
   margin-left: auto;
@@ -1754,9 +1754,43 @@ h3 {
   justify-content: space-between;
   padding-bottom: 30px;
 }
-/*!***************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/fonts.scss ***!
-  \***************************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/settings.scss ***!
+  \***************************************************************************************************************/
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .wrapper {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .wrapper {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/*!************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/fonts.scss ***!
+  \************************************************************************************************************/
 @font-face {
   font-family: "MontserratRegular";
   src: url(../fonts/Montserrat-Regularf5d6b5bf17165e78dc3b.woff) format("woff"), url(../fonts/Montserrat-Regular3cd786652b8a2e9d41f2.ttf) format("truetype"), url(../fonts/Montserrat-Regular4157e8a85b69c65af9b7.svg) format("svg");
@@ -1772,24 +1806,11 @@ h3 {
   src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 5 Brands Regular";
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/fa-brands-4002f517e09eb2ca6650ff5.svg) format("svg"), url(../fonts/fa-brands-4002285773e6b4b172f07d9.woff) format("woff"), url(../fonts/fa-brands-400527940b104eb2ea366c8.ttf) format("truetype");
 }
-/*!******************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/settings.scss ***!
-  \******************************************************************************************************************************/
-.container {
-  margin: 0 140px;
-  padding: 0 0;
-  width: 1160px;
-  max-width: 100%;
-}
-/*!*******************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./pages/form_elements/veriables.scss ***!
-  \*******************************************************************************************************************************/
-
 /*!*************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/text_field/text_field.scss ***!
   \*************************************************************************************************************************************/
@@ -3373,6 +3394,9 @@ label:hover {
 
 .datepicker--nav-action .material-icons {
   color: #BC9CFF;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 20px;
 }
 
 .datepicker--nav-action:hover {

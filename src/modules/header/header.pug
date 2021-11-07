@@ -8,18 +8,28 @@ header
                 .nav
                     .nav-item 
                         a(href="/mock-address/change-me").nav-link О нас 
-                    .nav-item.nav-item-arrow
-                        a(href="/mock-address/change-me").nav-link Услуги 
-                        span.nav-arrow expand_more
+                    .nav-item.nav-item-dropdown
+                        .nav-item-dropdown-heading
+                            a(href="/mock-address/change-me").nav-link Услуги 
+                            span.nav-arrow expand_more
+                        .nav-item-dropdown-content
+                            a(href="/mock-address/change-me").nav-link-dropdown 
+                            a(href="/mock-address/change-me").nav-link-dropdown  
+                            a(href="/mock-address/change-me").nav-link-dropdown 
                     .nav-item
                         .nav-item-text
                             a(href="/mock-address/change-me").nav-link Вакансии
                     .nav-item
                         .nav-item-text
                             a(href="/mock-address/change-me").nav-link Новости
-                    .nav-item.nav-item-arrow
-                        a(href="/mock-address/change-me").nav-link Соглашения 
-                        span.nav-arrow expand_more
+                    .nav-item.nav-item-dropdown
+                        .nav-item-dropdown-heading
+                            a(href="/mock-address/change-me").nav-link Соглашения 
+                            span.nav-arrow expand_more
+                        .nav-item-dropdown-content
+                            a(href="/mock-address/change-me").nav-link-dropdown 
+                            a(href="/mock-address/change-me").nav-link-dropdown  
+                            a(href="/mock-address/change-me").nav-link-dropdown 
                     .headerbtn_signin
                         +button({ type: 'bordercolor_header', text: 'войти', isHovered: false, link: '"sign_in.html"', })
                     .headerbtn_registration 

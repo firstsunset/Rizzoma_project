@@ -27,10 +27,11 @@ module.exports = {
     context: path.resolve(__dirname, 'src'), 
     mode: 'development',
     entry: {
+      colors_type: PATHS.src + '/ui_kit/colors_type/colors_type.js',
+      headers_footers: PATHS.src + '/ui_kit/headers_footers/headers_footers.js',
+      form_elements: PATHS.src + '/ui_kit/form_elements/form_elements.js',
+      cards: PATHS.src + '/ui_kit/cards/cards.js',
       registration: PATHS.src + '/pages/registration/registration.js',
-      uikit: PATHS.src + '/pages/uikit/uikit.js',
-      form_elements: PATHS.src + '/pages/form_elements/form_elements.js',
-      cards: PATHS.src + '/pages/cards/cards.js',
       sign_in: PATHS.src + '/pages/sign_in/sign_in.js',
       landing: PATHS.src + '/pages/landing/landing.js',
       search_room: PATHS.src + '/pages/search_room/search_room.js',
@@ -83,19 +84,25 @@ module.exports = {
           filename: 'registration.html'
         }),
         new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, 'src/pages/uikit/uikit.pug'),
+          template: path.resolve(__dirname, 'src/ui_kit/colors_type/colors_type.pug'),
             inject: true,
-            chunks: ['uikit'],
-            filename: 'uikit.html'
+            chunks: ['colors_type'],
+            filename: 'colors_type.html'
         }),
         new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, 'src/pages/form_elements/form_elements.pug'),
+          template: path.resolve(__dirname, 'src/ui_kit/headers_footers/headers_footers.pug'),
+            inject: true,
+            chunks: ['headers_footers'],
+            filename: 'headers_footers.html'
+        }),
+        new HtmlWebpackPlugin({
+          template: path.resolve(__dirname, 'src/ui_kit/form_elements/form_elements.pug'),
           inject: true,
           chunks: ['form_elements'],
           filename: 'form_elements.html'
         }),
         new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, 'src/pages/cards/cards.pug'),
+          template: path.resolve(__dirname, 'src/ui_kit/cards/cards.pug'),
           inject: true,
           chunks: ['cards'],
           filename: 'cards.html'

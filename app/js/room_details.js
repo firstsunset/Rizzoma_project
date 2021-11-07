@@ -4575,8 +4575,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./footer.scss */ "./modules/footer/footer.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/footer/fonts.scss");
-/* harmony import */ var _mixin_subscription_text_field_subscription_text_field__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../mixin/subscription_text_field/subscription_text_field */ "./modules/mixin/subscription_text_field/subscription_text_field.js");
+/* harmony import */ var _scss_fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/fonts.scss */ "./scss/fonts.scss");
+/* harmony import */ var _scss_settings_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../scss/settings.scss */ "./scss/settings.scss");
+/* harmony import */ var _mixin_subscription_text_field_subscription_text_field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../mixin/subscription_text_field/subscription_text_field */ "./modules/mixin/subscription_text_field/subscription_text_field.js");
+
 
 
 
@@ -33301,19 +33303,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/footer/fonts.scss":
-/*!***********************************!*\
-  !*** ./modules/footer/fonts.scss ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./modules/footer/footer.scss":
 /*!************************************!*\
   !*** ./modules/footer/footer.scss ***!
@@ -33496,19 +33485,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/room_details/fonts.scss":
-/*!***************************************!*\
-  !*** ./pages/room_details/fonts.scss ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./pages/room_details/room_details.scss":
 /*!**********************************************!*\
   !*** ./pages/room_details/room_details.scss ***!
@@ -33522,10 +33498,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/room_details/settings.scss":
-/*!******************************************!*\
-  !*** ./pages/room_details/settings.scss ***!
-  \******************************************/
+/***/ "./scss/fonts.scss":
+/*!*************************!*\
+  !*** ./scss/fonts.scss ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./scss/settings.scss":
+/*!****************************!*\
+  !*** ./scss/settings.scss ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33640,8 +33629,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/all */ "../node_modules/@fortawesome/fontawesome-free/js/all.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _room_details_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./room_details.scss */ "./pages/room_details/room_details.scss");
-/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./settings.scss */ "./pages/room_details/settings.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./fonts.scss */ "./pages/room_details/fonts.scss");
+/* harmony import */ var _scss_settings_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../scss/settings.scss */ "./scss/settings.scss");
+/* harmony import */ var _scss_fonts_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../scss/fonts.scss */ "./scss/fonts.scss");
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
 /* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");

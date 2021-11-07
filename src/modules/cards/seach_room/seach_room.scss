@@ -45,7 +45,9 @@
         
     
     }
-
+    &-guest {
+        position: relative;
+    }
     &-guest-head {
         font-family: 'MontserratBold';
         text-transform: uppercase;
@@ -56,6 +58,7 @@
 
     }
     &-buttonlong {
+        position: relative;
         margin-top: -125px;
     }
 }

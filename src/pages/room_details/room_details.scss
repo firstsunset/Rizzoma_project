@@ -13,43 +13,59 @@ body {
 }
 
 .room-details-pic {
-   // max-width: 100%;
-    height: auto;
+    max-width: 100%;
+    height: 485px;
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
    // background-image: url(image4.png);
     //background-position: center;
    
     
-   &-group {
+   &-group1 {
        display: flex;
        flex-direction: column;
        max-width: 100%;
        height: auto;
 
        &-pic1 {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-       }
-
-       &-pic2 {
-        max-width: 100%;
-        height: 243px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-       }
-
-       &-pic3 {
-        max-width: 100%;
-        height: 243px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-       }
+            max-width: 981px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            }
    }
+
+   &-group2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        align-content: stretch;
+        max-width: 100%;
+        height: auto;
+
+        &-pic1 {
+           
+            max-width: 100%;
+            height: 243px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+
+        &-pic2 {
+            max-width: 100%;
+            height: 243px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+       
+        }   
+    }
 }
 
 .room-details-content {

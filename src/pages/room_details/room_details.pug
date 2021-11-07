@@ -15,12 +15,12 @@ html(lang="ru")
   body 
     include ../../modules/header/header
     .room-details-pic
-      .room-details-pic-group
-        img(src=require("./image1.svg"), alt="first photo").room-details-pic-group-pic1
-      .room-details-pic-group 
-        img(src=require("./image2.svg"), width="100%", alt="second photo").room-details-pic-group-pic2 
-        img(src=require("./image3.svg"), alt="third photo").room-details-pic-group-pic3
-    .container
+      .room-details-pic-group1
+        img.room-details-pic-group1-pic1(src=require("./image1.svg"), alt="first photo")
+      .room-details-pic-group2 
+        img(src=require("./image2.svg"), alt="second photo").room-details-pic-group2-pic1 
+        img(src=require("./image3.svg"), alt="third photo").room-details-pic-group2-pic2
+    .wrapper
       .room-details-content
         .room-details-content-column
           .room-details-content-column-block

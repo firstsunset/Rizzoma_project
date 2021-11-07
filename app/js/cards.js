@@ -33533,10 +33533,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/cards/cards.scss":
-/*!********************************!*\
-  !*** ./pages/cards/cards.scss ***!
-  \********************************/
+/***/ "./scss/fonts.scss":
+/*!*************************!*\
+  !*** ./scss/fonts.scss ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33546,10 +33546,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/cards/fonts.scss":
-/*!********************************!*\
-  !*** ./pages/cards/fonts.scss ***!
-  \********************************/
+/***/ "./scss/settings.scss":
+/*!****************************!*\
+  !*** ./scss/settings.scss ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33559,10 +33559,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./pages/cards/settings.scss":
-/*!***********************************!*\
-  !*** ./pages/cards/settings.scss ***!
-  \***********************************/
+/***/ "./ui_kit/cards/cards.scss":
+/*!*********************************!*\
+  !*** ./ui_kit/cards/cards.scss ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33668,19 +33668,19 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-/*!******************************!*\
-  !*** ./pages/cards/cards.js ***!
-  \******************************/
+/*!*******************************!*\
+  !*** ./ui_kit/cards/cards.js ***!
+  \*******************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.scss */ "./pages/cards/cards.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fonts.scss */ "./pages/cards/fonts.scss");
-/* harmony import */ var _settings_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./settings.scss */ "./pages/cards/settings.scss");
+/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.scss */ "./ui_kit/cards/cards.scss");
+/* harmony import */ var _scss_fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../scss/fonts.scss */ "./scss/fonts.scss");
+/* harmony import */ var _scss_settings_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../scss/settings.scss */ "./scss/settings.scss");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../node_modules/@fortawesome/fontawesome-free/js/all */ "../node_modules/@fortawesome/fontawesome-free/js/all.js");
-/* harmony import */ var _node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/all */ "../node_modules/@fortawesome/fontawesome-free/js/all.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_cards_registration_registration__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/cards/registration/registration */ "./modules/cards/registration/registration.js");
 /* harmony import */ var _modules_cards_signin_signin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/cards/signin/signin */ "./modules/cards/signin/signin.js");
 /* harmony import */ var _modules_cards_seach_room_seach_room__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/seach_room/seach_room */ "./modules/cards/seach_room/seach_room.js");
