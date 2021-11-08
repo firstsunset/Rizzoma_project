@@ -9,7 +9,6 @@ body {
     height: auto;
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
 .room-details-pic {
@@ -19,8 +18,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-   // background-image: url(image4.png);
-    //background-position: center;
    
     
    &-group1 {
@@ -72,20 +69,26 @@ body {
     max-width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 70px;
     margin-top: 70px;
     margin-bottom: 70px;
     
     &-column {
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         gap: 30px;
 
         &-block {
+            max-width: 100%;
             display: flex;
             flex-direction: row;
             gap: 70px;
+
+            &-group {
+                max-width: 100%;
+            }
 
             &-group-heading {
                 font-family: 'MontserratBold';
@@ -104,8 +107,7 @@ body {
 
                 }
                 &-count {
-                    margin-top: -23px;
-                    text-align: right;
+                    margin-top: -20px;
                     font-family: 'MontserratRegular';
                     font-size: 14px;
                     line-height: 14px;
@@ -127,6 +129,70 @@ body {
         
     }
 }
+.room-details-line {
+    max-width: 100%;
+    height: 0px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .room-details-pic {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+    .room-details-pic-group2 {
+        display: flex;
+        flex-direction: row;
+    }
+    .room-details-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .room-details-content-column-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
 
+        &-group {
+            margin-right: 10px;
+        }
+    }
+    
 
+ }
+ 
+ @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .room-details-pic {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 100px;
+    }
+    
+    .room-details-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .room-details-content-column-block {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        &-group {
+            margin-right: 10px;
+
+            &-heading-count {
+                margin-top: 20px;
+            }
+
+        }
+    }
+    
+    
+ }

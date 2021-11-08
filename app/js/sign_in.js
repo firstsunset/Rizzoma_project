@@ -4516,24 +4516,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/header-login/header-login.js":
-/*!**********************************************!*\
-  !*** ./modules/header-login/header-login.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _header_login_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-login.scss */ "./modules/header-login/header-login.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/header-login/fonts.scss");
-
-
-
-
-/***/ }),
-
 /***/ "./modules/header/header.js":
 /*!**********************************!*\
   !*** ./modules/header/header.js ***!
@@ -21831,32 +21813,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/header-login/fonts.scss":
-/*!*****************************************!*\
-  !*** ./modules/header-login/fonts.scss ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/header-login/header-login.scss":
-/*!************************************************!*\
-  !*** ./modules/header-login/header-login.scss ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./modules/header/fonts.scss":
 /*!***********************************!*\
   !*** ./modules/header/fonts.scss ***!
@@ -22070,9 +22026,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
-/* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");
-/* harmony import */ var _modules_cards_signin_signin__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/signin/signin */ "./modules/cards/signin/signin.js");
-
+/* harmony import */ var _modules_cards_signin_signin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/cards/signin/signin */ "./modules/cards/signin/signin.js");
 
 
 

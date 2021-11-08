@@ -1,3 +1,4 @@
+include ../../modules/header/header
 include ../../modules/cards/datepicker/datepicker
 include ../../modules/mixin/dropdown_guests/dropdown_guests
 include ../../modules/mixin/range_slider/range_slider
@@ -18,7 +19,7 @@ html(lang="ru")
 
 
   body 
-    include ../../modules/header/header
+    +header
     .wrapper
         .searchroom
             .searchroom-firstcolumn 
@@ -63,6 +64,7 @@ html(lang="ru")
                   +type_room({ number: '352', cost: '5 000₽', count: '3', rate: '55' })(class='type-room-picture12')
               .searchroom-secondcolumn-pagination
                 +pagination
+    .searchroom-line
     include ../../modules/footer/footer
     script(type='text/javascript') 
       include ../../modules/mixin/checkbox_list/checkbox_list_script.js

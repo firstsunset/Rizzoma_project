@@ -8,7 +8,7 @@ body {
     align-items: center;
 }
 
-.searchroom{
+.searchroom {
     background: transparent;
     display: flex;
     flex-direction: row;
@@ -90,5 +90,10 @@ body {
             margin-left: 296px;
         }
 
+    }
+    &-line {
+        max-width: 100%;
+        height: 0px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
     }
 }

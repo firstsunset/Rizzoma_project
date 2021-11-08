@@ -6,12 +6,145 @@
     <title>Room details</title>
   <script defer src="js/room_details.js"></script><link href="./css/room_details.css" rel="stylesheet"></head>
   <body> 
+    <div class="header"> 
+      <div class="wrapper"> 
+        <div class="header-body">
+          <div class="header-logo"> <a href="/mock-address/change-me"><img src="images/logo37dcbdff522b4259045e.svg" alt="Logo"></a></div>
+          <div class="nav">
+            <div class="nav-item"> <a class="nav-link" href="/mock-address/change-me">О нас </a></div>
+            <div class="nav-item nav-item-dropdown">
+              <div class="nav-item-dropdown-heading"><a class="nav-link" href="/mock-address/change-me">Услуги </a><span class="nav-arrow">expand_more</span></div>
+              <div class="nav-item-dropdown-content"><a class="nav-link-dropdown" href="/mock-address/change-me"> </a><a class="nav-link-dropdown" href="/mock-address/change-me"> </a><a class="nav-link-dropdown" href="/mock-address/change-me"> </a></div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-item-text"><a class="nav-link" href="/mock-address/change-me">Вакансии</a></div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-item-text"><a class="nav-link" href="/mock-address/change-me">Новости</a></div>
+            </div>
+            <div class="nav-item nav-item-dropdown">
+              <div class="nav-item-dropdown-heading"><a class="nav-link" href="/mock-address/change-me">Соглашения </a><span class="nav-arrow">expand_more</span></div>
+              <div class="nav-item-dropdown-content"><a class="nav-link-dropdown" href="/mock-address/change-me"> </a><a class="nav-link-dropdown" href="/mock-address/change-me"> </a><a class="nav-link-dropdown" href="/mock-address/change-me"> </a></div>
+            </div>
+            <div class="headerbtn_signin">
+              <button class="button  button_bordercolor_header" type="bordercolor_header" onclick="window.location.href = &quot;sign_in.html&quot;">
+                <div class="button__wrapper"> <span class="button__text">войти</span>
+                </div>
+              </button>
+            </div>
+            <div class="headerbtn_registration"> 
+              <button class="button  button_long_header" type="long_header" onclick="window.location.href = &quot;registration.html&quot;">
+                <div class="button__wrapper"> <span class="button__text">зарегистрироваться</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="room-details-pic">
       <div class="room-details-pic-group1"><img class="room-details-pic-group1-pic1" src="images/image1e8552ea51540880b4e9e.svg" alt="first photo"></div>
-      <div class="room-details-pic-group2"> <img class="room-details-pic-group2-pic1" src="images/image21eca77245b48ac622aed.svg" alt="second photo"><img class="room-details-pic-group2-pic2" src="images/image384b0544e55c3fa593978.svg" alt="third photo"></div>
+      <div class="room-details-pic-group2"> <img class="room-details-pic-group2-pic1" src="images/image26e5a8c963471307ccedd.png" alt="second photo"><img class="room-details-pic-group2-pic2" src="images/image384b0544e55c3fa593978.svg" alt="third photo"></div>
     </div>
     <div class="wrapper">
       <div class="room-details-content">
+        <div class="room-details-content-column">
+          <div class="room-details-content-column-card">
+            <div class="room-number">
+              <div class="room-number-item">
+                <div class="room-number-head">
+                  <div class="room-number-head-number">№ <span>888</span></div>
+                  <input class="room-number-head-type" type="text" placeholder="люкс"><span class="room-number-head-cost">9 990₽<span>в сутки</span></span>
+                </div>
+                <div class="room-number-date">
+                  <div class="room-number-date-row"> 
+                    <div class="room-number-date-row-head">Прибытие </div>
+                    <div class="room-number-date-row-head">Выезд</div>
+                  </div>
+                  <div class="room-number-date-datepicker"> </div>
+                  <div class="datepicker-block">
+                    <div class="datepicker-block-lable">
+                      <input class="datepicker-here" id="start_one" type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
+                      <button class="datepicker-btn">expand_more  </button>
+                    </div>
+                    <div class="datepicker-block-lable">
+                      <input class="date-end" id="end_one" type="text" placeholder="ДД.ММ.ГГГГ">
+                      <button class="datepicker-btn">expand_more </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="room-number-guest">
+                  <div class="room-number-guest-head">Гости</div>
+                  <div class="wrap">
+                    <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей">
+                      <button class="dropdown__dropbtn">expand_more</button>
+                      <div class="dropdown__heading"></div>
+                      <div class="dropdown__content">
+                        <div class="dropdown__items">
+                          <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
+                            <div class="item-quantity__controls">
+                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                              <button class="item-quantity__button item-quantity__button_plus">+</button>
+                            </div>
+                          </div>
+                          <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
+                            <div class="item-quantity__controls">
+                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                              <button class="item-quantity__button item-quantity__button_plus">+</button>
+                            </div>
+                          </div>
+                          <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
+                            <div class="item-quantity__controls">
+                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                              <button class="item-quantity__button item-quantity__button_plus">+</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dropdown__buttons">
+                          <button class="dropdown__clear">Очистить</button>
+                          <button class="dropdown__apply">Применить </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="room-number-table">
+                  <table> 
+                    <tr class="room-number-table-line"> 
+                      <td class="room-number-table-line-box">9 990₽ х 4 суток</td>
+                      <td></td>
+                      <td class="room-number-table-line-right">39 960₽</td>
+                    </tr>
+                    <tr class="room-number-table-line"> 
+                      <td class="room-number-table-line-box">Сбор за услуги: скидка 2 179₽</td>
+                      <td>
+                        <input class="room-number-table-circle room-number-table-circle" type="text" placeholder="i">
+                      </td>
+                      <td class="room-number-table-line-right">0₽</td>
+                    </tr>
+                    <tr class="room-number-table-line">
+                      <td class="room-number-table-line-box">Сбор за дополнительные услуги</td>
+                      <td>
+                        <input class="room-number-table-circle room-number-table-circle" type="text" placeholder="i">
+                      </td>
+                      <td class="room-number-table-line-right">300₽</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="room-number-total"> 
+                  <div class="room-number-total-text">Итого</div>
+                  <div class="room-number-total-rect"> </div>
+                  <div class="room-number-total-text">38 081₽</div>
+                </div>
+                <div class="room-number-button"> </div>
+                <button class="button  button_long" type="long" onclick="window.location.href = undefined">
+                  <div class="button__wrapper"> <span class="button__text">забронировать</span><span class="button__arrow material-icons">arrow_forward</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="room-details-content-column">
           <div class="room-details-content-column-block">
             <div class="room-details-content-column-block-group">
@@ -118,7 +251,8 @@
           </div>
           <div class="room-details-content-column-block">
             <div class="room-details-content-column-block-group">
-              <div class="room-details-content-column-block-group-heading">Отзывы посетителей номера
+              <div class="room-details-content-column-block-group-heading"> 
+                <div class="room-details-content-column-block-group-heading-text">Отзывы посетителей номера</div>
                 <div class="room-details-content-column-block-group-heading-count">2 отзыва</div>
               </div>
               <div class="room-details-content-column-block-group-feedback">
@@ -203,105 +337,9 @@
             </div>
           </div>
         </div>
-        <div class="room-details-content-column">
-          <div class="room-details-content-column-card">
-            <div class="room-number">
-              <div class="room-number-item">
-                <div class="room-number-head">
-                  <div class="room-number-head-number">№ <span>888</span></div>
-                  <input class="room-number-head-type" type="text" placeholder="люкс"><span class="room-number-head-cost">9 990₽<span>в сутки</span></span>
-                </div>
-                <div class="room-number-date">
-                  <div class="room-number-date-row"> 
-                    <div class="room-number-date-row-head">Прибытие </div>
-                    <div class="room-number-date-row-head">Выезд</div>
-                  </div>
-                  <div class="room-number-date-datepicker"> </div>
-                  <div class="datepicker-block">
-                    <div class="datepicker-block-lable">
-                      <input class="datepicker-here" id="start_one" type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
-                      <button class="datepicker-btn">expand_more  </button>
-                    </div>
-                    <div class="datepicker-block-lable">
-                      <input class="date-end" id="end_one" type="text" placeholder="ДД.ММ.ГГГГ">
-                      <button class="datepicker-btn">expand_more </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="room-number-guest">
-                  <div class="room-number-guest-head">Гости</div>
-                  <div class="wrap">
-                    <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей">
-                      <button class="dropdown__dropbtn">expand_more</button>
-                      <div class="dropdown__heading"></div>
-                      <div class="dropdown__content">
-                        <div class="dropdown__items">
-                          <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
-                            <div class="item-quantity__controls">
-                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-                              <button class="item-quantity__button item-quantity__button_plus">+</button>
-                            </div>
-                          </div>
-                          <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
-                            <div class="item-quantity__controls">
-                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-                              <button class="item-quantity__button item-quantity__button_plus">+</button>
-                            </div>
-                          </div>
-                          <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
-                            <div class="item-quantity__controls">
-                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-                              <button class="item-quantity__button item-quantity__button_plus">+</button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="dropdown__buttons">
-                          <button class="dropdown__clear">Очистить</button>
-                          <button class="dropdown__apply">Применить </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="room-number-table">
-                  <table> 
-                    <tr class="room-number-table-line"> 
-                      <td class="room-number-table-line-box">9 990₽ х 4 суток</td>
-                      <td></td>
-                      <td class="room-number-table-line-right">39 960₽</td>
-                    </tr>
-                    <tr class="room-number-table-line"> 
-                      <td class="room-number-table-line-box">Сбор за услуги: скидка 2 179₽</td>
-                      <td>
-                        <input class="room-number-table-circle room-number-table-circle" type="text" placeholder="i">
-                      </td>
-                      <td class="room-number-table-line-right">0₽</td>
-                    </tr>
-                    <tr class="room-number-table-line">
-                      <td class="room-number-table-line-box">Сбор за дополнительные услуги</td>
-                      <td>
-                        <input class="room-number-table-circle room-number-table-circle" type="text" placeholder="i">
-                      </td>
-                      <td class="room-number-table-line-right">300₽</td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="room-number-total"> 
-                  <div class="room-number-total-text">Итого</div>
-                  <div class="room-number-total-rect"> </div>
-                  <div class="room-number-total-text">38 081₽</div>
-                </div>
-                <div class="room-number-button"> </div>
-                    <button class="button  button_long" type="long" onclick="window.location.href = undefined">
-                      <div class="button__wrapper"> <span class="button__text">забронировать</span><span class="button__arrow material-icons">arrow_forward</span>
-                      </div>
-                    </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="room-details-line"></div>
     <footer> 
       <div class="footer"> 
         <div class="footer_section-1">

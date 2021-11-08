@@ -4586,24 +4586,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/header-login/header-login.js":
-/*!**********************************************!*\
-  !*** ./modules/header-login/header-login.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _header_login_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-login.scss */ "./modules/header-login/header-login.scss");
-/* harmony import */ var _fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fonts.scss */ "./modules/header-login/fonts.scss");
-
-
-
-
-/***/ }),
-
 /***/ "./modules/header/header.js":
 /*!**********************************!*\
   !*** ./modules/header/header.js ***!
@@ -33318,32 +33300,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./modules/header-login/fonts.scss":
-/*!*****************************************!*\
-  !*** ./modules/header-login/fonts.scss ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./modules/header-login/header-login.scss":
-/*!************************************************!*\
-  !*** ./modules/header-login/header-login.scss ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./modules/header/fonts.scss":
 /*!***********************************!*\
   !*** ./modules/header/fonts.scss ***!
@@ -33635,14 +33591,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_fonts_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../scss/fonts.scss */ "./scss/fonts.scss");
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../modules/footer/footer */ "./modules/footer/footer.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../modules/header/header */ "./modules/header/header.js");
-/* harmony import */ var _modules_header_login_header_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/header-login/header-login */ "./modules/header-login/header-login.js");
-/* harmony import */ var _modules_cards_room_number_room_number__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/room_number/room_number */ "./modules/cards/room_number/room_number.js");
-/* harmony import */ var _modules_mixin_icontext_list_icontext_list__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/mixin/icontext_list/icontext_list */ "./modules/mixin/icontext_list/icontext_list.js");
-/* harmony import */ var _modules_mixin_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/mixin/feedback/feedback */ "./modules/mixin/feedback/feedback.js");
-/* harmony import */ var _modules_mixin_bullet_list_bullet_list__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/bullet_list/bullet_list */ "./modules/mixin/bullet_list/bullet_list.js");
-/* harmony import */ var _modules_mixin_pie_chart_pie_chart__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/mixin/pie_chart/pie_chart */ "./modules/mixin/pie_chart/pie_chart.js");
+/* harmony import */ var _modules_cards_room_number_room_number__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../modules/cards/room_number/room_number */ "./modules/cards/room_number/room_number.js");
+/* harmony import */ var _modules_mixin_icontext_list_icontext_list__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/mixin/icontext_list/icontext_list */ "./modules/mixin/icontext_list/icontext_list.js");
+/* harmony import */ var _modules_mixin_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/mixin/feedback/feedback */ "./modules/mixin/feedback/feedback.js");
+/* harmony import */ var _modules_mixin_bullet_list_bullet_list__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/mixin/bullet_list/bullet_list */ "./modules/mixin/bullet_list/bullet_list.js");
+/* harmony import */ var _modules_mixin_pie_chart_pie_chart__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/mixin/pie_chart/pie_chart */ "./modules/mixin/pie_chart/pie_chart.js");
  //import $ from 'jquery';
-
 
 
 

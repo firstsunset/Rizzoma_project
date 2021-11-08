@@ -1,3 +1,4 @@
+include ../../modules/header/header
 include ../../modules/cards/room_number/room_number
 include ../../modules/mixin/icontext_list/icontext_list
 include ../../modules/mixin/feedback/feedback
@@ -13,15 +14,18 @@ html(lang="ru")
 
 
   body 
-    include ../../modules/header/header
+    +header
     .room-details-pic
       .room-details-pic-group1
         img.room-details-pic-group1-pic1(src=require("./image1.svg"), alt="first photo")
       .room-details-pic-group2 
-        img(src=require("./image2.svg"), alt="second photo").room-details-pic-group2-pic1 
+        img(src=require("./image2.png"), alt="second photo").room-details-pic-group2-pic1 
         img(src=require("./image3.svg"), alt="third photo").room-details-pic-group2-pic2
     .wrapper
       .room-details-content
+        .room-details-content-column
+          .room-details-content-column-card
+            +room_number 
         .room-details-content-column
           .room-details-content-column-block
             .room-details-content-column-block-group
@@ -34,7 +38,8 @@ html(lang="ru")
                 +piechart  
           .room-details-content-column-block
             .room-details-content-column-block-group
-              .room-details-content-column-block-group-heading Отзывы посетителей номера
+              .room-details-content-column-block-group-heading 
+                .room-details-content-column-block-group-heading-text Отзывы посетителей номера
                 .room-details-content-column-block-group-heading-count 2 отзыва
               .room-details-content-column-block-group-feedback
                 +feedback
@@ -46,7 +51,5 @@ html(lang="ru")
             .room-details-content-column-block-group
               .room-details-content-column-block-group-heading Отмена
               .room-details-content-column-block-group-cancel Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-        .room-details-content-column
-          .room-details-content-column-card
-            +room_number 
+    .room-details-line
     include ../../modules/footer/footer
