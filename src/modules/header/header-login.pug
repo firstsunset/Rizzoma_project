@@ -1,13 +1,8 @@
-include ../../modules/mixin/button/button
-mixin header(options) 
-    -
-        const {
-           username = '' 
-        } = options || {}
-    .header 
-        .wrapper 
-            .header-body
-                .header-logo 
+mixin header_login 
+    .header-login 
+        .wrapper
+            .header-login-body
+                .header_logo 
                     a(href="/mock-address/change-me"): img(src=require("./logo.svg"), alt="Logo")
                 .nav
                     .nav-item 
@@ -33,12 +28,7 @@ mixin header(options)
                         .nav-item-dropdown-content
                             a(href="/mock-address/change-me").nav-link-dropdown 
                             a(href="/mock-address/change-me").nav-link-dropdown  
-                            a(href="/mock-address/change-me").nav-link-dropdown 
-                    if username !== ''
-                        .nav-item.nav-item-line
-                        .nav-item.nav-item-username= username
-                    else
-                        .headerbtn_signin
-                            +button({ type: 'bordercolor_header', text: 'войти', isHovered: false, link: '"sign_in.html"', })
-                        .headerbtn_registration 
-                            +button({ type: 'long_header', text: 'зарегистрироваться', link: '"registration.html"' })
+                            a(href="/mock-address/change-me").nav-link-dropdown
+                    .nav-item
+                    .nav-item Юлий Цезарь
+                    

@@ -1,4 +1,6 @@
-
+include ../../modules/header/header
+include ../../modules/footer/footer_mobile
+include ../../modules/header/header-login
 doctype html
 html(lang="ru")
   head
@@ -7,8 +9,14 @@ html(lang="ru")
  
   body
     div.logogroup 
-        a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group") 
-    include ../../modules/header/header
-    include ../../modules/footer/footer
- 
+        a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group")
+    .headers-footers-content 
+      .headers-footers-block   
+        +header
+      .headers-footers-block   
+        +header({username: 'Юлий Цезарь'}) 
+      .headers-footers-block
+        include ../../modules/footer/footer
+      .headers-footers-lastblock 
+        +footer_mobile
       

@@ -1775,7 +1775,6 @@ body {
   flex-direction: column;
   background-color: #FFFFFF;
   width: 100%;
-  border-top: 1px solid rgba(31, 32, 65, 0.25);
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   font-family: "MontserratRegular";
 }
@@ -1953,6 +1952,38 @@ body {
 
 path {
   fill: url(#Gradient-1);
+}
+
+.footer-mobile {
+  width: 768px;
+  height: 367px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.footer-mobile-firstgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-mobile-logo {
+  margin-bottom: 20px;
+}
+
+.footer-mobile-text {
+  margin-bottom: 25px;
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
@@ -2191,7 +2222,8 @@ path {
   width: 770px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 3px 0 3px 0;
@@ -2263,6 +2295,20 @@ path {
   background-color: #FFFFFF;
 }
 
+.nav-item-line {
+  width: 1px;
+  height: 30px;
+  background: rgba(31, 32, 65, 0.1);
+  padding-top: 0px;
+}
+
+.nav-item-username {
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
   .header {
     height: 100%;
@@ -2317,6 +2363,118 @@ path {
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/MaterialIcons-Regularb40b58088cbe69d8d205.svg) format("svg"), url(../fonts/MaterialIcons-Regular83bebaf37c09c7e1c3ee.woff) format("woff"), url(../fonts/MaterialIcons-Regular540dbc2786faa6a0c315.ttf) format("truetype");
+}
+/*!*****************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
+  \*****************************************************************************************************************************/
+.button {
+  display: block;
+  border: solid 2px transparent;
+  border-radius: 22px;
+  padding: 0.1667rem;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #FFFFFF inset;
+  cursor: pointer;
+  text-decoration-line: none;
+  width: 99px;
+  height: 44px;
+}
+.button:hover, .button.button_hovered {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+.button__wrapper {
+  display: flex;
+  padding: 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  height: 15px;
+}
+.button_default {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_bordercolor {
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor .button__wrapper {
+  background-color: white;
+}
+.button_bordercolor .button__text {
+  color: #BC9CFF;
+}
+.button_link {
+  padding: 0;
+  width: auto;
+  padding: 0;
+}
+.button_bordercolor_header {
+  width: 87px;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.button_bordercolor_header .button__text {
+  color: #BC9CFF;
+}
+.button.button_link {
+  background: white;
+}
+.button_link .button__wrapper {
+  padding: 0;
+}
+.button_link .button__text {
+  color: #BC9CFF;
+  line-height: 15px;
+}
+.button.button_link .button__wrapper .button__text:hover, .button.button_link.button_hovered .button__wrapper .button__text {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button_long.button {
+  width: 320px;
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button_long .button__wrapper {
+  padding: 0;
+  width: 100%;
+}
+.button_long .button__text {
+  width: 280px;
+  height: 15px;
+  margin-left: 20px;
+  margin-top: -30px;
+}
+.button_long_header.button {
+  width: 196px;
+  height: 34px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-shadow: none;
+  border: none;
+}
+.button__text {
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+  line-height: 3.3333rem;
+  white-space: nowrap;
+  height: 44px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.button__arrow {
+  font-family: "MaterialIcons";
+  color: white;
+  font-size: 24px;
+  margin-left: auto;
+  padding-right: 10px;
 }
 /*!***********************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/header-login/header-login.scss ***!
@@ -2736,118 +2894,6 @@ path {
   font-size: 14px;
   line-height: 18px;
   margin-right: 20px;
-}
-/*!*****************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
-  \*****************************************************************************************************************************/
-.button {
-  display: block;
-  border: solid 2px transparent;
-  border-radius: 22px;
-  padding: 0.1667rem;
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #FFFFFF inset;
-  cursor: pointer;
-  text-decoration-line: none;
-  width: 99px;
-  height: 44px;
-}
-.button:hover, .button.button_hovered {
-  background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-}
-.button__wrapper {
-  display: flex;
-  padding: 0px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 22px;
-  height: 15px;
-}
-.button_default {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-shadow: none;
-  border: none;
-}
-.button_bordercolor {
-  height: 44px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.button_bordercolor .button__wrapper {
-  background-color: white;
-}
-.button_bordercolor .button__text {
-  color: #BC9CFF;
-}
-.button_link {
-  padding: 0;
-  width: auto;
-  padding: 0;
-}
-.button_bordercolor_header {
-  width: 87px;
-  height: 34px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-.button_bordercolor_header .button__text {
-  color: #BC9CFF;
-}
-.button.button_link {
-  background: white;
-}
-.button_link .button__wrapper {
-  padding: 0;
-}
-.button_link .button__text {
-  color: #BC9CFF;
-  line-height: 15px;
-}
-.button.button_link .button__wrapper .button__text:hover, .button.button_link.button_hovered .button__wrapper .button__text {
-  color: rgba(31, 32, 65, 0.5);
-}
-.button_long.button {
-  width: 320px;
-  height: 44px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-shadow: none;
-  border: none;
-}
-.button_long .button__wrapper {
-  padding: 0;
-  width: 100%;
-}
-.button_long .button__text {
-  width: 280px;
-  height: 15px;
-  margin-left: 20px;
-  margin-top: -30px;
-}
-.button_long_header.button {
-  width: 196px;
-  height: 34px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-shadow: none;
-  border: none;
-}
-.button__text {
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  font-weight: bold;
-  color: white;
-  font-size: 12px;
-  line-height: 3.3333rem;
-  white-space: nowrap;
-  height: 44px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.button__arrow {
-  font-family: "MaterialIcons";
-  color: white;
-  font-size: 24px;
-  margin-left: auto;
-  padding-right: 10px;
 }
 
 /*# sourceMappingURL=registration.css.map*/
