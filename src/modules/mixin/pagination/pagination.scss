@@ -1,9 +1,9 @@
 .pagination {
-    width: 241px;
-    height: 41px;
+    max-width: 100%;
+    height: auto;
 }
 .pagination ul{
-    width: 261px;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 0;

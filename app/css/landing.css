@@ -1762,6 +1762,16 @@ body {
   padding-right: 0px;
 }
 
+.wrapper260 {
+  width: 100%;
+  height: 100%;
+  max-width: 266px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
 .container {
   width: 1440px;
   max-width: 100%;
@@ -1773,11 +1783,29 @@ body {
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .wrapper {
     max-width: 100%;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -2572,29 +2600,16 @@ path {
 .seach-room-buttonlong {
   position: relative;
   margin-top: -125px;
+  z-index: 1;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
   \*******************************************************************************************************************************************/
 .date-dropdown {
-  width: 320px;
-  height: 44px;
-  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-left: 30px;
-}
-.date-dropdown-block {
-  border: none;
-  width: 150px;
-  height: 44px;
-}
-.date-dropdown-input {
-  position: absolute;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  margin-bottom: 0px;
-  width: 148px;
+  max-width: 320px;
   height: 42px;
   font-family: "MontserratRegular";
   font-size: 14px;
@@ -2603,14 +2618,11 @@ path {
   border-radius: 4px;
   background: #FFFFFF;
   text-align: start;
-  cursor: pointer;
 }
-.date-dropdown-input:focus {
-  color: none;
-  color: red;
+.date-dropdown-text {
+  padding: 12px 0px 0px 15px;
 }
 .date-dropdown-btn {
-  position: relative;
   width: 40px;
   height: 40px;
   background: #FFFFFF;
@@ -2624,21 +2636,164 @@ path {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  left: 110px;
-  top: 0px;
-  background: transparent;
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
+  \***********************************************************************************************************************************************/
+.wrap {
+  width: 320px;
+  height: 205px;
+  position: relative;
 }
 
-.date-dropdown input[type=text] {
-  color: rgba(31, 32, 65, 0.75);
+.dropdown {
+  position: relative;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
+  width: 320px;
   font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: normal;
-  width: 133px;
-  height: 42px;
   font-size: 14px;
   line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+.dropdown__heading {
+  position: relative;
+  min-height: 44px;
   padding-left: 15px;
+  top: 15px;
+}
+.dropdown_hide > .dropdown__content {
+  display: none;
+}
+
+.dropdown__content {
+  height: 160px;
+  width: 320px;
+  padding-top: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background-color: #FFFFFF;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown__dropbtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+.dropdown__dropbtn-guest {
+  padding-left: 290px;
+}
+
+.dropdown__buttons {
+  max-width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+.dropdown__clear,
+.dropdown__apply {
+  padding: 0px;
+  width: 84px;
+  height: 15px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "MontserratBold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  text-align: start;
+}
+
+.dropdown__apply {
+  text-align: right;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
+  \*******************************************************************************************************************************************/
+.item-quantity {
+  max-width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
+  padding-right: 7px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-content: center;
+}
+
+.item-quantity__nam {
+  max-width: 83px;
+  height: 15px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
+}
+
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-quantity__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041;
 }
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/air-datepicker/dist/css/datepicker.min.css ***!
@@ -2965,161 +3120,6 @@ path {
   line-height: 15px;
   text-transform: uppercase;
   color: #BC9CFF;
-}
-/*!***********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
-  \***********************************************************************************************************************************************/
-.wrap {
-  width: 320px;
-  height: 205px;
-  position: relative;
-}
-
-.dropdown {
-  position: relative;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  margin-bottom: 20px;
-  width: 320px;
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  border-radius: 4px;
-  background: #FFFFFF;
-  text-align: start;
-}
-.dropdown__heading {
-  position: relative;
-  min-height: 44px;
-  padding-left: 15px;
-  top: 15px;
-}
-.dropdown_hide > .dropdown__content {
-  display: none;
-}
-
-.dropdown__content {
-  height: 160px;
-  width: 320px;
-  padding-top: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
-  background-color: #FFFFFF;
-  overflow: auto;
-}
-
-.dropdown__dropbtn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  color: rgba(31, 32, 65, 0.75);
-  border: none;
-  box-sizing: border-box;
-  padding: 2px;
-  cursor: pointer;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
-
-.dropdown__buttons {
-  width: 300px;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  padding-top: 13px;
-  padding-left: 10px;
-}
-
-.dropdown__clear,
-.dropdown__apply {
-  padding: 0px;
-  width: 84px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
-  text-align: start;
-}
-
-.dropdown__apply {
-  text-align: right;
-}
-/*!*******************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
-  \*******************************************************************************************************************************************/
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
-}
-
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-.item-quantity__controls {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
 }
 
 /*# sourceMappingURL=landing.css.map*/

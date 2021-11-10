@@ -1,6 +1,8 @@
-mixin toggle
-    .toggle
-        label.check-toggle
-            input.checkbox-toggle(type='checkbox')
-            span.checkmark-toggle
-        .toggle-text Получать спецпредложения
+mixin toggle(options)
+  -
+    const {
+      isChecked = false
+    } = options || {}
+  label.toggle
+    input.toggle__checkbox(type="checkbox", checked=isChecked) 
+    span.toggle__text Получать спецпредложения

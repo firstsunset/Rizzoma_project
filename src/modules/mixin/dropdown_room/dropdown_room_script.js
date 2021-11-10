@@ -20,7 +20,7 @@ function num2str(n, text_forms) {
       this.valueEl = this.el.querySelector(".item-quantity__value");
       this.value = parseInt(this.valueEl.innerHTML);
       this._checkButton();
-      this.heading = this.el.querySelector(".dropdown__heading");
+      this.heading = this.el.querySelector(".dropdown__room__heading");
     }
    _checkButton = () => {
       if (this.value === this.min) {
@@ -64,7 +64,7 @@ function num2str(n, text_forms) {
     constructor(element) {
       this.el = element;
       document.addEventListener('click',(e)=> !this.el.contains(e.target) && this.hide(e),)
-      this.el.onclick = this.show
+      this.el.onclick = this.show 
       this.default = this.el.dataset.default || "";
       this.words = this.el.dataset.words;
       this.items = Array.from(this.el.querySelectorAll(".item-quantity")).map(
@@ -78,21 +78,21 @@ function num2str(n, text_forms) {
         this._renderHeader()      
         this.hide(e)
       }));
-      this.heading = this.el.querySelector(".dropdown__heading");
+      this.heading = this.el.querySelector(".dropdown__room__heading");
       
       this._render();
      
       this._renderHeader();
       this.hide()
     }
-    hide = (e) => {
+     hide = (e) => {
       e !== undefined && e.stopPropagation()
-      !this.el.classList.contains("dropdown_hide") &&
-        this.el.classList.add("dropdown_hide");
+      !this.el.classList.contains("dropdown__room_hide") &&
+        this.el.classList.add("dropdown__room_hide");
     };
     show = () => {
-      this.el.classList.contains("dropdown_hide") &&
-        this.el.classList.remove("dropdown_hide");
+      this.el.classList.contains("dropdown__room_hide") &&
+        this.el.classList.remove("dropdown__room_hide");
     };
     getSum = () => {
       let sum = 0;
@@ -113,7 +113,7 @@ function num2str(n, text_forms) {
         item.setValue(0);
       });
     };
-   /* _checkClear = () => {
+    _checkClear = () => {
       const allMinimal = !this.items
         .map((item) => item.isMinimal())
         .includes(false);
@@ -124,7 +124,7 @@ function num2str(n, text_forms) {
         this.clear.style.display = 'inline-block';
       }
       this.clear && (this.clear.disabled = allMinimal);
-    };*/
+    };
     _checkApply = () => {
       const isAllZerro = !this.items.map((item)=>item.isZerro()).includes(false)
       if(this.apply&& isAllZerro){
@@ -150,5 +150,5 @@ function num2str(n, text_forms) {
     };
   }
   
-  const dropdowns = document.querySelectorAll(".dropdown");
+  const dropdowns = document.querySelectorAll(".dropdown__room");
   const Dropdowns = Array.from(dropdowns).map((dd) => new Dropdown(dd));

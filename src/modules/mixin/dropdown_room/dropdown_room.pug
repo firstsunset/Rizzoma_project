@@ -1,19 +1,22 @@
 include  ../dropdown_part/dropdown_part
+
+
 mixin dropdown_room(name,value,wordForms,min)
   -
     const data = {
       'data-words': wordForms || undefined,
       'data-min': min || undefined
     }
-  .wrap
-    .dropdown(data-default="Сколько комнат и кроватей?")
-      button.dropdown__dropbtn expand_more
-      .dropdown__heading
-      .dropdown__content
+  .wrap__room
+    .dropdown__room(data-default="Сколько комнат и кроватей?")
+      button.dropdown__dropbtn.dropdown__dropbtn-room expand_more
+      .dropdown__room__heading
+      .dropdown__room__content
         .dropdown__items
           +dropdown_part('Cпальня',2,'Спальня,Спальни,Спален',0)
           +dropdown_part('Кровать',2,'Кровать, Кровати, Кроватей',0)
           +dropdown_part('Ванные комнаты',0,'Ванная, Ванные, Ванных',0)
-      .dropdown__buttons
-        button.dropdown__clear Очистить
+      .dropdown__room__buttons
         button.dropdown__apply Применить
+        button.dropdown__clear Очистить
+        

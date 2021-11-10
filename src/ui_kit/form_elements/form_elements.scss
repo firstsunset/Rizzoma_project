@@ -4,81 +4,116 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 body {
     background-color: white;
     margin: 0;
-    padding: 0;
-    font-family: 'MontserratRegular';
+    padding: 0;   
    
-   
-}
-h3 {
-    font-family: 'MontserratBold';
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    margin-top: 3px;
-    font-size: 12px;
-    line-height: 15px;
 }
 
 .logogroup {
     width: 48px;
     height: 48px;
     margin-top: 30px;
-    margin-bottom: 62px;
     margin-left: 30px;
 }
 
 .form-elements {
     display: flex;
-    flex-direction: row;
-}
-.form-elements-first {
-    margin-right: 126px;
-    width: 320px;
-}
-.form-elements-second {
-    width: 100%;
-    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-}
-.form-elements-1 {
-    padding-bottom: 40px;
-}
-.form-elements-2 {
-    padding-bottom: 40px;
-}
-.form-elements-3 {
-    padding-bottom: 40px;
-}
-.form-elements-4 {
-    padding-bottom: 40px;
-}
-.like-button-group {
-    display: flex;
-    flex-direction: row;
-}
-.rate-button-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.buttons-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 30px;
+    
+
+    &-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 100px;
+        
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            &-firstgroup {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            &-secondgroup {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                &-date {
+                    display: inline-flex;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+
+        &-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        &-like {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        &-rate {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        &-button {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 15px;
+
+            &-row {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+        &-icon {
+            margin-right: 155px;
+        }
+
+    }
+
+    &-heading {
+        display: inline-flex;
+        justify-content: space-between;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+
+        &-bold {
+            font-family: 'MontserratBold';
+            color: #1F2041;
+        }
+
+        &-normal {
+            font-family: 'MontserratRegular';
+            color: rgba(31, 32, 65, 0.5);
+
+            &-material-icons {
+                font-family: 'MaterialIcons';
+            }
+        }
+    }
 }

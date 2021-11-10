@@ -1,3 +1,7 @@
 mixin text_field(text)
-    form.text_field_form(action="/mock-address/change-me")
-        input.text_field_input(type="text" name="emails" placeholder= text)
+    form.text-field-form(action="/mock-address/change-me")
+        input.text-field-input(type="text" name="emails" placeholder= text)
+
+mixin text_field_active(text)
+    form.text-field-form.text-field-form-hover(action="/mock-address/change-me")
+        input.text-field-input.text-field-input-hover(type="text" name="emails" placeholder= text)

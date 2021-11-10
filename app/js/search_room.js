@@ -665,6 +665,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dropdown_room_script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown_room_script */ "./modules/mixin/dropdown_room/dropdown_room_script.js");
 /* harmony import */ var _dropdown_room_script__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dropdown_room_script__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _dropdown_part_dropdown_part__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../dropdown_part/dropdown_part */ "./modules/mixin/dropdown_part/dropdown_part.js");
+/* harmony import */ var _dropdown_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../dropdown/dropdown */ "./modules/mixin/dropdown/dropdown.js");
+
 
 
 
@@ -761,7 +763,7 @@ var ItemQuantity = function ItemQuantity(element, onChangeCallback) {
 
   this._checkButton();
 
-  this.heading = this.el.querySelector(".dropdown__heading");
+  this.heading = this.el.querySelector(".dropdown__room__heading");
 };
 
 var Dropdown = function Dropdown(element) {
@@ -771,11 +773,11 @@ var Dropdown = function Dropdown(element) {
 
   _defineProperty(this, "hide", function (e) {
     e !== undefined && e.stopPropagation();
-    !_this2.el.classList.contains("dropdown_hide") && _this2.el.classList.add("dropdown_hide");
+    !_this2.el.classList.contains("dropdown__room_hide") && _this2.el.classList.add("dropdown__room_hide");
   });
 
   _defineProperty(this, "show", function () {
-    _this2.el.classList.contains("dropdown_hide") && _this2.el.classList.remove("dropdown_hide");
+    _this2.el.classList.contains("dropdown__room_hide") && _this2.el.classList.remove("dropdown__room_hide");
   });
 
   _defineProperty(this, "getSum", function () {
@@ -799,6 +801,20 @@ var Dropdown = function Dropdown(element) {
     _this2.items.forEach(function (item) {
       item.setValue(0);
     });
+  });
+
+  _defineProperty(this, "_checkClear", function () {
+    var allMinimal = !_this2.items.map(function (item) {
+      return item.isMinimal();
+    }).includes(false);
+
+    if (_this2.clear && allMinimal) {
+      _this2.clear.style.display = 'none';
+    } else {
+      _this2.clear.style.display = 'inline-block';
+    }
+
+    _this2.clear && (_this2.clear.disabled = allMinimal);
   });
 
   _defineProperty(this, "_checkApply", function () {
@@ -855,7 +871,7 @@ var Dropdown = function Dropdown(element) {
 
     _this2.hide(e);
   });
-  this.heading = this.el.querySelector(".dropdown__heading");
+  this.heading = this.el.querySelector(".dropdown__room__heading");
 
   this._render();
 
@@ -864,7 +880,7 @@ var Dropdown = function Dropdown(element) {
   this.hide();
 };
 
-var dropdowns = document.querySelectorAll(".dropdown");
+var dropdowns = document.querySelectorAll(".dropdown__room");
 var Dropdowns = Array.from(dropdowns).map(function (dd) {
   return new Dropdown(dd);
 });

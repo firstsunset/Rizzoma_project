@@ -22,4 +22,13 @@ mixin icontext-list
             .icontext-list-line
         .icontext-list-item 
             +icontext({ icon: 'whatshot', heading: 'Уют', words: 'Номер оснащён камином', })
+
+mixin icontext-list-form-el
+    .icontext-list
+        .icontext-list-item 
+            +icontext({ icon: 'location_city', heading: 'Комфорт', words: 'Шумопоглощающие стены', })
+            .icontext-list-line
+        .icontext-list-item 
+            +icontext({ icon: 'insert_emoticon', heading: 'Удобство', words: 'Окно в каждой из спален', })
+            .icontext-list-line
         

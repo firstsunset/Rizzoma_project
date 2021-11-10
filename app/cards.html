@@ -6,134 +6,128 @@
   <script defer src="js/cards.js"></script><link href="./css/cards.css" rel="stylesheet"></head>
   <body>
     <div class="logogroup"> <a href="#"><img src="images/logo_groupc2a93d6ae04f381031de.svg" alt="logo_group"></a></div>
-    <div class="container">
+    <div class="wrapper">
       <div class="cards-group">
-        <div class="cards-group-column">
-          <div class="card cards-seach-room"> 
-            <div class="seach-room"> 
-              <div class="seach-room-item">
-                <div class="seach-room-head">Найдём номера под ваши пожелания</div>
-                <div class="seach-room-date">
-                  <div class="seach-room-date-row"> 
-                    <div class="seach-room-date-row-head">Прибытие </div>
-                    <div class="seach-room-date-row-head">Выезд</div>
-                  </div>
-                  <div class="seach-room-date-datepicker"> </div>
-                  <div class="datepicker-block">
-                    <div class="datepicker-block-lable">
-                      <input class="datepicker-here" id="start_one" type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
-                      <button class="datepicker-btn">expand_more  </button>
-                    </div>
-                    <div class="datepicker-block-lable">
-                      <input class="date-end" id="end_one" type="text" placeholder="ДД.ММ.ГГГГ">
-                      <button class="datepicker-btn">expand_more </button>
-                    </div>
-                  </div>
+        <div class="seach-room"> 
+          <div class="seach-room-item">
+            <div class="seach-room-head">Найдём номера под ваши пожелания</div>
+            <div class="seach-room-date">
+              <div class="seach-room-date-row"> 
+                <div class="seach-room-date-row-head">Прибытие </div>
+                <div class="seach-room-date-row-head">Выезд</div>
+              </div>
+              <div class="seach-room-date-datepicker"> </div>
+              <div class="datepicker-block">
+                <div class="datepicker-block-lable">
+                  <input class="datepicker-here" id="start_one" type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
+                  <button class="datepicker-btn">expand_more  </button>
                 </div>
-                <div class="seach-room-guest">
-                  <div class="seach-room-guest-head">Гости</div>
-                  <div class="wrap">
-                    <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей">
-                      <button class="dropdown__dropbtn">expand_more</button>
-                      <div class="dropdown__heading"></div>
-                      <div class="dropdown__content">
-                        <div class="dropdown__items">
-                          <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
-                            <div class="item-quantity__controls">
-                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-                              <button class="item-quantity__button item-quantity__button_plus">+</button>
-                            </div>
-                          </div>
-                          <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
-                            <div class="item-quantity__controls">
-                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-                              <button class="item-quantity__button item-quantity__button_plus">+</button>
-                            </div>
-                          </div>
-                          <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
-                            <div class="item-quantity__controls">
-                              <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
-                              <button class="item-quantity__button item-quantity__button_plus">+</button>
-                            </div>
-                          </div>
+                <div class="datepicker-block-lable">
+                  <input class="date-end" id="end_one" type="text" placeholder="ДД.ММ.ГГГГ">
+                  <button class="datepicker-btn">expand_more </button>
+                </div>
+              </div>
+            </div>
+            <div class="seach-room-guest">
+              <div class="seach-room-guest-head">Гости</div>
+              <div class="wrap">
+                <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей">
+                  <button class="dropdown__dropbtn dropdown__dropbtn-guest">expand_more</button>
+                  <div class="dropdown__heading"></div>
+                  <div class="dropdown__content">
+                    <div class="dropdown__items">
+                      <div class="item-quantity"><span class="item-quantity__nam">Взрослые</span>
+                        <div class="item-quantity__controls">
+                          <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                          <button class="item-quantity__button item-quantity__button_plus">+</button>
                         </div>
-                        <div class="dropdown__buttons">
-                          <button class="dropdown__clear">Очистить</button>
-                          <button class="dropdown__apply">Применить </button>
+                      </div>
+                      <div class="item-quantity"><span class="item-quantity__nam">Дети</span>
+                        <div class="item-quantity__controls">
+                          <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                          <button class="item-quantity__button item-quantity__button_plus">+</button>
+                        </div>
+                      </div>
+                      <div class="item-quantity"><span class="item-quantity__nam">Младенцы</span>
+                        <div class="item-quantity__controls">
+                          <button class="item-quantity__button item-quantity__button_minus">-</button><span class="item-quantity__value">0</span>
+                          <button class="item-quantity__button item-quantity__button_plus">+</button>
                         </div>
                       </div>
                     </div>
+                    <div class="dropdown__buttons">
+                      <button class="dropdown__clear">Очистить</button>
+                      <button class="dropdown__apply">Применить </button>
+                    </div>
                   </div>
                 </div>
-                <div class="seach-room-buttonlong"> </div>
-                <button class="button  button_long" type="long" onclick="window.location.href = &quot;search_room.html&quot;">
-                  <div class="button__wrapper"> <span class="button__text">Подобрать номер</span><span class="button__arrow material-icons">arrow_forward</span>
-                  </div>
-                </button>
               </div>
             </div>
+            <div class="seach-room-buttonlong"> 
+              <button class="button  button_long" type="long" onclick="window.location.href = &quot;search_room.html&quot;">
+                <div class="button__wrapper"> <span class="button__text">Подобрать номер</span><span class="button__arrow material-icons">arrow_forward</span>
+                </div>
+              </button>
+            </div>
           </div>
-          <div class="card cards-registration"> 
-            <div class="registration">
-              <div class="registration-item">
-                <div class="registration-head">Регистрация аккаунта</div>
-                <div class="registration-firstname"> </div>
-                <form class="text_field_form" action="/mock-address/change-me">
-                  <input class="text_field_input" type="text" name="emails" placeholder="Имя">
-                </form>
-                <div class="registration-lastname"> </div>
-                <form class="text_field_form" action="/mock-address/change-me">
-                  <input class="text_field_input" type="text" name="emails" placeholder="Фамилия">
-                </form>
-                <div class="registration-radio"> </div>
-                <div class="radio">
-                  <div class="radio-group">
-                    <label class="check-radio">
-                      <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
-                    </label>
-                    <div class="radio-group-text">Мужчина</div>
-                  </div>
-                  <div class="radio-group">
-                    <label class="check-radio">
-                      <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
-                    </label>
-                    <div class="radio-group-text">Женщина</div>
-                  </div>
-                </div>
-                <div class="registration-date">Дата рождения               </div>
-                <form class="text_field_form" action="/mock-address/change-me">
-                  <input class="text_field_input" type="text" name="emails" placeholder="ДД.ММ.ГГГГ">
-                </form>
-                <div class="registration-sign"> 
-                  <div class="registration-sign-head">Данные для входа в сервис</div>
-                  <form class="text_field_form" action="/mock-address/change-me">
-                    <input class="text_field_input" type="text" name="emails" placeholder="Email">
-                  </form>
-                  <div class="registration-sign-password"> </div>
-                  <form class="text_field_form" action="/mock-address/change-me">
-                    <input class="text_field_input" type="text" name="emails" placeholder="Пароль">
-                  </form>
-                </div>
-                <div class="registration-toggle"> </div>
-                <div class="toggle">
-                  <label class="check-toggle">
-                    <input class="checkbox-toggle" type="checkbox"><span class="checkmark-toggle"></span>
+        </div>
+        <div class="card cards-registration"> 
+          <div class="registration">
+            <div class="registration-item">
+              <div class="registration-head">Регистрация аккаунта</div>
+              <div class="registration-firstname"> </div>
+              <form class="text-field-form" action="/mock-address/change-me">
+                <input class="text-field-input" type="text" name="emails" placeholder="Имя">
+              </form>
+              <div class="registration-lastname"> </div>
+              <form class="text-field-form" action="/mock-address/change-me">
+                <input class="text-field-input" type="text" name="emails" placeholder="Фамилия">
+              </form>
+              <div class="registration-radio"> </div>
+              <div class="radio">
+                <div class="radio-group">
+                  <label class="check-radio">
+                    <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
                   </label>
-                  <div class="toggle-text">Получать спецпредложения</div>
+                  <div class="radio-group-text">Мужчина</div>
                 </div>
-                <div class="registration-buttonlong"> </div>
-                <button class="button  button_long" type="long" onclick="window.location.href = undefined">
-                  <div class="button__wrapper"> <span class="button__text">перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span>
+                <div class="radio-group">
+                  <label class="check-radio">
+                    <input class="checkbox-radio" id="one" type="radio" name="radio" checked="checked"><span class="checkmark-radio"></span>
+                  </label>
+                  <div class="radio-group-text">Женщина</div>
+                </div>
+              </div>
+              <div class="registration-date">Дата рождения               </div>
+              <form class="text-field-form" action="/mock-address/change-me">
+                <input class="text-field-input" type="text" name="emails" placeholder="ДД.ММ.ГГГГ">
+              </form>
+              <div class="registration-sign"> 
+                <div class="registration-sign-head">Данные для входа в сервис</div>
+                <form class="text-field-form" action="/mock-address/change-me">
+                  <input class="text-field-input" type="text" name="emails" placeholder="Email">
+                </form>
+                <div class="registration-sign-password"> </div>
+                <form class="text-field-form" action="/mock-address/change-me">
+                  <input class="text-field-input" type="text" name="emails" placeholder="Пароль">
+                </form>
+              </div>
+              <div class="registration-toggle"> </div>
+              <label class="toggle">
+                <input class="toggle__checkbox" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+              </label>
+              <div class="registration-buttonlong"> </div>
+              <button class="button  button_long" type="long" onclick="window.location.href = undefined">
+                <div class="button__wrapper"> <span class="button__text">перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span>
+                </div>
+              </button>
+              <div class="registration-lastgroup"> 
+                <div class="registration-toxin">Уже есть аккаунт на Toxin </div>
+                <div class="ragistration-button"></div>
+                <button class="button  button_bordercolor" type="bordercolor" onclick="window.location.href = undefined">
+                  <div class="button__wrapper"> <span class="button__text">Войти</span>
                   </div>
                 </button>
-                <div class="registration-lastgroup"> 
-                  <div class="registration-toxin">Уже есть аккаунт на Toxin </div>
-                  <div class="ragistration-button"></div>
-                  <button class="button  button_bordercolor" type="bordercolor" onclick="window.location.href = undefined">
-                    <div class="button__wrapper"> <span class="button__text">Войти</span>
-                    </div>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -167,7 +161,7 @@
                   <div class="room-number-guest-head">Гости</div>
                   <div class="wrap">
                     <div class="dropdown" data-words="Гость,Гостя,Гостей" data-default="Сколько гостей">
-                      <button class="dropdown__dropbtn">expand_more</button>
+                      <button class="dropdown__dropbtn dropdown__dropbtn-guest">expand_more</button>
                       <div class="dropdown__heading"></div>
                       <div class="dropdown__content">
                         <div class="dropdown__items">
@@ -239,12 +233,12 @@
               <div class="signin-item"> 
                 <div class="signin-head">Войти</div>
                 <div class="signin-email"> </div>
-                <form class="text_field_form" action="/mock-address/change-me">
-                  <input class="text_field_input" type="text" name="emails" placeholder="Email">
+                <form class="text-field-form" action="/mock-address/change-me">
+                  <input class="text-field-input" type="text" name="emails" placeholder="Email">
                 </form>
                 <div class="signin-password"> </div>
-                <form class="text_field_form" action="/mock-address/change-me">
-                  <input class="text_field_input" type="text" name="emails" placeholder="Пароль">
+                <form class="text-field-form" action="/mock-address/change-me">
+                  <input class="text-field-input" type="text" name="emails" placeholder="Пароль">
                 </form>
                 <div class="signin-buttonlong"> </div>
                 <button class="button  button_long" type="long" onclick="window.location.href = undefined">
@@ -264,69 +258,16 @@
           </div>
         </div>
         <div class="cards-group-column">
-          <div class="card cards-datepicker">
-            <div class="datepicker-block">
-              <div class="datepicker-block-lable">
-                <input class="datepicker-here datepicker-here-page" id="start_one" type="text" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
-                <button class="datepicker-btn">expand_more  </button>
-              </div>
+          <div class="datepicker-block">
+            <div class="datepicker-block-lable">
+              <input class="datepicker-here datepicker-here-page" id="start_one" type="text" data-range="true" inline="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ">
             </div>
           </div>
           <div class="card cards-typeroom"> 
-            <div class="type-room">
-              <div class="type-room-picture1 type-room-picture1">
-                <div class="type-room-first-arrow">
-                  <button class="type-room-first-btn-arrow"></button>
-                  <button class="type-room-first-btn-arrow"></button>
-                </div>
-                <div class="type-room-first-circle"> 
-                  <div class="type-room-first-group-circle"></div>
-                  <div class="type-room-first-group-circle2">
-                    <div class="type-room-first-group-circle2-color"></div>
-                  </div>
-                  <div class="type-room-first-group-circle2">
-                    <div class="type-room-first-group-circle2-color"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="type-room-second">
-                <div class="type-room-second-number">№ <span>888</span></div>
-                <input class="type-room-second-type" type="text" placeholder="люкс"><span class="type-room-second-cost">9 990₽<span>в сутки</span></span>
-              </div>
-              <div class="type-room-line"></div>
-              <div class="type-room-fird"> 
-                <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
-                </div><span class="type-room-fird-rates">65<span>Отзывов </span></span>
-              </div>
-            </div>
+            <!--+type_room({ number: '888', lux: 'люкс', cost: '9 990₽', count: '5', rate: '65' })(class='type-room-picture1')-->
           </div>
           <div class="card cards-typeroom"> 
-            <div class="type-room">
-              <div class="type-room-picture1 type-room-picture2">
-                <div class="type-room-first-arrow">
-                  <button class="type-room-first-btn-arrow"></button>
-                  <button class="type-room-first-btn-arrow"></button>
-                </div>
-                <div class="type-room-first-circle"> 
-                  <div class="type-room-first-group-circle"></div>
-                  <div class="type-room-first-group-circle2">
-                    <div class="type-room-first-group-circle2-color"></div>
-                  </div>
-                  <div class="type-room-first-group-circle2">
-                    <div class="type-room-first-group-circle2-color"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="type-room-second">
-                <div class="type-room-second-number">№ <span>840</span></div>
-                <input class="type-room-second-type" type="text"><span class="type-room-second-cost">9 990₽<span>в сутки</span></span>
-              </div>
-              <div class="type-room-line"></div>
-              <div class="type-room-fird"> 
-                <div class="rate"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star_border</i>
-                </div><span class="type-room-fird-rates">145<span>Отзывов </span></span>
-              </div>
-            </div>
+            <!--+type_room({ number: '840', cost: '9 990₽', count: '4', rate: '145' })(class='type-room-picture2')-->
           </div>
         </div>
       </div>

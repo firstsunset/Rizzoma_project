@@ -1863,6 +1863,16 @@ body {
   padding-right: 0px;
 }
 
+.wrapper260 {
+  width: 100%;
+  height: 100%;
+  max-width: 266px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
 .container {
   width: 1440px;
   max-width: 100%;
@@ -1874,11 +1884,29 @@ body {
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .wrapper {
     max-width: 100%;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -2803,9 +2831,10 @@ path {
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
   background-color: #FFFFFF;
   overflow: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .dropdown__dropbtn {
@@ -2822,14 +2851,16 @@ path {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
   margin-top: 2px;
   margin-bottom: 2px;
   margin-right: 2px;
 }
+.dropdown__dropbtn-guest {
+  padding-left: 290px;
+}
 
 .dropdown__buttons {
-  width: 300px;
+  max-width: 100%;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
@@ -2859,20 +2890,20 @@ path {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
   \*******************************************************************************************************************************************/
 .item-quantity {
-  width: 300px;
+  max-width: 300px;
   height: 30px;
   padding-bottom: 7px;
+  padding-right: 7px;
   padding-left: 15px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   font-weight: bold;
   align-content: center;
 }
 
 .item-quantity__nam {
-  width: 83px;
+  max-width: 83px;
   height: 15px;
-  padding-right: 123px;
   padding-top: 7px;
   font-size: 12px;
   line-height: 15px;

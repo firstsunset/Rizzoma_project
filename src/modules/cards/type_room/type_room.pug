@@ -12,7 +12,7 @@ mixin type_room(options)
             rate
         } = options || {}
     .type-room
-        .type-room-picture1(class!=attributes.class)
+        a(href="room_details.html").type-room-picture1(class!=attributes.class)
             .type-room-first-arrow
                 button.type-room-first-btn-arrow= chevron_left
                 button.type-room-first-btn-arrow= chevron_right 

@@ -1,17 +1,17 @@
 .item-quantity {
-    width: 300px;
+    max-width: 300px;
     height: 30px;
     padding-bottom: 7px;
+    padding-right: 7px;
     padding-left: 15px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     font-weight: bold;
     align-content: center;
   }
   .item-quantity__nam {
-    width: 83px;
+    max-width: 83px;
     height: 15px;
-    padding-right: 123px;
     padding-top: 7px;
     font-size: 12px;
     line-height: 15px;

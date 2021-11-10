@@ -3,8 +3,6 @@ include ../../modules/cards/signin/signin
 include ../../modules/cards/seach_room/seach_room
 include ../../modules/cards/type_room/type_room
 include ../../modules/cards/room_number/room_number
-include ../../modules/mixin/calendar/calendar
-include ../../modules/cards/datepicker/datepicker
 include ../../modules/cards/datepicker_page/datepicker_page
 
 
@@ -17,23 +15,21 @@ html(lang="ru")
   body
     div.logogroup 
         a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group")
-    .container
+    .wrapper
       .cards-group
-        .cards-group-column
-          .card.cards-seach-room 
-            +seach_room
-          .card.cards-registration 
-            +registration
+        +seach_room
+        .card.cards-registration 
+          +registration
         .cards-group-column
           .card.cards-room-number 
             +room_number          
           .card.cards-signin 
             +signin
         .cards-group-column
-          .card.cards-datepicker
-            +datepicker_page 
+          +datepicker_page
+           
            
           .card.cards-typeroom 
-            +type_room({ number: '888', lux: 'люкс', cost: '9 990₽', count: '5', rate: '65' })(class='type-room-picture1')
+            //+type_room({ number: '888', lux: 'люкс', cost: '9 990₽', count: '5', rate: '65' })(class='type-room-picture1')
           .card.cards-typeroom 
-            +type_room({ number: '840', cost: '9 990₽', count: '4', rate: '145' })(class='type-room-picture2')
+            //+type_room({ number: '840', cost: '9 990₽', count: '4', rate: '145' })(class='type-room-picture2')

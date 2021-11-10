@@ -1,44 +1,23 @@
-.date-dropdown{
-    width: 320px;
-    height: 44px;
-    position: relative;
+.date-dropdown {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-left: 30px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    max-width: 320px;
+    height: 42px;
+    font-family: 'MontserratRegular';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    border-radius: 4px;
+    background: #FFFFFF;
+    text-align: start;
+
+    &-text {
+        padding: 12px 0px 0px 15px;
+    }
 
     
-    &-block {
-        border: none;
-        width: 150px;
-        height: 44px;
-    }
-    
-    &-input{
-        
-        
-        position: absolute;
-        border: 1px solid rgba(31, 32, 65, 0.25);
-        margin-bottom: 0px;
-        width: 148px;
-        height: 42px;
-        font-family: 'MontserratRegular';
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba(31, 32, 65, 0.75);
-        border-radius: 4px;
-        background: #FFFFFF;
-        text-align: start;
-        cursor: pointer;
-
-    }
-    &-input:focus {
-        color: none;
-        color: red;
-    }
-
-    &-btn{
-        position: relative;
+    &-btn {
         width: 40px;
         height: 40px;
         background: #FFFFFF;
@@ -52,20 +31,6 @@
         font-size: 24px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.5);
-        left: 110px;
-        top: 0px;
-        background: transparent;
-        
+
     }
-}
-.date-dropdown input[type="text"]{
-    color: rgba(31, 32, 65, 0.75);
-    font-family: "MontserratRegular";
-    font-style: normal;
-    font-weight: normal;
-    width: 133px;
-    height: 42px;
-    font-size: 14px;
-    line-height: 18px;
-    padding-left: 15px;
 }

@@ -2,20 +2,23 @@
 @import '~flexboxgrid2';
 
 body {
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
-    align-items: center;
 }
 
 .searchroom {
-    background: transparent;
+    max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     margin-bottom: 70px;
     gap: 60px;
     
     &-firstcolumn{
+        max-width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
 
@@ -49,20 +52,26 @@ body {
             }
         }
         &-comfort{
-            position: absolute;
-            margin-top: 707px;
+            max-width: 100%;
+            position: relative; 
+            z-index: 2;
+            margin-top: 5px;
         }
-        &-newcomfort{
-            
-            margin-top: 135px;
+        &-newcomfort {
+            position: relative;
+            z-index: 1;
+           margin-top: -220px;
         }
+       
 
     }
 
     &-secondcolumn{
+        max-width: 100%;
+        height: auto;
         margin-top: 30px;
         margin-left: 0px;
-
+        
         &-heading{
             font-family: 'MontserratBold';
             font-style: normal;
@@ -70,26 +79,44 @@ body {
             line-height: 29px;
             color: #1F2041;
             margin-bottom: 20px;
+            
         }
 
-        &-room{
+        &-content {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
 
-            &-row {
+            &-room{
+                max-width: 100%;
+                height: auto;
                 display: flex;
-                flex-direction: row;
-                gap: 12px;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+    
+                &-row {
+                    max-width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px;
+                }
             }
-        }
+    
+            &-pagination{
+                margin-top: 24px;
+                max-width: 100%;
+                
+               // align-content: center;
+               // margin-left: 296px;
+            }
+    
 
-        &-pagination{
-            width: 241px;
-            align-content: center;
-            margin-left: 296px;
         }
-
+        
     }
     &-line {
         max-width: 100%;
@@ -97,3 +124,100 @@ body {
         border: 1px solid rgba(31, 32, 65, 0.25);
     }
 }
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .searchroom {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 70px;
+        gap: 60px;
+        
+        
+        &-secondcolumn {        
+            
+            &-content {
+                    
+                &-room{
+                    max-width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 20px;
+        
+                    &-row {
+                        max-width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        gap: 20px;
+                    }
+                }
+        
+                &-pagination{
+                    margin-top: 24px;
+                    max-width: 100%;
+                    
+                   // align-content: center;
+                   // margin-left: 296px;
+                }
+        
+    
+            }
+            
+        }
+        
+    }
+  
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .searchroom {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 70px;
+        gap: 60px;
+        
+        
+        &-secondcolumn {        
+            
+            &-content {
+                    
+                &-room{
+                    max-width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+        
+                    &-row {
+                        max-width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+        
+                &-pagination{
+                    margin-top: 24px;
+                    max-width: 100%;
+                    
+                   // align-content: center;
+                   // margin-left: 296px;
+                }
+        
+    
+            }
+            
+        }
+        
+    }
+  }

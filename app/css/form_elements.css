@@ -1684,75 +1684,96 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
-  font-family: "MontserratRegular";
-}
-
-h3 {
-  font-family: "MontserratBold";
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  margin-top: 3px;
-  font-size: 12px;
-  line-height: 15px;
 }
 
 .logogroup {
   width: 48px;
   height: 48px;
   margin-top: 30px;
-  margin-bottom: 62px;
   margin-left: 30px;
 }
 
 .form-elements {
   display: flex;
-  flex-direction: row;
-}
-
-.form-elements-first {
-  margin-right: 126px;
-  width: 320px;
-}
-
-.form-elements-second {
-  width: 100%;
-  display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.form-elements-1 {
-  padding-bottom: 40px;
-}
-
-.form-elements-2 {
-  padding-bottom: 40px;
-}
-
-.form-elements-3 {
-  padding-bottom: 40px;
-}
-
-.form-elements-4 {
-  padding-bottom: 40px;
-}
-
-.like-button-group {
-  display: flex;
-  flex-direction: row;
-}
-
-.rate-button-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.buttons-group {
+.form-elements-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 30px;
+  margin-top: 100px;
+}
+.form-elements-row-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form-elements-row-column-firstgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-elements-row-column-secondgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.form-elements-row-column-secondgroup-date {
+  display: inline-flex;
+  gap: 20px;
+}
+.form-elements-block {
+  display: flex;
+  flex-direction: column;
+}
+.form-elements-block-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.form-elements-block-like {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.form-elements-block-rate {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.form-elements-block-button {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 15px;
+}
+.form-elements-block-button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.form-elements-block-icon {
+  margin-right: 155px;
+}
+.form-elements-heading {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.form-elements-heading-bold {
+  font-family: "MontserratBold";
+  color: #1F2041;
+}
+.form-elements-heading-normal {
+  font-family: "MontserratRegular";
+  color: rgba(31, 32, 65, 0.5);
+}
+.form-elements-heading-normal-material-icons {
+  font-family: "MaterialIcons";
 }
 /*!***************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./scss/settings.scss ***!
@@ -1761,6 +1782,16 @@ h3 {
   width: 100%;
   height: 100%;
   max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
+.wrapper260 {
+  width: 100%;
+  height: 100%;
+  max-width: 266px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0px;
@@ -1778,11 +1809,29 @@ h3 {
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .wrapper {
     max-width: 100%;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -1814,7 +1863,7 @@ h3 {
 /*!*************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/text_field/text_field.scss ***!
   \*************************************************************************************************************************************/
-.text_field_form {
+.text-field_form {
   display: flex;
   flex-direction: column;
   width: 318px;
@@ -1822,7 +1871,7 @@ h3 {
   border: none;
 }
 
-.text_field_input {
+.text-field-input {
   position: relative;
   width: 305px;
   height: 44px;
@@ -1833,7 +1882,7 @@ h3 {
   margin-bottom: 0px;
 }
 
-.text_field_form input[type=text] {
+.text-field-form input[type=text] {
   color: rgba(31, 32, 65, 0.25);
   font-family: "MontserratRegular";
   font-style: normal;
@@ -1843,10 +1892,22 @@ h3 {
   padding-left: 15px;
 }
 
-.text_field_input:focus,
-.text_field_input:hover {
+.text-field-form-hover input[type=text] {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+
+.text-field-input:focus,
+.text-field-input:hover,
+.text-field-input-hover {
   outline: none;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 /*!***************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/subscription_text_field/subscription_text_field.scss ***!
@@ -1920,20 +1981,20 @@ h3 {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
   \*******************************************************************************************************************************************/
 .item-quantity {
-  width: 300px;
+  max-width: 300px;
   height: 30px;
   padding-bottom: 7px;
+  padding-right: 7px;
   padding-left: 15px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   font-weight: bold;
   align-content: center;
 }
 
 .item-quantity__nam {
-  width: 83px;
+  max-width: 83px;
   height: 15px;
-  padding-right: 123px;
   padding-top: 7px;
   font-size: 12px;
   line-height: 15px;
@@ -2019,9 +2080,10 @@ h3 {
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
   background-color: #FFFFFF;
   overflow: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .dropdown__dropbtn {
@@ -2038,14 +2100,16 @@ h3 {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
   margin-top: 2px;
   margin-bottom: 2px;
   margin-right: 2px;
 }
+.dropdown__dropbtn-guest {
+  padding-left: 290px;
+}
 
 .dropdown__buttons {
-  width: 300px;
+  max-width: 100%;
   justify-content: space-between;
   display: flex;
   flex-direction: row;
@@ -2074,17 +2138,17 @@ h3 {
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_room/dropdown_room.scss ***!
   \*******************************************************************************************************************************************/
-.wrap {
-  width: 320px;
+.wrap__room {
+  width: 266px;
   height: 300px;
   position: relative;
 }
 
-.dropdown {
+.dropdown__room {
   position: relative;
   border: 1px solid rgba(31, 32, 65, 0.5);
   margin-bottom: 20px;
-  width: 320px;
+  max-width: 100%;
   font-family: "MontserratRegular";
   font-size: 14px;
   line-height: 18px;
@@ -2093,32 +2157,41 @@ h3 {
   background: #FFFFFF;
   text-align: start;
 }
-.dropdown__heading {
+.dropdown__room__heading {
   position: relative;
   min-height: 44px;
   padding-left: 15px;
   top: 15px;
 }
-.dropdown_hide > .dropdown__content {
+.dropdown__room_hide > .dropdown__room__content {
   display: none;
 }
 
-.dropdown__content {
+.dropdown__room__content {
   height: 160px;
-  width: 320px;
+  max-width: 266px;
   padding-top: 10px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
+  position: relative;
   background-color: #FFFFFF;
   overflow: auto;
+  z-index: 2;
 }
 
-.item-quantity {
-  width: 300px;
+.dropdown__content-room {
+  max-width: 100%;
+}
+
+.dropdown__items {
+  position: relative;
+}
+
+/*.item-quantity {
+  max-width: 100%;
   height: 30px;
   padding-bottom: 7px;
   padding-left: 15px;
@@ -2127,20 +2200,19 @@ h3 {
   font-weight: bold;
   align-content: center;
 }
-
 .item-quantity__nam {
-  width: 83px;
+  max-width: 83px;
   height: 15px;
   padding-right: 123px;
   padding-top: 7px;
   font-size: 12px;
   line-height: 15px;
-  font-family: "MontserratRegular";
+  font-family: 'MontserratRegular';
   text-transform: uppercase;
   color: #1F2041;
   font-weight: bold;
-}
 
+}*/
 .dropdown__dropbtn {
   position: absolute;
   width: 40px;
@@ -2155,10 +2227,12 @@ h3 {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
   margin-top: 2px;
   margin-bottom: 2px;
   margin-right: 2px;
+}
+.dropdown__dropbtn-room {
+  padding-left: 225px;
 }
 
 .item-quantity__button {
@@ -2180,11 +2254,11 @@ h3 {
   flex-direction: row;
 }
 
-.item-quantity__value {
+/*.item-quantity__value {
   width: 15px;
   height: 15px;
   text-align: center;
-  padding: 7px 10px;
+  padding: 7px 10px;   
   border: none;
   display: inline-block;
   vertical-align: middle;
@@ -2194,14 +2268,13 @@ h3 {
   line-height: 15px;
   text-align: center;
   text-transform: uppercase;
-  color: #1F2041;
-}
-
-.dropdown__buttons {
-  width: 300px;
-  justify-content: space-between;
+  color: #1F2041
+}*/
+.dropdown__room__buttons {
+  max-width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding-top: 13px;
   padding-left: 10px;
 }
@@ -2220,9 +2293,71 @@ h3 {
   color: #BC9CFF;
   text-align: start;
 }
+/*!*********************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown/dropdown.scss ***!
+  \*********************************************************************************************************************************/
+.dropdown-page {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  max-width: 100%;
+  height: 42px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
 
-.dropdown__apply {
-  text-align: right;
+.dropdown-page-text {
+  padding: 12px 0px 0px 15px;
+}
+
+.dropdown-page-btn {
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 1px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.dropdown-date {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  max-width: 152px;
+  height: 42px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+
+.dropdown-room {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  max-width: 266px;
+  height: 42px;
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkbox_list/checkbox_list.scss ***!
@@ -2448,96 +2583,48 @@ h3 {
 /*!*****************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/toggle/toggle.scss ***!
   \*****************************************************************************************************************************/
-.toggle {
-  display: flex;
-  flex-direction: row;
-}
-
-.check-toggle {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-/* Hide the browser's default checkbox */
-.checkbox-toggle {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark-toggle {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.checkmark-toggle:before {
-  position: absolute;
-  content: "";
-  left: 3px;
-  top: 3px;
-  background-color: #FFFFFF;
-  border: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(31, 32, 65, 0.25);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-/* When the checkbox is checked, add background */
-.check-toggle input:checked ~ .checkmark-toggle:before {
-  background-color: #FFFFFF;
-  border: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
-}
-
-.check-toggle input:checked ~ .checkmark-toggle {
-  background-color: #FFFFFF;
-  border: 1px solid #bc9cff;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark-toggle:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.check-toggle input:checked ~ .checkmark-toggle:after {
-  display: block;
-}
-
-.toggle-text {
+.toggle__text {
   font-family: "MontserratRegular";
   color: rgba(31, 32, 65, 0.5);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left: 50px;
+}
+.toggle__text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  width: 38px;
+  height: 18px;
+}
+.toggle__text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  left: 4px;
+  top: 3px;
+}
+.toggle__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.toggle__checkbox:checked + .toggle__text:before {
+  border-color: #bc9cff;
+}
+.toggle__checkbox:checked + .toggle__text:after {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  left: 24px;
 }
 /*!***********************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/checkmark/checkmark.scss ***!
@@ -3052,7 +3139,7 @@ label:hover {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/range_slider/range_slider.scss ***!
   \*****************************************************************************************************************************************/
 .range-slider {
-  width: 266px;
+  max-width: 100%;
   height: 48px;
 }
 
@@ -3120,6 +3207,7 @@ label:hover {
 
 .range-result {
   margin-top: -15px;
+  max-width: 266px;
   font-family: "MontserratRegular";
   color: rgba(31, 32, 65, 0.5);
   font-size: 12px;
@@ -3131,12 +3219,12 @@ label:hover {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/pagination/pagination.scss ***!
   \*************************************************************************************************************************************/
 .pagination {
-  width: 241px;
-  height: 41px;
+  max-width: 100%;
+  height: auto;
 }
 
 .pagination ul {
-  width: 261px;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -3222,24 +3310,10 @@ label:hover {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
   \*******************************************************************************************************************************************/
 .date-dropdown {
-  width: 320px;
-  height: 44px;
-  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-left: 30px;
-}
-.date-dropdown-block {
-  border: none;
-  width: 150px;
-  height: 44px;
-}
-.date-dropdown-input {
-  position: absolute;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  margin-bottom: 0px;
-  width: 148px;
+  max-width: 320px;
   height: 42px;
   font-family: "MontserratRegular";
   font-size: 14px;
@@ -3248,14 +3322,11 @@ label:hover {
   border-radius: 4px;
   background: #FFFFFF;
   text-align: start;
-  cursor: pointer;
 }
-.date-dropdown-input:focus {
-  color: none;
-  color: red;
+.date-dropdown-text {
+  padding: 12px 0px 0px 15px;
 }
 .date-dropdown-btn {
-  position: relative;
   width: 40px;
   height: 40px;
   background: #FFFFFF;
@@ -3269,347 +3340,6 @@ label:hover {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  left: 110px;
-  top: 0px;
-  background: transparent;
-}
-
-.date-dropdown input[type=text] {
-  color: rgba(31, 32, 65, 0.75);
-  font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: normal;
-  width: 133px;
-  height: 42px;
-  font-size: 14px;
-  line-height: 18px;
-  padding-left: 15px;
-}
-/*!*************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/air-datepicker/dist/css/datepicker.min.css ***!
-  \*************************************************************************************************************/
-.datepicker--cells{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.datepicker--cell{border-radius:4px;box-sizing:border-box;cursor:pointer;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:32px;z-index:1}.datepicker--cell.-focus-{background:#f0f0f0}.datepicker--cell.-current-{color:#4EB5E6}.datepicker--cell.-current-.-focus-{color:#4a4a4a}.datepicker--cell.-current-.-in-range-{color:#4EB5E6}.datepicker--cell.-in-range-{background:rgba(92,196,239,.1);color:#4a4a4a;border-radius:0}.datepicker--cell.-in-range-.-focus-{background-color:rgba(92,196,239,.2)}.datepicker--cell.-disabled-{cursor:default;color:#aeaeae}.datepicker--cell.-disabled-.-focus-{color:#aeaeae}.datepicker--cell.-disabled-.-in-range-{color:#a1a1a1}.datepicker--cell.-disabled-.-current-.-focus-{color:#aeaeae}.datepicker--cell.-range-from-{border:1px solid rgba(92,196,239,.5);background-color:rgba(92,196,239,.1);border-radius:4px 0 0 4px}.datepicker--cell.-range-to-{border:1px solid rgba(92,196,239,.5);background-color:rgba(92,196,239,.1);border-radius:0 4px 4px 0}.datepicker--cell.-selected-,.datepicker--cell.-selected-.-current-{color:#fff;background:#5cc4ef}.datepicker--cell.-range-from-.-range-to-{border-radius:4px}.datepicker--cell.-selected-{border:none}.datepicker--cell.-selected-.-focus-{background:#45bced}.datepicker--cell:empty{cursor:default}.datepicker--days-names{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:8px 0 3px}.datepicker--day-name{color:#FF9A19;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-flex:1;-ms-flex:1;flex:1;text-align:center;text-transform:uppercase;font-size:.8em}.-only-timepicker- .datepicker--content,.datepicker--body,.datepicker-inline .datepicker--pointer{display:none}.datepicker--cell-day{width:14.28571%}.datepicker--cells-months{height:170px}.datepicker--cell-month{width:33.33%;height:25%}.datepicker--cells-years,.datepicker--years{height:170px}.datepicker--cell-year{width:25%;height:33.33%}.datepickers-container{position:absolute;left:0;top:0}@media print{.datepickers-container{display:none}}.datepicker{background:#fff;border:1px solid #dbdbdb;box-shadow:0 4px 12px rgba(0,0,0,.15);border-radius:4px;box-sizing:content-box;font-family:Tahoma,sans-serif;font-size:14px;color:#4a4a4a;width:250px;position:absolute;left:-100000px;opacity:0;transition:opacity .3s ease,left 0s .3s,-webkit-transform .3s ease;transition:opacity .3s ease,transform .3s ease,left 0s .3s;transition:opacity .3s ease,transform .3s ease,left 0s .3s,-webkit-transform .3s ease;z-index:100}.datepicker.-from-top-{-webkit-transform:translateY(-8px);transform:translateY(-8px)}.datepicker.-from-right-{-webkit-transform:translateX(8px);transform:translateX(8px)}.datepicker.-from-bottom-{-webkit-transform:translateY(8px);transform:translateY(8px)}.datepicker.-from-left-{-webkit-transform:translateX(-8px);transform:translateX(-8px)}.datepicker.active{opacity:1;-webkit-transform:translate(0);transform:translate(0);transition:opacity .3s ease,left 0s 0s,-webkit-transform .3s ease;transition:opacity .3s ease,transform .3s ease,left 0s 0s;transition:opacity .3s ease,transform .3s ease,left 0s 0s,-webkit-transform .3s ease}.datepicker-inline .datepicker{border-color:#d7d7d7;box-shadow:none;position:static;left:auto;right:auto;opacity:1;-webkit-transform:none;transform:none}.datepicker--content{box-sizing:content-box;padding:4px}.datepicker--pointer{position:absolute;background:#fff;border-top:1px solid #dbdbdb;border-right:1px solid #dbdbdb;width:10px;height:10px;z-index:-1}.datepicker--nav-action:hover,.datepicker--nav-title:hover{background:#f0f0f0}.-top-center- .datepicker--pointer,.-top-left- .datepicker--pointer,.-top-right- .datepicker--pointer{top:calc(100% - 4px);-webkit-transform:rotate(135deg);transform:rotate(135deg)}.-right-bottom- .datepicker--pointer,.-right-center- .datepicker--pointer,.-right-top- .datepicker--pointer{right:calc(100% - 4px);-webkit-transform:rotate(225deg);transform:rotate(225deg)}.-bottom-center- .datepicker--pointer,.-bottom-left- .datepicker--pointer,.-bottom-right- .datepicker--pointer{bottom:calc(100% - 4px);-webkit-transform:rotate(315deg);transform:rotate(315deg)}.-left-bottom- .datepicker--pointer,.-left-center- .datepicker--pointer,.-left-top- .datepicker--pointer{left:calc(100% - 4px);-webkit-transform:rotate(45deg);transform:rotate(45deg)}.-bottom-left- .datepicker--pointer,.-top-left- .datepicker--pointer{left:10px}.-bottom-right- .datepicker--pointer,.-top-right- .datepicker--pointer{right:10px}.-bottom-center- .datepicker--pointer,.-top-center- .datepicker--pointer{left:calc(50% - 10px / 2)}.-left-top- .datepicker--pointer,.-right-top- .datepicker--pointer{top:10px}.-left-bottom- .datepicker--pointer,.-right-bottom- .datepicker--pointer{bottom:10px}.-left-center- .datepicker--pointer,.-right-center- .datepicker--pointer{top:calc(50% - 10px / 2)}.datepicker--body.active{display:block}.datepicker--nav{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;border-bottom:1px solid #efefef;min-height:32px;padding:4px}.-only-timepicker- .datepicker--nav{display:none}.datepicker--nav-action,.datepicker--nav-title{display:-webkit-flex;display:-ms-flexbox;display:flex;cursor:pointer;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.datepicker--nav-action{width:32px;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.datepicker--nav-action.-disabled-{visibility:hidden}.datepicker--nav-action svg{width:32px;height:32px}.datepicker--nav-action path{fill:none;stroke:#9c9c9c;stroke-width:2px}.datepicker--nav-title{border-radius:4px;padding:0 8px}.datepicker--buttons,.datepicker--time{border-top:1px solid #efefef;padding:4px}.datepicker--nav-title i{font-style:normal;color:#9c9c9c;margin-left:5px}.datepicker--nav-title.-disabled-{cursor:default;background:0 0}.datepicker--buttons{display:-webkit-flex;display:-ms-flexbox;display:flex}.datepicker--button{color:#4EB5E6;cursor:pointer;border-radius:4px;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:32px}.datepicker--button:hover{color:#4a4a4a;background:#f0f0f0}.datepicker--time{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative}.datepicker--time.-am-pm- .datepicker--time-sliders{-webkit-flex:0 1 138px;-ms-flex:0 1 138px;flex:0 1 138px;max-width:138px}.-only-timepicker- .datepicker--time{border-top:none}.datepicker--time-sliders{-webkit-flex:0 1 153px;-ms-flex:0 1 153px;flex:0 1 153px;margin-right:10px;max-width:153px}.datepicker--time-label{display:none;font-size:12px}.datepicker--time-current{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-flex:1;-ms-flex:1;flex:1;font-size:14px;text-align:center;margin:0 0 0 10px}.datepicker--time-current-colon{margin:0 2px 3px;line-height:1}.datepicker--time-current-hours,.datepicker--time-current-minutes{line-height:1;font-size:19px;font-family:"Century Gothic",CenturyGothic,AppleGothic,sans-serif;position:relative;z-index:1}.datepicker--time-current-hours:after,.datepicker--time-current-minutes:after{content:'';background:#f0f0f0;border-radius:4px;position:absolute;left:-2px;top:-3px;right:-2px;bottom:-2px;z-index:-1;opacity:0}.datepicker--time-current-hours.-focus-:after,.datepicker--time-current-minutes.-focus-:after{opacity:1}.datepicker--time-current-ampm{text-transform:uppercase;-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;color:#9c9c9c;margin-left:6px;font-size:11px;margin-bottom:1px}.datepicker--time-row{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-size:11px;height:17px;background:linear-gradient(to right,#dedede,#dedede) left 50%/100% 1px no-repeat}.datepicker--time-row:first-child{margin-bottom:4px}.datepicker--time-row input[type=range]{background:0 0;cursor:pointer;-webkit-flex:1;-ms-flex:1;flex:1;height:100%;padding:0;margin:0;-webkit-appearance:none}.datepicker--time-row input[type=range]::-ms-tooltip{display:none}.datepicker--time-row input[type=range]:hover::-webkit-slider-thumb{border-color:#b8b8b8}.datepicker--time-row input[type=range]:hover::-moz-range-thumb{border-color:#b8b8b8}.datepicker--time-row input[type=range]:hover::-ms-thumb{border-color:#b8b8b8}.datepicker--time-row input[type=range]:focus{outline:0}.datepicker--time-row input[type=range]:focus::-webkit-slider-thumb{background:#5cc4ef;border-color:#5cc4ef}.datepicker--time-row input[type=range]:focus::-moz-range-thumb{background:#5cc4ef;border-color:#5cc4ef}.datepicker--time-row input[type=range]:focus::-ms-thumb{background:#5cc4ef;border-color:#5cc4ef}.datepicker--time-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;box-sizing:border-box;height:12px;width:12px;border-radius:3px;border:1px solid #dedede;background:#fff;cursor:pointer;transition:background .2s;margin-top:-6px}.datepicker--time-row input[type=range]::-moz-range-thumb{box-sizing:border-box;height:12px;width:12px;border-radius:3px;border:1px solid #dedede;background:#fff;cursor:pointer;transition:background .2s}.datepicker--time-row input[type=range]::-ms-thumb{box-sizing:border-box;height:12px;width:12px;border-radius:3px;border:1px solid #dedede;background:#fff;cursor:pointer;transition:background .2s}.datepicker--time-row input[type=range]::-webkit-slider-runnable-track{border:none;height:1px;cursor:pointer;color:transparent;background:0 0}.datepicker--time-row input[type=range]::-moz-range-track{border:none;height:1px;cursor:pointer;color:transparent;background:0 0}.datepicker--time-row input[type=range]::-ms-track{border:none;height:1px;cursor:pointer;color:transparent;background:0 0}.datepicker--time-row input[type=range]::-ms-fill-lower{background:0 0}.datepicker--time-row input[type=range]::-ms-fill-upper{background:0 0}.datepicker--time-row span{padding:0 12px}.datepicker--time-icon{color:#9c9c9c;border:1px solid;border-radius:50%;font-size:16px;position:relative;margin:0 5px -1px 0;width:1em;height:1em}.datepicker--time-icon:after,.datepicker--time-icon:before{content:'';background:currentColor;position:absolute}.datepicker--time-icon:after{height:.4em;width:1px;left:calc(50% - 1px);top:calc(50% + 1px);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.datepicker--time-icon:before{width:.4em;height:1px;top:calc(50% + 1px);left:calc(50% - 1px)}.datepicker--cell-day.-other-month-,.datepicker--cell-year.-other-decade-{color:#dedede}.datepicker--cell-day.-other-month-:hover,.datepicker--cell-year.-other-decade-:hover{color:#c5c5c5}.-disabled-.-focus-.datepicker--cell-day.-other-month-,.-disabled-.-focus-.datepicker--cell-year.-other-decade-{color:#dedede}.-selected-.datepicker--cell-day.-other-month-,.-selected-.datepicker--cell-year.-other-decade-{color:#fff;background:#a2ddf6}.-selected-.-focus-.datepicker--cell-day.-other-month-,.-selected-.-focus-.datepicker--cell-year.-other-decade-{background:#8ad5f4}.-in-range-.datepicker--cell-day.-other-month-,.-in-range-.datepicker--cell-year.-other-decade-{background-color:rgba(92,196,239,.1);color:#ccc}.-in-range-.-focus-.datepicker--cell-day.-other-month-,.-in-range-.-focus-.datepicker--cell-year.-other-decade-{background-color:rgba(92,196,239,.2)}.datepicker--cell-day.-other-month-:empty,.datepicker--cell-year.-other-decade-:empty{background:0 0;border:none}
-/*!*************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/datepicker/datepicker.scss ***!
-  \*************************************************************************************************************************************/
-.datepicker-block {
-  display: inline-flex;
-}
-.datepicker-block-lable {
-  position: relative;
-  cursor: pointer;
-}
-
-.datepicker-btn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  color: rgba(31, 32, 65, 0.75);
-  border: none;
-  box-sizing: border-box;
-  padding: 2px;
-  cursor: pointer;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: -40px;
-  top: 0px;
-  background: transparent;
-}
-
-.date-end {
-  padding-left: 15px;
-  padding-right: 0px;
-  width: 133px;
-  height: 42px;
-  border: none;
-  border-radius: 4px;
-  outline: 1px solid rgba(31, 32, 65, 0.25);
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  margin-left: 20px;
-}
-
-.datepicker--nav-action:hover, .datepicker--nav-title:hover {
-  background: transparent;
-}
-
-.datepicker--nav-title {
-  border-radius: 4px;
-  padding: 0 8px;
-}
-
-.datepicker {
-  position: relative;
-  font-family: "MontserratRegular";
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.datepicker-here {
-  position: relative;
-  cursor: pointer;
-  padding-left: 15px;
-  padding-right: 0px;
-  width: 133px;
-  height: 42px;
-  border-radius: 4px;
-  border: none;
-  outline: 1px solid rgba(31, 32, 65, 0.25);
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.datepicker-here::placeholder,
-.date-end::placeholder {
-  color: rgba(31, 32, 65, 0.75);
-  opacity: 1;
-  /* Firefox */
-}
-
-.datepicker-here:focus,
-.date-end:focus {
-  border: none;
-}
-
-.datepicker--nav {
-  min-height: 0px;
-  height: 24px;
-  padding: 0px;
-  border-bottom: none;
-  margin-top: 20px;
-}
-
-.datepicker--nav-action {
-  margin-left: 20px;
-  margin-right: 20px;
-  color: #BC9CFF;
-}
-
-.datepicker--nav-action .material-icons {
-  color: #BC9CFF;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 20px;
-}
-
-.datepicker--nav-action:hover {
-  background: transparent;
-}
-
-.datepicker--nav-title {
-  font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 23px;
-  color: #1F2041;
-  border: none;
-  background: transparent;
-}
-
-.datepicker--nav-title:hover {
-  background: transparent;
-  border: none;
-}
-
-.datepicker--content {
-  width: 280px;
-  height: 240px;
-  padding: 0px;
-  margin-left: 20px;
-  margin-top: 30px;
-}
-
-.datepicker.-bottom-left-.-from-bottom- {
-  width: 318px;
-  height: 368px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  border-radius: 4px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-}
-
-.datepickers-container:focus {
-  border: none;
-}
-
-.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-}
-
-.datepicker--cell.-in-range- {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  opacity: 0.25;
-  color: #4a4a4a;
-  border-radius: 0;
-  width: 40px;
-  height: 40px;
-  padding-left: 40px;
-}
-
-.datepicker--cell.-in-range-.-focus- {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  opacity: 0.25;
-  color: #4a4a4a;
-  border-radius: 0;
-}
-
-.datepicker--day-name {
-  font-size: 12px;
-  line-height: 15px;
-  color: #BC9CFF;
-}
-
-.-bottom-left- .datepicker--pointer {
-  display: none;
-}
-
-.datepicker--cell.-current- {
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  width: 40px;
-  height: 40px;
-  font-weight: bold;
-  color: #FFFFFF;
-  border-radius: 50%;
-  font-size: 12px;
-  line-height: 15px;
-}
-
-.datepicker--cell.datepicker--cell-day.-in-range-.-current- {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 0;
-  color: rgba(31, 32, 65, 0.5);
-}
-
-.datepicker--cell.-focus- {
-  background: transparent;
-}
-
-.datepicker--cell.-selected-.-focus- {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-}
-
-.datepicker--cell.datepicker--cell-day.-range-to-.-focus- {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-  border: none;
-}
-
-.datepicker--cell.datepicker--cell-day.-weekend-.-range-to- {
-  border: none;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-}
-
-.datepicker--cell.datepicker--cell-day.-range-to- {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-  border: none;
-}
-
-.datepicker--cell.datepicker--cell-day.-range-to-.-selected- {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-  font-weight: bold;
-  color: #FFFFFF;
-  margin-left: -20px;
-}
-
-.datepicker--cell.datepicker--cell-day.-range-to-.-selected-:hover {
-  margin-left: -20px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.datepicker--cell.datepicker--cell-day.-range-from-.-selected- {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-  font-weight: bold;
-  color: #FFFFFF;
-  margin-right: -20px;
-}
-
-.datepicker--cell-day {
-  width: 40px;
-  height: 40px;
-}
-
-.datepicker--cell-day.-focus- {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 50%;
-}
-
-.datepicker-apply {
-  margin-left: 216px;
-  padding: 0px;
-  position: relative;
-  width: 84px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
-  text-align: center;
-  top: -15px;
-}
-
-.datepicker--buttons {
-  padding: 0px 0px 0px 20px;
-  display: flex;
-  flex-direction: row;
-  width: 72px;
-  height: 15px;
-  border: none;
-}
-
-.datepicker--button {
-  width: 72px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #BC9CFF;
-}
-
-.datepicker--button:hover {
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
 }
 /*!*********************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/feedback/feedback.scss ***!
@@ -3653,6 +3383,82 @@ label:hover {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   margin-bottom: 10px;
+}
+/*!***************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/bullet_list/bullet_list.scss ***!
+  \***************************************************************************************************************************************/
+.bullet {
+  display: flex;
+  flex-direction: column;
+  max-width: 292px;
+  height: auto;
+}
+.bullet-string {
+  display: inline-flex;
+}
+.bullet-string-mark {
+  width: 24px;
+  height: 24px;
+}
+.bullet-string-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+  border: none;
+  margin: 7px;
+}
+.bullet-string-text {
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/icontext_list/icontext_list.scss ***!
+  \*******************************************************************************************************************************************/
+.icontext {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 280px;
+}
+.icontext-group {
+  display: inline-flex;
+  gap: 10px;
+}
+.icontext-group-icon {
+  border: none;
+  width: 48px;
+  height: 48px;
+  font-family: "MaterialIcons";
+  font-size: 48px;
+  line-height: 41px;
+  color: transparent;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.icontext-group-text {
+  font-family: "MontserratRegular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.icontext-group-text-heading {
+  font-family: "MontserratBold";
+}
+
+.icontext-list {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.icontext-list-line {
+  background: rgba(31, 32, 65, 0.1);
+  height: 1px;
+  margin-top: 17px;
 }
 
 /*# sourceMappingURL=form_elements.css.map*/

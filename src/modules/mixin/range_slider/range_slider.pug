@@ -1,6 +1,6 @@
-mixin range-slider
+mixin range-slider(text)
   .range-slider 
-    .range-text Диапазон Цены
+    .range-text= text
     #result.range-result 5 000₽ - 10 000₽
     .content
         #my-slider.slider(se-min='0' se-step='1' se-min-value='5000' se-max-value='10000' se-max='15000')

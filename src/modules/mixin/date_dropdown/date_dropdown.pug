@@ -1,13 +1,5 @@
-mixin date_dropdown_input(date)
-    .date-dropdown-input(id= date)
-        button.date-dropdown-btn expand_more
-
-
-mixin date_dropdown
-    .date-dropdown
-        .date-dropdown-block
-            +date_dropdown_input('start-date')
-        .date-dropdown-block
-            +date_dropdown_input('end-date')   
-
+mixin date_dropdown(words)
+    .date_dropdown
+        .date_dropdown-text= words
+        button.date_dropdown-btn expand_more  
 

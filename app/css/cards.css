@@ -1784,6 +1784,16 @@ h3 {
   padding-right: 0px;
 }
 
+.wrapper260 {
+  width: 100%;
+  height: 100%;
+  max-width: 266px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+}
+
 .container {
   width: 1440px;
   max-width: 100%;
@@ -1795,11 +1805,29 @@ h3 {
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .wrapper {
     max-width: 100%;
+    max-height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 10px 0px 10px;
+  }
+
+  .wrapper260 {
+    width: 100%;
+    max-width: 266px;
     max-height: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -1886,7 +1914,7 @@ h3 {
 /*!*************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/text_field/text_field.scss ***!
   \*************************************************************************************************************************************/
-.text_field_form {
+.text-field_form {
   display: flex;
   flex-direction: column;
   width: 318px;
@@ -1894,7 +1922,7 @@ h3 {
   border: none;
 }
 
-.text_field_input {
+.text-field-input {
   position: relative;
   width: 305px;
   height: 44px;
@@ -1905,7 +1933,7 @@ h3 {
   margin-bottom: 0px;
 }
 
-.text_field_form input[type=text] {
+.text-field-form input[type=text] {
   color: rgba(31, 32, 65, 0.25);
   font-family: "MontserratRegular";
   font-style: normal;
@@ -1915,10 +1943,22 @@ h3 {
   padding-left: 15px;
 }
 
-.text_field_input:focus,
-.text_field_input:hover {
+.text-field-form-hover input[type=text] {
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "MontserratRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+
+.text-field-input:focus,
+.text-field-input:hover,
+.text-field-input-hover {
   outline: none;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/radio_buttons/radio_buttons.scss ***!
@@ -2011,96 +2051,48 @@ h3 {
 /*!*****************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/toggle/toggle.scss ***!
   \*****************************************************************************************************************************/
-.toggle {
-  display: flex;
-  flex-direction: row;
-}
-
-.check-toggle {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-/* Hide the browser's default checkbox */
-.checkbox-toggle {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark-toggle {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.checkmark-toggle:before {
-  position: absolute;
-  content: "";
-  left: 3px;
-  top: 3px;
-  background-color: #FFFFFF;
-  border: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(31, 32, 65, 0.25);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-/* When the checkbox is checked, add background */
-.check-toggle input:checked ~ .checkmark-toggle:before {
-  background-color: #FFFFFF;
-  border: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
-}
-
-.check-toggle input:checked ~ .checkmark-toggle {
-  background-color: #FFFFFF;
-  border: 1px solid #bc9cff;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark-toggle:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.check-toggle input:checked ~ .checkmark-toggle:after {
-  display: block;
-}
-
-.toggle-text {
+.toggle__text {
   font-family: "MontserratRegular";
   color: rgba(31, 32, 65, 0.5);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left: 50px;
+}
+.toggle__text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  width: 38px;
+  height: 18px;
+}
+.toggle__text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  left: 4px;
+  top: 3px;
+}
+.toggle__checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.toggle__checkbox:checked + .toggle__text:before {
+  border-color: #bc9cff;
+}
+.toggle__checkbox:checked + .toggle__text:after {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  left: 24px;
 }
 /*!*****************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/button/button.scss ***!
@@ -2318,29 +2310,16 @@ h3 {
 .seach-room-buttonlong {
   position: relative;
   margin-top: -125px;
+  z-index: 1;
 }
 /*!*******************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/date_dropdown/date_dropdown.scss ***!
   \*******************************************************************************************************************************************/
 .date-dropdown {
-  width: 320px;
-  height: 44px;
-  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-left: 30px;
-}
-.date-dropdown-block {
-  border: none;
-  width: 150px;
-  height: 44px;
-}
-.date-dropdown-input {
-  position: absolute;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  margin-bottom: 0px;
-  width: 148px;
+  max-width: 320px;
   height: 42px;
   font-family: "MontserratRegular";
   font-size: 14px;
@@ -2349,14 +2328,11 @@ h3 {
   border-radius: 4px;
   background: #FFFFFF;
   text-align: start;
-  cursor: pointer;
 }
-.date-dropdown-input:focus {
-  color: none;
-  color: red;
+.date-dropdown-text {
+  padding: 12px 0px 0px 15px;
 }
 .date-dropdown-btn {
-  position: relative;
   width: 40px;
   height: 40px;
   background: #FFFFFF;
@@ -2370,21 +2346,164 @@ h3 {
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  left: 110px;
-  top: 0px;
-  background: transparent;
+}
+/*!***********************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
+  \***********************************************************************************************************************************************/
+.wrap {
+  width: 320px;
+  height: 205px;
+  position: relative;
 }
 
-.date-dropdown input[type=text] {
-  color: rgba(31, 32, 65, 0.75);
+.dropdown {
+  position: relative;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
+  width: 320px;
   font-family: "MontserratRegular";
-  font-style: normal;
-  font-weight: normal;
-  width: 133px;
-  height: 42px;
   font-size: 14px;
   line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  border-radius: 4px;
+  background: #FFFFFF;
+  text-align: start;
+}
+.dropdown__heading {
+  position: relative;
+  min-height: 44px;
   padding-left: 15px;
+  top: 15px;
+}
+.dropdown_hide > .dropdown__content {
+  display: none;
+}
+
+.dropdown__content {
+  height: 160px;
+  width: 320px;
+  padding-top: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background-color: #FFFFFF;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown__dropbtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: rgba(31, 32, 65, 0.75);
+  border: none;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  font-family: "MaterialIcons";
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+.dropdown__dropbtn-guest {
+  padding-left: 290px;
+}
+
+.dropdown__buttons {
+  max-width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+.dropdown__clear,
+.dropdown__apply {
+  padding: 0px;
+  width: 84px;
+  height: 15px;
+  border: none;
+  background-color: #FFFFFF;
+  font-family: "MontserratBold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  text-align: start;
+}
+
+.dropdown__apply {
+  text-align: right;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
+  \*******************************************************************************************************************************************/
+.item-quantity {
+  max-width: 300px;
+  height: 30px;
+  padding-bottom: 7px;
+  padding-right: 7px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-content: center;
+}
+
+.item-quantity__nam {
+  max-width: 83px;
+  height: 15px;
+  padding-top: 7px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "MontserratRegular";
+  text-transform: uppercase;
+  color: #1F2041;
+  font-weight: bold;
+}
+
+.item-quantity__button {
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  align-content: center;
+  box-sizing: border-box;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: center;
+  font-size: 18px;
+}
+
+.item-quantity__controls {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-quantity__value {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  padding: 7px 10px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "MontserratBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1F2041;
 }
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/air-datepicker/dist/css/datepicker.min.css ***!
@@ -2712,167 +2831,12 @@ h3 {
   text-transform: uppercase;
   color: #BC9CFF;
 }
-/*!***********************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_guests/dropdown_guests.scss ***!
-  \***********************************************************************************************************************************************/
-.wrap {
-  width: 320px;
-  height: 205px;
-  position: relative;
-}
-
-.dropdown {
-  position: relative;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  margin-bottom: 20px;
-  width: 320px;
-  font-family: "MontserratRegular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  border-radius: 4px;
-  background: #FFFFFF;
-  text-align: start;
-}
-.dropdown__heading {
-  position: relative;
-  min-height: 44px;
-  padding-left: 15px;
-  top: 15px;
-}
-.dropdown_hide > .dropdown__content {
-  display: none;
-}
-
-.dropdown__content {
-  height: 160px;
-  width: 320px;
-  padding-top: 10px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  box-sizing: border-box;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
-  background-color: #FFFFFF;
-  overflow: auto;
-}
-
-.dropdown__dropbtn {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  color: rgba(31, 32, 65, 0.75);
-  border: none;
-  box-sizing: border-box;
-  padding: 2px;
-  cursor: pointer;
-  font-family: "MaterialIcons";
-  font-size: 24px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
-
-.dropdown__buttons {
-  width: 300px;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  padding-top: 13px;
-  padding-left: 10px;
-}
-
-.dropdown__clear,
-.dropdown__apply {
-  padding: 0px;
-  width: 84px;
-  height: 15px;
-  border: none;
-  background-color: #FFFFFF;
-  font-family: "MontserratBold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #BC9CFF;
-  text-align: start;
-}
-
-.dropdown__apply {
-  text-align: right;
-}
-/*!*******************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/mixin/dropdown_part/dropdown_part.scss ***!
-  \*******************************************************************************************************************************************/
-.item-quantity {
-  width: 300px;
-  height: 30px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  display: flex;
-  justify-content: start;
-  font-weight: bold;
-  align-content: center;
-}
-
-.item-quantity__nam {
-  width: 83px;
-  height: 15px;
-  padding-right: 123px;
-  padding-top: 7px;
-  font-size: 12px;
-  line-height: 15px;
-  font-family: "MontserratRegular";
-  text-transform: uppercase;
-  color: #1F2041;
-  font-weight: bold;
-}
-
-.item-quantity__button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
-  border-radius: 22px;
-  padding: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  align-content: center;
-  box-sizing: border-box;
-  color: rgba(31, 32, 65, 0.5);
-  text-align: center;
-  font-size: 18px;
-}
-
-.item-quantity__controls {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-quantity__value {
-  width: 15px;
-  height: 15px;
-  text-align: center;
-  padding: 7px 10px;
-  border: none;
-  display: inline-block;
-  vertical-align: middle;
-  font-family: "MontserratBold";
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #1F2041;
-}
 /*!***********************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./modules/cards/type_room/type_room.scss ***!
   \***********************************************************************************************************************************/
 .type-room {
-  width: 270px;
-  height: 257px;
+  max-width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -2881,63 +2845,63 @@ h3 {
   border-radius: 4px;
 }
 .type-room-picture1 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image19d103f80df454da7889c.png);
 }
 .type-room-picture2 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image26a351a7218912a70eb25.png);
 }
 .type-room-picture3 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image3e41cf0c600bac7c03e67.png);
 }
 .type-room-picture4 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image4088f1dff2f0d198fbe1d.png);
 }
 .type-room-picture5 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image5bc8ee38dd3c765b0b066.png);
 }
 .type-room-picture6 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image64ee358d5dd49bc8f8ecc.png);
 }
 .type-room-picture7 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image7334f4c1658d08c8c461d.png);
 }
 .type-room-picture8 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
   background: url(../images/image84cef0e4528a7fb4cd84a.png);
 }
 .type-room-picture9 {
-  width: 270px;
+  max-width: 100%;
   height: 152px;
   display: flex;
   flex-direction: column;
@@ -2998,7 +2962,7 @@ h3 {
   border: none;
 }
 .type-room-second {
-  width: 232px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -3049,7 +3013,7 @@ h3 {
   font-weight: normal;
 }
 .type-room-line {
-  width: 230px;
+  max-width: 100%;
   height: 1px;
   background: rgba(31, 32, 65, 0.1);
   margin-top: 10px;

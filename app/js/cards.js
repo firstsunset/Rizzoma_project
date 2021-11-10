@@ -4677,21 +4677,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _date_dropdown_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date_dropdown.scss */ "./modules/mixin/date_dropdown/date_dropdown.scss");
-/* harmony import */ var _script_date_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script_date_dropdown */ "./modules/mixin/date_dropdown/script_date_dropdown.js");
-/* harmony import */ var _script_date_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_date_dropdown__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-
-
-
-
-/***/ }),
-
-/***/ "./modules/mixin/date_dropdown/script_date_dropdown.js":
-/*!*************************************************************!*\
-  !*** ./modules/mixin/date_dropdown/script_date_dropdown.js ***!
-  \*************************************************************/
-/***/ (() => {
-
 
 
 /***/ }),
@@ -33686,9 +33671,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cards_seach_room_seach_room__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../modules/cards/seach_room/seach_room */ "./modules/cards/seach_room/seach_room.js");
 /* harmony import */ var _modules_cards_type_room_type_room__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../modules/cards/type_room/type_room */ "./modules/cards/type_room/type_room.js");
 /* harmony import */ var _modules_cards_room_number_room_number__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../modules/cards/room_number/room_number */ "./modules/cards/room_number/room_number.js");
-/* harmony import */ var _modules_cards_datepicker_datepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/cards/datepicker/datepicker */ "./modules/cards/datepicker/datepicker.js");
-/* harmony import */ var _modules_cards_datepicker_page_datepicker_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../modules/cards/datepicker_page/datepicker_page */ "./modules/cards/datepicker_page/datepicker_page.js");
-
+/* harmony import */ var _modules_cards_datepicker_page_datepicker_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../modules/cards/datepicker_page/datepicker_page */ "./modules/cards/datepicker_page/datepicker_page.js");
 
 
 

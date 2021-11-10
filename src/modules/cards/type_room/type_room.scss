@@ -1,6 +1,6 @@
 .type-room {
-    width: 270px;
-    height: 257px;
+    max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -9,63 +9,63 @@
     border-radius: 4px;
 
     &-picture1 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image1.png);
     }
     &-picture2 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image2.png);
     }
     &-picture3 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image3.png);
     }
     &-picture4 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image4.png);
     }
     &-picture5 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image5.png);
     }
     &-picture6 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image6.png);
     }
     &-picture7 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image7.png);
     }
     &-picture8 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
         background: url(image8.png);
     }
     &-picture9 {
-        width: 270px;
+        max-width: 100%;
         height: 152px;
         display: flex;
         flex-direction: column;
@@ -132,7 +132,7 @@
     }
 
     &-second {
-        width: 232px;
+        max-width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -192,7 +192,7 @@
     }
 
     &-line {
-        width: 230px;
+        max-width: 100%;
         height: 1px;
         background: rgba(31, 32, 65, 0.1);
         margin-top: 10px;

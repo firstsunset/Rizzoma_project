@@ -32,6 +32,7 @@
     }
   }
 }
+
 .dropdown__content {
   height: 160px;
   width: 320px;
@@ -41,10 +42,10 @@
   border-bottom-right-radius: 4px;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  position: absolute;
   background-color: #FFFFFF;
   overflow: auto;
-  
+  position: relative;
+  z-index: 2;  
 
 }
 
@@ -64,15 +65,18 @@
   font-size: 24px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
-  margin-left: 276px;
   margin-top: 2px;
   margin-bottom: 2px;
   margin-right: 2px;
 
+  &-guest {
+    padding-left: 290px;
+  }
+
 }
 
 .dropdown__buttons {
-  width: 300px;
+  max-width: 100%;
   justify-content: space-between;
   display: flex;
   flex-direction: row;

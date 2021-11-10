@@ -1,9 +1,8 @@
 .dropdown-page {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    position: relative;
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    min-width: 266px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    max-width: 100%;
     height: 42px;
     font-family: 'MontserratRegular';
     font-size: 14px;
@@ -21,7 +20,6 @@
     width: 40px;
     height: 40px;
     background: #FFFFFF;
-    color: rgba(31, 32, 65, 0.75);
     border: none;
     box-sizing: border-box;
     padding: 2px;
@@ -32,4 +30,32 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.5);
     
+}
+.dropdown-date {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    max-width: 152px;
+    height: 42px;
+    font-family: 'MontserratRegular';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    border-radius: 4px;
+    background: #FFFFFF;
+    text-align: start;
+}
+.dropdown-room {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    max-width: 266px;
+    height: 42px;
+    font-family: 'MontserratRegular';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    border-radius: 4px;
+    background: #FFFFFF;
+    text-align: start;
 }

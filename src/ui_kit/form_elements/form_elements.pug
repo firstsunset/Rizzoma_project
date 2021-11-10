@@ -20,6 +20,10 @@ include ../../modules/mixin/range_slider/range_slider
 include ../../modules/mixin/pagination/pagination
 include ../../modules/mixin/date_dropdown/date_dropdown
 include ../../modules/mixin/feedback/feedback
+include ../../modules/mixin/dropdown/dropdown
+include ../../modules/mixin/date_dropdown/date_dropdown
+include ../../modules/mixin/bullet_list/bullet_list
+include ../../modules/mixin/icontext_list/icontext_list
 
 
 
@@ -32,79 +36,150 @@ html(lang="ru")
   body
     div.logogroup 
         a(href="#"): img(src=require("./logo_group.svg"), alt="logo_group")
-    .container
+    .wrapper
       .form-elements 
-        .form-elements-first
-          h3 Text Field
-          +text_field('Hello')
-          p 
-          h3 subscription text field
-          +subscription_text_field
-          p 
-
-          h3 Date dropdown 
-          +date_dropdown('дд.мм.гггг')
-
-          h3 Dropdown
-          +dropdown_guests('Сколько гостей') 
-          +dropdown_room
-                  
-          p 
-          h3 Room dropdown 
+        .form-elements-row
+          .form-elements-row-column
+            .form-elements-row-column-firstgroup
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold Text Field
+                  .form-elements-heading-normal Default
+                +text_field('Email')
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold Text Field
+                  .form-elements-heading-normal Hover/focus
+                +text_field_active('This is pretty awesome')
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold Dropdown
+                +dropdown('Сколько гостей')
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold Masked text field
+                +text_field('ДД.ММ.ГГГГ')
+            .form-elements-row-column-secondgroup
+              .form-elements-row-column-secondgroup-date
+                .form-elements-block
+                  .form-elements-heading
+                    .form-elements-heading-bold Date dropdown 
+                  +dropdown('ДД.ММ.ГГГГ')(class='dropdown-date')
+                .form-elements-block
+                  .form-elements-heading
+                    .form-elements-heading-bold Date dropdown 
+                  +dropdown('19.08.2019')(class='dropdown-date')
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold filter date dropdown
+                +dropdown('19 авг - 23 авг')
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold subscription text field
+                +subscription_text_field
+          .form-elements-row-column
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold checkbox button 
+              +checkbox-list({ items: [ {text: "Можно курить"}, {text: "Можно с питомцами", isChecked: true}, {text: "Можно пригласить гостей (до 10 человек)", isChecked: true}, ]})
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold radio buttons
+              +radio_buttons
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold toggle
+              .form-elements-block-toggle
+                +toggle
+                +toggle({isChecked: true})
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold Like button
+              .form-elements-block-like
+                +like_button_grey
+                +like_button_violet
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold Rate button
+              .form-elements-block-rate
+                +rate_button({quantity: 3})
+                +rate_button({quantity: 5})
+          .form-elements-row-column
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold Range Slider
+              +range-slider
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold Buttons
+              .form-elements-block-button 
+                .form-elements-block-button-row
+                  +button({ type: 'default', isHovered: true, })
+                  +button({ text: 'войти', })
+                .form-elements-block-button-row
+                  +button({ type: 'bordercolor', isHovered: true, })
+                  +button({ type: 'bordercolor', })
+                .form-elements-block-button-row
+                  +button({ type: 'link', })
+                  +button({ type: 'link', isHovered: true, })
+                +button({ type: 'long', text: 'перейти к оплате', })
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold  Pagination
+              +pagination
+        .form-elements-row
+          .form-elements-row-column
+            .wrapper260
+              .form-elements-row-column-firstgroup
+                .form-elements-block
+                  .form-elements-heading
+                    .form-elements-heading-bold dropdown
+                    .form-elements-heading-normal Default
+                  +dropdown('2 спальни, 2 кровати...')(class='dropdown-room')
+                .form-elements-block
+                  .form-elements-heading
+                    .form-elements-heading-bold dropdown
+                    .form-elements-heading-normal Default
+                  +dropdown_room
+          .form-elements-row-column
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold dropdown
+              +dropdown_guests('Сколько гостей') 
+          .form-elements-row-column
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold dropdown
+              +dropdown_guests_form_el('3 гостя')
+        .form-elements-row
+          .form-elements-row-column
+            .form-elements-row-column-firstgroup
+              .form-elements-block
+                .form-elements-heading
+                  .form-elements-heading-bold expandable checkbox list
+                    span.form-elements-heading-normal-material-icons expand_more
+              .form-elements-block
+                .form-elements-heading
+                +checkbox-dropdown
+          .form-elements-row-column
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold rich Checkbox Buttons
+              +checkbox-list({ isRich: true, items: [ {text: "Широкий коридор", subText: 'Ширина коридоров в номере не менее 91 см.'}, {text: "Помощник для инвалидов", subText: 'На 1 этаже вас встретит специалист и проводит до номера.'}, ]})
+          .form-elements-row-column
+            .form-elements-block
+              .form-elements-heading
+                .form-elements-heading-bold Bullet list
+              +bullet-list
+        .form-elements-row
+          .form-elements-row-column
+            .form-elements-block-icon
+              +icontext-list-form-el
+          .form-elements-row-column
+            .form-elements-block
+              +feedback_men
           
-          
-          p 
-          h3 Checkbox list
-          +checkbox-dropdown 
-          
-        .form-elements-second
-          .form-elements-1
-            h3 Правила дома
-            +checkbox_button
-          
-          .form-elements-2
-            h3 Radio buttons
-            +radio_buttons
-          .form-elements-3 
-            h3 Toggle 
-            +toggle
-            p
-            +toggle
-          .form-elements-4 
-            h3 Like button
-            .like-button-group
-              +like_button_grey
-              +like_button_violet
-            
-          .form-elements-5 
-            h3 Rate button
-            .rate-button-group
-              +rate_button
-              +rate_button({quantity: 3})
-              +rate_button({quantity: 5})
-
-        .form-elements-third
-          h3 Range slider
-          +range-slider
-          h3 Buttons
-          p
-            .buttons-group
-              +button({ type: 'default', isHovered: true, })
-              +button({ text: 'войти', })
-            .buttons-group
-              +button({ type: 'bordercolor', isHovered: true, })
-              +button({ type: 'bordercolor', })
-            .buttons-group
-              +button({ type: 'link', })
-              +button({ type: 'link', isHovered: true, })
-            +button({ type: 'long', text: 'перейти к оплате', })
-          H3 Pagination
-          +pagination
-          h3 
-          +feedback_men
         
-        
-         
      
     script(type='text/javascript') 
       include ../../modules/mixin/checkbox_list/checkbox_list_script.js  
